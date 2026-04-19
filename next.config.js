@@ -4,6 +4,9 @@ const nextConfig = {
     domains: [],
     formats: ['image/avif', 'image/webp'],
   },
+   experimental: {
+    optimizeCss: true,
+  },
   compress: true,
   poweredByHeader: false,
   // Strict mode for better React 19 compat
