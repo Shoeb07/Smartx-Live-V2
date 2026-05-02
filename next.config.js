@@ -7,9 +7,9 @@ const nextConfig = {
     domains: [],
     formats: ["image/avif", "image/webp"],
   },
-  experimental: {
-    optimizeCss: true,
-  },
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
