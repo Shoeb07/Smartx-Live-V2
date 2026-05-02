@@ -80,12 +80,8 @@ const jsonLd = {
       name: 'SmartX Solutions',
       url: siteUrl,
       description: 'SmartX Solutions is a full-service digital innovation agency delivering custom software, web & mobile applications, and digital transformation services.',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Hyderabad',
-        addressRegion: 'Telangana',
-        addressCountry: 'IN',
-      },
+      address: { '@type': 'PostalAddress', addressLocality: 'Hyderabad', addressRegion: 'Telangana', addressCountry: 'IN' },
+      contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'shoebsmartx@gmail.com' },
     },
     {
       '@type': 'WebSite',
@@ -113,47 +109,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* 1. CRITICAL CSS INLINE — renders immediately, zero blocking */}
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-
-        {/* 2. FONT PRECONNECT — open the connection early */}
+      <link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* 3. PRELOAD HINT — browser knows about the font file early */}
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
-        />
-
-        {/* 4. NON-BLOCKING LOAD — media="print" = loads but doesn't apply
-            onLoad flips to media="all" once downloaded = zero render block */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
-          media="print"
-          onLoad={(e) => {
-            const el = e.currentTarget as HTMLLinkElement
-            el.onload = null
-            el.media = 'all'
-          }}
-        />
-
-        {/* 5. NOSCRIPT FALLBACK — for JS-disabled browsers */}
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
-          />
-        </noscript>
-
-        {/* 6. JSON-LD SCHEMA */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
+  media="print"
+  onLoad={(e) => { (e.currentTarget as HTMLLinkElement).media = 'all' }}
+/>
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap"
+  />
+</noscript>
+        <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#050508" />
         <meta name="color-scheme" content="dark" />
       </head>
