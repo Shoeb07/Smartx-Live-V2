@@ -86,7 +86,7 @@ const projects = [
     accent: "#00e5b0",
     bg: "from-[#00e5b0]/10 via-transparent to-transparent",
     type: "web",
-    status: "live",
+    status: "deployed",
     link: "#",
   },
   {
@@ -103,7 +103,7 @@ const projects = [
     accent: "#00e5b0",
     bg: "from-[#00e5b0]/10 via-transparent to-transparent",
     type: "web",
-    status: "live",
+    status: "deployed",
     link: "#",
   },
   {
@@ -166,11 +166,29 @@ const statusBadge = {
     bg: "rgba(245,158,11,0.1)",
     border: "rgba(245,158,11,0.2)",
   },
+    deployed: {
+    label: "✓ Deployed",
+    color: "#22c55e",
+    bg: "rgba(34,197,94,0.1)",
+    border: "rgba(34,197,94,0.2)",
+  },
   open: {
-    label: "✦ Open Slot",
+    label: "✦ Available for New Projects",
     color: "#6c63ff",
     bg: "rgba(108,99,255,0.1)",
     border: "rgba(108,99,255,0.2)",
+  },
+  staging: {
+    label: "◉ Ready for Launch",
+    color: "#38bdf8",
+    bg: "rgba(56,189,248,0.1)",
+    border: "rgba(56,189,248,0.2)",
+  },
+  concept: {
+    label: "✦ Concept / Prototype",
+    color: "#a78bfa",
+    bg: "rgba(167,139,250,0.1)",
+    border: "rgba(167,139,250,0.2)",
   },
 };
 
