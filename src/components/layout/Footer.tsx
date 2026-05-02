@@ -1,5 +1,5 @@
 import { ArrowUpRight, Mail, Phone, MapPin } from 'lucide-react'
-import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaInstagram,  } from 'react-icons/fa'
 
 const services = [
   'Web App Development',
@@ -21,10 +21,10 @@ const company = [
 ]
 
 const socials = [
-  { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
-  { icon: FaTwitter, href: '#', label: 'Twitter' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/company/smartx-solutions-in/posts/?feedView=all', label: 'LinkedIn' },
+  // { icon: FaTwitter, href: '#', label: 'Twitter' },
   { icon: FaInstagram, href: '#', label: 'Instagram' },
-  { icon: FaGithub, href: '#', label: 'GitHub' },
+  // { icon: FaGithub, href: '#', label: 'GitHub' },
 ]
 
 export default function Footer() {
@@ -94,14 +94,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={15} className="text-[#6c63ff] mt-0.5 shrink-0" />
-                <a href="mailto:hello@smartxsolutions.in" className="text-sm text-white/50 hover:text-white transition-colors">
-                  hello@smartxsolutions.in
+                <a href="mailto:shoebsmartx@gmail.com" className="text-sm text-white/50 hover:text-white transition-colors">
+                  shoebsmartx@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={15} className="text-[#6c63ff] mt-0.5 shrink-0" />
-                <a href="tel:+91" className="text-sm text-white/50 hover:text-white transition-colors">
-                  +91 000 000 0000
+                <a href="tel:+91 91005 90377" className="text-sm text-white/50 hover:text-white transition-colors">
+                  +91 91005 90377
                 </a>
               </li>
               <li className="flex items-start gap-3">
