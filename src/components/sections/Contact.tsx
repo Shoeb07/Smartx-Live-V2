@@ -249,16 +249,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-white/40 mb-0.5">Email Us</p>
-<<<<<<< HEAD
-                    <a href="mailto:shoebsmartx@gmail.com" className="text-sm text-white hover:text-[#6c63ff] transition-colors">
-                      shoebsmartx@gmail.com
-=======
                     <a
                       href="mailto:shoeb@smartxsolutions.in"
                       className="text-sm text-white hover:text-[#6c63ff] transition-colors"
                     >
                       business@smartxsolutions.in
->>>>>>> f9c47d77025f59c8012d4dd343b040a85d37c934
                     </a>
                   </div>
                 </li>
@@ -268,16 +263,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-white/40 mb-0.5">Call Us</p>
-<<<<<<< HEAD
                     <a href="tel:+91 91005 90377" className="text-sm text-white hover:text-[#6c63ff] transition-colors">
                       +91 91005 90377
-=======
-                    <a
-                      href="tel:+91"
-                      className="text-sm text-white hover:text-[#6c63ff] transition-colors"
-                    >
-                      +91 9100590377
->>>>>>> f9c47d77025f59c8012d4dd343b040a85d37c934
                     </a>
                   </div>
                 </li>

@@ -4,13 +4,13 @@ const nextConfig = {
     domains: [],
     formats: ['image/avif', 'image/webp'],
   },
-   experimental: {
-    optimizeCss: true,
-  },
   compress: true,
   poweredByHeader: false,
-  // Strict mode for better React 19 compat
   reactStrictMode: true,
+  // ❌ DELETE these 3 lines — they caused the error:
+  // experimental: {
+  //   optimizeCss: true,
+  // },
 }
 
 module.exports = nextConfig

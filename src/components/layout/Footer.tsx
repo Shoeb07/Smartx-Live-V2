@@ -94,24 +94,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={15} className="text-[#6c63ff] mt-0.5 shrink-0" />
-<<<<<<< HEAD
-                <a href="mailto:shoebsmartx@gmail.com" className="text-sm text-white/50 hover:text-white transition-colors">
-                  shoebsmartx@gmail.com
-=======
                 <a href="mailto:shoeb@smartxsolutions.in" className="text-sm text-white/50 hover:text-white transition-colors">
                   business@smartxsolutions.in
->>>>>>> f9c47d77025f59c8012d4dd343b040a85d37c934
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={15} className="text-[#6c63ff] mt-0.5 shrink-0" />
-<<<<<<< HEAD
                 <a href="tel:+91 91005 90377" className="text-sm text-white/50 hover:text-white transition-colors">
                   +91 91005 90377
-=======
-                <a href="tel:+91" className="text-sm text-white/50 hover:text-white transition-colors">
-                  +91 9100590377
->>>>>>> f9c47d77025f59c8012d4dd343b040a85d37c934
                 </a>
               </li>
               <li className="flex items-start gap-3">

@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-import './globals.css'
-
+import type { Metadata } from 'next';
+import './globals.css';
+import FontLoader from '@/components/ui/FontLoader'
 
 
 
@@ -109,32 +109,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-      <link rel="preload" as="style"
-  href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-<link
-  rel="preload"
-  as="style"
-  href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
-/>
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
-  media="print"
-  onLoad={(e) => { (e.currentTarget as HTMLLinkElement).media = 'all' }}
-/>
-<noscript>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap"
+  <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+  <FontLoader />                           
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
   />
-</noscript>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#050508" />
-        <meta name="color-scheme" content="dark" />
-      </head>
+  <meta name="theme-color" content="#050508" />
+  <meta name="color-scheme" content="dark" />
+</head>
       <body
         className="bg-[#050508] text-white antialiased overflow-x-hidden"
         style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
