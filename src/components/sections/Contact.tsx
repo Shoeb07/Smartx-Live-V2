@@ -1,24 +1,65 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { ArrowUpRight, Mail, Phone, MapPin } from 'lucide-react'
-import { FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
+import { FaLinkedin, FaTwitter } from "react-icons/fa";
 
-const budgets = ['< ₹5 Lakhs', '₹5–15 Lakhs', '₹15–50 Lakhs', '₹50 Lakhs+', 'Let\'s discuss']
+const budgets = [
+  "< ₹5 Lakhs",
+  "₹5–15 Lakhs",
+  "₹15–50 Lakhs",
+  "₹50 Lakhs+",
+  "Let's discuss",
+];
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', company: '', message: '', budget: '' })
-  const [sent, setSent] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+    budget: "",
+  });
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    await new Promise((r) => setTimeout(r, 1200))
-    setLoading(false)
-    setSent(true)
-  }
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const formData = new FormData();
+
+      formData.append("access_key", "722b639c-7bfc-46f5-8802-6edfa26526f8"); // 👈 paste your key
+      formData.append("subject", "New Lead – SmartX Website Contact Form")
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("company", form.company);
+      formData.append("budget", form.budget);
+      formData.append("message", form.message);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSent(true);
+        setForm({ name: "", email: "", company: "", message: "", budget: "" });
+      } else {
+        console.log("Error", data);
+        alert("Something went wrong");
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Submission failed");
+    }
+
+    setLoading(false);
+  };
 
   return (
     <section id="contact" className="py-32 bg-[#050508]">
@@ -50,7 +91,8 @@ export default function Contact() {
             transition={{ delay: 0.1 }}
             className="text-white/50 mt-4 max-w-md mx-auto leading-relaxed"
           >
-            Tell us about your challenge. We'll respond within 24 hours with a clear path forward.
+            Tell us about your challenge. We'll respond within 24 hours with a
+            clear path forward.
           </motion.p>
         </div>
 
@@ -67,26 +109,43 @@ export default function Contact() {
                 <div className="w-16 h-16 rounded-full bg-[#00e5b0]/15 flex items-center justify-center mb-6">
                   <span className="text-3xl">✓</span>
                 </div>
-                <h3 className="font-syne font-bold text-2xl mb-3 text-[#00e5b0]">Message Sent!</h3>
+                <h3 className="font-syne font-bold text-2xl mb-3 text-[#00e5b0]">
+                  Message Sent!
+                </h3>
                 <p className="text-white/55 max-w-sm">
-                  Thank you for reaching out. Our team will get back to you within 24 hours.
+                  Thank you for reaching out. Our team will get back to you
+                  within 24 hours.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { key: 'name', label: 'Your Name', type: 'text', placeholder: 'Arjun Mehta' },
-                    { key: 'email', label: 'Email Address', type: 'email', placeholder: 'arjun@company.com' },
+                    {
+                      key: "name",
+                      label: "Your Name",
+                      type: "text",
+                      placeholder: "Arjun Mehta",
+                    },
+                    {
+                      key: "email",
+                      label: "Email Address",
+                      type: "email",
+                      placeholder: "arjun@company.com",
+                    },
                   ].map(({ key, label, type, placeholder }) => (
                     <div key={key}>
-                      <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">{label}</label>
+                      <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">
+                        {label}
+                      </label>
                       <input
                         type={type}
                         required
                         placeholder={placeholder}
                         value={(form as any)[key]}
-                        onChange={(e) => setForm({ ...form, [key]: e.target.value })}
+                        onChange={(e) =>
+                          setForm({ ...form, [key]: e.target.value })
+                        }
                         className="w-full px-4 py-3.5 rounded-xl border border-white/[0.08] bg-[#0d0d14] text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#6c63ff]/50 focus:ring-1 focus:ring-[#6c63ff]/20 transition-all"
                       />
                     </div>
@@ -94,18 +153,24 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">Company (optional)</label>
+                  <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">
+                    Company (optional)
+                  </label>
                   <input
                     type="text"
                     placeholder="Your company name"
                     value={form.company}
-                    onChange={(e) => setForm({ ...form, company: e.target.value })}
+                    onChange={(e) =>
+                      setForm({ ...form, company: e.target.value })
+                    }
                     className="w-full px-4 py-3.5 rounded-xl border border-white/[0.08] bg-[#0d0d14] text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#6c63ff]/50 focus:ring-1 focus:ring-[#6c63ff]/20 transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">Project Budget</label>
+                  <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">
+                    Project Budget
+                  </label>
                   <div className="flex flex-wrap gap-2">
                     {budgets.map((b) => (
                       <button
@@ -114,8 +179,8 @@ export default function Contact() {
                         onClick={() => setForm({ ...form, budget: b })}
                         className={`px-4 py-2 rounded-full text-xs border transition-all ${
                           form.budget === b
-                            ? 'border-[#6c63ff]/50 bg-[#6c63ff]/15 text-[#a89eff]'
-                            : 'border-white/[0.07] text-white/40 hover:border-white/15'
+                            ? "border-[#6c63ff]/50 bg-[#6c63ff]/15 text-[#a89eff]"
+                            : "border-white/[0.07] text-white/40 hover:border-white/15"
                         }`}
                       >
                         {b}
@@ -125,13 +190,17 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">Tell Us About Your Project</label>
+                  <label className="block text-xs text-white/40 mb-2 uppercase tracking-wider">
+                    Tell Us About Your Project
+                  </label>
                   <textarea
                     required
                     rows={5}
                     placeholder="Describe your project, goals, and what you're looking to achieve..."
                     value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    onChange={(e) =>
+                      setForm({ ...form, message: e.target.value })
+                    }
                     className="w-full px-4 py-3.5 rounded-xl border border-white/[0.08] bg-[#0d0d14] text-white placeholder-white/20 text-sm focus:outline-none focus:border-[#6c63ff]/50 focus:ring-1 focus:ring-[#6c63ff]/20 transition-all resize-none"
                   />
                 </div>
@@ -147,12 +216,15 @@ export default function Contact() {
                       Sending...
                     </span>
                   ) : (
-                    <>Send Message <ArrowUpRight size={16} /></>
+                    <>
+                      Send Message <ArrowUpRight size={16} />
+                    </>
                   )}
                 </button>
 
                 <p className="text-center text-xs text-white/25">
-                  By submitting, you agree to our Privacy Policy. We never share your information.
+                  By submitting, you agree to our Privacy Policy. We never share
+                  your information.
                 </p>
               </form>
             )}
@@ -167,7 +239,9 @@ export default function Contact() {
           >
             {/* Direct contacts */}
             <div className="p-6 rounded-2xl border border-white/[0.07] bg-[#0d0d14]">
-              <h3 className="font-syne font-bold text-base mb-5">Get In Touch Directly</h3>
+              <h3 className="font-syne font-bold text-base mb-5">
+                Get In Touch Directly
+              </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-lg bg-[#6c63ff]/15 flex items-center justify-center flex-shrink-0">
@@ -175,7 +249,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-white/40 mb-0.5">Email Us</p>
-                    <a href="mailto:shoeb@smartxsolutions.in" className="text-sm text-white hover:text-[#6c63ff] transition-colors">
+                    <a
+                      href="mailto:shoeb@smartxsolutions.in"
+                      className="text-sm text-white hover:text-[#6c63ff] transition-colors"
+                    >
                       business@smartxsolutions.in
                     </a>
                   </div>
@@ -186,7 +263,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-white/40 mb-0.5">Call Us</p>
-                    <a href="tel:+91" className="text-sm text-white hover:text-[#6c63ff] transition-colors">
+                    <a
+                      href="tel:+91"
+                      className="text-sm text-white hover:text-[#6c63ff] transition-colors"
+                    >
                       +91 9100590377
                     </a>
                   </div>
@@ -197,7 +277,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs text-white/40 mb-0.5">Office</p>
-                    <p className="text-sm text-white">Hyderabad, Telangana, India</p>
+                    <p className="text-sm text-white">
+                      Hyderabad, Telangana, India
+                    </p>
                   </div>
                 </li>
               </ul>
@@ -205,11 +287,13 @@ export default function Contact() {
 
             {/* Social */}
             <div className="p-6 rounded-2xl border border-white/[0.07] bg-[#0d0d14]">
-              <h3 className="font-syne font-bold text-base mb-4">Connect With Us</h3>
+              <h3 className="font-syne font-bold text-base mb-4">
+                Connect With Us
+              </h3>
               <div className="flex gap-3">
                 {[
-                  { Icon: FaLinkedin, label: 'LinkedIn', href: '#' },
-                  { Icon: FaTwitter, label: 'Twitter', href: '#' },
+                  { Icon: FaLinkedin, label: "LinkedIn", href: "#" },
+                  { Icon: FaTwitter, label: "Twitter", href: "#" },
                 ].map(({ Icon, label, href }) => (
                   <a
                     key={label}
@@ -227,15 +311,18 @@ export default function Contact() {
             <div className="p-6 rounded-2xl border border-[#00e5b0]/20 bg-[#00e5b0]/[0.04]">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-2 h-2 rounded-full bg-[#00e5b0] animate-pulse" />
-                <span className="text-[#00e5b0] text-sm font-medium">Currently Taking New Projects</span>
+                <span className="text-[#00e5b0] text-sm font-medium">
+                  Currently Taking New Projects
+                </span>
               </div>
               <p className="text-white/50 text-xs leading-relaxed">
-                We have capacity starting immediately. Reach out and we can schedule a discovery call within 48 hours.
+                We have capacity starting immediately. Reach out and we can
+                schedule a discovery call within 48 hours.
               </p>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

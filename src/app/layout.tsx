@@ -87,8 +87,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
-  media="print"
-  onLoad={(e) => { (e.currentTarget as HTMLLinkElement).media = 'all' }}
 />
 <noscript>
   <link
