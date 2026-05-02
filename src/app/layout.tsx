@@ -55,7 +55,7 @@ const jsonLd = {
       url: siteUrl,
       description: 'SmartX Solutions is a full-service digital innovation agency delivering custom software, web & mobile applications, and digital transformation services.',
       address: { '@type': 'PostalAddress', addressLocality: 'Hyderabad', addressRegion: 'Telangana', addressCountry: 'IN' },
-      contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'hello@smartxsolutions.in' },
+      contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'business@smartxsolutions.in' },
     },
     {
       '@type': 'WebSite',
