@@ -15,7 +15,7 @@ const budgets = [
 
 export default function Contact() {
   const [form, setForm] = useState({
-    name: "",
+    name: "", 
     email: "",
     company: "",
     message: "",
