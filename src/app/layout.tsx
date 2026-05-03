@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import FontLoader from '@/components/ui/FontLoader'
-
+// import Script from "next/script";
 
 
 const siteUrl = 'https://smartxsolutions.in'
@@ -109,6 +109,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2599252144758204"
+          crossOrigin="anonymous"
+        ></script>
   <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
   <FontLoader />                           
   <script

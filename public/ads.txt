@@ -1,4 +1,1 @@
-# ads.txt — SmartX Solutions
-# This site does not participate in programmatic advertising.
-# File exists to pass ads.txt validation checks.
-placeholder.example.com, placeholder, DIRECT, placeholder
+google.com, pub-2599252144758204, DIRECT, f08c47fec0942fa0
