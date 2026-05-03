@@ -22,7 +22,7 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
+ 
   const handleNav = (href: string) => {
     setOpen(false)
     const el = document.querySelector(href)

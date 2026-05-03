@@ -95,14 +95,12 @@ const jsonLd = {
 
 // Critical above-the-fold CSS — inlined so it NEVER blocks render
 const criticalCSS = `
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#050508;color:#f0eff8;font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-.font-syne{font-family:'Syne',system-ui,sans-serif}
-.fixed{position:fixed}.inset-0{inset:0}
-.z-\\[9999\\]{z-index:9999}
-.flex{display:flex}.flex-col{flex-direction:column}
-.items-center{align-items:center}.justify-center{justify-content:center}
+html, body { margin: 0; padding: 0; }
+body {
+  background: #050508;
+  color: #f0eff8;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
 `
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
