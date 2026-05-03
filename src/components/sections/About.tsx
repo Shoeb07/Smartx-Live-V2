@@ -67,7 +67,7 @@ export default function About() {
               transition={{ delay: 0.1 }}
               className="text-white/55 leading-relaxed mb-8"
             >
-              Founded in 2016, SmartX Solutions has grown from a 3-person studio into a full-service 40+ member digital innovation agency. We've worked with funded startups, Fortune 500 companies, and everything in between.
+              Founded in 2016, SmartX Solutions has grown from a 3-person studio into a full-service 40+ member digital innovation agency. We&apos;ve worked with funded startups, Fortune 500 companies, and everything in between.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
