@@ -105,7 +105,7 @@ export default function Testimonials() {
             >
               <Quote size={40} className="mx-auto mb-8 text-white/10" />
               <p className="text-[clamp(20px,3vw,30px)] font-syne leading-relaxed text-white/85 mb-10">
-                "{t.review}"
+                &quot;{t.review}&quot;
               </p>
               <div className="flex items-center justify-center gap-4">
                 <div

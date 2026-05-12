@@ -76,7 +76,7 @@ export default function Industries() {
             viewport={{ once: true }}
             className="text-[#6c63ff] text-sm font-dm uppercase tracking-widest mb-4"
           >
-            Industries
+            Industries We Serve
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -84,8 +84,17 @@ export default function Industries() {
             viewport={{ once: true }}
             className="font-syne font-bold text-[clamp(36px,5vw,64px)] leading-tight max-w-xl"
           >
-            Deep Domain Expertise
+            Deep Domain Expertise Across Industries
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-white/55 leading-relaxed mt-4 max-w-2xl"
+          >
+            Our software engineering team brings specialized knowledge to each industry we serve. From fintech compliance requirements to healthcare data security, we understand the unique challenges of enterprise software development across different sectors and deliver tailored solutions that drive business growth.
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">

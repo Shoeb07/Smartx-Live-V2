@@ -13,8 +13,8 @@ const stats = [
 ]
 
 const techStack = [
-  'React','Next.js','Node.js','Python','AWS','Flutter',
-  'TypeScript','PostgreSQL','Docker','Figma','React Native','GraphQL','Tailwind','Firebase',
+  'Custom Software', 'Web Development', 'Mobile App Development', 'SaaS Platforms',
+  'Cloud Architecture', 'UI/UX Design', 'Digital Transformation', 'Scalable Software',
 ]
 
 function WordReveal({ text, delay = 0, gradient = false }: {
@@ -80,10 +80,10 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="font-syne font-bold text-[clamp(48px,7.5vw,100px)] leading-[1.01] tracking-[-0.03em] mb-7 max-w-5xl">
-          <div className="block"><WordReveal text="We Build" delay={0.18} /></div>
-          <div className="block"><WordReveal text="Digital Products" delay={0.30} gradient /></div>
-          <div className="block"><WordReveal text="That Drive" delay={0.46} /></div>
-          <div className="block"><WordReveal text="Growth." delay={0.58} /></div>
+          <div className="block"><WordReveal text="Custom Software" delay={0.18} /></div>
+          <div className="block"><WordReveal text="Development Company" delay={0.30} gradient /></div>
+          <div className="block"><WordReveal text="That Drives" delay={0.46} /></div>
+          <div className="block"><WordReveal text="Business Growth." delay={0.58} /></div>
         </h1>
 
         {/* Subline */}
@@ -93,7 +93,7 @@ export default function Hero() {
           transition={{ delay: 0.85, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-white/50 text-[17px] max-w-[480px] mb-11 leading-[1.75]"
         >
-          From concept to launch and beyond — we design, engineer, and scale world-class web apps, mobile apps, and digital experiences for ambitious businesses.
+          Leading custom software development company in Hyderabad. We build scalable software platforms, web apps, mobile apps, and SaaS solutions that transform businesses and drive measurable growth.
         </motion.p>
 
         {/* CTAs */}

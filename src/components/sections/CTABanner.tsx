@@ -25,11 +25,11 @@ export default function CTABanner() {
           <div className="relative z-10">
             <p className="text-[#6c63ff] text-sm font-dm uppercase tracking-widest mb-6">Ready to Build?</p>
             <h2 className="font-syne font-bold text-[clamp(32px,5vw,64px)] leading-tight mb-6 max-w-3xl mx-auto">
-              Let's Turn Your Idea Into a
+              Let&apos;s Turn Your Idea Into a
               <span className="text-gradient-accent"> Digital Reality.</span>
             </h2>
             <p className="text-white/50 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-              Whether you're a startup with an idea or an enterprise needing to modernise — we have the team and the process to make it happen.
+              Whether you&apos;re a startup with an idea or an enterprise needing to modernise — we have the team and the process to make it happen.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a

@@ -66,7 +66,7 @@ export default function Process() {
             viewport={{ once: true }}
             className="font-syne font-bold text-[clamp(36px,5vw,64px)] leading-tight"
           >
-            From Idea to Impact
+            Our Software Development Process
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function Process() {
             transition={{ delay: 0.15 }}
             className="text-white/50 mt-4 leading-relaxed"
           >
-            Our proven process eliminates uncertainty, reduces risk, and gets your product to market faster — without sacrificing quality.
+            Our proven custom software development process eliminates uncertainty, reduces risk, and gets your scalable software platform to market faster — without sacrificing quality or security.
           </motion.p>
         </div>
 
