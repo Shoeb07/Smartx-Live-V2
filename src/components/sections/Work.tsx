@@ -40,7 +40,7 @@ const projects = [
     year: "2026",
     description:
       "A comprehensive scholarship portal enabling students to discover, apply, and track scholarship opportunities — and administrators to manage applications, review submissions, and communicate outcomes efficiently.",
-    tags: ["React", "Node.js", "MongoDB", "Firebase Auth"],
+    tags: ["Education Platform", "Responsive UX", "Secure Student Data", "Automated Workflows"],
     highlights: [
       "Student application & tracking dashboard",
       "Admin panel for review & approval workflow",
@@ -62,7 +62,7 @@ const projects = [
     year: "2025",
     description:
       "FurneXo is India’s first furniture exchange platform, enabling users to buy, sell, or swap furniture seamlessly. It promotes affordability and sustainability by giving pre-owned furniture a second life.",
-    tags: ["React", "Node.js", "MongoDB", "Firebase Auth"],
+    tags: ["Marketplace UX", "Listing Management", "Secure Transactions", "Growth Optimized"],
     highlights: [],
     result: "In active development",
     resultColor: "#f59e0b",
@@ -79,7 +79,7 @@ const projects = [
     year: "2023",
     description:
       "Attraction Men’s Studio is a modern grooming destination offering premium haircuts, styling, and skincare services for men.It blends style and comfort to help you look sharp and feel confident every day.",
-    tags: ["React", "Node.js", "MongoDB", "Firebase Auth"],
+    tags: ["Commerce Experience", "Brand-Led Design", "Customer Retention", "Conversion Focused"],
     highlights: [],
     result: "In active development",
     resultColor: "#f59e0b",
@@ -96,7 +96,7 @@ const projects = [
     year: "2024",
     description:
       "One Stop Dashboard is a powerful ERP application that centralizes all business operations into a single, easy-to-manage platform. It streamlines workflows, improves efficiency, and provides real-time insights for smarter decision-making.",
-    tags: ["React", "Node.js", "MongoDB", "Firebase Auth"],
+    tags: ["Operations Automation", "Business Intelligence", "Real-Time Insights", "Scalable Enterprise App"],
     highlights: [],
     result: "In active development",
     resultColor: "#f59e0b",
@@ -120,7 +120,7 @@ const projects = [
       "Full SEO — sitemap, schema, OG tags",
       "Vercel deployment with CI/CD",
     ],
-    result: "You're looking at it",
+    result: "You&apos;re looking at it",
     resultColor: "#6c63ff",
     accent: "#ff5e62",
     bg: "from-[#ff5e62]/10 via-transparent to-transparent",
@@ -134,7 +134,7 @@ const projects = [
     category: "Various · In Pipeline",
     year: "2025",
     description:
-      "We're currently taking on new projects across web apps, mobile applications, e-commerce, and SaaS platforms. Every project we take on gets the same cinematic quality treatment.",
+      "We&apos;re currently taking on new projects across web apps, mobile applications, e-commerce, and SaaS platforms. Every project we take on gets the same cinematic quality treatment.",
     tags: ["Your Stack Here", "Your Vision Here"],
     highlights: [
       "Custom web & mobile applications",
@@ -142,7 +142,7 @@ const projects = [
       "E-commerce & marketplace platforms",
       "AI-powered product features",
     ],
-    result: "Let's build together",
+    result: "Let&apos;s build together",
     resultColor: "#00e5b0",
     accent: "#6c63ff",
     bg: "from-[#6c63ff]/08 via-transparent to-transparent",

@@ -10,7 +10,7 @@ const services = [
     icon: Globe,
     title: 'Web App Development',
     description: 'Scalable, high-performance web applications built with modern frameworks. From SaaS platforms to enterprise portals, we craft experiences users love.',
-    tags: ['React', 'Next.js', 'Node.js', 'TypeScript'],
+    tags: ['Modern Web Tech', 'Scalable Architecture', 'API-First Design'],
     points: ['Custom SaaS platforms', 'Real-time dashboards', 'API-first architecture', 'Progressive Web Apps'],
     color: '#6c63ff',
   },
@@ -19,7 +19,7 @@ const services = [
     icon: Smartphone,
     title: 'Mobile App Development',
     description: 'Native and cross-platform mobile apps for iOS & Android that deliver premium user experiences with flawless performance.',
-    tags: ['Flutter', 'React Native', 'Swift', 'Kotlin'],
+    tags: ['iOS & Android', 'Cross-Platform', 'Native Performance'],
     points: ['iOS & Android native apps', 'Cross-platform with Flutter', 'Offline-first design', 'App Store optimization'],
     color: '#00e5b0',
   },
@@ -28,7 +28,7 @@ const services = [
     icon: Palette,
     title: 'UI/UX Design',
     description: 'Research-driven design that converts. We create intuitive interfaces, robust design systems, and delightful experiences that align with business goals.',
-    tags: ['Figma', 'Design Systems', 'Prototyping', 'User Research'],
+    tags: ['UX Research', 'Design Systems', 'User-Centered Design'],
     points: ['UX research & audits', 'Wireframing & prototypes', 'Design system creation', 'Usability testing'],
     color: '#ff5e62',
   },
@@ -37,7 +37,7 @@ const services = [
     icon: Cloud,
     title: 'Cloud & DevOps',
     description: 'Infrastructure that scales with you. We architect, migrate, and manage cloud environments for reliability, speed, and cost efficiency.',
-    tags: ['AWS', 'GCP', 'Docker', 'Kubernetes'],
+    tags: ['Cloud Architecture', 'DevOps', 'Auto-Scaling'],
     points: ['Cloud architecture & migration', 'CI/CD pipelines', 'Auto-scaling infrastructure', '24/7 monitoring & support'],
     color: '#6c63ff',
   },
@@ -46,7 +46,7 @@ const services = [
     icon: Brain,
     title: 'AI & ML Integration',
     description: 'Embed intelligence into your products. From recommendation engines to LLM-powered features, we make AI practical and impactful.',
-    tags: ['Python', 'TensorFlow', 'LangChain', 'OpenAI'],
+    tags: ['AI Integration', 'Machine Learning', 'NLP Solutions'],
     points: ['AI chatbots & assistants', 'Predictive analytics', 'Computer vision', 'NLP & LLM integration'],
     color: '#00e5b0',
   },
@@ -55,7 +55,7 @@ const services = [
     icon: ShoppingCart,
     title: 'E-Commerce Solutions',
     description: 'End-to-end commerce platforms built to convert and scale. Custom storefronts, headless commerce, and seamless payment integrations.',
-    tags: ['Next.js', 'Shopify', 'Stripe', 'Headless'],
+    tags: ['E-Commerce Platforms', 'Payment Integration', 'Headless Commerce'],
     points: ['Custom storefronts', 'Headless commerce', 'Payment gateway integration', 'Inventory management'],
     color: '#ff5e62',
   },
@@ -64,7 +64,7 @@ const services = [
     icon: GitBranch,
     title: 'Digital Transformation',
     description: 'Modernise legacy systems and reimagine your business processes with technology-first strategies that deliver measurable ROI.',
-    tags: ['Strategy', 'Architecture', 'Migration', 'Training'],
+    tags: ['Legacy Modernization', 'Process Automation', 'Digital Strategy'],
     points: ['Legacy system modernisation', 'Process automation', 'Technology roadmapping', 'Team enablement'],
     color: '#6c63ff',
   },
@@ -73,7 +73,7 @@ const services = [
     icon: Shield,
     title: 'Cybersecurity & Compliance',
     description: 'Protect your digital assets. We implement security-first development practices and help you achieve GDPR, ISO 27001, and SOC2 compliance.',
-    tags: ['Security Audit', 'GDPR', 'Penetration Testing', 'SOC2'],
+    tags: ['Security Audits', 'Compliance', 'Data Protection'],
     points: ['Security architecture review', 'VAPT assessments', 'Compliance consulting', 'Data privacy implementation'],
     color: '#00e5b0',
   },
@@ -103,7 +103,7 @@ export default function Services() {
               transition={{ delay: 0.1 }}
               className="font-syne font-bold text-[clamp(36px,5vw,64px)] leading-tight max-w-lg"
             >
-              Services Built for Scale
+              Software Development Services Built for Scale
             </motion.h2>
           </div>
           <motion.p
@@ -113,7 +113,7 @@ export default function Services() {
             transition={{ delay: 0.2 }}
             className="text-white/50 max-w-sm text-[15px] leading-relaxed"
           >
-            We offer a full spectrum of digital services — so you can get everything you need under one roof, with one team that truly understands your vision.
+            As a leading custom software development company, we offer comprehensive web development services, mobile app development, SaaS development, cloud solutions, and digital transformation consulting — all under one roof with one dedicated software engineering team.
           </motion.p>
         </div>
 
@@ -177,6 +177,16 @@ export default function Services() {
           })}
         </div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="text-white/55 text-sm leading-relaxed max-w-3xl mx-auto mt-10"
+        >
+          SmartX delivers premium software consulting and development services tailored to your business. Our work is designed to align product strategy, user experience, and engineering execution so your web app, mobile app, or SaaS product performs reliably at scale.
+        </motion.p>
+
         {/* CTA Row */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -186,13 +196,13 @@ export default function Services() {
         >
           <div>
             <h3 className="font-syne font-bold text-xl mb-1">Not sure what you need?</h3>
-            <p className="text-white/50 text-sm">Tell us your challenge — we'll figure out the best solution together.</p>
+            <p className="text-white/50 text-sm">Tell us your challenge &mdash; we&apos;ll figure out the best solution together.</p>
           </div>
           <a
             href="#contact"
             className="mt-4 sm:mt-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#6c63ff] text-white font-medium text-sm hover:bg-[#5a52e0] transition-all whitespace-nowrap"
           >
-            Let's Talk <ArrowUpRight size={14} />
+            Let&apos;s Talk <ArrowUpRight size={14} />
           </a>
         </motion.div>
       </div>

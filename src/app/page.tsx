@@ -8,10 +8,12 @@ import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import TrustedBy from '@/components/sections/TrustedBy'
 import Services from '@/components/sections/Services'
+import WhyChooseSmartX from '@/components/sections/WhyChooseSmartX'
 import Work from '@/components/sections/Work'
 import Industries from '@/components/sections/Industries'
 import Process from '@/components/sections/Process'
 import About from '@/components/sections/About'
+import FAQ from '@/components/sections/FAQ'
 import Testimonials from '@/components/sections/Testimonials'
 import Insights from '@/components/sections/Insights'
 import CTABanner from '@/components/sections/CTABanner'
@@ -42,10 +44,12 @@ export default function HomePage() {
         <Hero />
         <TrustedBy />
         <Services />
+        <WhyChooseSmartX />
         <Work />
         <Industries />
         <Process />
         <About />
+        <FAQ />
         <Testimonials />
         <Insights />
         <CTABanner />

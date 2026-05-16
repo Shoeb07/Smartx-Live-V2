@@ -56,9 +56,7 @@ export default function About() {
               viewport={{ once: true }}
               className="font-syne font-bold text-[clamp(36px,5vw,56px)] leading-tight mb-6"
             >
-              We Don't Just
-              <br />
-              Build — We Partner.
+              Leading Software Development Company in Hyderabad
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -67,7 +65,7 @@ export default function About() {
               transition={{ delay: 0.1 }}
               className="text-white/55 leading-relaxed mb-8"
             >
-              Founded in 2016, SmartX Solutions has grown from a 3-person studio into a full-service 40+ member digital innovation agency. We&apos;ve worked with funded startups, Fortune 500 companies, and everything in between.
+              Founded in 2016, SmartX Solutions has grown from a 3-person studio into a full-service custom software development company with 40+ expert team members. We&apos;ve partnered with funded startups, Fortune 500 companies, and everything in between to deliver scalable software platforms and digital transformation solutions.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -76,7 +74,7 @@ export default function About() {
               transition={{ delay: 0.2 }}
               className="text-white/55 leading-relaxed mb-10"
             >
-              What sets us apart isn't just technical skill — it's how deeply we integrate with your team. We act as a true extension of your organisation, not a vendor.
+              What sets us apart isn&apos;t just technical skill — it&apos;s how deeply we integrate with your team as your trusted software consulting partner. We act as a true extension of your organisation, not a vendor, delivering enterprise software development that drives measurable business results.
             </motion.p>
             <motion.ul
               initial={{ opacity: 0 }}

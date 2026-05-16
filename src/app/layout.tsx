@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import FontLoader from '@/components/ui/FontLoader'
+import Analytics from '@/components/ui/Analytics'
 // import Script from "next/script";
 
 
@@ -9,26 +10,30 @@ const siteUrl = 'https://smartxsolutions.in'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'SmartX Solutions — Digital Innovation & Software Agency',
+    default: 'SmartX Solutions — Custom Software Development & Digital Innovation Agency',
     template: '%s | SmartX Solutions',
   },
   description:
-    'SmartX Solutions is a full-service digital innovation agency delivering custom software development, web & mobile apps, UI/UX design, cloud solutions, and digital transformation services.',
+    'Leading custom software development company in Hyderabad, India. We specialize in web app development, mobile app development, SaaS development, cloud solutions, UI/UX design, and digital transformation services for startups and enterprises.',
   keywords: [
+    'custom software development',
     'software development company india',
-    'digital innovation agency hyderabad',
-    'web app development',
+    'web development services',
     'mobile app development',
-    'UI UX design agency india',
+    'SaaS development company',
     'cloud solutions hyderabad',
+    'UI/UX design services',
     'digital transformation services',
+    'enterprise software development',
+    'scalable software platforms',
+    'software engineering team',
+    'software consulting',
     'SmartX Solutions',
     'IT services Hyderabad',
-    'custom software development india',
+    'digital innovation agency hyderabad',
     'Next.js development agency',
     'React development company india',
     'Flutter app development',
-    'SaaS development company',
   ],
   authors: [{ name: 'SmartX Solutions', url: siteUrl }],
   creator: 'SmartX Solutions',
@@ -49,14 +54,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteUrl,
     siteName: 'SmartX Solutions',
-    title: 'SmartX Solutions — Digital Innovation & Software Agency',
-    description: 'We design, build, and scale digital products for ambitious businesses. Custom software, apps, and digital transformation.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'SmartX Solutions — Digital Innovation Agency' }],
+    title: 'SmartX Solutions — Custom Software Development & Digital Innovation Agency',
+    description: 'Leading custom software development company in Hyderabad, India. We build scalable software platforms, web apps, mobile apps, and SaaS solutions for startups and enterprises.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'SmartX Solutions — Custom Software Development Company' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SmartX Solutions — Digital Innovation & Software Agency',
-    description: 'We design, build, and scale digital products for ambitious businesses.',
+    title: 'SmartX Solutions — Custom Software Development & Digital Innovation Agency',
+    description: 'Leading custom software development company in Hyderabad, India. We build scalable software platforms, web apps, mobile apps, and SaaS solutions for startups and enterprises.',
     images: ['/og-image.png'],
   },
   alternates: { canonical: siteUrl },
@@ -79,30 +84,66 @@ const jsonLd = {
       '@id': `${siteUrl}/#organization`,
       name: 'SmartX Solutions',
       url: siteUrl,
-      description: 'SmartX Solutions is a full-service digital innovation agency delivering custom software, web & mobile applications, and digital transformation services.',
+      description: 'Leading custom software development company in Hyderabad, India. We specialize in web app development, mobile app development, SaaS development, cloud solutions, UI/UX design, and digital transformation services.',
       address: { '@type': 'PostalAddress', addressLocality: 'Hyderabad', addressRegion: 'Telangana', addressCountry: 'IN' },
-      contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'shoebsmartx@gmail.com' },
+      contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'business@smartxsolutions.in', telephone: '+91-91005-90377' },
+      sameAs: [
+        'https://www.linkedin.com/company/smartx-solutions-in'
+      ]
     },
     {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
       name: 'SmartX Solutions',
+      description: 'Custom software development company offering web development services, mobile app development, SaaS development, and digital transformation solutions.',
       publisher: { '@id': `${siteUrl}/#organization` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${siteUrl}/search?q={search_term_string}`,
+        'query-input': 'required name=search_term_string'
+      }
     },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What services does SmartX Solutions offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'SmartX Solutions offers comprehensive custom software development services including web app development, mobile app development, SaaS development, cloud solutions, UI/UX design services, and digital transformation consulting.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it take to develop a custom software solution?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Development timelines vary based on project complexity, but typically range from 6-16 weeks for full custom software development projects. We follow an agile development process with regular deliverables.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you work with startups and enterprises?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, we work with both startups and enterprise clients. Our scalable software platforms and flexible engagement models make us suitable for businesses of all sizes.'
+          }
+        }
+      ]
+    }
   ],
 }
 
 // Critical above-the-fold CSS — inlined so it NEVER blocks render
 const criticalCSS = `
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#050508;color:#f0eff8;font-family:'DM Sans',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-.font-syne{font-family:'Syne',system-ui,sans-serif}
-.fixed{position:fixed}.inset-0{inset:0}
-.z-\\[9999\\]{z-index:9999}
-.flex{display:flex}.flex-col{flex-direction:column}
-.items-center{align-items:center}.justify-center{justify-content:center}
+html, body { margin: 0; padding: 0; }
+body {
+  background: #050508;
+  color: #f0eff8;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
 `
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -128,6 +169,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         style={{ fontFamily: "'DM Sans', system-ui, sans-serif" }}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   )

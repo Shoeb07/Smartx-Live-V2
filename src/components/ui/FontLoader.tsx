@@ -14,12 +14,12 @@ export default function FontLoader() {
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
-        media="print"
-        onLoad={(e) => {
-          const el = e.currentTarget as HTMLLinkElement
-          el.onload = null
-          el.media = 'all'
-        }}
+        // media="print"
+        // onLoad={(e) => {
+        //   const el = e.currentTarget as HTMLLinkElement
+        //   el.onload = null
+        //   el.media = 'all'
+        // }}
       />
       <noscript>
         <link
