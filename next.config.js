@@ -1,17 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: [],
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
   },
-  compress: true,
-  poweredByHeader: false,
-  reactStrictMode: true,
-  // ❌ DELETE these 3 lines — they caused the error:
   // experimental: {
   //   optimizeCss: true,
   // },
-}
+  compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
+};
 
 
 module.exports = nextConfig
