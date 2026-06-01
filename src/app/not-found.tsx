@@ -1,9 +1,11 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#050508] flex flex-col items-center justify-center text-center px-6">
-      <p className="text-[#6c63ff] text-sm font-dm uppercase tracking-widest mb-4">404 Error</p>
+      <p className="text-[#6c63ff] text-sm font-dm uppercase tracking-widest mb-4">
+        404 Error
+      </p>
       <h1 className="font-syne font-bold text-[clamp(48px,8vw,96px)] leading-none text-white mb-4">
         Page Not Found
       </h1>
@@ -17,5 +19,5 @@ export default function NotFound() {
         Back to Home
       </Link>
     </div>
-  )
+  );
 }
