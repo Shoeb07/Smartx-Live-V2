@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, ChevronUp } from 'lucide-react'
+import Link from 'next/link'
 
 const faqs = [
   {
@@ -120,12 +121,12 @@ export default function FAQ() {
           <p className="text-white/50 mb-6">
             Still have questions about our software development services?
           </p>
-          <a
-            href="#contact"
+          <Link
+            href="/contact-us"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6c63ff] text-white font-medium text-[15px] hover:bg-[#5a52e0] transition-all"
           >
             Get In Touch
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

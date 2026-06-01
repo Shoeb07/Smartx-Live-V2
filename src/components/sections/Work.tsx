@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 import {
   ArrowUpRight,
   Globe,
@@ -53,7 +54,7 @@ const projects = [
     bg: "from-[#00e5b0]/10 via-transparent to-transparent",
     type: "web",
     status: "dev",
-    link: "#",
+    link: "/portfolio",
   },
   {
     id: 3,
@@ -70,7 +71,7 @@ const projects = [
     bg: "from-[#00e5b0]/10 via-transparent to-transparent",
     type: "web",
     status: "live",
-    link: "#",
+    link: "/portfolio",
   },
   {
     id: 4,
@@ -87,7 +88,7 @@ const projects = [
     bg: "from-[#00e5b0]/10 via-transparent to-transparent",
     type: "web",
     status: "deployed",
-    link: "#",
+    link: "/portfolio",
   },
   {
     id: 5,
@@ -104,7 +105,7 @@ const projects = [
     bg: "from-[#00e5b0]/10 via-transparent to-transparent",
     type: "web",
     status: "deployed",
-    link: "#",
+    link: "/portfolio",
   },
   {
     id: 6,
@@ -126,7 +127,7 @@ const projects = [
     bg: "from-[#ff5e62]/10 via-transparent to-transparent",
     type: "web",
     status: "live",
-    link: "#",
+    link: "/portfolio",
   },
   {
     id: 7,
@@ -148,7 +149,7 @@ const projects = [
     bg: "from-[#6c63ff]/08 via-transparent to-transparent",
     type: "both",
     status: "open",
-    link: "#contact",
+    link: "/contact-us",
     cta: true,
   },
 ];
@@ -229,7 +230,7 @@ export default function Work() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.2 }}
-            className="text-white/40 text-sm max-w-xs leading-relaxed"
+            className="text-white/60 text-sm max-w-xs leading-relaxed"
           >
             Every project we take on gets our full cinematic treatment — no
             templates, no shortcuts.
@@ -268,10 +269,10 @@ export default function Work() {
                   {/* Top row */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-3">
-                      <span className="text-[11px] text-white/35 border border-white/[0.07] px-3 py-1 rounded-full">
+                      <span className="text-[11px] text-white/60 border border-white/[0.07] px-3 py-1 rounded-full">
                         {proj.category}
                       </span>
-                      <span className="text-[11px] text-white/20 flex items-center gap-1">
+                      <span className="text-[11px] text-white/55 flex items-center gap-1">
                         <Clock size={9} /> {proj.year}
                       </span>
                     </div>
@@ -312,7 +313,7 @@ export default function Work() {
                       >
                         {proj.title.charAt(0)}
                       </div>
-                      <p className="text-[11px] text-white/20 tracking-wider uppercase">
+                      <p className="text-[11px] text-white/55 tracking-wider uppercase">
                         {proj.title}
                       </p>
                     </div>
@@ -340,7 +341,7 @@ export default function Work() {
                     {proj.highlights.map((h) => (
                       <li
                         key={h}
-                        className="flex items-start gap-2 text-[12px] text-white/35"
+                          className="flex items-start gap-2 text-[12px] text-white/60"
                       >
                         <span
                           className="w-1 h-1 rounded-full flex-shrink-0 mt-1.5"
@@ -363,7 +364,7 @@ export default function Work() {
                       {proj.tags.map((t) => (
                         <span
                           key={t}
-                          className="text-[10px] text-white/25 border border-white/[0.06] px-2 py-0.5 rounded"
+                          className="text-[10px] text-white/55 border border-white/[0.06] px-2 py-0.5 rounded"
                         >
                           {t}
                         </span>
@@ -373,18 +374,12 @@ export default function Work() {
 
                   {/* CTA for open slot */}
                   {proj.cta && (
-                    <a
-                      href="#contact"
+                    <Link
+                      href="/contact-us"
                       className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 rounded-full bg-[#6c63ff] text-white text-[13px] font-medium hover:bg-[#5a52e0] transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        document
-                          .querySelector("#contact")
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
                     >
                       Let's Build Together <ArrowUpRight size={13} />
-                    </a>
+                    </Link>
                   )}
                 </div>
 
@@ -405,7 +400,7 @@ export default function Work() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
-          className="text-center text-white/20 text-[13px] mt-12"
+          className="text-center text-white/55 text-[13px] mt-12"
         >
           More case studies coming soon as projects go live. Every story we
           build is worth telling.

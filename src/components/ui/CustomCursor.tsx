@@ -8,17 +8,28 @@ export default function CustomCursor() {
   const mouse = useRef({ x: 0, y: 0 })
   const ring = useRef({ x: 0, y: 0 })
   const raf = useRef<number>(0)
+  const [mounted, setMounted] = useState(false)
+  const [enabled, setEnabled] = useState(false)
   const [visible, setVisible] = useState(false)
   const [hovered, setHovered] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+    const finePointer = window.matchMedia('(pointer: fine)').matches
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    setEnabled(finePointer && !reduceMotion)
+  }, [])
+
+  useEffect(() => {
+    if (!enabled) return
+
     const onMove = (e: MouseEvent) => {
       mouse.current = { x: e.clientX, y: e.clientY }
       if (dotRef.current) {
         dotRef.current.style.left = e.clientX + 'px'
         dotRef.current.style.top = e.clientY + 'px'
       }
-      if (!visible) setVisible(true)
+      setVisible(true)
     }
 
     const animate = () => {
@@ -31,29 +42,32 @@ export default function CustomCursor() {
       raf.current = requestAnimationFrame(animate)
     }
 
-    const onEnter = () => setHovered(true)
-    const onLeave = () => setHovered(false)
+    const isInteractive = (target: EventTarget | null) => {
+      return target instanceof Element && Boolean(target.closest('a, button, [data-magnetic]'))
+    }
 
-    const interactives = document.querySelectorAll('a, button, [data-magnetic]')
-    interactives.forEach(el => {
-      el.addEventListener('mouseenter', onEnter)
-      el.addEventListener('mouseleave', onLeave)
-    })
+    const onOver = (e: MouseEvent) => {
+      if (isInteractive(e.target)) setHovered(true)
+    }
+
+    const onOut = (e: MouseEvent) => {
+      if (!isInteractive(e.relatedTarget)) setHovered(false)
+    }
 
     window.addEventListener('mousemove', onMove)
+    document.addEventListener('mouseover', onOver)
+    document.addEventListener('mouseout', onOut)
     raf.current = requestAnimationFrame(animate)
 
     return () => {
       window.removeEventListener('mousemove', onMove)
+      document.removeEventListener('mouseover', onOver)
+      document.removeEventListener('mouseout', onOut)
       cancelAnimationFrame(raf.current)
-      interactives.forEach(el => {
-        el.removeEventListener('mouseenter', onEnter)
-        el.removeEventListener('mouseleave', onLeave)
-      })
     }
-  }, [visible])
+  }, [enabled])
 
-  if (typeof window === 'undefined') return null
+  if (!mounted || !enabled) return null
 
   return (
     <>

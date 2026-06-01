@@ -104,7 +104,7 @@ export default function Process() {
                       <div className="w-8 h-8 rounded-lg bg-[#6c63ff]/15 flex items-center justify-center">
                         <Icon size={15} className="text-[#6c63ff]" />
                       </div>
-                      <span className="text-xs text-white/30 border border-white/[0.07] px-2 py-0.5 rounded-full">{step.duration}</span>
+                      <span className="text-xs text-white/60 border border-white/[0.07] px-2 py-0.5 rounded-full">{step.duration}</span>
                     </div>
                     <h3 className="font-syne font-bold text-xl mb-2">{step.title}</h3>
                     <p className="text-white/50 text-sm leading-relaxed mb-4">{step.description}</p>

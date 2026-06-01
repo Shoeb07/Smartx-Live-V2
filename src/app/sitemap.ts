@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next'
+import { seoPageList } from '@/lib/seo-pages'
+import { blogPosts } from '@/lib/blog-posts'
 
 const siteUrl = 'https://smartxsolutions.in'
 
@@ -12,44 +14,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1.0,
     },
-    {
-      url: `${siteUrl}/#services`,
+    ...seoPageList.map((page) => ({
+      url: `${siteUrl}/${page.slug}`,
       lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    })),
     {
-      url: `${siteUrl}/#work`,
+      url: `${siteUrl}/blog`,
       lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.75,
     },
+    ...blogPosts.map((post) => ({
+      url: `${siteUrl}/${post.slug}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: post.keyword === 'software development company' ? 0.85 : 0.7,
+    })),
     {
-      url: `${siteUrl}/#industries`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/#about`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${siteUrl}/#contact`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.9,
-    },
-      {
       url: `${siteUrl}/privacy-policy`,
       lastModified,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${siteUrl}/terms`,
+      url: `${siteUrl}/terms-and-conditions`,
       lastModified,
       changeFrequency: 'yearly',
       priority: 0.3,

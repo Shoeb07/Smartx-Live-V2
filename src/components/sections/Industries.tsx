@@ -107,6 +107,8 @@ export default function Industries() {
                 <button
                   key={ind.id}
                   onClick={() => setActive(ind.id)}
+                  aria-pressed={isActive}
+                  aria-label={`Show ${ind.name} industry details`}
                   className={`flex-shrink-0 flex items-center gap-3 px-5 py-4 rounded-2xl border text-left transition-all duration-200 ${
                     isActive
                       ? 'border-white/15 bg-[#0d0d14]'
@@ -117,9 +119,9 @@ export default function Industries() {
                     className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 transition-all"
                     style={{ background: isActive ? `${ind.color}20` : 'rgba(255,255,255,0.04)' }}
                   >
-                    <Icon size={16} style={{ color: isActive ? ind.color : 'rgba(255,255,255,0.4)' }} />
+                    <Icon size={16} style={{ color: isActive ? ind.color : 'rgba(255,255,255,0.62)' }} />
                   </div>
-                  <span className={`font-syne font-bold text-[15px] whitespace-nowrap ${isActive ? 'text-white' : 'text-white/40'}`}>
+                  <span className={`font-syne font-bold text-[15px] whitespace-nowrap ${isActive ? 'text-white' : 'text-white/65'}`}>
                     {ind.name}
                   </span>
                 </button>
@@ -147,7 +149,7 @@ export default function Industries() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-syne font-bold text-sm uppercase tracking-wider text-white/40 mb-4">Challenges We Solve</h4>
+                <h4 className="font-syne font-bold text-sm uppercase tracking-wider text-white/65 mb-4">Challenges We Solve</h4>
                 <ul className="space-y-3">
                   {current.challenges.map((c) => (
                     <li key={c} className="flex items-start gap-2.5">
@@ -158,7 +160,7 @@ export default function Industries() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-syne font-bold text-sm uppercase tracking-wider text-white/40 mb-4">How We Solve Them</h4>
+                <h4 className="font-syne font-bold text-sm uppercase tracking-wider text-white/65 mb-4">How We Solve Them</h4>
                 <ul className="space-y-3">
                   {current.solutions.map((s) => (
                     <li key={s} className="flex items-start gap-2.5">

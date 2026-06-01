@@ -14,17 +14,34 @@ export default function ParticleCanvas() {
   const animRef = useRef<number>(0)
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const finePointer = window.matchMedia('(pointer: fine)').matches
+    const largeViewport = window.matchMedia('(min-width: 768px)').matches
+    if (reduceMotion || !finePointer || !largeViewport) return
+
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')!
 
-    let W = (canvas.width = window.innerWidth)
-    let H = (canvas.height = window.innerHeight)
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5)
+    let W = window.innerWidth
+    let H = window.innerHeight
     let particles: Particle[] = []
+
+    const sizeCanvas = () => {
+      W = window.innerWidth
+      H = window.innerHeight
+      canvas.width = Math.floor(W * dpr)
+      canvas.height = Math.floor(H * dpr)
+      canvas.style.width = `${W}px`
+      canvas.style.height = `${H}px`
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+    }
+    sizeCanvas()
 
     const init = () => {
       particles = []
-      const N = Math.min(Math.floor((W * H) / 18000), 70)
+      const N = Math.min(Math.floor((W * H) / 26000), 48)
       for (let i = 0; i < N; i++) {
         particles.push({
           x: Math.random() * W, y: Math.random() * H,
@@ -38,8 +55,7 @@ export default function ParticleCanvas() {
     init()
 
     const onResize = () => {
-      W = canvas.width = window.innerWidth
-      H = canvas.height = window.innerHeight
+      sizeCanvas()
       init()
     }
     const onMouse = (e: MouseEvent) => { mouseRef.current = { x: e.clientX, y: e.clientY } }
@@ -104,13 +120,24 @@ export default function ParticleCanvas() {
         }
       }
 
-      animRef.current = requestAnimationFrame(draw)
+      if (document.visibilityState === 'visible') {
+        animRef.current = requestAnimationFrame(draw)
+      }
     }
     animRef.current = requestAnimationFrame(draw)
+
+    const onVisibility = () => {
+      if (document.visibilityState === 'visible') {
+        cancelAnimationFrame(animRef.current)
+        animRef.current = requestAnimationFrame(draw)
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibility)
 
     return () => {
       window.removeEventListener('resize', onResize)
       window.removeEventListener('mousemove', onMouse)
+      document.removeEventListener('visibilitychange', onVisibility)
       cancelAnimationFrame(animRef.current)
     }
   }, [])

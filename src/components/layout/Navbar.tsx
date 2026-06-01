@@ -3,19 +3,38 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'About', href: '#about' },
-  { label: 'Blog', href: '#insights' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'Technologies', href: '/technologies' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about-us' },
+]
+
+const serviceRoutes = [
+  '/services',
+  '/web-development-services',
+  '/mobile-app-development',
+  '/software-development-company',
+  '/digital-marketing-services',
+  '/ai-automation-services',
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  const isActive = (href: string) => {
+    if (href === '/services') return serviceRoutes.includes(pathname)
+    if (href === '/blog') return pathname === '/blog' || pathname.startsWith('/blog/')
+    return pathname === href
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -23,12 +42,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
  
-  const handleNav = (href: string) => {
-    setOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <>
       <motion.nav
@@ -44,43 +57,48 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
+          <Link href="/" className="flex items-center gap-2.5 group" aria-label="SmartX Solutions homepage">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-white font-syne font-bold text-sm">
               SX
             </div>
             <span className="font-syne font-bold text-[18px] tracking-tight text-white">
               SmartX<span className="text-accent2">.</span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Links */}
           <ul className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <button
-                  onClick={() => handleNav(link.href)}
-                  className="text-sm text-white/60 hover:text-white transition-colors duration-200 font-dm"
+                <Link
+                  href={link.href}
+                  aria-current={isActive(link.href) ? 'page' : undefined}
+                  className={cn(
+                    'text-sm transition-colors duration-200 font-dm',
+                    isActive(link.href) ? 'text-white' : 'text-white/60 hover:text-white'
+                  )}
                 >
                   {link.label}
-                </button>
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <button
-              onClick={() => handleNav('#contact')}
+            <Link
+              href="/contact-us"
+              aria-current={pathname === '/contact-us' ? 'page' : undefined}
               className="px-5 py-2.5 rounded-full border border-white/10 text-sm text-white/70 hover:text-white hover:border-white/25 transition-all duration-200"
             >
               Contact
-            </button>
-            <button
-              onClick={() => handleNav('#contact')}
+            </Link>
+            <Link
+              href="/contact-us"
               className="px-5 py-2.5 rounded-full bg-accent text-white text-sm font-medium hover:bg-accent/90 transition-all duration-200 flex items-center gap-1.5"
             >
               Get Started <ArrowUpRight size={14} />
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Burger */}
@@ -112,12 +130,17 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.07 }}
                 >
-                  <button
-                    onClick={() => handleNav(link.href)}
-                    className="text-3xl font-syne font-bold text-white hover:text-accent2 transition-colors"
+                  <Link
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={isActive(link.href) ? 'page' : undefined}
+                    className={cn(
+                      'text-3xl font-syne font-bold hover:text-accent2 transition-colors',
+                      isActive(link.href) ? 'text-accent2' : 'text-white'
+                    )}
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </motion.li>
               ))}
               <motion.li
@@ -125,12 +148,13 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.07 }}
               >
-                <button
-                  onClick={() => handleNav('#contact')}
+                <Link
+                  href="/contact-us"
+                  onClick={() => setOpen(false)}
                   className="mt-4 px-8 py-3 rounded-full bg-accent text-white font-medium text-lg"
                 >
                   Get Started
-                </button>
+                </Link>
               </motion.li>
             </ul>
           </motion.div>

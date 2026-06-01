@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Globe, Smartphone, Palette, Cloud, Brain, ShoppingCart, GitBranch, Shield, ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
 
 const services = [
   {
@@ -152,7 +153,7 @@ export default function Services() {
                 {/* Points */}
                 <ul className="space-y-1.5 mb-5">
                   {svc.points.map((pt) => (
-                    <li key={pt} className="flex items-center gap-2 text-xs text-white/40">
+                    <li key={pt} className="flex items-center gap-2 text-xs text-white/65">
                       <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: svc.color }} />
                       {pt}
                     </li>
@@ -162,7 +163,7 @@ export default function Services() {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1.5">
                   {svc.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-0.5 rounded-full border border-white/[0.07] text-[11px] text-white/35">
+                    <span key={tag} className="px-2 py-0.5 rounded-full border border-white/[0.07] text-[11px] text-white/60">
                       {tag}
                     </span>
                   ))}
@@ -198,12 +199,12 @@ export default function Services() {
             <h3 className="font-syne font-bold text-xl mb-1">Not sure what you need?</h3>
             <p className="text-white/50 text-sm">Tell us your challenge &mdash; we&apos;ll figure out the best solution together.</p>
           </div>
-          <a
-            href="#contact"
+          <Link
+            href="/contact-us"
             className="mt-4 sm:mt-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#6c63ff] text-white font-medium text-sm hover:bg-[#5a52e0] transition-all whitespace-nowrap"
           >
             Let&apos;s Talk <ArrowUpRight size={14} />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

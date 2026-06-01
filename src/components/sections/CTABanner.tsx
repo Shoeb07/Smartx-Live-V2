@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CalendarDays } from 'lucide-react'
+import Link from 'next/link'
 
 export default function CTABanner() {
   return (
@@ -32,14 +33,13 @@ export default function CTABanner() {
               Whether you&apos;re a startup with an idea or an enterprise needing to modernise — we have the team and the process to make it happen.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}
+              <Link
+                href="/contact-us"
                 className="px-8 py-4 rounded-full bg-[#6c63ff] text-white font-medium text-[15px] hover:bg-[#5a52e0] transition-all flex items-center gap-2 group"
               >
                 Start a Project
                 <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
+              </Link>
               <a
                 href="https://calendly.com"
                 target="_blank"
@@ -58,7 +58,7 @@ export default function CTABanner() {
                 '✓ Response within 24 hours',
                 '✓ No commitment required',
               ].map((item) => (
-                <span key={item} className="text-sm text-white/35">{item}</span>
+                <span key={item} className="text-sm text-white/60">{item}</span>
               ))}
             </div>
           </div>

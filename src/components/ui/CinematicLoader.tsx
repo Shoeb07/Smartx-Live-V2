@@ -64,7 +64,7 @@ export default function CinematicLoader({ onComplete }: { onComplete: () => void
                 SmartX<span className="text-[#00e5b0]">.</span>
               </span>
             </div>
-            <p className="text-white/20 text-[11px] tracking-[0.2em] uppercase">Digital Innovation Agency</p>
+            <p className="text-white/55 text-[11px] tracking-[0.2em] uppercase">Digital Innovation Agency</p>
           </motion.div>
 
           {/* Progress bar */}
@@ -82,7 +82,7 @@ export default function CinematicLoader({ onComplete }: { onComplete: () => void
             </div>
             <div className="flex justify-between mt-2">
               <span className="text-[10px] text-white/15 tracking-[0.15em] uppercase">Loading</span>
-              <span className="text-[10px] text-white/25 font-mono">{progress}%</span>
+              <span className="text-[10px] text-white/55 font-mono">{progress}%</span>
             </div>
           </motion.div>
         </motion.div>

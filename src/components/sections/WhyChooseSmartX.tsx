@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { CheckCircle2, Users, Trophy, Clock, Zap, Shield, Target, Heart } from 'lucide-react'
+import Link from 'next/link'
 
 const advantages = [
   {
@@ -100,12 +101,12 @@ export default function WhyChooseSmartX() {
           <p className="text-white/50 text-lg mb-6">
             Ready to transform your business with custom software development?
           </p>
-          <a
-            href="#contact"
+          <Link
+            href="/contact-us"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6c63ff] text-white font-medium text-[15px] hover:bg-[#5a52e0] transition-all"
           >
             Start Your Project
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

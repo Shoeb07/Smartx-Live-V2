@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 
 import Navbar from '@/components/layout/Navbar'
@@ -21,26 +21,27 @@ import Contact from '@/components/sections/Contact'
 
 // Dynamic imports — these need browser APIs (canvas, mousemove)
 const CinematicLoader = dynamic(() => import('@/components/ui/CinematicLoader'), { ssr: false })
-const CustomCursor = dynamic(() => import('@/components/ui/CustomCursor'), { ssr: false })
 const ParticleCanvas = dynamic(() => import('@/components/ui/ParticleCanvas'), { ssr: false })
 
 export default function HomePage() {
-  const [loaded, setLoaded] = useState(false)
+  const [showLoader, setShowLoader] = useState(false)
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const desktopPointer = window.matchMedia('(pointer: fine) and (min-width: 1024px)').matches
+    setShowLoader(desktopPointer && !reduceMotion)
+  }, [])
 
   return (
     <>
-      {/* Cinematic preloader — exits with scale animation */}
-      {!loaded && <CinematicLoader onComplete={() => setLoaded(true)} />}
-
-      {/* Custom cursor (desktop only) */}
-      <CustomCursor />
+      {showLoader && <CinematicLoader onComplete={() => setShowLoader(false)} />}
 
       {/* Particle mesh background — fixed, behind everything */}
       <ParticleCanvas />
 
       <Navbar />
 
-      <main className={`transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+      <main>
         <Hero />
         <TrustedBy />
         <Services />

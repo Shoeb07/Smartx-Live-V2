@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Play } from 'lucide-react'
+import Link from 'next/link'
 import { useMagneticButton } from '@/lib/useMagneticButton'
 
 const stats = [
@@ -61,7 +62,6 @@ function Counter({ value, suffix, delay }: { value: number; suffix: string; dela
 export default function Hero() {
   const btn1 = useMagneticButton(0.3)
   const btn2 = useMagneticButton(0.3)
-  const scrollTo = (id: string) => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-20">
@@ -103,25 +103,25 @@ export default function Hero() {
           transition={{ delay: 1.0, duration: 0.7 }}
           className="flex flex-wrap items-center gap-4 mb-20"
         >
-          <button
-            ref={btn1.ref as React.RefObject<HTMLButtonElement>}
+          <Link
+            href="/contact-us"
+            ref={btn1.ref as React.RefObject<HTMLAnchorElement>}
             onMouseMove={btn1.onMouseMove}
             onMouseLeave={btn1.onMouseLeave}
-            onClick={() => scrollTo('#contact')}
             className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#6c63ff] text-white font-medium text-[15px] hover:bg-[#5a52e0] transition-colors"
           >
             Start a Project
             <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </button>
-          <button
-            ref={btn2.ref as React.RefObject<HTMLButtonElement>}
+          </Link>
+          <Link
+            href="/portfolio"
+            ref={btn2.ref as React.RefObject<HTMLAnchorElement>}
             onMouseMove={btn2.onMouseMove}
             onMouseLeave={btn2.onMouseLeave}
-            onClick={() => scrollTo('#work')}
             className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-full border border-white/10 text-white/70 font-medium text-[15px] hover:border-white/25 hover:text-white transition-all"
           >
             <Play size={13} className="fill-current" /> View Our Work
-          </button>
+          </Link>
         </motion.div>
 
         {/* Stats */}
@@ -134,7 +134,7 @@ export default function Hero() {
           {stats.map((s, i) => (
             <div key={s.label} className={`flex flex-col gap-1.5 pr-6 ${i !== 0 ? 'pl-6 border-l border-white/[0.06]' : ''}`}>
               <Counter value={s.value} suffix={s.suffix} delay={1200 + i * 100} />
-              <span className="text-[13px] text-white/35">{s.label}</span>
+              <span className="text-[13px] text-white/60">{s.label}</span>
             </div>
           ))}
         </motion.div>
@@ -154,14 +154,14 @@ export default function Hero() {
             transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
           />
         </div>
-        <span className="text-[9px] text-white/20 tracking-[0.18em] uppercase [writing-mode:vertical-rl]">Scroll</span>
+        <span className="text-[9px] text-white/55 tracking-[0.18em] uppercase [writing-mode:vertical-rl]">Scroll</span>
       </motion.div>
 
       {/* Tech marquee */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden whitespace-nowrap z-10 pb-3 pointer-events-none">
         <div className="inline-flex animate-marquee">
           {[...techStack, ...techStack].map((tech, i) => (
-            <span key={i} className="inline-flex items-center gap-2.5 mx-7 text-[10px] text-white/[0.18] uppercase tracking-[0.14em]">
+            <span key={i} className="inline-flex items-center gap-2.5 mx-7 text-[10px] text-white/50 uppercase tracking-[0.14em]">
               <span className="w-[3px] h-[3px] rounded-full bg-[#6c63ff]/40 flex-shrink-0" />
               {tech}
             </span>

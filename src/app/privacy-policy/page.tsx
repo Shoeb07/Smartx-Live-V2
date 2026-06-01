@@ -1,5 +1,26 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { absoluteUrl } from '@/lib/seo'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy - SmartX Solutions',
+  description:
+    'Read the SmartX Solutions privacy policy, including how we collect, use, protect, and share information for website visitors and service clients.',
+  alternates: { canonical: absoluteUrl('/privacy-policy') },
+  openGraph: {
+    title: 'Privacy Policy - SmartX Solutions',
+    description: 'How SmartX Solutions collects, uses, and protects client and website visitor information.',
+    url: absoluteUrl('/privacy-policy'),
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy - SmartX Solutions',
+    description: 'How SmartX Solutions collects, uses, and protects client and website visitor information.',
+  },
+}
 
 export default function PrivacyPolicyPage() {
   return (
@@ -12,7 +33,7 @@ export default function PrivacyPolicyPage() {
               Privacy Policy
             </h1>
             <p className="text-white/50 text-lg">
-              Last updated: {new Date().toLocaleDateString()}
+              Last updated: May 31, 2026
             </p>
           </div>
 
@@ -108,9 +129,12 @@ business@smartxsolutions.in.
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <ul className="list-disc list-inside ml-4">
-                <li>Email: shoebsmartx@gmail.com</li>
+                <li>Email: business@smartxsolutions.in</li>
                 <li>Phone: +91 91005 90377</li>
               </ul>
+              <p>
+                You can also return to the <Link href="/" className="text-[#00e5b0] hover:text-white">SmartX Solutions homepage</Link>, review our <Link href="/services" className="text-[#00e5b0] hover:text-white">software development services</Link>, or reach us through the <Link href="/contact-us" className="text-[#00e5b0] hover:text-white">contact page</Link>.
+              </p>
             </div>
           </div>
         </div>
