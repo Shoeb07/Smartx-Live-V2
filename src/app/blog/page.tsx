@@ -7,12 +7,12 @@ import { absoluteUrl } from '@/lib/seo'
 import { blogPosts } from '@/lib/blog-posts'
 
 export const metadata: Metadata = {
-  title: 'Blog - SmartX Solutions',
+  title: 'Software Development Blog - Guides & Resources',
   description:
     'SmartX Solutions blog posts about software development, custom web applications, IT services, product development, and digital innovation.',
   alternates: { canonical: absoluteUrl('/blog') },
   openGraph: {
-    title: 'Blog - SmartX Solutions',
+    title: 'Software Development Blog - Guides & Resources',
     description:
       'Guides from SmartX Solutions on software development, IT services, product development, and digital innovation.',
     url: absoluteUrl('/blog'),
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog - SmartX Solutions',
+    title: 'Software Development Blog - Guides & Resources',
     description:
       'Guides from SmartX Solutions on software development, IT services, product development, and digital innovation.',
   },

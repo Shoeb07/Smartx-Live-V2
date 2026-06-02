@@ -9,7 +9,7 @@ const serviceBreadcrumb = (label: string, href: string) => [
 export const seoPages: Record<string, SeoPage> = {
   'about-us': {
     slug: 'about-us',
-    title: 'About SmartX Solutions - Software Development Company in Hyderabad',
+    title: 'Software Development Company in Hyderabad',
     description:
       'Learn about SmartX Solutions, a Hyderabad software development company helping startups and enterprises build scalable web, mobile, AI, and digital platforms.',
     h1: 'About SmartX Solutions',

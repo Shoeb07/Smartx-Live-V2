@@ -78,7 +78,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'it-services-company',
     keyword: 'it services company',
-    title: 'What an IT Services Company Does for Growing Businesses',
+    title: 'IT Services for Growing Businesses',
     description:
       'Understand what an IT services company provides, from software development and cloud support to automation, digital platforms, and technology consulting.',
     date: '2026-05-31',
@@ -129,7 +129,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'software-development-company-guide',
     keyword: 'software development company',
-    title: 'Software Development Company: A Practical Buyer Guide',
+    title: 'Choosing a Software Development Company',
     description:
       'A practical guide to choosing a software development company for custom applications, SaaS products, mobile apps, integrations, and digital transformation.',
     date: '2026-05-31',
@@ -180,7 +180,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'product-development-company',
     keyword: 'product development company',
-    title: 'Product Development Company for Digital Products and SaaS',
+    title: 'Product Development Company for SaaS',
     description:
       'Learn how a product development company helps businesses plan, design, build, launch, and improve digital products, SaaS platforms, and applications.',
     date: '2026-05-31',
@@ -231,7 +231,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'digital-innovation-agency',
     keyword: 'digital innovation agency',
-    title: 'What a Digital Innovation Agency Does for Modern Businesses',
+    title: 'Digital Innovation for Modern Businesses',
     description:
       'Discover how a digital innovation agency helps companies create new digital products, automate workflows, modernise systems, and improve customer experience.',
     date: '2026-05-31',
