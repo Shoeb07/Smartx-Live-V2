@@ -37,8 +37,33 @@ export default function BlogPage() {
             SmartX Growth Guides
           </h1>
           <p className="text-white/65 text-lg max-w-3xl leading-relaxed mb-12">
-            Practical guides for businesses comparing software development companies, IT services partners, product development teams, and digital innovation agencies.
+            Practical guides for businesses comparing software development companies, IT services partners, product development teams, and digital innovation agencies. Our blog helps founders, operations leaders, and technology decision-makers make informed choices about digital investments.
           </p>
+
+          <div className="bg-white/[0.02] border border-white/[0.08] rounded-2xl p-8 mb-16 max-w-3xl">
+            <h2 className="font-syne font-bold text-2xl mb-4">What You'll Learn</h2>
+            <p className="text-white/70 leading-relaxed mb-6">
+              Choosing technology partners, building products, and modernizing systems requires clear thinking. This blog provides research-backed guides that cut through marketing noise and deliver practical frameworks for evaluating partners, planning projects, and understanding digital capabilities that impact your business.
+            </p>
+            <ul className="space-y-3 text-white/65">
+              <li className="flex items-start gap-3">
+                <span className="text-[#00e5b0] mt-1">•</span>
+                <span><strong>Vendor evaluation:</strong> How to assess software development companies, IT services partners, and digital agencies based on capability, communication, and fit.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#00e5b0] mt-1">•</span>
+                <span><strong>Product development:</strong> Best practices for planning, designing, and launching digital products that solve real problems.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#00e5b0] mt-1">•</span>
+                <span><strong>Technology strategy:</strong> Understanding custom software, web development, mobile apps, AI automation, and cloud systems in practical business terms.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-[#00e5b0] mt-1">•</span>
+                <span><strong>Growth decisions:</strong> Connecting digital capability with business outcomes so your investment delivers measurable results.</span>
+              </li>
+            </ul>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {blogPosts.map((post) => (
@@ -57,6 +82,43 @@ export default function BlogPage() {
               </article>
             ))}
           </div>
+
+          <section className="mt-20 pt-16 border-t border-white/[0.08]">
+            <h2 className="font-syne font-bold text-3xl mb-6">Why Smart Companies Read This Blog</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div>
+                <h3 className="font-syne font-bold text-lg mb-3">Make Better Decisions</h3>
+                <p className="text-white/65 leading-relaxed">
+                  Technology decisions require judgment. Our guides provide frameworks for evaluating vendors, prioritizing features, and understanding tradeoffs so your choices align with business strategy.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-syne font-bold text-lg mb-3">Reduce Project Risk</h3>
+                <p className="text-white/65 leading-relaxed">
+                  Most software projects struggle from unclear requirements or poor vendor selection. These guides help you plan better, ask better questions, and create partnerships that deliver results.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-syne font-bold text-lg mb-3">Build Internal Capability</h3>
+                <p className="text-white/65 leading-relaxed">
+                  Whether you work with external teams or build in-house, understanding digital products, software development, and technology strategy improves decision-making at every level.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-[#6c63ff]/10 border border-[#6c63ff]/30 rounded-2xl p-8">
+              <h3 className="font-syne font-bold text-xl mb-3">Need Help Planning a Technology Project?</h3>
+              <p className="text-white/70 mb-6">
+                Read the relevant guides in this blog, then reach out to discuss your specific situation. SmartX Solutions helps businesses plan, build, and launch digital products with confidence.
+              </p>
+              <Link
+                href="/contact-us"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#6c63ff] text-white rounded-lg hover:bg-[#7d72ff] transition-colors"
+              >
+                Start a conversation <ArrowUpRight size={16} />
+              </Link>
+            </div>
+          </section>
         </div>
       </main>
       <Footer />
