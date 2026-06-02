@@ -1,30 +1,64 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { Send } from 'lucide-react'
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Send } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({ name: '', email: '', message: '' })
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission here
+  //   console.log("Form submitted:", formData);
+  //   // Reset form
+  //   setFormData({ name: "", email: "", message: "" });
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+
+  const response = await fetch(
+    "https://api.web3forms.com/submit",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "217ec2ff-d20d-48f5-b309-06deccdb02a1",
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    }
+  )
+
+  const result = await response.json()
+
+  if (result.success) {
+    alert("Message Sent Successfully!")
+
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    })
   }
+}
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
-    }))
-  }
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <section id="contact" className="py-20 bg-[#050508]">
@@ -36,13 +70,16 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
           className="text-center mb-12"
         >
-          <p className="text-[#6c63ff] text-sm font-dm uppercase tracking-widest mb-4">Get In Touch</p>
+          <p className="text-[#6c63ff] text-sm font-dm uppercase tracking-widest mb-4">
+            Get In Touch
+          </p>
           <h2 className="font-syne font-bold text-[clamp(32px,5vw,56px)] leading-tight mb-6">
             Ready to Start Your
             <span className="text-gradient-accent"> Project?</span>
           </h2>
           <p className="text-white/50 text-lg max-w-2xl mx-auto">
-            Let&apos;s discuss your vision and how we can bring it to life with cutting-edge technology and creative solutions.
+            Let&apos;s discuss your vision and how we can bring it to life with
+            cutting-edge technology and creative solutions.
           </p>
         </motion.div>
 
@@ -56,7 +93,10 @@ export default function Contact() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-white/75 text-sm font-medium mb-2">
+              <label
+                htmlFor="name"
+                className="block text-white/75 text-sm font-medium mb-2"
+              >
                 Name
               </label>
               <input
@@ -71,7 +111,10 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-white/75 text-sm font-medium mb-2">
+              <label
+                htmlFor="email"
+                className="block text-white/75 text-sm font-medium mb-2"
+              >
                 Email
               </label>
               <input
@@ -87,7 +130,10 @@ export default function Contact() {
             </div>
           </div>
           <div>
-            <label htmlFor="message" className="block text-white/75 text-sm font-medium mb-2">
+            <label
+              htmlFor="message"
+              className="block text-white/75 text-sm font-medium mb-2"
+            >
               Message
             </label>
             <textarea
@@ -107,11 +153,14 @@ export default function Contact() {
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#6c63ff] text-white font-medium text-[15px] hover:bg-[#5a52e0] transition-all group"
             >
               Send Message
-              <Send size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <Send
+                size={16}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              />
             </button>
           </div>
         </motion.form>
       </div>
     </section>
-  )
+  );
 }
