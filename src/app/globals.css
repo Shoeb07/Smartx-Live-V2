@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-syne: 'Syne', sans-serif;
-  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-syne: var(--font-syne, 'Syne', system-ui, sans-serif);
+  --font-dm-sans: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
 }
 
 @layer base {

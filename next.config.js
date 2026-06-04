@@ -6,14 +6,19 @@ const nextConfig = {
   images: {
     domains: [],
     formats: ["image/avif", "image/webp"],
+    // Optimize image loading
+    minimumCacheTTL: 31536000,
   },
-  // experimental: {
-  //   optimizeCss: true,
-  // },
+  // Enable experimental optimizations
+  experimental: {
+    optimizeCss: true,
+  },
+  // Performance optimizations
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  // Optimize production builds
+  productionBrowserSourceMaps: false,
 };
-
 
 module.exports = nextConfig
