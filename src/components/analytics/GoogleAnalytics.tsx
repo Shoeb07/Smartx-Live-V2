@@ -25,16 +25,17 @@ export function GoogleAnalytics() {
         strategy="lazyOnload"
         onLoad={() => {
           if (typeof window !== 'undefined') {
-            ;(window as any).dataLayer = (window as any).dataLayer || []
-            function gtag(...args: any[]) {
-              ;(window as any).dataLayer.push(arguments)
+            const w = window as any
+            w.dataLayer = w.dataLayer || []
+            const gtag = (...args: any[]) => {
+              w.dataLayer.push(args)
             }
             gtag('js', new Date())
             gtag('config', gaId, {
               send_page_view: true,
               anonymize_ip: true,
             })
-            ;(window as any).gtag = gtag
+            w.gtag = gtag
           }
         }}
       />
@@ -62,13 +63,5 @@ export function trackPageView(pageTitle: string, pagePath: string) {
       page_title: pageTitle,
       page_path: pagePath,
     })
-  }
-}
-
-// Declare global for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[]
-    gtag: (...args: any[]) => void
   }
 }
