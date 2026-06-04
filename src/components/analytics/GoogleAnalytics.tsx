@@ -25,15 +25,16 @@ export function GoogleAnalytics() {
         strategy="lazyOnload"
         onLoad={() => {
           if (typeof window !== 'undefined') {
-            window.dataLayer = window.dataLayer || []
-            function gtag() {
-              window.dataLayer.push(arguments)
+            ;(window as any).dataLayer = (window as any).dataLayer || []
+            function gtag(...args: any[]) {
+              ;(window as any).dataLayer.push(arguments)
             }
             gtag('js', new Date())
             gtag('config', gaId, {
               send_page_view: true,
               anonymize_ip: true,
             })
+            ;(window as any).gtag = gtag
           }
         }}
       />
@@ -46,8 +47,8 @@ export function GoogleAnalytics() {
  * Usage: trackEvent('contact_click', { service: 'web-development' })
  */
 export function trackEvent(eventName: string, eventParams?: Record<string, any>) {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, eventParams)
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    ;(window as any).gtag('event', eventName, eventParams)
   }
 }
 
@@ -56,8 +57,8 @@ export function trackEvent(eventName: string, eventParams?: Record<string, any>)
  * Usage: trackPageView('SaaS Development', '/services/saas-development-company-hyderabad')
  */
 export function trackPageView(pageTitle: string, pagePath: string) {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    ;(window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
       page_title: pageTitle,
       page_path: pagePath,
     })
@@ -68,6 +69,6 @@ export function trackPageView(pageTitle: string, pagePath: string) {
 declare global {
   interface Window {
     dataLayer: any[]
-    gtag: Function
+    gtag: (...args: any[]) => void
   }
 }
