@@ -52,6 +52,8 @@ export const primaryRoutes = [
   '/software-development-company-guide',
   '/product-development-company',
   '/digital-innovation-agency',
+  '/services/saas-development-company-hyderabad',
+  '/mobile-app-cost-india-2026',
   '/privacy-policy',
   '/terms-and-conditions',
 ]
