@@ -1,7 +1,10 @@
+import { Metadata } from 'next'
 import { Syne, DM_Sans } from 'next/font/google'
 import './globals.css'
 import RootLayoutClient from './layout-client'
 import { organizationSchema } from '@/lib/seo'
+
+const siteUrl = 'https://smartxsolutions.in'
 
 // Optimize font loading with display: swap
 const syne = Syne({
@@ -18,7 +21,7 @@ const dmSans = DM_Sans({
   preload: true,
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'SmartX Solutions - Custom Software & Web Development',
   description: 'SmartX Solutions is a custom software development company in Hyderabad delivering web apps, mobile apps, SaaS platforms, UI/UX design, and digital transformation services across India.',
   keywords: [
@@ -38,6 +41,9 @@ export const metadata = {
     'web development agency hyderabad',
     'IT company hyderabad',
   ],
+  alternates: {
+    canonical: siteUrl,
+  },
 }
 
 export default function RootLayout({
