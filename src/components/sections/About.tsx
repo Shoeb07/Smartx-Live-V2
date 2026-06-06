@@ -65,7 +65,7 @@ export default function About() {
               transition={{ delay: 0.1 }}
               className="text-white/55 leading-relaxed mb-8"
             >
-              Founded in 2016, SmartX Solutions has grown from a 3-person studio into a full-service custom software development company with 40+ expert team members. We&apos;ve partnered with funded startups, Fortune 500 companies, and everything in between to deliver scalable software platforms and digital transformation solutions.
+              Founded in 2016, SmartX Solutions has grown from a 3-person studio into a full-service custom software development company with a growing team of expert engineers and designers. We&apos;ve partnered with funded startups and innovative companies across India to deliver scalable software platforms and digital transformation solutions.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -123,11 +123,11 @@ export default function About() {
               className="col-span-2 p-6 rounded-2xl border border-white/[0.07] bg-gradient-to-br from-[#6c63ff]/10 to-[#0d0d14] flex items-center gap-6"
             >
               <div>
-                <p className="font-syne font-bold text-5xl text-white mb-1">40<span className="text-[#6c63ff]">+</span></p>
-                <p className="text-white/50 text-sm">Expert team members across engineering, design, cloud, and product</p>
+                <p className="font-syne font-bold text-5xl text-white mb-1">Growing<span className="text-[#6c63ff]">!</span></p>
+                <p className="text-white/50 text-sm">Expert team across engineering, design, cloud, and product — always hiring talented professionals</p>
               </div>
               <div className="flex -space-x-3 ml-auto">
-                {['#6c63ff', '#00e5b0', '#ff5e62', '#a89eff', '#6c63ff'].map((c, i) => (
+                {['#6c63ff', '#00e5b0', '#ff5e62', '#a89eff'].map((c, i) => (
                   <div
                     key={i}
                     className="w-9 h-9 rounded-full border-2 border-[#0d0d14] flex items-center justify-center text-[10px] font-bold"
@@ -136,9 +136,6 @@ export default function About() {
                     {String.fromCharCode(65 + i)}
                   </div>
                 ))}
-                <div className="w-9 h-9 rounded-full border-2 border-[#0d0d14] bg-white/5 flex items-center justify-center text-[10px] text-white/40">
-                  +35
-                </div>
               </div>
             </motion.div>
           </div>

@@ -129,19 +129,26 @@ export const seoPages: Record<string, SeoPage> = {
   },
   'web-development-services': {
     slug: 'web-development-services',
-    title: 'Web Development Services - Custom Websites and Web Apps',
+    title: 'Web Development Services - Custom Web Portal Development & Web Development Agency',
     description:
-      'Custom web development services for business websites, SaaS platforms, portals, dashboards, ecommerce, and high-performance Next.js applications.',
-    h1: 'Web Development Services',
+      'Custom web development and web portal development services for websites, SaaS, portals, dashboards, ecommerce, web development agency services, and high-performance Next.js applications.',
+    h1: 'Web Development Services & Web Portal Development',
     eyebrow: 'Web Development',
     intro:
-      'SmartX builds fast, secure, search-ready web experiences for companies that need websites and web applications to perform as business assets. Our web development services cover strategy, UX, frontend engineering, backend systems, integrations, performance, and launch support.',
+      'SmartX is a web development agency building fast, secure, search-ready web experiences and custom web portals for companies that need websites and web applications to perform as business assets. Our custom web development services cover strategy, UX, frontend engineering, backend systems, integrations, performance, and launch support.',
     sections: [
       {
         h2: 'Custom Websites and Web Applications',
         body: [
           'We create marketing websites, corporate websites, landing pages, SaaS applications, ecommerce storefronts, customer portals, admin dashboards, and internal tools. Each build is planned around the user journey, content structure, technical SEO, Core Web Vitals, and the workflows your team needs behind the scenes.',
           'Our preferred approach is modern and maintainable: component-based interfaces, clean routing, structured metadata, reusable design systems, and scalable APIs. We use frameworks such as Next.js and React when they fit the project, and we pair them with reliable backend services, databases, authentication, and cloud hosting.',
+        ],
+      },
+      {
+        h2: 'Web Portal Development Services',
+        body: [
+          'We build custom web portals for businesses — client portals, vendor portals, admin dashboards, and B2B platforms. Our web portal development services cover the full stack from UI design to backend APIs. Client portals let your customers manage accounts, view orders, track status, and access documents. Vendor portals enable suppliers to upload products, manage inventory, and view performance. Admin portals give your team complete control over users, content, workflows, and reporting.',
+          'Each web portal is designed for usability, security, and performance. We handle user authentication, role-based access control, data isolation, notifications, integrations with your backend systems, and analytics dashboards so you can see how customers and vendors interact with your platform.',
         ],
       },
       {
@@ -182,18 +189,18 @@ export const seoPages: Record<string, SeoPage> = {
   },
   'mobile-app-development': {
     slug: 'mobile-app-development',
-    title: 'Mobile App Development - iOS, Android and Cross-Platform Apps',
+    title: 'Mobile App Development Company - iOS, Android, Cross-Platform Apps',
     description:
-      'Mobile app development for iOS, Android, Flutter, React Native, customer apps, internal apps, MVPs, and scalable product platforms.',
-    h1: 'Mobile App Development',
+      'Mobile app development company in Hyderabad building iOS, Android, Flutter, React Native apps, custom app development, MVPs, and scalable product platforms for startups and enterprises.',
+    h1: 'Mobile App Development Company in Hyderabad',
     eyebrow: 'Mobile Apps',
     intro:
-      'SmartX designs and develops mobile applications that are easy to use, stable in production, and aligned with business goals. We support iOS, Android, and cross-platform builds for startups, service businesses, and enterprise workflows.',
+      'SmartX is a mobile app development company in Hyderabad designing and developing iOS, Android, and cross-platform applications that are easy to use, stable in production, and aligned with business goals. We build custom apps for startups, service businesses, and enterprise workflows. Looking for a mobile app development company near you in Hyderabad? SmartX Solutions is based in Hyderabad, Telangana — available for in-person meetings and partnerships.',
     sections: [
       {
-        h2: 'Mobile Products Designed Around Real Users',
+        h2: 'Best Mobile App Development Company Services',
         body: [
-          'Successful mobile apps depend on focus. We help define the core user journeys, onboarding flow, navigation model, offline needs, notifications, analytics, and integrations before development begins. That clarity prevents feature overload and gives the first release a stronger chance of adoption.',
+          'SmartX is one of the best mobile app development firms in India, specializing in custom app development. We help define the core user journeys, onboarding flow, navigation model, offline needs, notifications, analytics, and integrations before development begins. That clarity prevents feature overload and gives the first release a stronger chance of adoption.',
           'Our mobile app development services cover product planning, UI/UX design, cross-platform development, backend APIs, authentication, payments, admin panels, testing, app store preparation, and post-launch support. We can build a new app from scratch or modernise an existing app that needs better performance, usability, or maintainability.',
         ],
       },
@@ -217,7 +224,7 @@ export const seoPages: Record<string, SeoPage> = {
       { href: '/ai-automation-services', label: 'AI automation services' },
       { href: '/contact-us', label: 'Discuss a mobile app' },
     ],
-    breadcrumb: serviceBreadcrumb('Mobile App Development', '/mobile-app-development'),
+    breadcrumb: serviceBreadcrumb('Mobile App Development Company', '/mobile-app-development'),
     faqs: [
       {
         question: 'Does SmartX build both iOS and Android apps?',

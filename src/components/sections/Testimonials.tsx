@@ -7,51 +7,18 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
 const testimonials = [
   {
     id: 1,
-    name: 'Arjun Mehta',
-    role: 'Founder & CEO, FinEdge',
-    company: 'FinEdge',
-    review: "SmartX transformed our vision into a world-class banking app. Their technical depth, design sensibility, and communication were exceptional. We launched on time, under budget, and our users love it.",
-    rating: 5,
-    avatar: 'AM',
+    name: 'Your Review Could Be Here',
+    role: 'Share your experience with SmartX',
+    company: 'Client',
+    review: "We are currently collecting testimonials from our clients. If you've worked with us, we'd love to feature your story.",
+    rating: 0,
+    avatar: '★',
     color: '#6c63ff',
-  },
-  {
-    id: 2,
-    name: 'Priya Sharma',
-    role: 'CPO, MediSync Health',
-    company: 'MediSync',
-    review: "The team at SmartX truly understood the complexity of healthcare software. They navigated HIPAA compliance, complex workflows, and tight deadlines without breaking a sweat. Phenomenal partners.",
-    rating: 5,
-    avatar: 'PS',
-    color: '#ff5e62',
-  },
-  {
-    id: 3,
-    name: 'Rahul Nair',
-    role: 'Co-Founder, EduCore',
-    company: 'EduCore',
-    review: "From wireframes to launch in 14 weeks — an incredible achievement. SmartX's agile process gave us full visibility at every step. Our platform now serves 80,000 students and growing.",
-    rating: 5,
-    avatar: 'RN',
-    color: '#00e5b0',
-  },
-  {
-    id: 4,
-    name: 'Kavita Reddy',
-    role: 'Director of Technology, TradeFlow',
-    company: 'TradeFlow',
-    review: "SmartX didn't just build our marketplace — they helped us think through the product strategy. Their input on the architecture saved us months of rework. A team that truly cares about your success.",
-    rating: 5,
-    avatar: 'KR',
-    color: '#6c63ff',
+    cta: true,
   },
 ]
 
-const ratingPlatforms = [
-  { name: 'Google', rating: '4.9', count: '38 reviews' },
-  { name: 'Clutch', rating: '5.0', count: '24 reviews' },
-  { name: 'GoodFirms', rating: '4.8', count: '17 reviews' },
-]
+const ratingText = 'Trusted by businesses across India'
 
 export default function Testimonials() {
   const [idx, setIdx] = useState(0)
@@ -63,24 +30,14 @@ export default function Testimonials() {
   return (
     <section className="py-32 bg-[#050508]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        {/* Rating badges */}
+        {/* Trust statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap items-center justify-center gap-4 mb-20"
+          className="text-center mb-20"
         >
-          {ratingPlatforms.map(({ name, rating, count }) => (
-            <div key={name} className="flex items-center gap-3 px-5 py-3 rounded-full border border-white/[0.07] bg-[#0d0d14]">
-              <div className="flex items-center gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={12} className="text-yellow-400 fill-yellow-400" />
-                ))}
-              </div>
-              <span className="font-syne font-bold text-white text-sm">{rating}</span>
-              <span className="text-white/60 text-xs">on {name} · {count}</span>
-            </div>
-          ))}
+          <p className="text-white/60 text-base">{ratingText}</p>
         </motion.div>
 
         {/* Main review */}
@@ -122,8 +79,17 @@ export default function Testimonials() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-12">
+          {/* CTA Button */}
+          <div className="mt-12 flex items-center justify-center">
+            <a
+              href="/contact-us"
+              className="px-6 py-3 rounded-lg bg-[#6c63ff] text-white font-syne font-bold hover:bg-[#5a5acc] transition-all"
+            >
+              Share Your Experience →
+            </a>
+          </div>
+          {/* Navigation hidden for single testimonial */}
+          <div className="flex items-center justify-center gap-4 mt-12 hidden">
             <button
               onClick={prev}
               aria-label="Show previous testimonial"

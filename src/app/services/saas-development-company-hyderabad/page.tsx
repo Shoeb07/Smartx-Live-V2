@@ -9,7 +9,7 @@ import WhatsAppButton from './whatsapp-button'
 const page = {
   title: 'SaaS Development Company in Hyderabad — SmartX Solutions',
   description:
-    'SmartX Solutions is a SaaS development company in Hyderabad building custom SaaS platforms for startups and enterprises across India. Free discovery call available.',
+    'SaaS product development services in Hyderabad. SmartX builds custom SaaS platforms, web portals, subscription management systems, and SaaS applications for startups and enterprises across India.',
   canonicalUrl: absoluteUrl('/services/saas-development-company-hyderabad'),
 }
 
@@ -209,10 +209,10 @@ export default function SaasDevelopmentPage() {
           <div className="max-w-5xl mx-auto relative z-10">
             <p className="text-[#00e5b0] text-sm font-dm uppercase tracking-widest mb-6">SaaS Development</p>
             <h1 className="font-syne font-bold text-[clamp(48px,8vw,72px)] leading-tight mb-6">
-              SaaS Development Company in Hyderabad
+              SaaS Development Company & Web Portal Development Services in Hyderabad
             </h1>
             <p className="text-white/70 text-lg max-w-2xl leading-relaxed mb-8">
-              Build scalable, multi-tenant SaaS platforms with subscription billing, analytics, APIs, and enterprise security. From MVP to scale-ready platform—SmartX delivers production-ready SaaS products for startups and enterprises across India.
+              Build scalable SaaS management platforms and web portal development services with subscription billing, analytics, APIs, and enterprise security. We develop custom SaaS application platforms, web portals for clients, and subscription management systems from MVP to scale-ready platform for startups and enterprises across India.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -252,6 +252,37 @@ export default function SaasDevelopmentPage() {
                   'Mobile-responsive or native mobile apps that work alongside your SaaS',
                   'Analytics and reporting that show customers their ROI',
                   'Compliance and security features (SOC 2, GDPR, data encryption)',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Check className="text-[#00e5b0] mt-1 flex-shrink-0" size={20} />
+                    <span className="text-white/70">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SaaS Subscription Management Section */}
+        <section className="py-20 px-6 lg:px-10 max-w-6xl mx-auto">
+          <div>
+            <h2 className="font-syne font-bold text-4xl mb-6">SaaS Subscription Management & Billing</h2>
+            <p className="text-white/70 text-lg leading-relaxed max-w-3xl mb-8">
+              Our SaaS platform development includes complete subscription management — from free trials and plan upgrades to usage-based billing and Razorpay/Stripe integration. We build flexible billing engines that support recurring subscriptions, metered pricing, seat-based licensing, and annual contracts with proper invoice generation and financial reporting.
+            </p>
+
+            <div className="bg-white/[0.02] border border-white/[0.08] rounded-xl p-8">
+              <h3 className="font-syne font-bold text-xl mb-6">What We Build for SaaS Subscription Management</h3>
+              <ul className="space-y-4">
+                {[
+                  'Flexible pricing models: fixed plans, usage-based billing, metered pricing, and hybrid models',
+                  'Free trial management with automatic upsell prompts and trial expiration workflows',
+                  'Plan upgrade/downgrade logic with prorated billing and instant access changes',
+                  'Payment gateway integration (Razorpay, Stripe) with automated charge and retry logic',
+                  'Invoice generation, tax calculation, and email delivery for SaaS billing',
+                  'Subscription analytics: MRR, ARR, churn, retention, and expansion metrics',
+                  'Dunning management: failed payment retries and customer retention workflows',
+                  'Web portal access for customers to manage subscriptions, update payment methods, and download invoices',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <Check className="text-[#00e5b0] mt-1 flex-shrink-0" size={20} />
