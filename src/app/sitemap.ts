@@ -1,50 +1,38 @@
 import { MetadataRoute } from 'next'
-import { seoPageList } from '@/lib/seo-pages'
-import { blogPosts } from '@/lib/blog-posts'
+import { blogPosts } from '../lib/blog-posts'
 
 const siteUrl = 'https://smartxsolutions.in'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
+  const now = new Date()
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: siteUrl,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    ...seoPageList.map((page) => ({
-      url: `${siteUrl}/${page.slug}`,
-      lastModified,
-      changeFrequency: page.changeFrequency,
-      priority: page.priority,
-    })),
-    {
-      url: `${siteUrl}/blog`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.75,
-    },
-    ...blogPosts.map((post) => ({
-      url: `${siteUrl}/${post.slug}`,
-      lastModified,
-      changeFrequency: 'monthly' as const,
-      priority: post.keyword === 'software development company' ? 0.85 : 0.7,
-    })),
-    {
-      url: `${siteUrl}/privacy-policy`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${siteUrl}/terms-and-conditions`,
-      lastModified,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${siteUrl}/${post.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
+
+  return [
+    // Main pages
+    { url: siteUrl, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${siteUrl}/about-us`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/contact-us`, lastModified: now, changeFrequency: 'yearly', priority: 0.9 },
+    { url: `${siteUrl}/portfolio`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${siteUrl}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${siteUrl}/industries`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${siteUrl}/technologies`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${siteUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+
+    // Service landing pages
+    { url: `${siteUrl}/services/saas-development-company-hyderabad`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+
+    // Blog posts
+    ...blogEntries,
+
+    // Legal pages
+    { url: `${siteUrl}/privacy-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${siteUrl}/terms-and-conditions`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ]
-
-  return staticRoutes
 }
+

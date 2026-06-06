@@ -18,6 +18,7 @@ import Testimonials from '@/components/sections/Testimonials'
 import Insights from '@/components/sections/Insights'
 import CTABanner from '@/components/sections/CTABanner'
 import Contact from '@/components/sections/Contact'
+import Analytics from '@/components/ui/Analytics'
 
 // Dynamic imports — these need browser APIs (canvas, mousemove)
 const CinematicLoader = dynamic(() => import('@/components/ui/CinematicLoader'), { ssr: false })
@@ -58,6 +59,7 @@ export default function HomePage() {
       </main>
 
       <Footer />
+      <Analytics />
     </>
   )
 }
