@@ -114,7 +114,7 @@ export function organizationSchema() {
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
-          email: 'business@smartxsolutions.in',
+          email: 'shoebsmartx@gmail.com',
           telephone: '+91-91005-90377',
         },
         sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
@@ -126,7 +126,7 @@ export function organizationSchema() {
         url: siteUrl,
         image: `${siteUrl}/og-image.png`,
         telephone: '+91-91005-90377',
-        email: 'business@smartxsolutions.in',
+        email: 'shoebsmartx@gmail.com',
         priceRange: '$$',
         address: {
           '@type': 'PostalAddress',
