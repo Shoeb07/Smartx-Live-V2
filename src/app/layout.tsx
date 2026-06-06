@@ -1,6 +1,7 @@
 import { Syne, DM_Sans } from 'next/font/google'
 import './globals.css'
 import RootLayoutClient from './layout-client'
+import { organizationSchema } from '@/lib/seo'
 
 // Optimize font loading with display: swap
 const syne = Syne({
@@ -19,7 +20,24 @@ const dmSans = DM_Sans({
 
 export const metadata = {
   title: 'SmartX Solutions - Custom Software & Web Development',
-  description: 'SmartX Solutions builds custom web applications, software, mobile apps, AI automation, and digital marketing services for startups and enterprises.',
+  description: 'SmartX Solutions is a custom software development company in Hyderabad delivering web apps, mobile apps, SaaS platforms, UI/UX design, and digital transformation services across India.',
+  keywords: [
+    'custom software development company hyderabad',
+    'software development company hyderabad',
+    'web development company hyderabad',
+    'mobile app development company hyderabad',
+    'saas development company hyderabad',
+    'ui ux design agency hyderabad',
+    'web portal development services',
+    'saas application development company',
+    'saas subscription management',
+    'mobile app development company india',
+    'custom app development company',
+    'app development company hyderabad',
+    'digital innovation agency hyderabad',
+    'web development agency hyderabad',
+    'IT company hyderabad',
+  ],
 }
 
 export default function RootLayout({
@@ -47,6 +65,12 @@ export default function RootLayout({
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
           as="style"
+        />
+        
+        {/* JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
         />
       </head>
       <body>

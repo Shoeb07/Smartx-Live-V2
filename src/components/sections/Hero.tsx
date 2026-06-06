@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { ArrowUpRight, Play } from 'lucide-react'
 import Link from 'next/link'
 import { useMagneticButton } from '@/lib/useMagneticButton'
@@ -10,7 +10,7 @@ const stats = [
   { value: 5, suffix: '+', label: 'Projects Delivered' },
   { value: 100, suffix: '%', label: 'Client Satisfaction' },
   { value: 2, suffix: '+', label: 'Years Building' },
-  { value: 3, suffix: '+', label: 'Happy Clients' },
+  { value: 5, suffix: '+', label: 'Happy Clients' },
 ]
 
 const techStack = [
@@ -41,11 +41,14 @@ function WordReveal({ text, delay = 0, gradient = false }: {
 
 function Counter({ value, suffix, delay }: { value: number; suffix: string; delay: number }) {
   const [count, setCount] = useState(0)
-  const started = useRef(false)
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+  
   useEffect(() => {
-    if (started.current) return
+    if (!isInView) return
+    
+    // Start counting after 500ms fallback delay
     const timer = setTimeout(() => {
-      started.current = true
       const dur = 1600, start = performance.now()
       const tick = (now: number) => {
         const t = Math.min((now - start) / dur, 1)
@@ -53,10 +56,12 @@ function Counter({ value, suffix, delay }: { value: number; suffix: string; dela
         if (t < 1) requestAnimationFrame(tick)
       }
       requestAnimationFrame(tick)
-    }, delay)
+    }, 500)
+    
     return () => clearTimeout(timer)
-  }, [value, delay])
-  return <span className="font-syne font-bold text-[40px] leading-none tabular-nums">{count}{suffix}</span>
+  }, [isInView, value])
+  
+  return <span ref={ref} className="font-syne font-bold text-[40px] leading-none tabular-nums">{count}{suffix}</span>
 }
 
 export default function Hero() {
@@ -75,15 +80,15 @@ export default function Hero() {
           className="mb-8 inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#6c63ff]/25 bg-[#6c63ff]/10"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-[#00e5b0] animate-pulse" />
-          <span className="text-[11px] text-[#a89eff] tracking-[0.07em] uppercase">Digital Innovation Agency · Hyderabad, India</span>
+          <span className="text-[11px] text-[#a89eff] tracking-[0.07em] uppercase">Software Development Company · Hyderabad, India</span>
         </motion.div>
 
         {/* Headline */}
         <h1 className="font-syne font-bold text-[clamp(48px,7.5vw,100px)] leading-[1.01] tracking-[-0.03em] mb-7 max-w-5xl">
           <div className="block"><WordReveal text="Custom Software" delay={0.18} /></div>
           <div className="block"><WordReveal text="Development Company" delay={0.30} gradient /></div>
-          <div className="block"><WordReveal text="That Drives" delay={0.46} /></div>
-          <div className="block"><WordReveal text="Business Growth." delay={0.58} /></div>
+          <div className="block"><WordReveal text="in Hyderabad" delay={0.46} /></div>
+          <div className="block"><WordReveal text="India." delay={0.58} /></div>
         </h1>
 
         {/* Subline */}
@@ -93,7 +98,7 @@ export default function Hero() {
           transition={{ delay: 0.85, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-white/50 text-[17px] max-w-[480px] mb-11 leading-[1.75]"
         >
-          Leading custom software development company in Hyderabad. We build scalable software platforms, web apps, mobile apps, and SaaS solutions that transform businesses and drive measurable growth.
+          SmartX Solutions is a software development company in Hyderabad building web applications, mobile apps, SaaS platforms, and digital products for startups and enterprises across India. From concept to launch — we deliver.
         </motion.p>
 
         {/* CTAs */}

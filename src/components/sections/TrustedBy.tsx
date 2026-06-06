@@ -3,15 +3,12 @@
 import { motion } from 'framer-motion'
 
 const clients = [
-  'FinEdge', 'MediSync', 'EduCore', 'TradeFlow', 'BrightPay',
-  'NexaHR', 'CloudVault', 'ShipSmart', 'GrowIQ', 'SafeNet',
+  'AG Traders', 'FurneXo', 'Attractions Mens Studio', 'Scholarship App', 'One Stop Dashboard', 'SmartX Solutions',
 ]
 
 const awards = [
-  { label: 'Top Dev Company', platform: 'GoodFirms · 2023' },
-  { label: 'Best IT Services', platform: 'Clutch · 2023' },
-  { label: '4.9★ Rating', platform: 'Google Reviews' },
-  { label: 'ISO 9001 Certified', platform: 'Quality Management' },
+  { label: 'Currently Accepting Projects', platform: '' },
+  { label: 'Hyderabad, India', platform: '' },
 ]
 
 export default function TrustedBy() {
@@ -43,7 +40,7 @@ export default function TrustedBy() {
         </div>
 
         {/* Award badges */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
           {awards.map((award, i) => (
             <motion.div
               key={award.label}
