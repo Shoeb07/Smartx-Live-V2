@@ -57,7 +57,7 @@ export default function ContactUsPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="mailto:business@smartxsolutions.in"
+                  href="mailto:shoebsmartx@gmail.com"
                   className="inline-flex items-center gap-2 rounded-full bg-[#6c63ff] px-6 py-3 text-sm font-medium text-white hover:bg-[#5a52e0] transition-all"
                 >
                   Email Us <ArrowUpRight size={14} />
@@ -78,7 +78,7 @@ export default function ContactUsPage() {
                   <Mail size={17} className="text-[#00e5b0] mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm text-white/45 mb-1">Email</p>
-                    <a href="mailto:business@smartxsolutions.in" className="text-sm text-white/75 hover:text-white">
+                    <a href="mailto:shoebsmartx@gmail.com" className="text-sm text-white/75 hover:text-white">
                       business@smartxsolutions.in
                     </a>
                   </div>
