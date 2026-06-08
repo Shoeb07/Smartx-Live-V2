@@ -120,6 +120,61 @@ export function organizationSchema() {
           telephone: '+91-91005-90377',
         },
         sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
+        knowsAbout: [
+          'web application development',
+          'mobile app development',
+          'SaaS platform development',
+          'UI/UX design',
+          'digital transformation',
+          'AI and machine learning integration',
+          'cloud infrastructure and DevOps',
+          'cybersecurity and compliance',
+          'API development and integrations',
+        ],
+        makesOffer: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Custom Web Development',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Mobile App Development',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'SaaS Development',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'UI/UX Design',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'AI Automation & LLM Integration',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cloud Infrastructure & DevOps',
+            },
+          },
+        ],
       },
       {
         '@type': 'LocalBusiness',

@@ -1,8 +1,3 @@
-'use client'
-
-import { useEffect, useState } from 'react'
-import dynamic from 'next/dynamic'
-
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
@@ -19,26 +14,48 @@ import Insights from '@/components/sections/Insights'
 import CTABanner from '@/components/sections/CTABanner'
 import Contact from '@/components/sections/Contact'
 import Analytics from '@/components/ui/Analytics'
-
-// Dynamic imports — these need browser APIs (canvas, mousemove)
-const CinematicLoader = dynamic(() => import('@/components/ui/CinematicLoader'), { ssr: false })
-const ParticleCanvas = dynamic(() => import('@/components/ui/ParticleCanvas'), { ssr: false })
+import HomeClient from './home-client'
+import { absoluteUrl } from '@/lib/seo'
+import { homeFaqs } from '@/lib/home-faq'
 
 export default function HomePage() {
-  const [showLoader, setShowLoader] = useState(false)
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'SmartX Solutions',
+    url: absoluteUrl('/'),
+  }
 
-  useEffect(() => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const desktopPointer = window.matchMedia('(pointer: fine) and (min-width: 1024px)').matches
-    setShowLoader(desktopPointer && !reduceMotion)
-  }, [])
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
+    ],
+  }
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homeFaqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  }
 
   return (
     <>
-      {showLoader && <CinematicLoader onComplete={() => setShowLoader(false)} />}
+      {/* Client-only visuals */}
+      <HomeClient />
 
-      {/* Particle mesh background — fixed, behind everything */}
-      <ParticleCanvas />
+      {/* JSON-LD for AI/crawlers */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <Navbar />
 
