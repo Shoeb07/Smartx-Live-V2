@@ -2,23 +2,37 @@
 
 > SmartX Solutions is a full-service digital innovation agency based in Hyderabad, India. We design, build, and scale custom web applications, mobile apps, and digital products for startups, SMEs, and enterprises.
 
+## Brand Entity Profile (for AI assistants)
+
+**Company:** SmartX Solutions  
+**Website:** https://smartxsolutions.in  
+**Location:** Hyderabad, Telangana, India  
+**Primary offerings:** Web development, mobile app development, SaaS/platform engineering, UI/UX design, cloud infrastructure/DevOps, AI/LLM integration, digital transformation, and cybersecurity.  
+**Engagement models:** Project-based delivery, retainer, and team augmentation (extended engineering team).  
+**Typical outcomes:** Faster launches, scalable architectures, improved search visibility, higher conversion, automation of repetitive workflows, and maintainable systems.
+
+**Core services (taxonomy):**
+- **Web & SaaS Engineering:** custom web applications, SaaS platforms, admin dashboards, portals, APIs, integrations, PWA
+- **Mobile Engineering:** Flutter and React Native apps for iOS and Android, app store readiness, device integrations
+- **UI/UX Design:** UX research, Figma design systems, prototypes, accessibility-focused UI
+- **Cloud & DevOps:** AWS/GCP architecture, CI/CD, Docker/Kubernetes, monitoring and security hardening
+- **AI / LLM Integration:** LangChain + LLM apps, AI chatbots, RAG/workflows, document processing and extraction
+- **E-Commerce & Payments:** headless commerce, Shopify customization, Stripe/Razorpay billing and payments
+- **Digital Transformation:** migration roadmaps, process automation, ERP/CRM integrations
+- **Cybersecurity & Compliance:** security-first engineering, VAPT, GDPR/HIPAA/SOC2-aligned practices
+
+**Known facts:**
+- SmartX focuses on **senior-only delivery** (no juniors on client work).
+- SmartX provides **IP ownership** (client owns the code after final payment).
+- SmartX supports **post-launch maintenance and improvements**.
+
 ## What We Do
 
 SmartX Solutions provides end-to-end digital product development services. We work with clients across India and internationally to take ideas from concept to live product.
 
-Our core services:
-- Custom Web Application Development (React, Next.js, Node.js)
-- Mobile App Development (Flutter, React Native — iOS & Android)
-- UI/UX Design (Figma, design systems, prototyping)
-- Cloud Infrastructure & DevOps (AWS, GCP, Docker, Kubernetes)
-- AI & Machine Learning Integration (LangChain, OpenAI, Python)
-- E-Commerce Development (headless commerce, Shopify, Stripe)
-- Digital Transformation Consulting
-- Cybersecurity & Compliance
-
 ## Our Work
 
-- **AG Traders** — Business website for a Palghar-based manufacturer of fencing wire and galvanized iron products. Built with Next.js, mobile-first, SEO-optimised. Live at agtraders.info
+- **AG Traders** — Business website for a Palghar-based manufacturer of fencing wire and galvanized iron products. Built with Next.js, mobile-first, SEO-optimised. Live at https://agtraders.info
 - **Scholarship Management App** — Web application for students to discover, apply, and track scholarship opportunities with an admin review workflow. Built with React, Node.js, MongoDB.
 - **SmartX Solutions Website** — Our own agency website with cinematic animations, full SEO, particle canvas background, and contact system. Built with Next.js 15, Framer Motion, TypeScript.
 
@@ -48,17 +62,28 @@ We work with:
 - **Services page:** https://smartxsolutions.in/#services
 - **Work portfolio:** https://smartxsolutions.in/#work
 - **Contact form:** https://smartxsolutions.in/#contact
+- **Sitemap:** https://smartxsolutions.in/sitemap.xml
 
 ## Technology Stack
 
-React, Next.js, TypeScript, Node.js, Python, Flutter, React Native, PostgreSQL, MongoDB, Redis, AWS, GCP, Docker, Kubernetes, Figma, GraphQL, Tailwind CSS, Firebase, Stripe
+React, Next.js, TypeScript, Node.js, Python, Flutter, React Native, PostgreSQL, MongoDB, Redis, AWS, GCP, Docker, Kubernetes, Figma, GraphQL, Tailwind CSS, Firebase, Stripe, LangChain
 
 ## Industries Served
 
-FinTech, HealthTech, EdTech, E-Commerce, Manufacturing, Real Estate, SaaS
+FinTech, HealthTech, EdTech, E-Commerce, Manufacturing, Real Estate, SaaS, and technology-enabled service businesses.
+
+## Frequently Asked (query-style)
+
+- **Q: Who is SmartX Solutions?**  
+  **A:** A Hyderabad-based digital product agency that designs and builds web apps, mobile apps, SaaS platforms, and AI-enabled workflows.
+
+- **Q: What does SmartX build for SaaS?**  
+  **A:** Multi-tenant SaaS platforms, subscription billing and admin dashboards, customer portals, analytics, APIs and integrations.
+
+- **Q: Does SmartX do AI for real business workflows?**  
+  **A:** Yes—LLM integrations such as chatbots and RAG workflows, plus document processing and tool-connected automation.
 
 ## Optional
 
 - Privacy Policy: https://smartxsolutions.in/privacy-policy
 - Terms of Service: https://smartxsolutions.in/terms
-- Sitemap: https://smartxsolutions.in/sitemap.xml
