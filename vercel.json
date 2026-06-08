@@ -49,13 +49,6 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.smartxsolutions.in" }],
-      "destination": "https://smartxsolutions.in/:path*",
-      "permanent": true
-    }
   ]
+ 
 }
