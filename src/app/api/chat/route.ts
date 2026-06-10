@@ -13,7 +13,7 @@ const SYSTEM_PROMPT = `You are the SmartX Solutions project advisor — a helpfu
 ABOUT SMARTX SOLUTIONS:
 - Full-service digital product agency based in Hyderabad, India
 - We build web apps, mobile apps, UI/UX design, cloud solutions, AI integration
-- Contact: business@smartxsolutions.in | +91 91005 90377
+- Contact: shoebsmartx@gmail.com | +91 91005 90377
 - Real projects: AG Traders website (agtraders.info), Scholarship Management App
 
 OUR SERVICES & HONEST PRICING:

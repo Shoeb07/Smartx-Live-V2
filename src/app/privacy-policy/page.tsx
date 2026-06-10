@@ -121,7 +121,7 @@ unauthorised access, loss, or misuse:
 While we implement industry-standard safeguards, no method of 
 transmission over the internet is 100% secure. If you believe your 
 information has been compromised, please contact us immediately at 
-business@smartxsolutions.in.
+shoebsmartx@gmail.com.
               </p>
 
               <h2 className="font-syne font-bold text-2xl text-white mt-8 mb-4">Contact Us</h2>
@@ -129,7 +129,7 @@ business@smartxsolutions.in.
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <ul className="list-disc list-inside ml-4">
-                <li>Email: business@smartxsolutions.in</li>
+                <li>Email: shoebsmartx@gmail.com</li>
                 <li>Phone: +91 91005 90377</li>
               </ul>
               <p>
