@@ -55,13 +55,13 @@ We work with:
 
 ## Location & Contact
 
-- **Location:** Hyderabad, Telangana, India
-- **Email:** business@smartxsolutions.in
+- **Location:** 866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet, Hyderabad, Telangana 500059, India
+- **Email:** shoebsmartx@gmail.com
 - **Phone:** +91 91005 90377
 - **Website:** https://smartxsolutions.in
-- **Services page:** https://smartxsolutions.in/#services
-- **Work portfolio:** https://smartxsolutions.in/#work
-- **Contact form:** https://smartxsolutions.in/#contact
+- **Services page:** https://smartxsolutions.in/services
+- **About us:** https://smartxsolutions.in/about-us
+- **Contact form:** https://smartxsolutions.in/contact-us
 - **Sitemap:** https://smartxsolutions.in/sitemap.xml
 
 ## Technology Stack
@@ -86,4 +86,4 @@ FinTech, HealthTech, EdTech, E-Commerce, Manufacturing, Real Estate, SaaS, and t
 ## Optional
 
 - Privacy Policy: https://smartxsolutions.in/privacy-policy
-- Terms of Service: https://smartxsolutions.in/terms
+- Terms of Service: https://smartxsolutions.in/terms-and-conditions

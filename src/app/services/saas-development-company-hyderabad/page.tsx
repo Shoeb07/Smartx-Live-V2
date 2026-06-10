@@ -438,7 +438,7 @@ export default function SaasDevelopmentPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WhatsAppButton variant="secondary" source="saas-cta" message="I want to build a SaaS platform" />
               <a
-                href="mailto:business@smartxsolutions.in"
+                href="mailto:shoebsmartx@gmail.com"
                 className="inline-flex items-center justify-center gap-3 px-8 py-3 bg-black/20 text-black font-dm font-bold rounded-lg hover:bg-black/30 transition-all"
               >
                 Email: business@smartxsolutions.in

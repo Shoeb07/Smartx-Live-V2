@@ -183,7 +183,7 @@ export function organizationSchema() {
         description: 'Custom software development company in Hyderabad',
         url: siteUrl,
         telephone: '+919100590377',
-        email: 'business@smartxsolutions.in',
+        email: 'shoebsmartx@gmail.com',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Hyderabad',
