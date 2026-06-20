@@ -13,7 +13,6 @@ import Testimonials from '@/components/sections/Testimonials'
 import Insights from '@/components/sections/Insights'
 import CTABanner from '@/components/sections/CTABanner'
 import Contact from '@/components/sections/Contact'
-import Analytics from '@/components/ui/Analytics'
 import HomeClient from './home-client'
 import { absoluteUrl } from '@/lib/seo'
 import { homeFaqs } from '@/lib/home-faq'
@@ -76,7 +75,6 @@ export default function HomePage() {
       </main>
 
       <Footer />
-      <Analytics />
     </>
   )
 }

@@ -65,7 +65,7 @@ export default function About() {
               transition={{ delay: 0.1 }}
               className="text-white/55 leading-relaxed mb-8"
             >
-              Founded in 2016, SmartX Solutions has grown from a 3-person studio into a full-service custom software development company with a growing team of expert engineers and designers. We&apos;ve partnered with funded startups and innovative companies across India to deliver scalable software platforms and digital transformation solutions.
+              Founded in 2024, SmartX Solutions has grown from a 3-person studio into a full-service custom software development company with a growing team of expert engineers and designers. We&apos;ve partnered with funded startups and innovative companies across India to deliver scalable software platforms and digital transformation solutions.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

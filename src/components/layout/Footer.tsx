@@ -28,6 +28,26 @@ const socials = [
   { icon: FaLinkedin, href: 'https://www.linkedin.com/company/smartx-solutions-in/posts/?feedView=all', label: 'LinkedIn' },
 ]
 
+function ObfuscatedEmail({ user, domain, className }: { user: string; domain: string; className?: string }) {
+  const email = `${user}@${domain}`
+
+  return (
+    <a href={`mailto:${email}`} className={className}>
+      {email}
+    </a>
+  )
+}
+
+function trackPhoneClick() {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'generate_lead', {
+      event_category: 'engagement',
+      event_label: 'phone_click',
+      value: 1
+    })
+  }
+}
+
 export default function Footer() {
   return (
     <footer className="bg-[#050508] border-t border-white/[0.06] pt-20 pb-8">
@@ -101,13 +121,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail size={15} className="text-[#6c63ff] mt-0.5 shrink-0" />
-                <a href="mailto:shoebsmartx@gmail.com" className="text-sm text-white/50 hover:text-white transition-colors">
-                  business@smartxsolutions.in
-                </a>
+                <ObfuscatedEmail
+                  user="business"
+                  domain="smartxsolutions.in"
+                  className="text-sm text-white/50 hover:text-white transition-colors"
+                />
               </li>
               <li className="flex items-start gap-3">
                 <Phone size={15} className="text-[#6c63ff] mt-0.5 shrink-0" />
-                <a href="tel:+91 91005 90377" className="text-sm text-white/50 hover:text-white transition-colors">
+                <a href="tel:+91 91005 90377" onClick={trackPhoneClick} className="text-sm text-white/50 hover:text-white transition-colors">
                   +91 91005 90377
                 </a>
               </li>

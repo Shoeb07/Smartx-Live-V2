@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Contact from '@/components/sections/Contact'
+import TrackedLeadLink from '@/components/analytics/TrackedLeadLink'
 import { buildMetadata, breadcrumbSchema, faqSchema } from '@/lib/seo'
 import { seoPages } from '@/lib/seo-pages'
 
@@ -57,17 +58,18 @@ export default function ContactUsPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="mailto:shoebsmartx@gmail.com"
+                  href="mailto:business@smartxsolutions.in"
                   className="inline-flex items-center gap-2 rounded-full bg-[#6c63ff] px-6 py-3 text-sm font-medium text-white hover:bg-[#5a52e0] transition-all"
                 >
                   Email Us <ArrowUpRight size={14} />
                 </a>
-                <a
+                <TrackedLeadLink
                   href="tel:+919100590377"
+                  eventLabel="phone_click"
                   className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/75 hover:border-white/25 hover:text-white transition-all"
                 >
                   Call SmartX
-                </a>
+                </TrackedLeadLink>
               </div>
             </div>
 
@@ -78,7 +80,7 @@ export default function ContactUsPage() {
                   <Mail size={17} className="text-[#00e5b0] mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm text-white/45 mb-1">Email</p>
-                    <a href="mailto:shoebsmartx@gmail.com" className="text-sm text-white/75 hover:text-white">
+                    <a href="mailto:business@smartxsolutions.in" className="text-sm text-white/75 hover:text-white">
                       business@smartxsolutions.in
                     </a>
                   </div>
@@ -87,9 +89,9 @@ export default function ContactUsPage() {
                   <Phone size={17} className="text-[#00e5b0] mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm text-white/45 mb-1">Phone</p>
-                    <a href="tel:+919100590377" className="text-sm text-white/75 hover:text-white">
+                    <TrackedLeadLink href="tel:+919100590377" eventLabel="phone_click" className="text-sm text-white/75 hover:text-white">
                       +91 91005 90377
-                    </a>
+                    </TrackedLeadLink>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
