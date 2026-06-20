@@ -19,6 +19,14 @@ export default function WhatsAppButton({
   variant = 'primary',
 }: WhatsAppButtonProps) {
   const handleClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'generate_lead', {
+        event_category: 'engagement',
+        event_label: 'whatsapp_click',
+        value: 1
+      })
+    }
+
     trackWhatsAppClick(source)
     trackCTAClick('WhatsApp', source)
   }

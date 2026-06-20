@@ -114,7 +114,7 @@ export default function AIChatWidget() {
     } catch {
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: "Sorry, something went wrong. Please email us at shoebsmartx@gmail.com or call +91 91005 90377.",
+        content: "Sorry, something went wrong. Please email us at business@smartxsolutions.in or call +91 91005 90377.",
         isNew: true,
       }])
     } finally {

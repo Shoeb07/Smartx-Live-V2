@@ -41,6 +41,14 @@ export default function Contact() {
   const result = await response.json()
 
   if (result.success) {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'generate_lead', {
+        event_category: 'engagement',
+        event_label: 'contact_form_submission',
+        value: 1
+      })
+    }
+
     alert("Message Sent Successfully!")
 
     setFormData({

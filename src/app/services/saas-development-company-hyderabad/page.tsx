@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import TrackedLeadLink from '@/components/analytics/TrackedLeadLink'
 import { ArrowUpRight, Phone, Check } from 'lucide-react'
 import { absoluteUrl } from '@/lib/seo'
 import WhatsAppButton from './whatsapp-button'
@@ -217,13 +218,14 @@ export default function SaasDevelopmentPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <WhatsAppButton source="saas-hero" />
-              <a
+              <TrackedLeadLink
                 href="tel:+919100590377"
+                eventLabel="phone_click"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/20 text-white font-dm font-bold rounded-lg hover:border-white/40 transition-all"
               >
                 <Phone size={20} />
                 Call Now
-              </a>
+              </TrackedLeadLink>
             </div>
 
             <p className="text-white/50 text-sm">
@@ -438,7 +440,7 @@ export default function SaasDevelopmentPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WhatsAppButton variant="secondary" source="saas-cta" message="I want to build a SaaS platform" />
               <a
-                href="mailto:shoebsmartx@gmail.com"
+                href="mailto:business@smartxsolutions.in"
                 className="inline-flex items-center justify-center gap-3 px-8 py-3 bg-black/20 text-black font-dm font-bold rounded-lg hover:bg-black/30 transition-all"
               >
                 Email: business@smartxsolutions.in

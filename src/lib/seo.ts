@@ -116,7 +116,7 @@ export function organizationSchema() {
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
-          email: 'shoebsmartx@gmail.com',
+          email: 'business@smartxsolutions.in',
           telephone: '+91-91005-90377',
         },
         sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
@@ -183,7 +183,7 @@ export function organizationSchema() {
         description: 'Custom software development company in Hyderabad',
         url: siteUrl,
         telephone: '+919100590377',
-        email: 'shoebsmartx@gmail.com',
+        email: 'business@smartxsolutions.in',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Hyderabad',

@@ -76,7 +76,7 @@ export default function TermsAndConditionsPage() {
 
               <h2 className="font-syne font-bold text-2xl text-white mt-8 mb-4">Contact Information</h2>
               <p>
-                Questions about these Terms can be sent to shoebsmartx@gmail.com or discussed through our <Link href="/contact-us" className="text-[#00e5b0] hover:text-white">contact page</Link>. You can return to the <Link href="/" className="text-[#00e5b0] hover:text-white">homepage</Link> or review our <Link href="/services" className="text-[#00e5b0] hover:text-white">services</Link> at any time.
+                Questions about these Terms can be sent to business@smartxsolutions.in or discussed through our <Link href="/contact-us" className="text-[#00e5b0] hover:text-white">contact page</Link>. You can return to the <Link href="/" className="text-[#00e5b0] hover:text-white">homepage</Link> or review our <Link href="/services" className="text-[#00e5b0] hover:text-white">services</Link> at any time.
               </p>
             </div>
           </div>
