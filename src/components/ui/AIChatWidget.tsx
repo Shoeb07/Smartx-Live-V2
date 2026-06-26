@@ -22,6 +22,17 @@ const QUICK_PROMPTS = [
   "What's your pricing?",
 ]
 
+GREETING.content = "Hi, thanks for reaching SmartX Solutions. Our instant AI advisor is temporarily paused, but our team is still available. Please share your project details here, or contact us directly on WhatsApp, email, or phone for the fastest response."
+QUICK_PROMPTS[3] = "I want a quick call"
+
+const TEMPORARY_REPLY: Message = {
+  role: 'assistant',
+  content: "Thanks for sharing. The AI chat is temporarily paused, so please WhatsApp us at +91 91005 90377 or email business@smartxsolutions.in. Our team will review your message and respond as soon as possible.",
+  isNew: true,
+}
+
+const CHAT_API_ENABLED = false
+
 // Detect if a lead was captured in AI response
 function extractLead(text: string): { name: string; phone: string } | null {
   const match = text.match(/##LEAD_CAPTURED##(.+?)\|(.+?)##/)
@@ -71,6 +82,13 @@ export default function AIChatWidget() {
     const userMsg: Message = { role: 'user', content: trimmed }
     const newMessages = [...messages, userMsg]
     setMessages(newMessages)
+
+    if (!CHAT_API_ENABLED) {
+      setMessages(prev => [...prev, TEMPORARY_REPLY])
+      if (!open) setUnread(c => c + 1)
+      return
+    }
+
     setLoading(true)
 
     try {
@@ -165,7 +183,7 @@ export default function AIChatWidget() {
               <div className="flex items-center gap-1">
                 <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#6c63ff]/15 border border-[#6c63ff]/20">
                   <Sparkles size={9} className="text-[#a89eff]" />
-                  <span className="text-[9px] text-[#a89eff] font-medium uppercase tracking-wider">AI</span>
+                  <span className="text-[9px] text-[#a89eff] font-medium uppercase tracking-wider">Team</span>
                 </div>
                 <button
                   onClick={() => setOpen(false)}
@@ -174,6 +192,34 @@ export default function AIChatWidget() {
                 >
                   <X size={15} />
                 </button>
+              </div>
+            </div>
+
+            <div className="px-4 py-3 border-b border-white/[0.07] bg-[#00e5b0]/[0.06]">
+              <p className="text-[12px] leading-relaxed text-white/75">
+                AI chat is temporarily paused. For urgent enquiries, use WhatsApp, call, or email below.
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                <a
+                  href="https://wa.me/919100590377"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-[#00e5b0] px-3 py-1.5 text-[11px] font-bold text-black"
+                >
+                  WhatsApp
+                </a>
+                <a
+                  href="tel:+919100590377"
+                  className="rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-medium text-white/80"
+                >
+                  Call
+                </a>
+                <a
+                  href="mailto:business@smartxsolutions.in"
+                  className="rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-medium text-white/80"
+                >
+                  Email
+                </a>
               </div>
             </div>
 
@@ -284,7 +330,7 @@ export default function AIChatWidget() {
                 ref={inputRef}
                 value={input}
                 onChange={e => setInput(e.target.value)}
-                placeholder="Describe your project..."
+                placeholder="Share your project details..."
                 aria-label="Describe your project"
                 disabled={loading}
                 className="flex-1 bg-transparent text-white text-[13px] placeholder-white/25 outline-none px-2"
@@ -305,9 +351,10 @@ export default function AIChatWidget() {
 
             {/* Footer */}
             <div
-              className="text-center py-2 text-[10px] text-white/55 border-t"
+              className="text-center py-2 text-[0px] text-white/55 border-t"
               style={{ borderColor: 'rgba(255,255,255,0.04)' }}
             >
+              <span className="text-[10px]">SmartX Solutions team follow-up</span>
               Powered by Claude AI · SmartX Solutions
             </div>
           </motion.div>

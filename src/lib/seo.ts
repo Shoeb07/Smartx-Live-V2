@@ -255,3 +255,27 @@ export function faqSchema(faqs: FaqItem[]) {
     })),
   }
 }
+
+export function serviceSchema(page: SeoPage) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: page.h1,
+    serviceType: page.h1,
+    description: page.description,
+    url: absoluteUrl(`/${page.slug}`),
+    provider: {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: siteName,
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: absoluteUrl(`/${page.slug}`),
+    },
+  }
+}

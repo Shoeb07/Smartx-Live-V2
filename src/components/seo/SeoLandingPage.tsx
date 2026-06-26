@@ -5,7 +5,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CheckCircle2, Sparkles } from 'lucide-react'
-import { breadcrumbSchema, faqSchema, type SeoPage } from '@/lib/seo'
+import { breadcrumbSchema, faqSchema, serviceSchema, type SeoPage } from '@/lib/seo'
 
 type SeoLandingPageProps = {
   page: SeoPage
@@ -21,7 +21,12 @@ export default function SeoLandingPage({ page }: SeoLandingPageProps) {
     { label: 'Home', href: '/' },
     { label: page.h1, href: `/${page.slug}` },
   ]
-  const schemas = [breadcrumbSchema(page), ...(page.faqs ? [faqSchema(page.faqs)] : [])]
+  // page.breadcrumb is only defined on dedicated service pages (set via serviceBreadcrumb())
+  const schemas = [
+    breadcrumbSchema(page),
+    ...(page.faqs ? [faqSchema(page.faqs)] : []),
+    ...(page.breadcrumb ? [serviceSchema(page)] : []),
+  ]
 
   return (
     <>

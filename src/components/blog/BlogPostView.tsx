@@ -10,13 +10,15 @@ type BlogPostViewProps = {
 }
 
 export default function BlogPostView({ post }: BlogPostViewProps) {
-  const articleSchema = {
+  const blogPostingSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
+    image: absoluteUrl('/og-image.png'),
+    url: absoluteUrl(`/${post.slug}`),
     author: {
       '@type': 'Organization',
       name: 'SmartX Solutions',
@@ -30,7 +32,20 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
         url: absoluteUrl('/favicon_io/android-chrome-512x512.png'),
       },
     },
-    mainEntityOfPage: absoluteUrl(`/${post.slug}`),
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': absoluteUrl(`/${post.slug}`),
+    },
+  }
+
+  const breadcrumbListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: absoluteUrl('/blog') },
+      { '@type': 'ListItem', position: 3, name: post.title, item: absoluteUrl(`/${post.slug}`) },
+    ],
   }
 
   return (
@@ -38,7 +53,11 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
       <Navbar />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbListSchema) }}
       />
       <script
         type="application/ld+json"

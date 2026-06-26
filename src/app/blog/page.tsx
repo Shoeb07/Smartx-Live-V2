@@ -16,19 +16,42 @@ export const metadata: Metadata = {
     description:
       'Guides from SmartX Solutions on software development, IT services, product development, and digital innovation.',
     url: absoluteUrl('/blog'),
+    siteName: 'SmartX Solutions',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'SmartX Solutions Blog - Software Development Guides',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Software Development Blog - Guides & Resources',
     description:
       'Guides from SmartX Solutions on software development, IT services, product development, and digital innovation.',
+    images: ['/og-image.png'],
   },
 }
 
 export default function BlogPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: absoluteUrl('/blog') },
+    ],
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
       <main className="bg-[#050508] text-white pt-28 pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
