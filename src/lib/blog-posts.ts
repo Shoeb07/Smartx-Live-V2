@@ -1,6 +1,39 @@
 import type { Metadata } from 'next'
 import { absoluteUrl, siteName } from './seo'
 
+export type Author = {
+  name: string
+  role: string
+  company: string
+  bio: string
+  initials: string
+  color: string
+  linkedin: string
+  url: string
+}
+
+export const shoebUddin: Author = {
+  name: 'Shoeb Uddin',
+  role: 'Founder & CEO',
+  company: 'SmartX Solutions',
+  bio: 'Shoeb Uddin is the Founder and CEO of SmartX Solutions, a software development company based in Hyderabad. He leads product strategy, client relationships, and business development — helping startups and enterprises across India build world-class digital products.',
+  initials: 'SU',
+  color: '#6c63ff',
+  linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
+  url: 'https://smartxsolutions.in/about-us',
+}
+
+export const salehaBegum: Author = {
+  name: 'Saleha Begum',
+  role: 'Co-Founder & CTO',
+  company: 'SmartX Solutions',
+  bio: 'Saleha Begum is the Co-Founder and CTO of SmartX Solutions. She leads engineering and technical architecture — overseeing the delivery of web applications, mobile apps, SaaS platforms, and AI integrations for clients across India.',
+  initials: 'SB',
+  color: '#00e5b0',
+  linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
+  url: 'https://smartxsolutions.in/about-us',
+}
+
 export type BlogPost = {
   slug: string
   keyword: string
@@ -8,6 +41,7 @@ export type BlogPost = {
   description: string
   date: string
   readTime: string
+  author: Author
   intro: string
   sections: {
     h2: string
@@ -21,6 +55,10 @@ export type BlogPost = {
     href: string
     label: string
   }[]
+  sources: {
+    label: string
+    url: string
+  }[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -32,6 +70,7 @@ export const blogPosts: BlogPost[] = [
       'Learn how to choose a custom web application company for scalable portals, dashboards, SaaS products, internal tools, and customer-facing platforms.',
     date: '2026-05-31',
     readTime: '8 min read',
+    author: shoebUddin,
     intro:
       'A custom web application company helps businesses build software that fits their exact workflow instead of forcing teams into generic tools. The right partner can turn a business process, customer journey, or product idea into a secure, scalable, browser-based application.',
     sections: [
@@ -74,6 +113,11 @@ export const blogPosts: BlogPost[] = [
       { href: '/software-development-company', label: 'Custom software development' },
       { href: '/contact-us', label: 'Discuss a web application' },
     ],
+    sources: [
+      { label: 'W3Techs Web Technology Surveys', url: 'https://w3techs.com' },
+      { label: 'Stack Overflow Developer Survey 2024', url: 'https://survey.stackoverflow.co/2024' },
+      { label: 'MDN Web Docs — Web Application Reference', url: 'https://developer.mozilla.org' },
+    ],
   },
   {
     slug: 'it-services-company',
@@ -83,6 +127,7 @@ export const blogPosts: BlogPost[] = [
       'Understand what an IT services company provides, from software development and cloud support to automation, digital platforms, and technology consulting.',
     date: '2026-05-31',
     readTime: '7 min read',
+    author: shoebUddin,
     intro:
       'An IT services company helps businesses plan, build, support, and improve the technology systems they depend on. For modern companies, IT services are no longer limited to hardware support. They often include software development, websites, cloud platforms, automation, integrations, analytics, and digital growth systems.',
     sections: [
@@ -125,6 +170,11 @@ export const blogPosts: BlogPost[] = [
       { href: '/technologies', label: 'Technologies we use' },
       { href: '/contact-us', label: 'Talk to an IT services team' },
     ],
+    sources: [
+      { label: 'NASSCOM India Tech Ecosystem Report', url: 'https://nasscom.in' },
+      { label: 'IDC Technology Market Research', url: 'https://www.idc.com' },
+      { label: 'Gartner IT Services Research & Insights', url: 'https://www.gartner.com/en/information-technology' },
+    ],
   },
   {
     slug: 'software-development-company-guide',
@@ -134,6 +184,7 @@ export const blogPosts: BlogPost[] = [
       'A practical guide to choosing a software development company for custom applications, SaaS products, mobile apps, integrations, and digital transformation.',
     date: '2026-05-31',
     readTime: '9 min read',
+    author: salehaBegum,
     intro:
       'Choosing a software development company is a major business decision. The right partner can help you launch a product, modernise operations, improve customer experience, or create software that becomes part of your company competitive advantage.',
     sections: [
@@ -176,6 +227,12 @@ export const blogPosts: BlogPost[] = [
       { href: '/case-studies', label: 'Case study patterns' },
       { href: '/contact-us', label: 'Plan a software project' },
     ],
+    sources: [
+      { label: 'Stack Overflow Developer Survey 2024', url: 'https://survey.stackoverflow.co/2024' },
+      { label: 'GitHub Octoverse Report 2024', url: 'https://octoverse.github.com' },
+      { label: 'NASSCOM India Software Market Report', url: 'https://nasscom.in' },
+      { label: 'ISO/IEC 25010 Software Quality Standards', url: 'https://www.iso.org/standard/35733.html' },
+    ],
   },
   {
     slug: 'product-development-company',
@@ -185,6 +242,7 @@ export const blogPosts: BlogPost[] = [
       'Learn how a product development company helps businesses plan, design, build, launch, and improve digital products, SaaS platforms, and applications.',
     date: '2026-05-31',
     readTime: '8 min read',
+    author: shoebUddin,
     intro:
       'A product development company helps turn an idea into a usable digital product. This includes product strategy, UX design, software engineering, testing, launch planning, analytics, and ongoing iteration after real users begin using the product.',
     sections: [
@@ -227,6 +285,11 @@ export const blogPosts: BlogPost[] = [
       { href: '/mobile-app-development', label: 'Build a mobile product' },
       { href: '/contact-us', label: 'Discuss a product idea' },
     ],
+    sources: [
+      { label: 'Y Combinator Startup & Product Library', url: 'https://www.ycombinator.com/library' },
+      { label: 'Harvard Business Review — Product Development', url: 'https://hbr.org/topic/subject/product-development' },
+      { label: 'McKinsey Digital — Product Innovation', url: 'https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights' },
+    ],
   },
   {
     slug: 'digital-innovation-agency',
@@ -236,6 +299,7 @@ export const blogPosts: BlogPost[] = [
       'Discover how a digital innovation agency helps companies create new digital products, automate workflows, modernise systems, and improve customer experience.',
     date: '2026-05-31',
     readTime: '7 min read',
+    author: shoebUddin,
     intro:
       'A digital innovation agency helps businesses use technology to create better customer experiences, new digital products, improved operations, and more scalable systems. It sits at the intersection of strategy, design, software engineering, automation, and growth.',
     sections: [
@@ -278,6 +342,11 @@ export const blogPosts: BlogPost[] = [
       { href: '/ai-automation-services', label: 'AI automation services' },
       { href: '/about-us', label: 'About SmartX Solutions' },
     ],
+    sources: [
+      { label: 'World Economic Forum — Digital Transformation', url: 'https://www.weforum.org/agenda/digital-transformation' },
+      { label: 'McKinsey Global Institute — Digital Economy', url: 'https://www.mckinsey.com/mgi/overview' },
+      { label: 'Gartner — Digital Innovation Trends', url: 'https://www.gartner.com/en/information-technology/insights/digital-innovation' },
+    ],
   },
   {
     slug: 'mobile-app-development-cost-india',
@@ -287,6 +356,7 @@ export const blogPosts: BlogPost[] = [
       'Real breakdown of mobile app development costs in India for 2026. Learn what affects pricing, typical budgets for different app types, and how to get the best value.',
     date: '2026-06-01',
     readTime: '10 min read',
+    author: shoebUddin,
     intro:
       'Mobile app development costs in India vary significantly based on complexity, team size, technology stack, timeline, and business requirements. Understanding these factors helps you plan budgets, evaluate proposals, and make informed vendor decisions. This guide breaks down real costs for different app types and explains the factors that affect pricing.',
     sections: [
@@ -351,6 +421,11 @@ export const blogPosts: BlogPost[] = [
       { href: '/mobile-app-development', label: 'Mobile app development services' },
       { href: '/software-development-company-guide', label: 'Choosing a development partner' },
       { href: '/contact-us', label: 'Discuss your app idea' },
+    ],
+    sources: [
+      { label: 'NASSCOM India Tech Industry Report 2024', url: 'https://nasscom.in' },
+      { label: 'Statista: Mobile App Development Market India', url: 'https://www.statista.com' },
+      { label: 'Google Play Developer Statistics', url: 'https://play.google.com/console' },
     ],
   },
 ]

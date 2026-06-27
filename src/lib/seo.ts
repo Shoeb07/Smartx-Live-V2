@@ -219,6 +219,24 @@ export function organizationSchema() {
         name: siteName,
         publisher: { '@id': `${siteUrl}/#organization` },
       },
+      {
+        '@type': 'Person',
+        '@id': `${siteUrl}/#shoeb-uddin`,
+        name: 'Shoeb Uddin',
+        jobTitle: 'Founder & CEO',
+        worksFor: { '@id': `${siteUrl}/#organization` },
+        url: `${siteUrl}/about-us`,
+        sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
+      },
+      {
+        '@type': 'Person',
+        '@id': `${siteUrl}/#saleha-begum`,
+        name: 'Saleha Begum',
+        jobTitle: 'Co-Founder & CTO',
+        worksFor: { '@id': `${siteUrl}/#organization` },
+        url: `${siteUrl}/about-us`,
+        sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
+      },
     ],
   }
 }

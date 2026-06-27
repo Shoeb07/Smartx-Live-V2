@@ -323,6 +323,41 @@ export const seoPages: Record<string, SeoPage> = {
           'SmartX is useful for companies that need marketing and engineering to collaborate. We can create SEO landing pages, implement tracking, build high-converting websites, support campaign launches, and use automation to respond faster to inbound enquiries.',
         ],
       },
+      {
+        h2: 'What Digital Services We Offer',
+        body: [
+          'SmartX digital marketing covers technical SEO, content strategy and production, landing page development, paid campaign support, analytics configuration, conversion rate optimisation, and structured data implementation. These services are designed to reinforce one another: a paid campaign pointing to an unoptimised landing page will underperform, and SEO that lacks conversion focus attracts visitors without generating enquiries. We connect all channels through a shared strategy and consistent measurement approach.',
+          'Specific deliverables include technical SEO audits, keyword research and mapping, service and blog content production, internal link architecture, Google Search Console and Analytics setup, schema markup, campaign landing page design and development, lead capture form configuration, CRM integration, A/B testing, and monthly performance reporting. Businesses can engage SmartX for a one-time audit, a defined implementation project, or ongoing monthly growth support depending on their current stage.',
+        ],
+      },
+      {
+        h2: 'SEO for Software Companies',
+        body: [
+          'Software companies and technology agencies face a distinct SEO challenge. Buyers are often technical decision-makers who compare multiple providers across weeks before contacting anyone. They search for precise terms: specific technologies, use cases, industries, and cities, not broad terms like "software company." A homepage alone cannot capture this demand. The businesses that win organic traffic and qualified leads maintain a library of specific, well-structured service pages targeting each segment of buyer search behaviour.',
+          'SmartX builds SEO programmes for software companies through dedicated service pages, location pages, technology pages, industry pages, case study formats, and supporting blog content. Each page targets a defined search intent, uses structured headings, internal links to related content, FAQ sections addressing real buyer objections, and schema markup for enhanced search results. This builds topical authority in stages rather than competing for every term simultaneously, which produces more sustainable ranking improvement over time.',
+        ],
+      },
+      {
+        h2: 'Why a Development Agency Handles Digital Too',
+        body: [
+          'Most digital marketing improvements depend on changes to the website itself: adding pages, fixing crawl errors, improving page speed, updating metadata, or restructuring internal links. When the marketing team and the development team are separate agencies, these changes require coordination, prioritisation handoffs, and delays between strategy and implementation. Changes that could be made in hours take weeks when the dependency sits between two separate vendors.',
+          'SmartX removes that friction by handling both. Our team can identify that a page is underperforming, diagnose the cause, and implement the fix in the same engagement. Analytics are configured alongside the build. Schema markup is added during development. Landing pages for campaigns are designed with SEO structure from the start rather than retrofitted later. The result is faster progress with fewer coordination costs and no gaps between what the marketer specifies and what the developer ships.',
+        ],
+      },
+      {
+        h2: 'Our Digital Strategy Process',
+        body: [
+          'Every digital marketing engagement at SmartX starts with an audit of the current website. We assess technical SEO fundamentals, page structure, content depth, keyword coverage, Core Web Vitals, analytics configuration, backlink quality, and competitor positioning. The audit output is a prioritised action plan where each recommendation includes the expected impact, the implementation effort, and the measurement approach, so decisions about where to start are based on evidence rather than guesswork.',
+          'From the audit, we build a phased strategy. The first phase addresses quick wins: fixing crawl errors, correcting metadata, improving title and heading structure, connecting Search Console, and setting up analytics events. The second phase develops content through service pages, blog articles, and supporting landing pages that expand keyword coverage and build topical authority. The third phase optimises conversion by improving calls to action, testing page structure, and refining lead capture flows. Progress is reviewed monthly with transparent reporting on rankings, traffic, and enquiry volume.',
+        ],
+      },
+      {
+        h2: 'Pricing for Digital Services',
+        body: [
+          'Digital marketing pricing at SmartX is based on the scope of deliverables, the current state of the website, and the pace of the engagement. A one-time technical SEO audit with a prioritised recommendation report typically ranges from \u20b925,000 to \u20b950,000 depending on website size and complexity. Implementation projects where SmartX fixes technical issues, creates new landing pages, and configures analytics are scoped as fixed-cost deliverables with clear milestones and defined outputs based on the audit findings.',
+          'Ongoing monthly digital marketing support typically ranges from \u20b930,000 to \u20b980,000 per month, covering SEO monitoring, content publication, performance reporting, and conversion improvements. The exact figure depends on the number of deliverables per month and the level of strategic involvement required. Paid campaign management including Google Ads setup and optimisation is priced separately based on ad spend and platform scope. We share a specific proposal after a discovery call where we can align on priorities and budget.',
+        ],
+      },
     ],
     links: [
       { href: '/web-development-services', label: 'SEO-friendly web development' },
@@ -341,6 +376,16 @@ export const seoPages: Record<string, SeoPage> = {
         question: 'Can SmartX build campaign landing pages?',
         answer:
           'Yes. SmartX designs and develops campaign landing pages for SEO, paid media, lead generation, and product launches.',
+      },
+      {
+        question: 'How long before SEO shows results?',
+        answer:
+          'Technical fixes and metadata improvements can increase impressions within 4 to 8 weeks. New content pages typically gain traction within 3 to 6 months as they are crawled, indexed, and begin earning clicks. Competitive terms in a strong market may take 6 to 12 months of consistent effort. SmartX tracks progress monthly so you can see directional movement early.',
+      },
+      {
+        question: 'Do you run paid advertising campaigns?',
+        answer:
+          'Yes. SmartX can set up and manage Google Ads campaigns including Search, Display, and Performance Max. We align paid campaigns with the same landing pages and messaging used in organic SEO so both channels reinforce each other rather than operating in isolation.',
       },
     ],
     priority: 0.8,
@@ -376,6 +421,41 @@ export const seoPages: Record<string, SeoPage> = {
           'Our AI automation work includes process mapping, data handling rules, access controls, prompt and workflow testing, monitoring, and documentation. The goal is to create systems your team can trust, measure, and improve over time.',
         ],
       },
+      {
+        h2: 'What AI Automation Can Do For Your Business',
+        body: [
+          'AI automation creates practical value by eliminating the manual effort behind tasks that consume hours of human time. Routine data entry, document review, customer query routing, invoice extraction, and report generation can be handled by AI systems that process faster, more consistently, and at any scale. The business result is a team that spends more time on judgement and relationships, and less time on mechanical processing.',
+          'Beyond task replacement, AI opens capabilities that were previously inaccessible for most businesses. Predictive analytics can flag churn risk, recommend next actions, or identify anomalies in financial data before they become problems. Document processing extracts structured information from unstructured contracts, medical records, or application forms within seconds. AI-powered customer support handles high volumes of common questions around the clock, reducing response times from hours to seconds and automatically escalating complex cases to human agents.',
+        ],
+      },
+      {
+        h2: 'Our AI Integration Process',
+        body: [
+          'Every AI engagement at SmartX begins with a discovery session that maps existing workflows, bottlenecks, data sources, and team capacity. Not every problem benefits from AI, so use case identification helps prioritise the tasks where automation delivers clear value without unnecessary complexity. After identifying the right opportunities, we build a focused proof of concept to validate performance and integration fit before committing to a full system.',
+          'Once the proof of concept confirms the approach, we move into integration, connecting the AI system to your existing tools, databases, and workflows through well-defined APIs and data pipelines. Training and tuning cycles improve accuracy and relevance against your specific business data and edge cases. After deployment, live monitoring tracks model performance, flags unexpected outputs, and generates the feedback data needed for continuous improvement.',
+        ],
+      },
+      {
+        h2: 'Technologies We Use',
+        body: [
+          'SmartX AI projects draw from a tested stack of production-ready tools. For language-based automation, we use OpenAI GPT-4 and the Claude API, both capable of handling complex instructions, natural language understanding, structured output generation, and integration with application logic. LangChain provides orchestration for multi-step AI workflows, retrieval-augmented generation, and tool-calling patterns, reducing the engineering effort needed to build reliable AI agents.',
+          'For the infrastructure layer, Python is our primary AI development language and FastAPI builds fast, type-safe AI service APIs that integrate cleanly with external systems. TensorFlow and HuggingFace cover machine learning tasks including classification, regression, anomaly detection, and custom prediction models. HuggingFace provides access to thousands of pre-trained models that can be fine-tuned on business-specific data with a modest compute budget. All AI systems can be deployed on AWS, GCP, or custom infrastructure based on security and cost requirements.',
+        ],
+      },
+      {
+        h2: 'AI Automation Use Cases by Industry',
+        body: [
+          'In FinTech, AI automation enables real-time fraud detection by analysing transaction patterns and flagging anomalies before losses occur. AI systems also automate credit scoring workflows, verify documents submitted for loan applications, generate regulatory compliance reports, and classify customer risk profiles. These systems help financial businesses scale compliance and risk operations without proportionally increasing headcount.',
+          'HealthTech platforms use AI to summarise patient records, triage incoming queries, and surface relevant clinical information to support diagnostic decisions. In EdTech, AI personalises learning paths based on student progress data and automates grading for structured assessments, freeing educators for higher-value teaching. E-commerce businesses apply recommendation engines trained on purchase behaviour and browsing patterns to increase average order value, typically seeing measurable uplift within weeks of deployment.',
+        ],
+      },
+      {
+        h2: 'How Much Does AI Integration Cost?',
+        body: [
+          'AI automation investment scales with problem scope, data readiness, integration complexity, and whether the solution requires custom model training. A simple AI feature such as a website chatbot, document extraction workflow, or text classification tool typically costs between \u20b91,00,000 and \u20b93,00,000. These projects use existing language models with defined integration points and minimal infrastructure overhead.',
+          'Custom machine learning models that require training on proprietary data, validation pipelines, and iterative tuning typically range from \u20b93,00,000 to \u20b98,00,000 depending on data complexity and iteration cycles. Full AI platforms comprising multiple models, orchestration logic, admin interfaces, monitoring dashboards, and deep integrations across business functions start at \u20b98,00,000 and scale with feature and infrastructure scope. We provide a specific estimate after a brief discovery call where we can review your data, workflow, and goals.',
+        ],
+      },
     ],
     links: [
       { href: '/software-development-company', label: 'Custom software development' },
@@ -385,14 +465,24 @@ export const seoPages: Record<string, SeoPage> = {
     breadcrumb: serviceBreadcrumb('AI Automation Services', '/ai-automation-services'),
     faqs: [
       {
-        question: 'What can SmartX automate with AI?',
+        question: 'What is AI automation?',
         answer:
-          'SmartX can automate lead qualification, chatbot support, document processing, CRM updates, reporting, internal knowledge search, and repetitive business workflows.',
+          'AI automation uses artificial intelligence to perform tasks that previously required human input, such as reading documents, answering questions, classifying requests, or predicting outcomes. Unlike rule-based automation, AI systems handle variability, natural language, and unstructured data, making them suitable for tasks that simple rule-based workflows cannot address.',
       },
       {
-        question: 'Do AI automations connect with existing tools?',
+        question: 'How long does AI integration take?',
         answer:
-          'Yes. SmartX can connect AI automation with websites, CRMs, databases, spreadsheets, email systems, and custom applications.',
+          'A simple AI feature typically takes 3 to 6 weeks from scoping to deployment. Custom models or multi-system integrations may take 2 to 4 months depending on data readiness, integration complexity, and testing requirements. We define milestones during discovery so timelines are clear before development begins.',
+      },
+      {
+        question: 'Do you need large amounts of data for AI?',
+        answer:
+          'Not always. Many AI solutions use pre-trained models that perform well from day one, especially for language tasks such as summarisation, classification, and generation. Custom ML models may need more data, but SmartX assesses what is available and whether it is sufficient before recommending a training approach.',
+      },
+      {
+        question: 'Can you integrate AI with our existing software?',
+        answer:
+          'Yes. SmartX designs AI integrations that connect with existing CRMs, databases, websites, spreadsheets, project management tools, email platforms, and custom applications. Integration planning is a core part of the discovery process, not an afterthought.',
       },
     ],
     priority: 0.8,
@@ -583,30 +673,52 @@ export const seoPages: Record<string, SeoPage> = {
       'SmartX chooses technology based on the product goal, team needs, budget, performance requirements, and long-term maintainability. We prefer proven tools that help clients launch confidently and scale responsibly.',
     sections: [
       {
-        h2: 'Frontend and Web Technologies',
+        h2: 'Why Technology Choice Matters',
         body: [
-          'For modern websites and web applications, we often use React, Next.js, TypeScript, Tailwind CSS, and component-based design systems. These tools support fast interfaces, clean routing, reusable UI, strong developer experience, and SEO-friendly rendering when implemented correctly.',
-          'We also work with CMS integrations, headless content models, ecommerce storefronts, analytics tools, schema markup, and performance optimisation workflows. The frontend is planned as part of the customer journey and the technical SEO foundation, not just the visual layer.',
+          'The technology powering a digital product directly affects how fast the team can ship, how much it costs to maintain, how reliably the system performs under real load, and how easily it adapts when the business changes direction. Poor technology choices create bottlenecks, increase hiring costs, produce technical debt, and slow every future release. SmartX treats technology selection as a product decision with long-term consequences, not just a developer preference.',
+          'Before recommending a stack, we consider the product roadmap, the team\'s existing skills, expected user load, infrastructure budget, industry compliance requirements, and the likelihood of architectural change over the next twelve months. That context produces a recommendation that is appropriate today and defensible as the business grows, rather than one that is fashionable but misaligned with real constraints.',
         ],
       },
       {
-        h2: 'Backend, Cloud, Mobile, and AI',
+        h2: 'Frontend Technologies',
         body: [
-          'Backend work may include Node.js, API development, relational and document databases, authentication, payment systems, admin panels, and third-party integrations. For cloud and DevOps, we support hosting, deployment pipelines, monitoring, backups, and scalable architecture decisions.',
-          'Mobile projects may use cross-platform or native approaches depending on product needs. AI automation projects can involve language model integrations, retrieval workflows, business rules, data extraction, chat interfaces, and tool integrations with CRMs or internal systems.',
+          'SmartX builds web frontends primarily with React and Next.js. React provides a component model that scales well as application complexity grows, with reusable UI elements, predictable state management, and a strong ecosystem of tooling. Next.js adds server-side rendering, static generation, edge deployment, image optimisation, and file-system routing that together support both SEO-critical marketing pages and complex interactive applications from a single codebase.',
+          'TypeScript is used across all frontend projects to catch type errors before runtime, improve code clarity through types, and make large codebases easier to navigate. Tailwind CSS enables rapid, consistent styling with minimal specificity conflicts and lean production builds. For UI animation and accessibility, we choose libraries based on bundle impact, WCAG compliance, and maintenance stability. The result is a frontend that scores well on Core Web Vitals, works reliably across devices, and remains easy to extend.',
         ],
       },
       {
-        h2: 'Choosing the Right Stack',
+        h2: 'Backend Technologies',
         body: [
-          'We do not recommend technology because it is fashionable. We recommend it because it supports the client roadmap. A marketing website, MVP, enterprise dashboard, and AI workflow all have different constraints. SmartX helps choose a stack that balances speed, reliability, cost, hiring availability, and future change.',
+          'Backend services at SmartX are built with Node.js or Python depending on project context. Node.js excels at handling concurrent API requests, integrating with JavaScript-native services, and maintaining a consistent language across the full stack when the frontend is also in React. Python with FastAPI is preferred when the backend needs to interface with data processing pipelines, machine learning models, or scientific libraries, offering type safety, automatic API documentation, and strong async performance.',
+          'We design backends with clear separation between business logic, data access layers, authentication middleware, and integration connectors. This structure makes components testable in isolation and replaceable without cascading changes. REST APIs are used for most service communication following consistent naming conventions, error formats, and versioning patterns. GraphQL is chosen when multiple frontend clients need flexible data queries or when the API surface would otherwise be difficult to maintain.',
         ],
       },
       {
-        h2: 'Technology Decisions We Document',
+        h2: 'Mobile Development',
         body: [
-          'During planning, we document important technical choices such as rendering strategy, hosting, data storage, authentication, API boundaries, CMS needs, analytics, deployment workflow, and third-party services. This makes the project easier to understand and reduces ambiguity when future features are added.',
-          'Clear technology documentation also helps business teams make budget and maintenance decisions. You can see which parts of the system are custom, which depend on external providers, and which can be scaled, replaced, or extended as the product grows.',
+          'For most business mobile applications, SmartX recommends cross-platform development using Flutter or React Native. Flutter is a strong default choice: a single Dart codebase produces native-quality applications on both iOS and Android, with smooth animations, custom UI flexibility, and solid performance on mid-range devices. Flutter is especially suitable for applications with unique interface designs, offline requirements, or a need for consistent visual behaviour across platforms.',
+          'React Native is preferred when the team already works in JavaScript and React, or when the project needs to share business logic with a web application in the same ecosystem. Both frameworks provide access to device features including camera, location, biometric authentication, push notifications, and local storage. When native-only APIs, hardware performance, or platform-specific interactions are business-critical, we assess whether a native iOS or Android build would deliver better results for the investment.',
+        ],
+      },
+      {
+        h2: 'Cloud & DevOps',
+        body: [
+          'SmartX deploys on AWS, Google Cloud Platform, and Vercel depending on project scale and requirements. Vercel is ideal for Next.js applications requiring fast global delivery, preview environments on every branch, and minimal infrastructure management. AWS and GCP are preferred when applications need granular control over compute, networking, security groups, compliance boundaries, and data residency, particularly for regulated industries or enterprise platforms handling sensitive data.',
+          'Every production system includes a CI/CD pipeline that automates linting, testing, building, and deployment when code is merged. Docker containers standardise the environment between local development and production, eliminating environment-specific bugs. Monitoring, structured logging, alerting, and uptime checks are configured before launch. Infrastructure is documented in enough detail that it can be understood, handed over, or modified without requiring deep institutional knowledge.',
+        ],
+      },
+      {
+        h2: 'Database Technologies',
+        body: [
+          'SmartX selects databases based on data structure, query complexity, consistency requirements, and expected scale. PostgreSQL is the default relational database for most applications: mature, feature-complete, and capable of handling complex joins, JSONB columns, full-text search, and high write throughput. Supabase builds on PostgreSQL with managed hosting, built-in row-level security, real-time subscriptions, and a developer-friendly client library that accelerates early-stage product development.',
+          'MongoDB is used in projects where document flexibility is genuinely needed, such as content types with significantly different shapes or rapid schema iteration during early development. Redis handles caching, session storage, rate limiting, and lightweight pub/sub messaging rather than serving as a primary data store. Across all database choices, we define indexing strategy, migration tooling, backup frequency, retention policy, and access controls before any production data enters the system.',
+        ],
+      },
+      {
+        h2: 'AI & Machine Learning',
+        body: [
+          'SmartX AI projects use OpenAI GPT-4 and the Claude API as the core language intelligence layer. These models handle natural language tasks including summarisation, classification, extraction, generation, and conversational response with reliability sufficient for production use. LangChain orchestrates multi-step AI workflows, retrieval-augmented generation pipelines, and tool-calling agents, reducing the time needed to move from a working prototype to a stable, observable production system.',
+          'For machine learning models requiring custom training such as predictive scoring, anomaly detection, recommendation systems, or image classification, SmartX uses TensorFlow and HuggingFace. TensorFlow provides a production-grade framework for training and serving neural networks at scale. HuggingFace gives access to thousands of pre-trained models that can be fine-tuned on business-specific data with modest compute resources, making custom AI accessible to businesses without large training datasets. All AI deployments include monitoring, confidence thresholds, fallback paths, and human escalation for edge cases.',
         ],
       },
     ],

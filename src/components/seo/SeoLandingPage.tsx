@@ -9,6 +9,7 @@ import { breadcrumbSchema, faqSchema, serviceSchema, type SeoPage } from '@/lib/
 
 type SeoLandingPageProps = {
   page: SeoPage
+  children?: React.ReactNode
 }
 
 const fadeUp = {
@@ -16,7 +17,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 }
 
-export default function SeoLandingPage({ page }: SeoLandingPageProps) {
+export default function SeoLandingPage({ page, children }: SeoLandingPageProps) {
   const breadcrumbs = page.breadcrumb ?? [
     { label: 'Home', href: '/' },
     { label: page.h1, href: `/${page.slug}` },
@@ -225,6 +226,7 @@ export default function SeoLandingPage({ page }: SeoLandingPageProps) {
             </motion.aside>
           </div>
         </div>
+        {children}
       </main>
       <Footer />
     </>
