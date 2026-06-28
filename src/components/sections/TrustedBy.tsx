@@ -3,7 +3,12 @@
 import { motion } from 'framer-motion'
 
 const clients = [
-  'AG Traders', 'FurneXo', 'Attractions Mens Studio', 'Scholarship App', 'One Stop Dashboard', 'SmartX Solutions',
+  'AG Traders',
+  'FurneXo',
+  'MANT Talent Solutions',
+  'Attractions Mens Studio',
+  'Scholarship App',
+  'One Stop Dashboard',
 ]
 
 const awards = [
@@ -21,7 +26,7 @@ export default function TrustedBy() {
           viewport={{ once: true }}
           className="text-center text-white/60 text-xs uppercase tracking-widest mb-10"
         >
-          Trusted by 100+ companies worldwide
+          Trusted by businesses across India and the US
         </motion.p>
 
         {/* Logo marquee */}

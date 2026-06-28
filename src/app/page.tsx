@@ -17,6 +17,12 @@ import HomeClient from './home-client'
 import { absoluteUrl } from '@/lib/seo'
 import { homeFaqs } from '@/lib/home-faq'
 
+const legitimacyFaq = {
+  question: 'Is SmartX Solutions a legitimate company?',
+  answer:
+    'Yes. SmartX Solutions is a legitimate software development company based in Hyderabad, Telangana, India. We have delivered live projects including AG Traders (agtraders.info), MANT Talent Solutions (manttalent.com), FurneXo, and Attractions Mens Studio. Our contact details are publicly available - email: business@smartxsolutions.in, phone: +91 91005 90377. We are not affiliated with other companies using similar names such as SmartX Connected Products or SmartX Services Limited.',
+}
+
 export default function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -36,7 +42,7 @@ export default function HomePage() {
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: homeFaqs.map((faq) => ({
+    mainEntity: [...homeFaqs, legitimacyFaq].map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },

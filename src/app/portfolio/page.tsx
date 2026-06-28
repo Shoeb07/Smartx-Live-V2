@@ -67,6 +67,18 @@ const projects: Project[] = [
     accentColor: '#00e5b0',
   },
   {
+    name: 'MANT Talent Solutions',
+    slug: 'mant-talent',
+    href: '/portfolio/mant-talent',
+    industry: 'Staffing Agency - Marketing Website',
+    description:
+      'A conversion-focused website for a US non-IT staffing agency - built to capture enterprise leads across 13 industries and 50 states.',
+    techStack: ['Next.js 15', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+    timeline: '5 weeks',
+    status: 'Live',
+    accentColor: '#6c63ff',
+  },
+  {
     name: 'One Stop Dashboard',
     slug: 'one-stop-dashboard',
     href: '/portfolio/one-stop-dashboard',
@@ -152,14 +164,25 @@ export default function PortfolioPage() {
                 className="group rounded-2xl border border-white/[0.08] bg-[#0d0d14] p-5 hover:border-white/[0.16] transition-all flex flex-col"
               >
                 {/* Thumbnail placeholder */}
-                <div className="w-full h-48 rounded-xl border border-dashed border-white/15 bg-white/[0.02] flex items-center justify-center mb-5 flex-shrink-0">
-                  <p className="text-white/25 text-xs text-center px-4">
-                    {project.name} — Project thumbnail
-                    <br />
-                    <span className="text-[10px] text-white/15">
-                      Replace with: public/case-studies/{project.slug}/thumbnail.png
-                    </span>
-                  </p>
+                <div
+                  className="w-full h-48 rounded-xl mb-5 flex items-center justify-center overflow-hidden flex-shrink-0"
+                  style={{
+                    background: `${project.accentColor}10`,
+                    border: `1px solid ${project.accentColor}20`,
+                  }}
+                >
+                  <div className="text-center">
+                    <div
+                      className="w-12 h-12 rounded-xl mx-auto mb-2 flex items-center justify-center font-syne font-bold text-lg"
+                      style={{
+                        background: `${project.accentColor}20`,
+                        color: project.accentColor,
+                      }}
+                    >
+                      {project.name.charAt(0)}
+                    </div>
+                    <p className="text-white/20 text-xs">{project.name}</p>
+                  </div>
                 </div>
 
                 {/* Industry + status */}

@@ -39,26 +39,39 @@ function WordReveal({ text, delay = 0, gradient = false }: {
   )
 }
 
-function Counter({ value, suffix, label, delay, index }: { value: number; suffix: string; label: string; delay: number; index: number }) {
+function Counter({ value, suffix, label, index }: { value: number; suffix: string; label: string; index: number }) {
   const [count, setCount] = useState(0)
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-50px' })
+  const started = useRef(false)
+  const isInView = useInView(ref, { once: true, margin: '0px' })
+
+  const startCountAnimation = () => {
+    if (started.current) return
+
+    started.current = true
+    const dur = 1200
+    const start = performance.now()
+    const tick = (now: number) => {
+      const t = Math.min((now - start) / dur, 1)
+      setCount(Math.round(value * (1 - Math.pow(1 - t, 4))))
+      if (t < 1) requestAnimationFrame(tick)
+    }
+
+    requestAnimationFrame(tick)
+  }
   
   useEffect(() => {
     if (!isInView) return
-    
+    startCountAnimation()
+  }, [isInView])
+
+  useEffect(() => {
     const timer = setTimeout(() => {
-      const dur = 1600, start = performance.now()
-      const tick = (now: number) => {
-        const t = Math.min((now - start) / dur, 1)
-        setCount(Math.round(value * (1 - Math.pow(1 - t, 4))))
-        if (t < 1) requestAnimationFrame(tick)
-      }
-      requestAnimationFrame(tick)
-    }, delay)
+      startCountAnimation()
+    }, 100)
     
     return () => clearTimeout(timer)
-  }, [delay, isInView, value])
+  }, [])
   
   return (
     <div ref={ref} className={`flex flex-col gap-1.5 pr-6 ${index !== 0 ? 'pl-6 border-l border-white/[0.06]' : ''}`}>
@@ -139,9 +152,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.15, duration: 0.7 }}
           className="grid grid-cols-2 sm:grid-cols-4 border-t border-white/[0.06] pt-10"
+          style={{ minHeight: '60px' }}
         >
           {stats.map((s, i) => (
-            <Counter key={s.label} value={s.value} suffix={s.suffix} label={s.label} delay={1200 + i * 100} index={i} />
+            <Counter key={s.label} value={s.value} suffix={s.suffix} label={s.label} index={i} />
           ))}
         </motion.div>
       </div>

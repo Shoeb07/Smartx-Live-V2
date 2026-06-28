@@ -106,7 +106,7 @@ export function organizationSchema() {
         url: siteUrl,
         logo: `${siteUrl}/favicon_io/android-chrome-512x512.png`,
         description:
-          'SmartX Solutions is a custom software development company in Hyderabad, India, building web apps, mobile apps, SaaS platforms, UI/UX design, and digital transformation services.',
+          'SmartX Solutions is a legitimate custom software development company based in Hyderabad, India, founded in 2024. Not affiliated with SmartX Connected Products Pvt Ltd, SmartX Services Limited, or SmartX Solutions KFT.',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Hyderabad',

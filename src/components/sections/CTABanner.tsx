@@ -40,15 +40,13 @@ export default function CTABanner() {
                 Start a Project
                 <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
-              <a
-                href="https://calendly.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/contact-us"
                 className="px-8 py-4 rounded-full border border-white/15 text-white/75 font-medium text-[15px] hover:border-white/30 hover:text-white transition-all flex items-center gap-2"
               >
                 <CalendarDays size={16} />
-                Book a Free Call
-              </a>
+                Schedule a Consultation
+              </Link>
             </div>
 
             {/* Trust signals */}

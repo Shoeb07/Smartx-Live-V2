@@ -7,6 +7,11 @@ const nextConfig = {
         destination: '/about-us',
         permanent: true,
       },
+      {
+        source: '/case-studies',
+        destination: '/portfolio',
+        permanent: true,
+      },
     ]
   },
   eslint: {
