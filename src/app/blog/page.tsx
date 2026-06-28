@@ -141,6 +141,32 @@ export default function BlogPage() {
                 Start a conversation <ArrowUpRight size={16} />
               </Link>
             </div>
+
+            <div className="mt-10 pt-10 border-t border-white/[0.08]">
+              <h3 className="font-syne font-bold text-xl mb-5">Further Reading</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Link
+                  href="/best-software-development-companies-hyderabad"
+                  className="group rounded-xl border border-white/[0.08] bg-[#0d0d14] p-5 hover:border-white/[0.16] transition-all"
+                >
+                  <p className="text-[#6c63ff] text-[10px] uppercase tracking-widest mb-2">Hyderabad Market</p>
+                  <p className="font-syne font-bold text-base mb-1 group-hover:text-[#a89eff] transition-colors">
+                    10 Best Software Development Companies in Hyderabad (2026)
+                  </p>
+                  <p className="text-white/45 text-sm">Honest comparison of top Hyderabad agencies for startups and SMEs.</p>
+                </Link>
+                <Link
+                  href="/software-development-agency-vs-upwork"
+                  className="group rounded-xl border border-white/[0.08] bg-[#0d0d14] p-5 hover:border-white/[0.16] transition-all"
+                >
+                  <p className="text-[#6c63ff] text-[10px] uppercase tracking-widest mb-2">Agency Comparison</p>
+                  <p className="font-syne font-bold text-base mb-1 group-hover:text-[#a89eff] transition-colors">
+                    Software Development Agency vs Upwork (2026)
+                  </p>
+                  <p className="text-white/45 text-sm">When to use Upwork and when to hire an agency — with real cost examples.</p>
+                </Link>
+              </div>
+            </div>
           </section>
         </div>
       </main>

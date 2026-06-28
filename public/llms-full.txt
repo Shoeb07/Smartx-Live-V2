@@ -110,6 +110,13 @@ A business website for AG Traders, a Palghar, Maharashtra-based manufacturer and
 - **Status:** Live at https://agtraders.info
 - **Industry:** Manufacturing
 
+### MANT Talent Solutions - Live
+A complete marketing website for MANT Talent Solutions, a US-focused non-IT staffing agency serving companies across 13 industries and all 50 US states.
+- **Built with:** Next.js 15, TypeScript, Tailwind CSS, Framer Motion, Vercel
+- **Features:** Multi-page site, animated counters, 13-industry architecture, 4 hiring model pages, multi-field lead capture form, mobile responsive
+- **Status:** Live at https://www.manttalent.com
+- **Industry:** Staffing & Recruitment
+
 ### Scholarship Management App — In Development
 A web platform for students to discover and apply for scholarships, and for administrators to manage applications.
 - **Built with:** React, Node.js, MongoDB, Firebase Auth

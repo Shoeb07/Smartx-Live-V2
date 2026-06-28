@@ -186,13 +186,30 @@ export default function CaseStudyLayout({
               </motion.div>
             )}
 
-            {/* Hero image placeholder */}
-            <div className="w-full h-[400px] rounded-2xl border-2 border-dashed border-white/20 bg-white/[0.02] flex flex-col items-center justify-center mt-10">
-              <div className="text-4xl mb-3">🖼️</div>
-              <p className="text-white/40 text-sm font-medium text-center px-6">
-                Hero Image — {heroImagePlaceholder}
-              </p>
-              <p className="text-white/20 text-xs mt-1">Recommended: 1200×600px</p>
+            {/*
+              TODO: Replace with real screenshot
+              File: public/case-studies/[slug]/hero.png
+              Size: 1200x600px
+            */}
+            <div
+              className="w-full h-[400px] rounded-2xl mt-10 flex flex-col items-center justify-center"
+              style={{
+                background: `linear-gradient(135deg, ${accentColor}08 0%, transparent 100%)`,
+                border: `1px solid ${accentColor}15`,
+              }}
+              aria-label={heroImagePlaceholder}
+            >
+              <div
+                className="w-16 h-16 rounded-2xl mb-4 flex items-center justify-center font-syne font-bold text-2xl"
+                style={{
+                  background: `${accentColor}20`,
+                  color: accentColor,
+                }}
+              >
+                {client.charAt(0)}
+              </div>
+              <p className="text-white/20 text-sm">{client} - Coming Soon</p>
+              <p className="text-white/10 text-xs mt-1">Screenshots being added shortly</p>
             </div>
           </motion.section>
 
@@ -346,10 +363,30 @@ export default function CaseStudyLayout({
                   variants={fadeUp}
                   transition={{ duration: 0.55, delay: index * 0.06 }}
                 >
-                  <div className="w-full aspect-video rounded-xl border-2 border-dashed border-white/15 bg-white/[0.02] flex flex-col items-center justify-center">
-                    <div className="text-3xl mb-2">📸</div>
-                    <p className="text-white/40 text-xs text-center px-4">{placeholder.alt}</p>
-                    <p className="text-white/20 text-[10px] mt-1 text-center px-4">{placeholder.caption}</p>
+                  {/*
+                    TODO: Replace with real screenshot
+                    File: public/case-studies/[slug]/screenshot-[index].png
+                    Size: 1200x675px
+                  */}
+                  <div
+                    className="w-full aspect-video rounded-xl flex flex-col items-center justify-center overflow-hidden"
+                    style={{
+                      background: `linear-gradient(135deg, ${accentColor}10 0%, rgba(255,255,255,0.02) 100%)`,
+                      border: `1px solid ${accentColor}18`,
+                    }}
+                    aria-label={placeholder.alt}
+                  >
+                    <div
+                      className="w-12 h-12 rounded-xl mb-3 flex items-center justify-center font-syne font-bold text-lg"
+                      style={{
+                        background: `${accentColor}20`,
+                        color: accentColor,
+                      }}
+                    >
+                      {client.charAt(0)}
+                    </div>
+                    <p className="text-white/20 text-xs text-center px-4">{client}</p>
+                    <p className="text-white/10 text-[10px] mt-1 text-center px-4">Screenshot coming soon</p>
                   </div>
                 </motion.div>
               ))}

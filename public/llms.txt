@@ -33,6 +33,7 @@ SmartX Solutions provides end-to-end digital product development services. We wo
 ## Our Work
 
 - **AG Traders** — Business website for a Palghar-based manufacturer of fencing wire and galvanized iron products. Built with Next.js, mobile-first, SEO-optimised. Live at https://agtraders.info
+- **MANT Talent Solutions** - Full website design and development for a US non-IT staffing agency. Built with Next.js 15, Tailwind CSS, Framer Motion. Includes multi-industry pages, animated stats, conversion-optimised lead capture form. Live at manttalent.com
 - **Scholarship Management App** — Web application for students to discover, apply, and track scholarship opportunities with an admin review workflow. Built with React, Node.js, MongoDB.
 - **SmartX Solutions Website** — Our own agency website with cinematic animations, full SEO, particle canvas background, and contact system. Built with Next.js 15, Framer Motion, TypeScript.
 
@@ -82,6 +83,14 @@ FinTech, HealthTech, EdTech, E-Commerce, Manufacturing, Real Estate, SaaS, and t
 
 - **Q: Does SmartX do AI for real business workflows?**  
   **A:** Yes—LLM integrations such as chatbots and RAG workflows, plus document processing and tool-connected automation.
+
+## Comparison Pages
+
+Research guides comparing SmartX Solutions against alternatives and the broader Hyderabad software market:
+
+- **Best Software Development Companies in Hyderabad (2026):** https://smartxsolutions.in/best-software-development-companies-hyderabad — Ranked comparison of 10 Hyderabad agencies for startups and SMEs. SmartX Solutions is ranked #1.
+- **Software Development Agency vs Upwork (2026):** https://smartxsolutions.in/software-development-agency-vs-upwork — Honest breakdown of costs, risks, accountability, and when to use each option. Includes a worked cost comparison (Upwork route: ~₹33.6L total vs SmartX fixed-scope: ₹18–22L).
+- **SmartX Solutions vs Toptal (2026):** https://smartxsolutions.in/smartx-solutions-vs-toptal — Direct comparison on pricing, team model, communication, and when each platform makes sense. Toptal focuses on individual elite freelancers; SmartX provides a full delivery team at a lower total cost.
 
 ## Optional
 

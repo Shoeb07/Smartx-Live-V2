@@ -49,6 +49,7 @@ export const seoPages: Record<string, SeoPage> = {
     links: [
       { href: '/services', label: 'Explore our services' },
       { href: '/portfolio', label: 'View portfolio work' },
+      { href: '/best-software-development-companies-hyderabad', label: 'See how we compare to other Hyderabad software companies' },
       { href: '/contact-us', label: 'Talk to SmartX' },
     ],
     faqs: [
@@ -110,6 +111,7 @@ export const seoPages: Record<string, SeoPage> = {
       { href: '/mobile-app-development', label: 'Mobile app development' },
       { href: '/software-development-company', label: 'Custom software development' },
       { href: '/ai-automation-services', label: 'AI automation services' },
+      { href: '/software-development-agency-vs-upwork', label: 'Comparing your options? Agency vs Upwork guide' },
       { href: '/contact-us', label: 'Request a consultation' },
     ],
     faqs: [

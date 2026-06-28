@@ -39,7 +39,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Case study pages
     { url: `${siteUrl}/portfolio/ag-traders`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${siteUrl}/portfolio/furnexo`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${siteUrl}/portfolio/mant-talent`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${siteUrl}/portfolio/one-stop-dashboard`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+
+    // Competitor comparison pages
+    { url: `${siteUrl}/best-software-development-companies-hyderabad`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${siteUrl}/software-development-agency-vs-upwork`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${siteUrl}/smartx-solutions-vs-toptal`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
     // Blog post pages
     ...blogEntries,

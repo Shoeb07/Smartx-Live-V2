@@ -224,7 +224,7 @@ export const blogPosts: BlogPost[] = [
     ],
     related: [
       { href: '/software-development-company', label: 'Software development service page' },
-      { href: '/case-studies', label: 'Case study patterns' },
+      { href: '/software-development-agency-vs-upwork', label: 'Agency vs freelancer comparison' },
       { href: '/contact-us', label: 'Plan a software project' },
     ],
     sources: [
