@@ -156,13 +156,17 @@ const companies = [
   },
   {
     rank: 5,
-    name: 'Trigent Software',
-    specialisation: 'Enterprise IT, quality engineering, cloud migration',
-    teamSize: 'Large (200+)',
+    name: 'Trigent Software Inc.',
+    specialisation: 'Enterprise software, digital transformation, cloud, QA/testing services',
+    teamSize: 'Medium-Large (200-500)',
     minProject: '₹5,00,000+',
-    bestFor: 'Enterprise IT services, QA automation, legacy modernisation',
-    limitation: 'High minimum engagement size — not for early-stage product builds',
+    bestFor: 'Large enterprises needing offshore development partners with US delivery model',
+    limitation: 'Minimum engagement size is too large for most Indian startups and SMEs',
     website: 'trigent.com',
+    profile:
+      'Trigent Software Inc. is one of the more established IT services firms connected with the Hyderabad software ecosystem, with operations dating back to 1995. That makes it one of Hyderabad&apos;s oldest IT firms when compared with newer web development agencies and startup-focused product studios. Trigent is best understood as an enterprise technology partner rather than a small-business software vendor. Its core specialisations include enterprise software development, digital transformation programs, cloud engineering, application modernisation, QA automation, and broader testing services for complex business systems. The company typically serves US and European enterprises that need a dependable offshore development partner with a US-style delivery model, structured governance, mature documentation, and long-term engineering capacity. With an estimated team size in the 200-500 employee range, Trigent is better suited to multi-month enterprise engagements than small fixed-scope builds. For larger organisations, this can be a strength: the company can support distributed delivery, quality engineering, cloud migration, and ongoing maintenance across mature software portfolios. The trade-off is accessibility. With minimum projects usually starting around ₹5,00,000+, Trigent&apos;s engagement size can be too large for most Indian startups, early-stage founders, and SMEs that need a focused MVP, website, internal dashboard, or custom workflow tool on a tighter budget. Website: trigent.com.',
+    comparisonNote:
+      'SmartX Solutions vs Trigent: If you&apos;re an Indian startup or SME, Trigent&apos;s minimum engagement sizes may be too large. SmartX Solutions serves smaller projects (from ₹50,000) with the same senior engineering standards.',
     isUs: false,
   },
   {
