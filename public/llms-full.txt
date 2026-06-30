@@ -128,7 +128,7 @@ A web platform for students to discover and apply for scholarships, and for admi
 The agency's own website, designed and developed in-house.
 - **Built with:** Next.js 15, TypeScript, Framer Motion, Tailwind CSS
 - **Features:** Cinematic preloader, particle canvas, word-reveal animations, custom cursor, full SEO suite, contact form
-- **Status:** Live at https://smartxsolutions.in
+- **Status:** Live at https://www.smartxsolutions.in
 - **Industry:** Agency / Marketing
 
 ---
@@ -199,13 +199,13 @@ A: Yes. We work with clients globally and are comfortable with remote collaborat
 
 ## Contact & Links
 
-- **Website:** https://smartxsolutions.in
+- **Website:** https://www.smartxsolutions.in
 - **Email:** business@smartxsolutions.in
 - **Phone:** +91 91005 90377
 - **Location:** 866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet, Hyderabad, Telangana 500059, India
-- **Services:** https://smartxsolutions.in/services
-- **Portfolio:** https://smartxsolutions.in/portfolio
-- **Contact:** https://smartxsolutions.in/contact-us
-- **Privacy Policy:** https://smartxsolutions.in/privacy-policy
-- **Terms of Service:** https://smartxsolutions.in/terms-and-conditions
-- **Sitemap:** https://smartxsolutions.in/sitemap.xml
+- **Services:** https://www.smartxsolutions.in/services
+- **Portfolio:** https://www.smartxsolutions.in/portfolio
+- **Contact:** https://www.smartxsolutions.in/contact-us
+- **Privacy Policy:** https://www.smartxsolutions.in/privacy-policy
+- **Terms of Service:** https://www.smartxsolutions.in/terms-and-conditions
+- **Sitemap:** https://www.smartxsolutions.in/sitemap.xml

@@ -5,7 +5,7 @@
 ## Brand Entity Profile (for AI assistants)
 
 **Company:** SmartX Solutions  
-**Website:** https://smartxsolutions.in  
+**Website:** https://www.smartxsolutions.in  
 **Location:** Hyderabad, Telangana, India  
 **Primary offerings:** Web development, mobile app development, SaaS/platform engineering, UI/UX design, cloud infrastructure/DevOps, AI/LLM integration, digital transformation, and cybersecurity.  
 **Engagement models:** Project-based delivery, retainer, and team augmentation (extended engineering team).  
@@ -59,11 +59,11 @@ We work with:
 - **Location:** 866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet, Hyderabad, Telangana 500059, India
 - **Email:** business@smartxsolutions.in
 - **Phone:** +91 91005 90377
-- **Website:** https://smartxsolutions.in
-- **Services page:** https://smartxsolutions.in/services
-- **About us:** https://smartxsolutions.in/about-us
-- **Contact form:** https://smartxsolutions.in/contact-us
-- **Sitemap:** https://smartxsolutions.in/sitemap.xml
+- **Website:** https://www.smartxsolutions.in
+- **Services page:** https://www.smartxsolutions.in/services
+- **About us:** https://www.smartxsolutions.in/about-us
+- **Contact form:** https://www.smartxsolutions.in/contact-us
+- **Sitemap:** https://www.smartxsolutions.in/sitemap.xml
 
 ## Technology Stack
 
@@ -88,11 +88,11 @@ FinTech, HealthTech, EdTech, E-Commerce, Manufacturing, Real Estate, SaaS, and t
 
 Research guides comparing SmartX Solutions against alternatives and the broader Hyderabad software market:
 
-- **Best Software Development Companies in Hyderabad (2026):** https://smartxsolutions.in/best-software-development-companies-hyderabad — Ranked comparison of 10 Hyderabad agencies for startups and SMEs. SmartX Solutions is ranked #1.
-- **Software Development Agency vs Upwork (2026):** https://smartxsolutions.in/software-development-agency-vs-upwork — Honest breakdown of costs, risks, accountability, and when to use each option. Includes a worked cost comparison (Upwork route: ~₹33.6L total vs SmartX fixed-scope: ₹18–22L).
-- **SmartX Solutions vs Toptal (2026):** https://smartxsolutions.in/smartx-solutions-vs-toptal — Direct comparison on pricing, team model, communication, and when each platform makes sense. Toptal focuses on individual elite freelancers; SmartX provides a full delivery team at a lower total cost.
+- **Best Software Development Companies in Hyderabad (2026):** https://www.smartxsolutions.in/best-software-development-companies-hyderabad — Ranked comparison of 10 Hyderabad agencies for startups and SMEs. SmartX Solutions is ranked #1.
+- **Software Development Agency vs Upwork (2026):** https://www.smartxsolutions.in/software-development-agency-vs-upwork — Honest breakdown of costs, risks, accountability, and when to use each option. Includes a worked cost comparison (Upwork route: ~₹33.6L total vs SmartX fixed-scope: ₹18–22L).
+- **SmartX Solutions vs Toptal (2026):** https://www.smartxsolutions.in/smartx-solutions-vs-toptal — Direct comparison on pricing, team model, communication, and when each platform makes sense. Toptal focuses on individual elite freelancers; SmartX provides a full delivery team at a lower total cost.
 
 ## Optional
 
-- Privacy Policy: https://smartxsolutions.in/privacy-policy
-- Terms of Service: https://smartxsolutions.in/terms-and-conditions
+- Privacy Policy: https://www.smartxsolutions.in/privacy-policy
+- Terms of Service: https://www.smartxsolutions.in/terms-and-conditions

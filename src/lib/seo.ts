@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-export const siteUrl = 'https://smartxsolutions.in'
+export const siteUrl = 'https://www.smartxsolutions.in'
 export const siteName = 'SmartX Solutions'
 
 export type FaqItem = {
@@ -99,27 +99,46 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@graph': [
+      // FIX 4, 5: ImageObject logo + foundingDate
       {
         '@type': 'Organization',
         '@id': `${siteUrl}/#organization`,
         name: siteName,
         url: siteUrl,
-        logo: `${siteUrl}/favicon_io/android-chrome-512x512.png`,
+        foundingDate: '2024',
+        // TODO: Add real logo.png (600x60px) to /public folder — currently this path may 404 until the file is uploaded
+        logo: {
+          '@type': 'ImageObject',
+          url: `${siteUrl}/logo.png`,
+          width: 600,
+          height: 60,
+        },
         description:
           'SmartX Solutions is a legitimate custom software development company based in Hyderabad, India, founded in 2024. Not affiliated with SmartX Connected Products Pvt Ltd, SmartX Services Limited, or SmartX Solutions KFT.',
         address: {
           '@type': 'PostalAddress',
+          streetAddress: '866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet',
           addressLocality: 'Hyderabad',
           addressRegion: 'Telangana',
+          postalCode: '500059',
           addressCountry: 'IN',
         },
+        // FIX 8: E.164 phone format
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
           email: 'business@smartxsolutions.in',
-          telephone: '+91-91005-90377',
+          telephone: '+919100590377',
         },
-        sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
+        // FIX 9: Expanded sameAs (add profiles when created)
+        sameAs: [
+          'https://www.linkedin.com/company/smartx-solutions-in',
+          // TODO: Add when created:
+          // 'https://twitter.com/smartxsolutions',
+          // 'https://github.com/smartx-solutions',
+          // 'https://clutch.co/profile/smartx-solutions',
+          // 'https://www.crunchbase.com/organization/smartx-solutions',
+        ],
         knowsAbout: [
           'web application development',
           'mobile app development',
@@ -134,50 +153,33 @@ export function organizationSchema() {
         makesOffer: [
           {
             '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Custom Web Development',
-            },
+            itemOffered: { '@type': 'Service', name: 'Custom Web Development' },
           },
           {
             '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Mobile App Development',
-            },
+            itemOffered: { '@type': 'Service', name: 'Mobile App Development' },
           },
           {
             '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'SaaS Development',
-            },
+            itemOffered: { '@type': 'Service', name: 'SaaS Development' },
           },
           {
             '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'UI/UX Design',
-            },
+            itemOffered: { '@type': 'Service', name: 'UI/UX Design' },
           },
           {
             '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'AI Automation & LLM Integration',
-            },
+            itemOffered: { '@type': 'Service', name: 'AI Automation & LLM Integration' },
           },
           {
             '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Cloud Infrastructure & DevOps',
-            },
+            itemOffered: { '@type': 'Service', name: 'Cloud Infrastructure & DevOps' },
           },
         ],
       },
+      // FIX 1: Correct streetAddress + postalCode; FIX 1 dual @type
       {
-        '@type': 'LocalBusiness',
+        '@type': ['LocalBusiness', 'ProfessionalService'],
         '@id': `${siteUrl}/#localbusiness`,
         name: siteName,
         description: 'Custom software development company in Hyderabad',
@@ -186,10 +188,10 @@ export function organizationSchema() {
         email: 'business@smartxsolutions.in',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Hyderabad',
+          streetAddress: '866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet',
           addressLocality: 'Hyderabad',
           addressRegion: 'Telangana',
-          postalCode: '500081',
+          postalCode: '500059',
           addressCountry: 'IN',
         },
         geo: {
@@ -212,13 +214,37 @@ export function organizationSchema() {
         },
         parentOrganization: { '@id': `${siteUrl}/#organization` },
       },
+      // FIX 7: SearchAction added to WebSite
       {
         '@type': 'WebSite',
         '@id': `${siteUrl}/#website`,
         url: siteUrl,
         name: siteName,
         publisher: { '@id': `${siteUrl}/#organization` },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: `${siteUrl}/?s={search_term_string}`,
+          },
+          'query-input': 'required name=search_term_string',
+        },
       },
+      // FIX 6: Expanded WebPage schema
+      {
+        '@type': 'WebPage',
+        '@id': `${siteUrl}/#webpage`,
+        url: siteUrl,
+        name: 'SmartX Solutions - Custom Software & Web Development',
+        description:
+          'Custom software development company in Hyderabad delivering web apps, mobile apps, SaaS platforms, and digital transformation services across India.',
+        inLanguage: 'en-IN',
+        isPartOf: { '@id': `${siteUrl}/#website` },
+        about: { '@id': `${siteUrl}/#organization` },
+        dateModified: new Date().toISOString().split('T')[0],
+      },
+      // FIX 2: Personal LinkedIn URLs (not company page)
+      // IMPORTANT: Update these to each founder's real personal LinkedIn profile URL (not company page)
       {
         '@type': 'Person',
         '@id': `${siteUrl}/#shoeb-uddin`,
@@ -226,7 +252,8 @@ export function organizationSchema() {
         jobTitle: 'Founder & CEO',
         worksFor: { '@id': `${siteUrl}/#organization` },
         url: `${siteUrl}/about-us`,
-        sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
+        sameAs: ['https://www.linkedin.com/in/shoeb-khan-smartx'],
+        // TODO: Replace with real personal LinkedIn URL
       },
       {
         '@type': 'Person',
@@ -235,7 +262,8 @@ export function organizationSchema() {
         jobTitle: 'Co-Founder & CTO',
         worksFor: { '@id': `${siteUrl}/#organization` },
         url: `${siteUrl}/about-us`,
-        sameAs: ['https://www.linkedin.com/company/smartx-solutions-in'],
+        sameAs: ['https://www.linkedin.com/in/saleha-begum-smartx'],
+        // TODO: Replace with real personal LinkedIn URL
       },
     ],
   }

@@ -26,12 +26,12 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
       url: post.author.url,
       sameAs: [
         post.author.linkedin,
-        'https://smartxsolutions.in',
+        'https://www.smartxsolutions.in',
       ],
       worksFor: {
         '@type': 'Organization',
         name: 'SmartX Solutions',
-        url: 'https://smartxsolutions.in',
+        url: 'https://www.smartxsolutions.in',
       },
     },
     publisher: {
@@ -39,7 +39,9 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
       name: 'SmartX Solutions',
       logo: {
         '@type': 'ImageObject',
-        url: absoluteUrl('/favicon_io/android-chrome-512x512.png'),
+        url: absoluteUrl('/logo.png'),
+        width: 600,
+        height: 60,
       },
     },
     mainEntityOfPage: {

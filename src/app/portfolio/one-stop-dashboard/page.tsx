@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import CaseStudyLayout from '@/components/case-study/CaseStudyLayout'
 
-const siteUrl = 'https://smartxsolutions.in'
+const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/portfolio/one-stop-dashboard`
 
 export const metadata: Metadata = {

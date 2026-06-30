@@ -186,8 +186,8 @@ export default function SaasDevelopmentPage() {
         addressRegion: 'Telangana',
         addressCountry: 'IN',
       },
-      telephone: '+91-9100-590-377',
-      url: 'https://smartxsolutions.in',
+      telephone: '+919100590377',
+      url: 'https://www.smartxsolutions.in',
     },
     areaServed: ['IN'],
     description:

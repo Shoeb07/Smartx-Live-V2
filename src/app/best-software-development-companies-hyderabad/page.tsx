@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ComparisonLayout from '@/components/comparison/ComparisonLayout'
 
-const siteUrl = 'https://smartxsolutions.in'
+const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/best-software-development-companies-hyderabad`
 
 export const metadata: Metadata = {

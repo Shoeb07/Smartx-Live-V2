@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { blogPosts } from '../lib/blog-posts'
 import { seoPageList } from '../lib/seo-pages'
 
-const siteUrl = 'https://smartxsolutions.in'
+const siteUrl = 'https://www.smartxsolutions.in'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

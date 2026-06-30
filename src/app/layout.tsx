@@ -4,7 +4,7 @@ import './globals.css'
 import RootLayoutClient from './layout-client'
 import { organizationSchema } from '@/lib/seo'
 
-const siteUrl = 'https://smartxsolutions.in'
+const siteUrl = 'https://www.smartxsolutions.in'
 
 // Optimize font loading with display: swap
 const syne = Syne({
