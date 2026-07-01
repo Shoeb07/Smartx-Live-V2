@@ -6,6 +6,7 @@ import TrackedLeadLink from '@/components/analytics/TrackedLeadLink'
 import { ArrowUpRight, Phone, Check } from 'lucide-react'
 import { absoluteUrl } from '@/lib/seo'
 import WhatsAppButton from './whatsapp-button'
+import DirectAnswer from '@/components/ui/DirectAnswer'
 
 const page = {
   title: 'SaaS Development Company in Hyderabad — SmartX Solutions',
@@ -243,6 +244,13 @@ export default function SaasDevelopmentPage() {
             </p>
           </div>
         </section>
+
+        <div className="max-w-5xl mx-auto px-6 lg:px-10">
+          <DirectAnswer
+            question="How much does SaaS development cost in Hyderabad?"
+            answer="SaaS development in Hyderabad costs ₹3,00,000 to ₹5,00,000 for an MVP with core features, multi-tenancy, and subscription billing. A production-ready SaaS platform with advanced analytics, API integrations, and enterprise security typically costs ₹8,00,000 to ₹20,00,000 depending on complexity. SmartX Solutions provides fixed-price SaaS development with a 30-day post-launch warranty."
+          />
+        </div>
 
         {/* What We Build */}
         <section className="py-20 px-6 lg:px-10 max-w-6xl mx-auto">

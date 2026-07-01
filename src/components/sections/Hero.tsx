@@ -113,7 +113,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-white/50 text-[17px] max-w-[480px] mb-11 leading-[1.75]"
+          className="text-white/50 text-[17px] max-w-[480px] mb-11 leading-[1.75] speakable"
         >
           SmartX Solutions is a software development company in Hyderabad building web applications, mobile apps, SaaS platforms, and digital products for startups and enterprises across India. From concept to launch — we deliver.
         </motion.p>

@@ -46,9 +46,60 @@ const steps = [
   },
 ]
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How SmartX Solutions Builds Your Software',
+  description:
+    'Our proven 5-step custom software development process — from discovery to post-launch growth — delivering scalable products in 4 months.',
+  totalTime: 'P4M',
+  estimatedCost: { '@type': 'MonetaryAmount', currency: 'INR', value: '500000' },
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Discovery & Strategy',
+      text: 'We deep-dive into your business goals, user needs, and technical landscape to align on scope, timeline, and success metrics.',
+      url: 'https://www.smartxsolutions.in/#process',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Design & Prototype',
+      text: 'Our UX team crafts wireframes, design systems, and clickable prototypes validated with real user feedback before a single line of code is written.',
+      url: 'https://www.smartxsolutions.in/#process',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Agile Development',
+      text: 'We build in 2-week sprints with continuous delivery, regular demos, and transparent progress tracking throughout the development phase.',
+      url: 'https://www.smartxsolutions.in/#process',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Launch & Deploy',
+      text: 'Zero-downtime deployments with automated CI/CD pipelines, performance testing, and full go-live coordination.',
+      url: 'https://www.smartxsolutions.in/#process',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Growth & Support',
+      text: 'Post-launch monitoring, monthly updates, and growth consulting to help you scale as your user base grows.',
+      url: 'https://www.smartxsolutions.in/#process',
+    },
+  ],
+}
+
 export default function Process() {
   return (
     <section className="py-32 bg-[#0a0a10]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="mb-20 text-center max-w-2xl mx-auto">

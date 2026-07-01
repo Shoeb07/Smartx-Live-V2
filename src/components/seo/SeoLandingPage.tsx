@@ -10,6 +10,7 @@ import { breadcrumbSchema, faqSchema, serviceSchema, type SeoPage } from '@/lib/
 type SeoLandingPageProps = {
   page: SeoPage
   children?: React.ReactNode
+  topSlot?: React.ReactNode
 }
 
 const fadeUp = {
@@ -17,7 +18,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 }
 
-export default function SeoLandingPage({ page, children }: SeoLandingPageProps) {
+export default function SeoLandingPage({ page, children, topSlot }: SeoLandingPageProps) {
   const breadcrumbs = page.breadcrumb ?? [
     { label: 'Home', href: '/' },
     { label: page.h1, href: `/${page.slug}` },
@@ -128,6 +129,8 @@ export default function SeoLandingPage({ page, children }: SeoLandingPageProps) 
               </Link>
             </motion.div>
           </motion.section>
+
+          {topSlot}
 
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12 items-start mt-14">
             <article className="space-y-8">

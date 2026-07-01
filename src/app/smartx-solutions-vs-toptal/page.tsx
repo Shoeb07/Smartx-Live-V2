@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ComparisonLayout from '@/components/comparison/ComparisonLayout'
+import LastUpdated from '@/components/ui/LastUpdated'
 
 const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/smartx-solutions-vs-toptal`
@@ -120,6 +121,8 @@ export default function SmartXVsToptalPage() {
         authorUrl={`${siteUrl}/about-us`}
         disclosureText="This comparison was written by SmartX Solutions. We compete with Toptal for some clients. We have credited Toptal's genuine strengths honestly — their vetting is real and rigorous."
       >
+
+        <LastUpdated date="July 2026" />
 
         {/* Intro */}
         <section>

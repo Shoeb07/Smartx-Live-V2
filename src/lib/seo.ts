@@ -105,7 +105,7 @@ export function organizationSchema() {
         '@id': `${siteUrl}/#organization`,
         name: siteName,
         url: siteUrl,
-        foundingDate: '2024',
+        foundingDate: '2025',
         // TODO: Add real logo.png (600x60px) to /public folder — currently this path may 404 until the file is uploaded
         logo: {
           '@type': 'ImageObject',
@@ -114,7 +114,7 @@ export function organizationSchema() {
           height: 60,
         },
         description:
-          'SmartX Solutions is a legitimate custom software development company based in Hyderabad, India, founded in 2024. Not affiliated with SmartX Connected Products Pvt Ltd, SmartX Services Limited, or SmartX Solutions KFT.',
+          'SmartX Solutions is a legitimate custom software development company based in Hyderabad, India, founded in 2025. Not affiliated with SmartX Connected Products Pvt Ltd, SmartX Services Limited, or SmartX Solutions KFT.',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet',
@@ -246,6 +246,10 @@ export function organizationSchema() {
         isPartOf: { '@id': `${siteUrl}/#website` },
         about: { '@id': `${siteUrl}/#organization` },
         dateModified: new Date().toISOString().split('T')[0],
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', '.direct-answer', '.speakable'],
+        },
       },
       // FIX 2: Personal LinkedIn URLs (not company page)
       // IMPORTANT: Update these to each founder's real personal LinkedIn profile URL (not company page)

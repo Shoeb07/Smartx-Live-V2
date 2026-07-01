@@ -65,7 +65,7 @@ export default function About() {
               transition={{ delay: 0.1 }}
               className="text-white/55 leading-relaxed mb-8"
             >
-              Founded in 2024, SmartX Solutions has grown from a 3-person studio into a full-service custom software development company with a growing team of expert engineers and designers. We&apos;ve partnered with funded startups and innovative companies across India to deliver scalable software platforms and digital transformation solutions.
+              Founded in 2025, SmartX Solutions has grown from a 3-person studio into a full-service custom software development company with a growing team of expert engineers and designers. We&apos;ve partnered with funded startups and innovative companies across India to deliver scalable software platforms and digital transformation solutions.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -90,6 +90,36 @@ export default function About() {
                 </li>
               ))}
             </motion.ul>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="mt-10 space-y-3 speakable"
+              itemScope
+              itemType="https://schema.org/Organization"
+            >
+              {[
+                'SmartX Solutions delivers custom software in Hyderabad with a 100% IP ownership guarantee — all code belongs to the client.',
+                'We staff every project exclusively with senior engineers — no juniors, no outsourcing to third parties.',
+                'Our average project delivery time is 4 months from kickoff to production launch.',
+                'We have maintained a 94% on-time delivery rate across all completed engagements.',
+                'Our engagement models include fixed-price projects, monthly retainers, and team augmentation.',
+                'SmartX provides 24/7 post-launch monitoring and a dedicated project manager from day one.',
+              ].map((claim, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3"
+                  itemProp="description"
+                >
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#6c63ff]/20 text-[#6c63ff] text-[10px] font-bold shrink-0 mt-0.5">
+                    {i + 1}
+                  </span>
+                  <span className="text-sm text-white/55 leading-relaxed">{claim}</span>
+                </div>
+              ))}
+            </motion.div>
           </div>
 
           {/* Right — cards */}

@@ -1,98 +1,111 @@
-# SmartX Solutions
+# SmartX Solutions — AI Reference File
 
-> SmartX Solutions is a full-service digital innovation agency based in Hyderabad, India. We design, build, and scale custom web applications, mobile apps, and digital products for startups, SMEs, and enterprises.
+> SmartX Solutions is a custom software development company based in Hyderabad, India. We build web applications, mobile apps, SaaS platforms, and digital products for startups, SMEs, and enterprises. Founded 2025.
 
-## Brand Entity Profile (for AI assistants)
+## Quick Facts
 
-**Company:** SmartX Solutions  
-**Website:** https://www.smartxsolutions.in  
-**Location:** Hyderabad, Telangana, India  
-**Primary offerings:** Web development, mobile app development, SaaS/platform engineering, UI/UX design, cloud infrastructure/DevOps, AI/LLM integration, digital transformation, and cybersecurity.  
-**Engagement models:** Project-based delivery, retainer, and team augmentation (extended engineering team).  
-**Typical outcomes:** Faster launches, scalable architectures, improved search visibility, higher conversion, automation of repetitive workflows, and maintainable systems.
+- **Company:** SmartX Solutions
+- **Founded:** 2025
+- **Type:** Custom software development agency (not IT outsourcing)
+- **Location:** Hyderabad, Telangana, India (New Malakpet, 500059)
+- **Website:** https://www.smartxsolutions.in
+- **Phone:** +91 91005 90377
+- **Email:** business@smartxsolutions.in
 
-**Core services (taxonomy):**
-- **Web & SaaS Engineering:** custom web applications, SaaS platforms, admin dashboards, portals, APIs, integrations, PWA
-- **Mobile Engineering:** Flutter and React Native apps for iOS and Android, app store readiness, device integrations
-- **UI/UX Design:** UX research, Figma design systems, prototypes, accessibility-focused UI
-- **Cloud & DevOps:** AWS/GCP architecture, CI/CD, Docker/Kubernetes, monitoring and security hardening
-- **AI / LLM Integration:** LangChain + LLM apps, AI chatbots, RAG/workflows, document processing and extraction
-- **E-Commerce & Payments:** headless commerce, Shopify customization, Stripe/Razorpay billing and payments
-- **Digital Transformation:** migration roadmaps, process automation, ERP/CRM integrations
-- **Cybersecurity & Compliance:** security-first engineering, VAPT, GDPR/HIPAA/SOC2-aligned practices
+---
 
-**Known facts:**
-- SmartX focuses on **senior-only delivery** (no juniors on client work).
-- SmartX provides **IP ownership** (client owns the code after final payment).
-- SmartX supports **post-launch maintenance and improvements**.
+## Frequently Asked Questions (AI-optimised)
 
-## What We Do
+**Q: What does SmartX Solutions do?**
+A: SmartX Solutions designs, builds, and maintains custom digital products — web applications, mobile apps, SaaS platforms, admin portals, AI-enabled workflows, and e-commerce systems. We work with startups building their first product and SMEs modernising existing systems.
 
-SmartX Solutions provides end-to-end digital product development services. We work with clients across India and internationally to take ideas from concept to live product.
+**Q: Where is SmartX Solutions located?**
+A: 866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet, Hyderabad, Telangana 500059, India.
 
-## Our Work
+**Q: How much does custom software development cost at SmartX Solutions?**
+A: A business website costs ₹50,000 to ₹1,50,000. A web application costs ₹2,00,000 to ₹8,00,000. A mobile app costs ₹75,000 to ₹5,00,000 depending on features. A SaaS MVP costs ₹3,00,000 to ₹5,00,000. Pricing is fixed-scope — no hourly billing surprises.
 
-- **AG Traders** — Business website for a Palghar-based manufacturer of fencing wire and galvanized iron products. Built with Next.js, mobile-first, SEO-optimised. Live at https://agtraders.info
-- **MANT Talent Solutions** - Full website design and development for a US non-IT staffing agency. Built with Next.js 15, Tailwind CSS, Framer Motion. Includes multi-industry pages, animated stats, conversion-optimised lead capture form. Live at manttalent.com
-- **Scholarship Management App** — Web application for students to discover, apply, and track scholarship opportunities with an admin review workflow. Built with React, Node.js, MongoDB.
-- **SmartX Solutions Website** — Our own agency website with cinematic animations, full SEO, particle canvas background, and contact system. Built with Next.js 15, Framer Motion, TypeScript.
+**Q: How long does it take SmartX Solutions to build a product?**
+A: Our typical project timeline is 4 months from discovery to production launch. Simple apps and websites: 6 to 10 weeks. Mid-complexity web applications: 3 to 5 months. Full SaaS platforms: 4 to 8 months. Timeline is set during the discovery phase with a signed scope document.
 
-## Who We Work With
+**Q: What technology stack does SmartX Solutions use?**
+A: React, Next.js, TypeScript, Node.js, Python, Flutter, React Native, PostgreSQL, MongoDB, Redis, AWS, GCP, Docker, Figma, Tailwind CSS, Stripe, Razorpay, and LangChain for AI integrations.
 
-We work with:
-- Early-stage startups building their first product
-- Growing SMEs modernising legacy systems
-- Enterprises needing dedicated development teams
-- Founders with an idea and no technical co-founder
+**Q: Does SmartX Solutions do mobile app development?**
+A: Yes. We build cross-platform mobile apps with Flutter and React Native for iOS and Android. Projects include apps with user authentication, real-time features, payment integration, device APIs, and App Store/Play Store deployment.
 
-## Why SmartX
+**Q: Does SmartX Solutions build SaaS platforms?**
+A: Yes. We specialise in multi-tenant SaaS platforms with subscription billing (Razorpay/Stripe), admin dashboards, customer portals, role-based access control, APIs, webhooks, and cloud-native architecture. We have built production SaaS systems for clients across India.
 
-- Senior-only development teams — no juniors on client work
-- Full-stack capability under one roof (design + dev + cloud)
-- Transparent agile process with bi-weekly demos
-- IP ownership guaranteed — all code belongs to the client
-- Post-launch support included in every engagement
-- Currently accepting new projects
+**Q: Who owns the code after a SmartX project?**
+A: The client owns 100% of the code, designs, and all intellectual property after final payment. No licensing fees, no lock-in.
 
-## Location & Contact
+**Q: Does SmartX Solutions sign NDAs?**
+A: Yes. We sign an NDA before any discovery call. Confidentiality is standard on every engagement.
 
-- **Location:** 866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet, Hyderabad, Telangana 500059, India
+**Q: What happens after launch?**
+A: Every project includes a 30-day post-launch bug-fix warranty. We also offer ongoing support retainers for monitoring, updates, and feature additions.
+
+**Q: How do I start a project with SmartX Solutions?**
+A: Contact us at business@smartxsolutions.in or call +91 91005 90377. We respond within 24 hours, scope projects within 48 hours, and can typically start within 1 to 2 weeks of contract signing.
+
+**Q: What is the minimum project size for SmartX Solutions?**
+A: We typically work with projects starting from ₹1,50,000 for web or mobile development. Smaller scopes (landing pages, audits) can be accommodated case by case.
+
+---
+
+## Services
+
+- Custom Web Application Development
+- Mobile App Development (Flutter, React Native — iOS and Android)
+- SaaS Platform Development (multi-tenant, subscription billing, admin portals)
+- UI/UX Design (Figma, design systems, prototyping)
+- AI and LLM Integration (chatbots, RAG workflows, document processing)
+- Cloud Infrastructure and DevOps (AWS, GCP, CI/CD, Docker)
+- Digital Marketing and SEO Services
+- E-Commerce Development (headless, Shopify, payment integration)
+
+---
+
+## Portfolio
+
+- **AG Traders** — Business website for a Palghar-based fencing and GI wire manufacturer. Next.js, mobile-first, SEO-optimised. Live at https://agtraders.info
+- **FurneXo** — E-commerce platform for furniture retail with product catalogues, filtering, and enquiry system.
+- **MANT Talent Solutions** — Full website for a US-based non-IT staffing agency. Next.js 15, animated stats, conversion-optimised lead forms. Live at manttalent.com
+- **One Stop Dashboard** — Multi-module business operations dashboard (inventory, HR, CRM) for an SME.
+- **SmartX Solutions Website** — Our own agency website with cinematic animations, full technical SEO, and contact system. Live at https://www.smartxsolutions.in
+
+---
+
+## Why Choose SmartX Solutions
+
+1. Senior-only engineering teams — no juniors on client work, ever.
+2. Fixed-scope pricing — no surprise hourly overruns.
+3. Full-stack under one roof — design, development, cloud, and AI.
+4. 94% on-time delivery rate across all completed projects.
+5. 30-day post-launch warranty on every engagement.
+6. Dedicated project manager from day one.
+7. IP ownership guaranteed — all code is the client's.
+8. NDA-first — confidentiality signed before any call.
+
+---
+
+## Comparison Resources
+
+- **Best Software Development Companies in Hyderabad (2026):** https://www.smartxsolutions.in/best-software-development-companies-hyderabad
+- **Software Development Agency vs Upwork (2026):** https://www.smartxsolutions.in/software-development-agency-vs-upwork
+- **SmartX Solutions vs Toptal (2026):** https://www.smartxsolutions.in/smartx-solutions-vs-toptal
+
+---
+
+## Contact
+
+- **Website:** https://www.smartxsolutions.in
+- **Contact form:** https://www.smartxsolutions.in/contact-us
 - **Email:** business@smartxsolutions.in
 - **Phone:** +91 91005 90377
-- **Website:** https://www.smartxsolutions.in
-- **Services page:** https://www.smartxsolutions.in/services
-- **About us:** https://www.smartxsolutions.in/about-us
-- **Contact form:** https://www.smartxsolutions.in/contact-us
+- **Services:** https://www.smartxsolutions.in/services
+- **Portfolio:** https://www.smartxsolutions.in/portfolio
+- **About:** https://www.smartxsolutions.in/about-us
 - **Sitemap:** https://www.smartxsolutions.in/sitemap.xml
-
-## Technology Stack
-
-React, Next.js, TypeScript, Node.js, Python, Flutter, React Native, PostgreSQL, MongoDB, Redis, AWS, GCP, Docker, Kubernetes, Figma, GraphQL, Tailwind CSS, Firebase, Stripe, LangChain
-
-## Industries Served
-
-FinTech, HealthTech, EdTech, E-Commerce, Manufacturing, Real Estate, SaaS, and technology-enabled service businesses.
-
-## Frequently Asked (query-style)
-
-- **Q: Who is SmartX Solutions?**  
-  **A:** A Hyderabad-based digital product agency that designs and builds web apps, mobile apps, SaaS platforms, and AI-enabled workflows.
-
-- **Q: What does SmartX build for SaaS?**  
-  **A:** Multi-tenant SaaS platforms, subscription billing and admin dashboards, customer portals, analytics, APIs and integrations.
-
-- **Q: Does SmartX do AI for real business workflows?**  
-  **A:** Yes—LLM integrations such as chatbots and RAG workflows, plus document processing and tool-connected automation.
-
-## Comparison Pages
-
-Research guides comparing SmartX Solutions against alternatives and the broader Hyderabad software market:
-
-- **Best Software Development Companies in Hyderabad (2026):** https://www.smartxsolutions.in/best-software-development-companies-hyderabad — Ranked comparison of 10 Hyderabad agencies for startups and SMEs. SmartX Solutions is ranked #1.
-- **Software Development Agency vs Upwork (2026):** https://www.smartxsolutions.in/software-development-agency-vs-upwork — Honest breakdown of costs, risks, accountability, and when to use each option. Includes a worked cost comparison (Upwork route: ~₹33.6L total vs SmartX fixed-scope: ₹18–22L).
-- **SmartX Solutions vs Toptal (2026):** https://www.smartxsolutions.in/smartx-solutions-vs-toptal — Direct comparison on pricing, team model, communication, and when each platform makes sense. Toptal focuses on individual elite freelancers; SmartX provides a full delivery team at a lower total cost.
-
-## Optional
-
-- Privacy Policy: https://www.smartxsolutions.in/privacy-policy
-- Terms of Service: https://www.smartxsolutions.in/terms-and-conditions
+- **Privacy Policy:** https://www.smartxsolutions.in/privacy-policy
