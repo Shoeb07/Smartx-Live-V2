@@ -23,20 +23,20 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Bingbot',
         allow: '/',
       },
-      // AI assistants — allow for citation/answer engine visibility
+      // AI answer engines — allow for citation/answer engine visibility
       {
         userAgent: 'PerplexityBot',
         allow: '/',
       },
-      // AI training crawlers — disallow
       {
         userAgent: 'ClaudeBot',
-        disallow: '/',
+        allow: '/',
       },
       {
         userAgent: 'GPTBot',
-        disallow: '/',
+        allow: '/',
       },
+      // Generic crawler (Common Crawl) — disallow training only
       {
         userAgent: 'CCBot',
         disallow: '/',
