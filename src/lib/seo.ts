@@ -186,6 +186,7 @@ export function organizationSchema() {
         url: siteUrl,
         telephone: '+919100590377',
         email: 'business@smartxsolutions.in',
+        image: `${siteUrl}/og-image.png`,
         address: {
           '@type': 'PostalAddress',
           streetAddress: '866, Sayeedabad Rd, Jeevan Yaar Jung Colony, Akbarbagh, New Malakpet',
@@ -196,8 +197,8 @@ export function organizationSchema() {
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: 17.3850,
-          longitude: 78.4867,
+          latitude: 17.37455,
+          longitude: 78.50218,
         },
         openingHoursSpecification: {
           '@type': 'OpeningHoursSpecification',
@@ -208,10 +209,13 @@ export function organizationSchema() {
         priceRange: '₹₹',
         currenciesAccepted: 'INR',
         paymentAccepted: 'Cash, Credit Card, Bank Transfer',
-        areaServed: {
-          '@type': 'Country',
-          name: 'India',
-        },
+        areaServed: [
+          { '@type': 'City', name: 'Hyderabad' },
+          { '@type': 'City', name: 'Secunderabad' },
+          { '@type': 'City', name: 'Cyberabad' },
+          { '@type': 'AdministrativeArea', name: 'Telangana' },
+          { '@type': 'Country', name: 'India' },
+        ],
         parentOrganization: { '@id': `${siteUrl}/#organization` },
       },
       // FIX 7: SearchAction added to WebSite
@@ -235,7 +239,7 @@ export function organizationSchema() {
         '@type': 'WebPage',
         '@id': `${siteUrl}/#webpage`,
         url: siteUrl,
-        name: 'SmartX Solutions - Custom Software & Web Development',
+        name: 'SmartX Solutions | Custom Software Development Company in Hyderabad',
         description:
           'Custom software development company in Hyderabad delivering web apps, mobile apps, SaaS platforms, and digital transformation services across India.',
         inLanguage: 'en-IN',

@@ -149,13 +149,19 @@ export default function Footer() {
                 </p>
               </div>
 
+              {/*
+                TODO: Replace embed src with GBP Place ID embed URL
+                Go to: Google Business Profile → Share → Embed a map
+                Copy the src URL from the iframe code provided
+                This links the map to your verified GBP listing
+              */}
               <div className="w-full">
                 <iframe
                   title="SmartX Solutions location map"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-[220px] md:h-[240px]"
-                  src="https://www.google.com/maps?q=866%2C%20Sayeedabad%20Rd%2C%20Jeevan%20Yaar%20Jung%20Colony%2C%20Akbarbagh%2C%20New%20Malakpet%2C%20Hyderabad%2C%20Telangana%20500059%2C%20India&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8!2d78.50218!3d17.37455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba42dc0000001%3A0x0!2sSmartX+Solutions!5e0!3m2!1sen!2sin!4v1234567890"
                 />
               </div>
 
