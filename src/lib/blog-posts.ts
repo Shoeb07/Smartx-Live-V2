@@ -1,37 +1,29 @@
 import type { Metadata } from 'next'
 import { absoluteUrl, siteName } from './seo'
+import { shoebUddin, salehaBegum, type Author } from './blog-authors'
+import { webDevClusterPosts } from './webdev-cluster-posts'
 
-export type Author = {
-  name: string
-  role: string
-  company: string
-  bio: string
-  initials: string
-  color: string
-  linkedin: string
-  url: string
-}
+export { shoebUddin, salehaBegum }
+export type { Author }
 
-export const shoebUddin: Author = {
-  name: 'Shoeb Uddin',
-  role: 'Founder & CEO',
-  company: 'SmartX Solutions',
-  bio: 'Shoeb Uddin is the Founder and CEO of SmartX Solutions, a software development company based in Hyderabad. He leads product strategy, client relationships, and business development — helping startups and enterprises across India build world-class digital products.',
-  initials: 'SU',
-  color: '#6c63ff',
-  linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
-  url: 'https://www.smartxsolutions.in/about-us',
-}
-
-export const salehaBegum: Author = {
-  name: 'Saleha Begum',
-  role: 'Co-Founder & CTO',
-  company: 'SmartX Solutions',
-  bio: 'Saleha Begum is the Co-Founder and CTO of SmartX Solutions. She leads engineering and technical architecture — overseeing the delivery of web applications, mobile apps, SaaS platforms, and AI integrations for clients across India.',
-  initials: 'SB',
-  color: '#00e5b0',
-  linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
-  url: 'https://www.smartxsolutions.in/about-us',
+export type BlogSection = {
+  h2: string
+  // Paragraphs support inline links using [label](/path) markdown-style syntax
+  body: string[]
+  h3s?: {
+    h3: string
+    body: string[]
+  }[]
+  table?: {
+    caption?: string
+    headers: string[]
+    rows: string[][]
+  }
+  checklist?: string[]
+  links?: {
+    href: string
+    label: string
+  }[]
 }
 
 export type BlogPost = {
@@ -43,13 +35,20 @@ export type BlogPost = {
   readTime: string
   author: Author
   intro: string
-  sections: {
-    h2: string
-    body: string[]
-  }[]
+  lastUpdated?: string
+  directAnswer?: {
+    question: string
+    answer: string
+    cite?: string
+  }
+  sections: BlogSection[]
   faqs: {
     question: string
     answer: string
+  }[]
+  paa?: {
+    q: string
+    a: string
   }[]
   related: {
     href: string
@@ -59,9 +58,10 @@ export type BlogPost = {
     label: string
     url: string
   }[]
+  extraSchemas?: Record<string, unknown>[]
 }
 
-export const blogPosts: BlogPost[] = [
+const corePosts: BlogPost[] = [
   {
     slug: 'custom-web-application-company',
     keyword: 'custom web application company',
@@ -429,6 +429,8 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 ]
+
+export const blogPosts: BlogPost[] = [...corePosts, ...webDevClusterPosts]
 
 export const blogPostMap = new Map(blogPosts.map((post) => [post.slug, post]))
 

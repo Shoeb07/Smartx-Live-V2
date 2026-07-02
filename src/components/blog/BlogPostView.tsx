@@ -1,12 +1,149 @@
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import DirectAnswer from '@/components/ui/DirectAnswer'
+import PeopleAlsoAsk from '@/components/ui/PeopleAlsoAsk'
+import LastUpdated from '@/components/ui/LastUpdated'
 import { ArrowUpRight, CalendarDays, Clock, CheckCircle2, ChevronLeft } from 'lucide-react'
 import { absoluteUrl, faqSchema } from '@/lib/seo'
-import { blogPosts, type BlogPost } from '@/lib/blog-posts'
+import { blogPosts, type BlogPost, type BlogSection } from '@/lib/blog-posts'
 
 type BlogPostViewProps = {
   post: BlogPost
+}
+
+// Renders [label](/path) markdown-style links inside paragraph text.
+// Internal paths use next/link; external URLs open in a new tab.
+function RichText({ text }: { text: string }) {
+  const linkPattern = /\[([^\]]+)\]\(([^)\s]+)\)/g
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+    const [full, label, href] = match
+    const linkClass =
+      'text-[#a89eff] underline underline-offset-2 decoration-[#6c63ff]/40 hover:text-white hover:decoration-white/60 transition-colors'
+    parts.push(
+      href.startsWith('/') ? (
+        <Link key={match.index} href={href} className={linkClass}>
+          {label}
+        </Link>
+      ) : (
+        <a
+          key={match.index}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={linkClass}
+        >
+          {label}
+        </a>
+      )
+    )
+    lastIndex = match.index + full.length
+  }
+
+  if (parts.length === 0) return <>{text}</>
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex))
+  return <>{parts}</>
+}
+
+function SectionBlock({ section }: { section: BlogSection }) {
+  return (
+    <section>
+      <h2 className="font-syne font-bold text-[clamp(26px,4vw,38px)] leading-tight mb-5">
+        {section.h2}
+      </h2>
+      <div className="space-y-5">
+        {section.body.map((paragraph, i) => (
+          <p key={i} className="text-white/64 text-base md:text-lg leading-relaxed">
+            <RichText text={paragraph} />
+          </p>
+        ))}
+      </div>
+
+      {section.table && (
+        <div className="mt-6 overflow-x-auto rounded-2xl border border-white/[0.08]">
+          <table className="w-full text-left text-sm">
+            {section.table.caption && (
+              <caption className="sr-only">{section.table.caption}</caption>
+            )}
+            <thead>
+              <tr className="bg-white/[0.04]">
+                {section.table.headers.map((header) => (
+                  <th
+                    key={header}
+                    className="px-4 py-3 font-syne font-bold text-white text-[13px] whitespace-nowrap"
+                  >
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.table.rows.map((row, rowIndex) => (
+                <tr key={rowIndex} className="border-t border-white/[0.06]">
+                  {row.map((cell, cellIndex) => (
+                    <td key={cellIndex} className="px-4 py-3 text-white/60 align-top">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {section.checklist && (
+        <div className="mt-6 rounded-2xl border border-white/[0.08] bg-[#0d0d14] p-6">
+          <ul className="space-y-3">
+            {section.checklist.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <CheckCircle2 size={16} className="text-[#00e5b0] mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-white/65 leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {section.h3s?.map((sub) => (
+        <div key={sub.h3} className="mt-8">
+          <h3 className="font-syne font-bold text-xl md:text-2xl mb-4">{sub.h3}</h3>
+          <div className="space-y-4">
+            {sub.body.map((paragraph, i) => (
+              <p key={i} className="text-white/64 text-base md:text-lg leading-relaxed">
+                <RichText text={paragraph} />
+              </p>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      {section.links && (
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {section.links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="group flex items-start gap-3 rounded-xl border border-white/[0.08] bg-white/[0.03] p-4 text-sm text-white/65 hover:text-white hover:border-white/[0.16] transition-all"
+            >
+              <ArrowUpRight
+                size={15}
+                className="text-[#00e5b0] mt-0.5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+              <span>{link.label}</span>
+            </Link>
+          ))}
+        </div>
+      )}
+    </section>
+  )
 }
 
 export default function BlogPostView({ post }: BlogPostViewProps) {
@@ -75,6 +212,13 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(post.faqs)) }}
       />
+      {post.extraSchemas?.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <main className="relative overflow-hidden bg-[#050508] text-white pt-28 pb-24">
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
@@ -114,6 +258,11 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                 {post.readTime}
               </span>
             </div>
+            {post.lastUpdated && (
+              <div className="mt-5">
+                <LastUpdated date={post.lastUpdated} />
+              </div>
+            )}
 
             {/* Author card */}
             <div className="flex items-center gap-4 mt-6 mb-0 pt-6 border-t border-white/[0.06]">
@@ -161,19 +310,16 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12 mt-12 items-start">
             <article className="space-y-10">
+              {post.directAnswer && (
+                <DirectAnswer
+                  question={post.directAnswer.question}
+                  answer={post.directAnswer.answer}
+                  cite={post.directAnswer.cite}
+                />
+              )}
+
               {post.sections.map((section) => (
-                <section key={section.h2}>
-                  <h2 className="font-syne font-bold text-[clamp(26px,4vw,38px)] leading-tight mb-5">
-                    {section.h2}
-                  </h2>
-                  <div className="space-y-5">
-                    {section.body.map((paragraph) => (
-                      <p key={paragraph} className="text-white/64 text-base md:text-lg leading-relaxed">
-                        {paragraph}
-                      </p>
-                    ))}
-                  </div>
-                </section>
+                <SectionBlock key={section.h2} section={section} />
               ))}
 
               <section className="pt-4">
@@ -189,6 +335,8 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                   ))}
                 </div>
               </section>
+
+              {post.paa && post.paa.length > 0 && <PeopleAlsoAsk items={post.paa} />}
 
               {post.sources.length > 0 && (
                 <section className="pt-4 border-t border-white/[0.07]">

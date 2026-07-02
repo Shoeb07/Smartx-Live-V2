@@ -316,6 +316,14 @@ export default function AgencyVsUpworkPage() {
               to see examples of what we build.
             </p>
           </div>
+
+          <p className="mt-6 text-white/55 text-sm leading-relaxed">
+            Deciding between hiring locally instead of through a platform? Read our comparison of a{' '}
+            <Link href="/blog/web-development-company-hyderabad-vs-freelancer" className="text-[#a89eff] underline underline-offset-2 hover:text-white transition-colors">
+              web development company vs freelancer in Hyderabad
+            </Link>
+            .
+          </p>
         </section>
 
         <PeopleAlsoAsk
