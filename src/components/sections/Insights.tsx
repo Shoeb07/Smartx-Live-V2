@@ -6,6 +6,9 @@ import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-posts'
 
 export default function Insights() {
+  // Newest posts first (stable sort keeps in-file order for same-day posts)
+  const latestPosts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3)
+
   return (
     <section id="insights" className="py-32 bg-[#0a0a10]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -43,7 +46,7 @@ export default function Insights() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {blogPosts.slice(0, 3).map((post, i) => (
+          {latestPosts.map((post, i) => (
             <motion.article
               key={post.slug}
               initial={{ opacity: 0, y: 30 }}

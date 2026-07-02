@@ -170,6 +170,7 @@ export const seoPages: Record<string, SeoPage> = {
     links: [
       { href: '/services', label: 'All software development services' },
       { href: '/software-development-company', label: 'Custom software development' },
+      { href: '/blog/ecommerce-website-development-hyderabad', label: 'E-commerce website development' },
       { href: '/digital-marketing-services', label: 'Digital marketing services' },
       { href: '/contact-us', label: 'Start a web project' },
     ],

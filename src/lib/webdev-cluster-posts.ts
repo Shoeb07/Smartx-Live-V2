@@ -65,7 +65,7 @@ export const webDevClusterPosts: BlogPost[] = [
           {
             h3: 'E-Commerce Websites',
             body: [
-              'E-commerce development for the Indian market means Razorpay and UPI integration, cash-on-delivery workflows, GST-compliant invoicing, and mobile-first product pages — because the majority of Indian online shoppers buy on their phones. Custom stores in Hyderabad cost ₹1,50,000 to ₹4,00,000; Shopify-based builds can start lower. Our [ecommerce website development guide](/blog/ecommerce-website-development-hyderabad) covers how to choose between custom, Shopify, and WooCommerce.',
+              'E-commerce development for the Indian market means Razorpay and UPI integration, cash-on-delivery workflows, GST-compliant invoicing, and mobile-first product pages — because the majority of Indian online shoppers buy on their phones. Custom stores in Hyderabad cost ₹1,50,000 to ₹4,00,000; Shopify-based builds can start lower. Our guide to [ecommerce website development in Hyderabad](/blog/ecommerce-website-development-hyderabad) covers how to choose between custom, Shopify, and WooCommerce.',
             ],
           },
           {
