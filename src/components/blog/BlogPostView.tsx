@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import DirectAnswer from '@/components/ui/DirectAnswer'
@@ -154,7 +155,7 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
-    image: absoluteUrl('/og-image.png'),
+    image: absoluteUrl(post.image ?? '/og-image.png'),
     url: absoluteUrl(`/${post.slug}`),
     author: {
       '@type': 'Person',
@@ -308,6 +309,20 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
             </div>
           </header>
 
+          {post.image && (
+            <div className="mt-10 overflow-hidden rounded-2xl border border-white/[0.08] shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={1200}
+                height={630}
+                priority
+                sizes="(max-width: 1024px) 100vw, 960px"
+                className="w-full h-auto"
+              />
+            </div>
+          )}
+
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12 mt-12 items-start">
             <article className="space-y-10">
               {post.directAnswer && (
@@ -409,7 +424,19 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {others.map((p) => (
-                  <article key={p.slug} className="rounded-2xl border border-white/[0.08] bg-[#0d0d14] p-5 hover:border-white/[0.16] transition-all">
+                  <article key={p.slug} className="group rounded-2xl border border-white/[0.08] bg-[#0d0d14] p-5 hover:border-white/[0.16] transition-all">
+                    {p.image && (
+                      <Link href={`/${p.slug}`} className="block mb-4 overflow-hidden rounded-xl border border-white/[0.06]">
+                        <Image
+                          src={p.image}
+                          alt={p.title}
+                          width={600}
+                          height={315}
+                          sizes="(max-width: 640px) 100vw, 320px"
+                          className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.03]"
+                        />
+                      </Link>
+                    )}
                     <p className="text-[#6c63ff] text-xs uppercase tracking-widest mb-2">{p.keyword}</p>
                     <h3 className="font-syne font-bold text-base leading-snug mb-3">
                       <Link href={`/${p.slug}`} className="hover:text-[#a89eff] transition-colors">

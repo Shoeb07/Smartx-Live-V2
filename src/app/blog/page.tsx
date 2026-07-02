@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { ArrowUpRight } from 'lucide-react'
@@ -91,6 +92,18 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
             {blogPosts.map((post) => (
               <article key={post.slug} className="group rounded-2xl border border-white/[0.08] bg-[#0d0d14] p-6 hover:border-white/[0.16] transition-all">
+                {post.image && (
+                  <Link href={`/${post.slug}`} className="block mb-5 overflow-hidden rounded-xl border border-white/[0.06]">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width={600}
+                      height={315}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
+                      className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.03]"
+                    />
+                  </Link>
+                )}
                 <p className="text-[#6c63ff] text-xs uppercase tracking-widest mb-3">{post.keyword}</p>
                 <h2 className="font-syne font-bold text-xl mb-3 group-hover:text-[#a89eff] transition-colors">
                   <Link href={`/${post.slug}`}>{post.title}</Link>

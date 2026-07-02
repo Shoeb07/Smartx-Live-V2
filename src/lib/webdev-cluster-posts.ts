@@ -10,6 +10,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/web-development-hyderabad-guide',
+    image: '/blog-images/web-development-hyderabad-guide.png',
     keyword: 'web development hyderabad',
     title: 'Web Development in Hyderabad: The Complete Guide (2026)',
     description:
@@ -317,6 +318,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/web-development-cost-hyderabad',
+    image: '/blog-images/web-development-cost-hyderabad.png',
     keyword: 'web development cost hyderabad',
     title: 'Web Development Cost in Hyderabad: 2026 Pricing Guide',
     description:
@@ -463,6 +465,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/ecommerce-website-development-hyderabad',
+    image: '/blog-images/ecommerce-website-development-hyderabad.png',
     keyword: 'ecommerce website development company hyderabad',
     title: 'Ecommerce Website Development in Hyderabad: What to Look For in a Partner (2026)',
     description:
@@ -610,6 +613,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/wordpress-website-development-hyderabad',
+    image: '/blog-images/wordpress-website-development-hyderabad.png',
     keyword: 'wordpress website development hyderabad',
     title: 'WordPress Website Development in Hyderabad: When It Makes Sense (2026)',
     description:
@@ -743,6 +747,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/how-to-choose-web-development-company-hyderabad',
+    image: '/blog-images/how-to-choose-web-development-company-hyderabad.png',
     keyword: 'how to choose a web development company in hyderabad',
     title: 'How to Choose a Web Development Company in Hyderabad (2026 Guide)',
     description:
@@ -873,6 +878,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/web-development-company-hyderabad-vs-freelancer',
+    image: '/blog-images/web-development-company-hyderabad-vs-freelancer.png',
     keyword: 'web development company hyderabad vs freelancer',
     title: 'Web Development Company vs Freelancer in Hyderabad: Which Should You Hire? (2026)',
     description:
@@ -999,6 +1005,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/custom-web-application-development-company-hyderabad',
+    image: '/blog-images/custom-web-application-development-company-hyderabad.png',
     keyword: 'custom web application development company hyderabad',
     title: 'Custom Web Application vs Off-the-Shelf Software: What Hyderabad Businesses Should Know',
     description:
@@ -1136,6 +1143,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/web-development-services-hyderabad-small-business',
+    image: '/blog-images/web-development-services-hyderabad-small-business.png',
     keyword: 'web development services hyderabad small business',
     title: 'Web Development Services in Hyderabad for Small Businesses (2026)',
     description:
@@ -1252,6 +1260,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/affordable-web-development-hyderabad-startups',
+    image: '/blog-images/affordable-web-development-hyderabad-startups.png',
     keyword: 'affordable web development hyderabad startups',
     title: 'Affordable Web Development for Startups in Hyderabad: Where to Start (2026)',
     description:
@@ -1376,6 +1385,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/wordpress-vs-custom-website-development-cost-hyderabad',
+    image: '/blog-images/wordpress-vs-custom-website-development-cost-hyderabad.png',
     keyword: 'wordpress vs custom website development cost hyderabad',
     title: 'WordPress vs Custom Development: Which Costs Less Long-Term in Hyderabad?',
     description:
@@ -1510,6 +1520,7 @@ export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
   {
     slug: 'blog/web-design-vs-web-development-hyderabad',
+    image: '/blog-images/web-design-vs-web-development-hyderabad.png',
     keyword: 'web design vs web development hyderabad',
     title: 'Web Design vs Web Development: What Hyderabad Businesses Actually Need',
     description:

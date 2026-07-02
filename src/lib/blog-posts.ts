@@ -28,6 +28,8 @@ export type BlogSection = {
 
 export type BlogPost = {
   slug: string
+  // Branded 1200x630 hero/OG image under /public/blog-images/
+  image?: string
   keyword: string
   title: string
   description: string
@@ -64,6 +66,7 @@ export type BlogPost = {
 const corePosts: BlogPost[] = [
   {
     slug: 'custom-web-application-company',
+    image: '/blog-images/custom-web-application-company.png',
     keyword: 'custom web application company',
     title: 'How to Choose a Custom Web Application Company',
     description:
@@ -121,6 +124,7 @@ const corePosts: BlogPost[] = [
   },
   {
     slug: 'it-services-company',
+    image: '/blog-images/it-services-company.png',
     keyword: 'it services company',
     title: 'IT Services for Growing Businesses',
     description:
@@ -178,6 +182,7 @@ const corePosts: BlogPost[] = [
   },
   {
     slug: 'software-development-company-guide',
+    image: '/blog-images/software-development-company-guide.png',
     keyword: 'software development company',
     title: 'Choosing a Software Development Company',
     description:
@@ -236,6 +241,7 @@ const corePosts: BlogPost[] = [
   },
   {
     slug: 'product-development-company',
+    image: '/blog-images/product-development-company.png',
     keyword: 'product development company',
     title: 'Product Development Company for SaaS',
     description:
@@ -293,6 +299,7 @@ const corePosts: BlogPost[] = [
   },
   {
     slug: 'digital-innovation-agency',
+    image: '/blog-images/digital-innovation-agency.png',
     keyword: 'digital innovation agency',
     title: 'Digital Innovation for Modern Businesses',
     description:
@@ -350,6 +357,7 @@ const corePosts: BlogPost[] = [
   },
   {
     slug: 'mobile-app-development-cost-india',
+    image: '/blog-images/mobile-app-development-cost-india.png',
     keyword: 'mobile app development cost India',
     title: 'Mobile App Development Cost in India 2026',
     description:
@@ -436,6 +444,7 @@ export const blogPostMap = new Map(blogPosts.map((post) => [post.slug, post]))
 
 export function buildBlogMetadata(post: BlogPost): Metadata {
   const url = absoluteUrl(`/${post.slug}`)
+  const image = post.image ?? '/og-image.png'
 
   return {
     title: `${post.title} | ${siteName}`,
@@ -448,13 +457,13 @@ export function buildBlogMetadata(post: BlogPost): Metadata {
       description: post.description,
       siteName,
       publishedTime: post.date,
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: post.title }],
+      images: [{ url: image, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: ['/og-image.png'],
+      images: [image],
     },
   }
 }
