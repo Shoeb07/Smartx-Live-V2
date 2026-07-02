@@ -12,8 +12,44 @@ const page = seoPages['contact-us']
 
 export const metadata: Metadata = buildMetadata(page)
 
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': 'https://www.smartxsolutions.in/contact-us#contactpage',
+  url: 'https://www.smartxsolutions.in/contact-us',
+  name: 'Contact SmartX Solutions — Software Development Company Hyderabad',
+  description:
+    'Contact SmartX Solutions for custom software development, web apps, mobile apps, and SaaS platforms. Based in Hyderabad. Free discovery call available.',
+  inLanguage: 'en-IN',
+  isPartOf: { '@id': 'https://www.smartxsolutions.in/#website' },
+  mainEntity: {
+    '@type': 'Organization',
+    '@id': 'https://www.smartxsolutions.in/#organization',
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+919100590377',
+        contactType: 'customer service',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi', 'Telugu'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+919100590377',
+        contactType: 'sales',
+        areaServed: ['IN', 'US', 'GB', 'AU'],
+        availableLanguage: 'English',
+      },
+    ],
+  },
+}
+
 export default function ContactUsPage() {
-  const schemas = [breadcrumbSchema(page), ...(page.faqs ? [faqSchema(page.faqs)] : [])]
+  const schemas = [
+    breadcrumbSchema(page),
+    contactSchema,
+    ...(page.faqs ? [faqSchema(page.faqs)] : []),
+  ]
 
   return (
     <>

@@ -7,6 +7,54 @@ const page = seoPages['about-us']
 
 export const metadata: Metadata = buildMetadata(page)
 
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': 'https://www.smartxsolutions.in/about-us#aboutpage',
+  url: 'https://www.smartxsolutions.in/about-us',
+  name: 'About SmartX Solutions — Software Development Company Hyderabad',
+  description:
+    'SmartX Solutions is a custom software development company based in Hyderabad, India. We build web applications, mobile apps, and SaaS platforms for startups and enterprises.',
+  inLanguage: 'en-IN',
+  isPartOf: { '@id': 'https://www.smartxsolutions.in/#website' },
+  about: { '@id': 'https://www.smartxsolutions.in/#organization' },
+  mainEntity: { '@id': 'https://www.smartxsolutions.in/#organization' },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.smartxsolutions.in',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About Us',
+        item: 'https://www.smartxsolutions.in/about-us',
+      },
+    ],
+  },
+}
+
+const verifiedWork = [
+  {
+    client: 'AG Traders',
+    description:
+      'Fencing wire manufacturer website — Next.js, SEO-optimised, ranking on Google for local searches',
+    url: 'https://agtraders.info',
+    industry: 'Manufacturing',
+  },
+  {
+    client: 'MANT Talent Solutions',
+    description:
+      'US non-IT staffing agency website — Next.js 15, Framer Motion, conversion-optimised for US market',
+    url: 'https://www.manttalent.com',
+    industry: 'Staffing & Recruitment',
+  },
+]
+
 const linkedInSvg = (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
@@ -16,7 +64,12 @@ const linkedInSvg = (
 
 export default function AboutUsPage() {
   return (
-    <SeoLandingPage page={page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <SeoLandingPage page={page}>
       {/* Team section — injected before footer via children prop */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 lg:px-10 py-16 border-t border-white/[0.07]">
         <p className="text-[#6c63ff] text-[11px] uppercase tracking-[0.12em] mb-4">Our Team</p>
@@ -84,6 +137,47 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-    </SeoLandingPage>
+
+      {/* Verified work — live evidence links for GEO */}
+      <section className="relative z-10 py-12 border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-6 lg:px-10">
+          <p className="text-[11px] uppercase tracking-[0.12em] text-[#6c63ff] mb-6">
+            Verified Work
+          </p>
+          <h2 className="font-syne font-bold text-xl text-white mb-8">
+            You Can See Our Work Live
+          </h2>
+          <div className="space-y-4">
+            {verifiedWork.map((item) => (
+              <div
+                key={item.client}
+                className="flex items-center justify-between p-5 rounded-xl border border-white/[0.07] bg-[#0d0d14]"
+              >
+                <div>
+                  <p className="font-syne font-bold text-white text-[14px]">
+                    {item.client}
+                  </p>
+                  <p className="text-white/40 text-[13px] mt-1">
+                    {item.description}
+                  </p>
+                  <span className="text-[11px] text-[#6c63ff] border border-[#6c63ff]/20 px-2 py-0.5 rounded-full mt-2 inline-block">
+                    {item.industry}
+                  </span>
+                </div>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[12px] text-[#00e5b0] hover:text-white transition-colors flex items-center gap-1.5 flex-shrink-0 ml-6"
+                >
+                  View Live →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      </SeoLandingPage>
+    </>
   )
 }

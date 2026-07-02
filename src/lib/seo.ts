@@ -106,6 +106,14 @@ export function organizationSchema() {
         name: siteName,
         url: siteUrl,
         foundingDate: '2025',
+        // TODO: Uncomment after collecting 5+ real Google reviews
+        // aggregateRating: {
+        //   '@type': 'AggregateRating',
+        //   ratingValue: '5.0',
+        //   reviewCount: '5',
+        //   bestRating: '5',
+        //   worstRating: '1',
+        // },
         // TODO: Add real logo.png (600x60px) to /public folder — currently this path may 404 until the file is uploaded
         logo: {
           '@type': 'ImageObject',
