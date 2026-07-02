@@ -8,12 +8,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
 
   // All SEO-managed pages (about-us, services, web-development-services, etc.)
-  const seoPageEntries: MetadataRoute.Sitemap = seoPageList.map((page) => ({
-    url: `${siteUrl}/${page.slug}`,
-    lastModified: now,
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
-  }))
+  // /case-studies 308-redirects to /portfolio (next.config.js) — keep it out of the sitemap
+  const seoPageEntries: MetadataRoute.Sitemap = seoPageList
+    .filter((page) => page.slug !== 'case-studies')
+    .map((page) => ({
+      url: `${siteUrl}/${page.slug}`,
+      lastModified: now,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+    }))
 
   // Blog post pages (served at root level e.g. /custom-web-application-company)
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({

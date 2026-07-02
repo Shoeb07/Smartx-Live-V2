@@ -12,6 +12,11 @@ const nextConfig = {
         destination: '/portfolio',
         permanent: true,
       },
+      {
+        source: '/case-studies/:path*',
+        destination: '/portfolio/:path*',
+        permanent: true,
+      },
     ]
   },
   eslint: {

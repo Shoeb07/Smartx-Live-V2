@@ -267,7 +267,7 @@ export default function PortfolioPage() {
                 <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
-                href="/case-studies"
+                href="/portfolio/ag-traders"
                 className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.03] px-7 py-3.5 text-sm font-medium text-white/70 hover:border-white/25 hover:text-white transition-all"
               >
                 <CheckCircle2 size={14} className="text-[#00e5b0]" />

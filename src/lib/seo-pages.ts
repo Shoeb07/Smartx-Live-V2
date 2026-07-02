@@ -364,7 +364,7 @@ export const seoPages: Record<string, SeoPage> = {
     links: [
       { href: '/web-development-services', label: 'SEO-friendly web development' },
       { href: '/portfolio', label: 'View portfolio' },
-      { href: '/case-studies', label: 'Read case studies' },
+      { href: '/portfolio/ag-traders', label: 'Read the AG Traders case study' },
       { href: '/contact-us', label: 'Improve digital growth' },
     ],
     breadcrumb: serviceBreadcrumb('Digital Marketing Services', '/digital-marketing-services'),
@@ -587,7 +587,7 @@ export const seoPages: Record<string, SeoPage> = {
       },
     ],
     links: [
-      { href: '/case-studies', label: 'Read case studies' },
+      { href: '/portfolio/ag-traders', label: 'Read case studies' },
       { href: '/services', label: 'Explore services' },
       { href: '/contact-us', label: 'Discuss similar work' },
     ],
@@ -785,7 +785,7 @@ export const seoPages: Record<string, SeoPage> = {
     ],
     links: [
       { href: '/services', label: 'Services for your industry' },
-      { href: '/case-studies', label: 'Case study patterns' },
+      { href: '/portfolio', label: 'Case study patterns' },
       { href: '/contact-us', label: 'Discuss your industry' },
     ],
     faqs: [
