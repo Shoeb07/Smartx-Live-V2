@@ -100,6 +100,17 @@ function SectionBlock({ section }: { section: BlogSection }) {
         </div>
       )}
 
+      {section.quote && (
+        <blockquote className="mt-6 rounded-2xl border-l-4 border-[#00e5b0] border-t border-r border-b border-white/[0.08] bg-[#00e5b0]/[0.04] p-6">
+          <p className="text-white/75 text-base md:text-lg leading-relaxed italic mb-3">
+            &ldquo;{section.quote.text}&rdquo;
+          </p>
+          <footer className="text-sm text-white/45">
+            — <span className="text-white/70 font-medium">{section.quote.name}</span>, {section.quote.role}
+          </footer>
+        </blockquote>
+      )}
+
       {section.checklist && (
         <div className="mt-6 rounded-2xl border border-white/[0.08] bg-[#0d0d14] p-6">
           <ul className="space-y-3">

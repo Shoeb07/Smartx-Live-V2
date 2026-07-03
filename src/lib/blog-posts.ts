@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { absoluteUrl, siteName } from './seo'
 import { shoebUddin, salehaBegum, type Author } from './blog-authors'
 import { webDevClusterPosts } from './webdev-cluster-posts'
+import { fintechClusterPosts } from './fintech-cluster-posts'
 
 export { shoebUddin, salehaBegum }
 export type { Author }
@@ -24,6 +25,12 @@ export type BlogSection = {
     href: string
     label: string
   }[]
+  // Named expert pull-quote rendered as a styled blockquote after the body
+  quote?: {
+    text: string
+    name: string
+    role: string
+  }
 }
 
 export type BlogPost = {
@@ -438,7 +445,7 @@ const corePosts: BlogPost[] = [
   },
 ]
 
-export const blogPosts: BlogPost[] = [...corePosts, ...webDevClusterPosts]
+export const blogPosts: BlogPost[] = [...corePosts, ...webDevClusterPosts, ...fintechClusterPosts]
 
 export const blogPostMap = new Map(blogPosts.map((post) => [post.slug, post]))
 
