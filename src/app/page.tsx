@@ -24,29 +24,26 @@ const legitimacyFaq = {
 }
 
 export default function HomePage() {
-  const jsonLd = {
+  // Homepage-specific schema in one @graph (WebPage lives in the layout's
+  // Organization graph — do not duplicate it here)
+  const homeGraph = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'SmartX Solutions',
-    url: absoluteUrl('/'),
-  }
-
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl('/') },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [...homeFaqs, legitimacyFaq].map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      },
     ],
-  }
-
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [...homeFaqs, legitimacyFaq].map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
   }
 
   return (
@@ -55,12 +52,7 @@ export default function HomePage() {
       <HomeClient />
 
       {/* JSON-LD for AI/crawlers */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeGraph) }} />
 
       <Navbar />
 

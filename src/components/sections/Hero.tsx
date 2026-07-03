@@ -144,6 +144,12 @@ export default function Hero() {
           >
             <Play size={13} className="fill-current" /> View Our Work
           </Link>
+          <Link
+            href="/offshore-software-development-india"
+            className="basis-full text-[13px] text-white/40 hover:text-[#00e5b0] transition-colors mt-1"
+          >
+            Hiring from the US or UK? Offshore development teams from $2,000/month →
+          </Link>
         </motion.div>
 
         {/* Stats */}

@@ -114,12 +114,12 @@ export function organizationSchema() {
         //   bestRating: '5',
         //   worstRating: '1',
         // },
-        // TODO: Add real logo.png (600x60px) to /public folder — currently this path may 404 until the file is uploaded
+        // logo-large.png is 600x200 — meets Google's 336x112 minimum for logo markup
         logo: {
           '@type': 'ImageObject',
-          url: `${siteUrl}/logo.png`,
+          url: `${siteUrl}/logo-large.png`,
           width: 600,
-          height: 60,
+          height: 200,
         },
         description:
           'SmartX Solutions is a legitimate custom software development company based in Hyderabad, India, founded in 2025. Not affiliated with SmartX Connected Products Pvt Ltd, SmartX Services Limited, or SmartX Solutions KFT.',
@@ -223,6 +223,7 @@ export function organizationSchema() {
           { '@type': 'City', name: 'Cyberabad' },
           { '@type': 'AdministrativeArea', name: 'Telangana' },
           { '@type': 'Country', name: 'India' },
+          { '@type': 'Country', name: 'United States' },
         ],
         parentOrganization: { '@id': `${siteUrl}/#organization` },
       },
@@ -267,9 +268,10 @@ export function organizationSchema() {
         name: 'Shoeb Uddin',
         jobTitle: 'Founder & CEO',
         worksFor: { '@id': `${siteUrl}/#organization` },
-        url: `${siteUrl}/about-us`,
+        url: `${siteUrl}/authors/shoeb-uddin`,
         sameAs: ['https://www.linkedin.com/in/shoeb-khan-smartx'],
         // TODO: Replace with real personal LinkedIn URL
+        // TODO: Add image once a real headshot exists in /public (do not point at a missing file)
       },
       {
         '@type': 'Person',
@@ -277,9 +279,10 @@ export function organizationSchema() {
         name: 'Saleha Begum',
         jobTitle: 'Co-Founder & CTO',
         worksFor: { '@id': `${siteUrl}/#organization` },
-        url: `${siteUrl}/about-us`,
+        url: `${siteUrl}/authors/saleha-begum`,
         sameAs: ['https://www.linkedin.com/in/saleha-begum-smartx'],
         // TODO: Replace with real personal LinkedIn URL
+        // TODO: Add image once a real headshot exists in /public (do not point at a missing file)
       },
     ],
   }

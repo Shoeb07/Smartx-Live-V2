@@ -57,8 +57,8 @@ export default function BlogPage() {
       <main className="bg-[#050508] text-white pt-28 pb-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <p className="text-[#00e5b0] text-sm font-dm uppercase tracking-widest mb-4">Blog</p>
-          <h1 className="font-syne font-bold text-[clamp(42px,7vw,80px)] leading-tight mb-6">
-            SmartX Growth Guides
+          <h1 className="font-syne font-bold text-[clamp(38px,6vw,72px)] leading-tight mb-6">
+            Software Development Blog — SmartX Solutions
           </h1>
           <p className="text-white/65 text-lg max-w-3xl leading-relaxed mb-12">
             Practical guides for businesses comparing software development companies, IT services partners, product development teams, and digital innovation agencies. Our blog helps founders, operations leaders, and technology decision-makers make informed choices about digital investments.

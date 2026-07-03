@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.7,
+    // Branded hero images — emitted as <image:image> tags for Google Images
+    ...(post.image ? { images: [`${siteUrl}${post.image}`] } : {}),
   }))
 
   return [
@@ -38,6 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Nested service landing page (not in seoPages)
     { url: `${siteUrl}/services/saas-development-company-hyderabad`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+
+    // Offshore / US-market landing page
+    { url: `${siteUrl}/offshore-software-development-india`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+
+    // Author profile pages
+    { url: `${siteUrl}/authors/shoeb-uddin`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${siteUrl}/authors/saleha-begum`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
 
     // Case study pages
     { url: `${siteUrl}/portfolio/ag-traders`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },

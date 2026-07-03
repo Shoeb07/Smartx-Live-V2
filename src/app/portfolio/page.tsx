@@ -148,8 +148,8 @@ export default function PortfolioPage() {
                 Portfolio
               </span>
             </div>
-            <h1 className="font-syne font-bold text-[clamp(42px,7vw,80px)] leading-[1.02] max-w-4xl mb-6">
-              Work We&apos;re Proud Of
+            <h1 className="font-syne font-bold text-[clamp(38px,6vw,72px)] leading-[1.02] max-w-5xl mb-6">
+              Our Portfolio — Custom Software Projects by SmartX Solutions
             </h1>
             <p className="text-white/65 text-lg md:text-xl leading-relaxed max-w-3xl">
               A selection of projects across manufacturing, e-commerce, SaaS, and EdTech — each solving a real business problem with thoughtful engineering and design.

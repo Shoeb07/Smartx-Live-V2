@@ -17,7 +17,7 @@ export const shoebUddin: Author = {
   initials: 'SU',
   color: '#6c63ff',
   linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
-  url: 'https://www.smartxsolutions.in/about-us',
+  url: 'https://www.smartxsolutions.in/authors/shoeb-uddin',
 }
 
 export const salehaBegum: Author = {
@@ -28,5 +28,5 @@ export const salehaBegum: Author = {
   initials: 'SB',
   color: '#00e5b0',
   linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
-  url: 'https://www.smartxsolutions.in/about-us',
+  url: 'https://www.smartxsolutions.in/authors/saleha-begum',
 }
