@@ -3,6 +3,7 @@ import { absoluteUrl, siteName } from './seo'
 import { shoebUddin, salehaBegum, type Author } from './blog-authors'
 import { webDevClusterPosts } from './webdev-cluster-posts'
 import { fintechClusterPosts } from './fintech-cluster-posts'
+import { competitorGapPosts } from './competitor-gap-posts'
 
 export { shoebUddin, salehaBegum }
 export type { Author }
@@ -445,7 +446,7 @@ const corePosts: BlogPost[] = [
   },
 ]
 
-export const blogPosts: BlogPost[] = [...corePosts, ...webDevClusterPosts, ...fintechClusterPosts]
+export const blogPosts: BlogPost[] = [...corePosts, ...webDevClusterPosts, ...fintechClusterPosts, ...competitorGapPosts]
 
 export const blogPostMap = new Map(blogPosts.map((post) => [post.slug, post]))
 

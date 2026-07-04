@@ -44,6 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Offshore / US-market landing page
     { url: `${siteUrl}/offshore-software-development-india`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
 
+    // Competitor gap page — enterprise software (zerozilla keyword gap)
+    { url: `${siteUrl}/enterprise-software-development-hyderabad`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+
     // Author profile pages
     { url: `${siteUrl}/authors/shoeb-uddin`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${siteUrl}/authors/saleha-begum`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
