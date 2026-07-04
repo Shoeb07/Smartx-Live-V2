@@ -7,9 +7,9 @@ const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/smartx-solutions-vs-toptal`
 
 export const metadata: Metadata = {
-  title: 'SmartX Solutions vs Toptal: Agency vs Elite Freelancer Network (2026)',
+  title: 'SmartX Solutions vs Toptal: Agency vs Freelancer (2026)',
   description:
-    'SmartX Solutions vs Toptal — which gives you better value for a complex software project? Honest comparison of cost, vetting, accountability, and outcomes for India-based companies.',
+    'SmartX Solutions vs Toptal — which gives better value for a complex software project? Honest comparison of cost, vetting, and outcomes.',
   keywords: [
     'toptal alternatives india',
     'toptal vs software development agency',

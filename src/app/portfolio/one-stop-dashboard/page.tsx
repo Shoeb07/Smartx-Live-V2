@@ -5,9 +5,9 @@ const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/portfolio/one-stop-dashboard`
 
 export const metadata: Metadata = {
-  title: 'One Stop Dashboard — ERP Platform for Business Operations | SmartX Solutions',
+  title: 'One Stop Dashboard — ERP Platform for Business Operations',
   description:
-    'How SmartX Solutions built One Stop Dashboard — a comprehensive ERP application that centralises business operations, automates reporting, and gives teams real-time operational visibility.',
+    'How SmartX Solutions built One Stop Dashboard — an ERP application that centralises operations and automates reporting.',
   alternates: { canonical },
   openGraph: {
     type: 'article',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'SmartX Solutions',
     title: 'One Stop Dashboard — ERP Platform for Business Operations',
     description:
-      'How SmartX Solutions built One Stop Dashboard — a comprehensive ERP application that centralises business operations, automates reporting, and gives teams real-time operational visibility.',
+      'How SmartX Solutions built One Stop Dashboard — an ERP application that centralises operations and automates reporting.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'One Stop Dashboard Case Study — SmartX Solutions' }],
   },
   twitter: {
@@ -32,7 +32,7 @@ const schema = {
   '@type': 'Article',
   headline: 'One Stop Dashboard: ERP Platform That Eliminated Manual Reporting',
   description:
-    'How SmartX Solutions built One Stop Dashboard — a comprehensive ERP application that centralises business operations, automates reporting, and gives teams real-time operational visibility.',
+    'How SmartX Solutions built One Stop Dashboard — an ERP application that centralises operations and automates reporting.',
   author: {
     '@type': 'Organization',
     name: 'SmartX Solutions',
@@ -50,7 +50,7 @@ const schema = {
     '@type': 'Organization',
     name: 'One Stop Dashboard',
     description:
-      'One Stop Dashboard is a comprehensive ERP platform that centralises business operations, automates reporting, and provides real-time visibility for multi-location businesses.',
+      'One Stop Dashboard is an ERP platform that centralises operations and automates reporting for multi-location businesses.',
   },
   keywords:
     'ERP development India, custom dashboard development, business operations software, React Node.js ERP, operational reporting automation, SaaS dashboard development',

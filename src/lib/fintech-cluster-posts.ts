@@ -14,7 +14,7 @@ export const fintechClusterPosts: BlogPost[] = [
     keyword: 'fintech software development company hyderabad',
     title: 'FinTech Software Development in Hyderabad: The 2026 Guide',
     description:
-      'How to build a fintech product in Hyderabad in 2026 — what fintech development involves, real costs, RBI compliance basics, UPI integration, and how to choose a development partner.',
+      'How to build a fintech product in Hyderabad — what it involves, real costs, RBI compliance basics, and how to choose a development partner.',
     date: '2026-07-04',
     readTime: '10 min read',
     lastUpdated: 'July 2026',
@@ -152,7 +152,7 @@ export const fintechClusterPosts: BlogPost[] = [
     keyword: 'fintech app development cost india',
     title: 'FinTech App Development Cost in India: 2026 Breakdown',
     description:
-      'What a fintech app really costs to build in India in 2026 — line-item budgets for payments, lending, and neo-banking products, the compliance costs generalists miss, and how to phase spend.',
+      'What a fintech app really costs to build in India — line-item budgets for payments, lending, and neo-banking products.',
     date: '2026-07-04',
     readTime: '9 min read',
     lastUpdated: 'July 2026',
@@ -272,9 +272,9 @@ export const fintechClusterPosts: BlogPost[] = [
   {
     slug: 'blog/upi-payment-gateway-integration-guide',
     keyword: 'upi payment gateway integration',
-    title: 'UPI & Payment Gateway Integration: A Practical Guide for Indian Apps (2026)',
+    title: 'UPI & Payment Gateway Integration Guide for Indian Apps',
     description:
-      'How UPI and payment gateway integration actually works for Indian apps — choosing between Razorpay, Cashfree, and PhonePe, handling failed payments and reconciliation, and what it costs.',
+      'How UPI and payment gateway integration works for Indian apps — Razorpay vs Cashfree vs PhonePe, failed payments, reconciliation, and cost.',
     date: '2026-07-04',
     readTime: '9 min read',
     lastUpdated: 'July 2026',
@@ -398,9 +398,9 @@ export const fintechClusterPosts: BlogPost[] = [
   {
     slug: 'blog/rbi-compliance-fintech-apps-india',
     keyword: 'rbi compliance fintech apps',
-    title: 'RBI Compliance for FinTech Apps: What Founders Must Build In (2026)',
+    title: 'RBI Compliance for FinTech Apps: A Founder\'s Guide',
     description:
-      'A founder-level guide to RBI compliance for fintech apps in India — data localisation, digital lending guidelines, PA/PG rules, KYC/AML, and the DPDP Act, translated into build decisions.',
+      'A founder-level guide to RBI compliance for fintech apps — data localisation, digital lending rules, PA/PG rules, and KYC/AML, translated into build decisions.',
     date: '2026-07-04',
     readTime: '10 min read',
     lastUpdated: 'July 2026',

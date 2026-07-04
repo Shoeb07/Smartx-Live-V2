@@ -369,7 +369,7 @@ const corePosts: BlogPost[] = [
     keyword: 'mobile app development cost India',
     title: 'Mobile App Development Cost in India 2026',
     description:
-      'Real breakdown of mobile app development costs in India for 2026. Learn what affects pricing, typical budgets for different app types, and how to get the best value.',
+      'Real breakdown of mobile app development costs in India. What affects pricing, typical budgets by app type, and how to get the best value.',
     date: '2026-06-01',
     readTime: '10 min read',
     author: shoebUddin,

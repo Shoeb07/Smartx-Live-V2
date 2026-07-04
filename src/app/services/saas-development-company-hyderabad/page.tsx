@@ -11,7 +11,7 @@ import DirectAnswer from '@/components/ui/DirectAnswer'
 const page = {
   title: 'SaaS Development Company in Hyderabad — SmartX Solutions',
   description:
-    'SaaS product development services in Hyderabad. SmartX builds custom SaaS platforms, web portals, subscription management systems, and SaaS applications for startups and enterprises across India.',
+    'SaaS product development services in Hyderabad. SmartX builds custom SaaS platforms, web portals, and subscription management systems.',
   canonicalUrl: absoluteUrl('/services/saas-development-company-hyderabad'),
 }
 

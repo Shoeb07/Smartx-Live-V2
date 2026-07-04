@@ -5,9 +5,9 @@ const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/portfolio/furnexo`
 
 export const metadata: Metadata = {
-  title: "FurneXo — India's First Furniture Exchange Platform | SmartX Solutions",
+  title: "FurneXo — India's First Furniture Exchange Platform",
   description:
-    "How SmartX Solutions designed and built FurneXo — a two-sided marketplace enabling users to buy, sell, and exchange furniture across India, promoting sustainability and affordability.",
+    "How SmartX Solutions built FurneXo — a two-sided marketplace for buying, selling, and exchanging furniture across India.",
   alternates: { canonical },
   openGraph: {
     type: 'article',
@@ -32,7 +32,7 @@ const schema = {
   '@type': 'Article',
   headline: "Building India's First Furniture Exchange Platform",
   description:
-    "How SmartX Solutions designed and built FurneXo — a two-sided marketplace enabling users to buy, sell, and exchange furniture across India, promoting sustainability and affordability.",
+    "How SmartX Solutions built FurneXo — a two-sided marketplace for buying, selling, and exchanging furniture across India.",
   author: {
     '@type': 'Organization',
     name: 'SmartX Solutions',

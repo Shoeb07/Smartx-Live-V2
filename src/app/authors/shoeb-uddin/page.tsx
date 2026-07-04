@@ -8,7 +8,7 @@ const url = absoluteUrl('/authors/shoeb-uddin')
 export const metadata: Metadata = {
   title: 'Shoeb Uddin — Founder & CEO, SmartX Solutions',
   description:
-    'Shoeb Uddin is the Founder and CEO of SmartX Solutions, a Hyderabad software development company. Read his guides on web development, choosing agencies, and software costs.',
+    'Shoeb Uddin is the Founder and CEO of SmartX Solutions, a Hyderabad software development company. Read his development guides.',
   alternates: { canonical: url },
   openGraph: {
     type: 'profile',

@@ -13,7 +13,7 @@ const canonical = `${siteUrl}/offshore-software-development-india`
 export const metadata: Metadata = {
   title: 'Offshore Software Development India | SmartX Solutions',
   description:
-    'Hire a US-ready offshore development team in India. Senior engineers, USD pricing from $2,000/dev/month, daily EST overlap, NDA-first, 100% IP transfer. Book a US-hours call.',
+    'Hire a US-ready offshore development team in India. Senior engineers, USD pricing from $2,000/dev/month, daily EST overlap, NDA-first.',
   keywords: [
     'offshore software development india',
     'offshore development team india',

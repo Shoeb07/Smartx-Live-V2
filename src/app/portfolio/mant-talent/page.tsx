@@ -24,7 +24,7 @@ const canonical = `${siteUrl}/portfolio/mant-talent`
 export const metadata: Metadata = {
   title: 'MantTalent - Non-IT Staffing Website for US Market',
   description:
-    'How SmartX Solutions designed and built the MantTalent Solutions website - a modern, conversion-focused Next.js site for a US non-IT staffing agency serving companies across all 50 states.',
+    'How SmartX Solutions built the MantTalent Solutions website - a modern, conversion-focused Next.js site for a US non-IT staffing agency.',
   alternates: { canonical },
   openGraph: {
     type: 'article',
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     siteName: 'SmartX Solutions',
     title: 'MantTalent - Non-IT Staffing Website for US Market',
     description:
-      'How SmartX Solutions designed and built the MantTalent Solutions website - a modern, conversion-focused Next.js site for a US non-IT staffing agency serving companies across all 50 states.',
+      'How SmartX Solutions built the MantTalent Solutions website - a modern, conversion-focused Next.js site for a US non-IT staffing agency.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MantTalent Case Study - SmartX Solutions' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'MantTalent - Non-IT Staffing Website for US Market',
     description:
-      'How SmartX Solutions designed and built the MantTalent Solutions website - a modern, conversion-focused Next.js site for a US non-IT staffing agency.',
+      'How SmartX Solutions built the MantTalent Solutions website for a US non-IT staffing agency.',
     images: ['/og-image.png'],
   },
 }
@@ -49,7 +49,7 @@ const schema = {
   '@type': 'Article',
   headline: 'MantTalent Solutions - Non-IT Staffing Website Built by SmartX Solutions',
   description:
-    'Case study: SmartX Solutions built the MantTalent website using Next.js 15, Tailwind CSS, and Framer Motion - a conversion-optimised staffing agency site for the US market.',
+    'Case study: SmartX Solutions built the MantTalent website with Next.js 15 - a conversion-optimised staffing agency site for the US market.',
   author: {
     '@type': 'Organization',
     name: 'SmartX Solutions',

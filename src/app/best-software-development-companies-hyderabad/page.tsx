@@ -74,7 +74,7 @@ const itemListSchema = {
     { '@type': 'ListItem', position: 4, name: 'Arka Softwares', url: 'https://www.arkasoftwares.com' },
     { '@type': 'ListItem', position: 5, name: 'Trigent Software', url: 'https://www.trigent.com' },
     { '@type': 'ListItem', position: 6, name: 'Uneecops Technologies', url: 'https://www.uneecops.com' },
-    { '@type': 'ListItem', position: 7, name: 'Celect IT Solutions', url: '#' },
+    { '@type': 'ListItem', position: 7, name: 'Celect IT Solutions', url: 'https://celect.in' },
     { '@type': 'ListItem', position: 8, name: 'Seasia Infotech', url: 'https://www.seasiainfotech.com' },
     { '@type': 'ListItem', position: 9, name: 'Sphinx Solution', url: 'https://www.sphinxsolution.com' },
     { '@type': 'ListItem', position: 10, name: 'SunTec India', url: 'https://www.suntecindiagroup.com' },

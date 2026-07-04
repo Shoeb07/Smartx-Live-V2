@@ -11,7 +11,7 @@ export const seoPages: Record<string, SeoPage> = {
     slug: 'about-us',
     title: 'About SmartX Solutions — Custom Software Agency, Hyderabad',
     description:
-      'Learn about SmartX Solutions, a Hyderabad software development company helping startups and enterprises build scalable web, mobile, AI, and digital platforms.',
+      'SmartX Solutions is a Hyderabad software development company helping startups and enterprises build scalable web, mobile, and AI platforms.',
     h1: 'About SmartX Solutions',
     eyebrow: 'About Us',
     intro:
@@ -69,9 +69,9 @@ export const seoPages: Record<string, SeoPage> = {
   },
   services: {
     slug: 'services',
-    title: 'Software Development Services - Web, Mobile, AI and Marketing',
+    title: 'Software Development Services — Web, Mobile, AI',
     description:
-      'Explore SmartX Solutions services including web development, mobile app development, custom software, AI automation, digital marketing, cloud, and UX design.',
+      'Explore SmartX Solutions services — web development, mobile apps, custom software, AI automation, digital marketing, and UX design.',
     h1: 'Custom Software Development Services — Web, Mobile, AI & Cloud',
     eyebrow: 'Services',
     intro:
@@ -131,9 +131,9 @@ export const seoPages: Record<string, SeoPage> = {
   },
   'web-development-services': {
     slug: 'web-development-services',
-    title: 'Web Development Services - Custom Web Portal Development & Web Development Agency',
+    title: 'Web Development Services & Web Portal Development',
     description:
-      'Custom web development and web portal development services for websites, SaaS, portals, dashboards, ecommerce, web development agency services, and high-performance Next.js applications.',
+      'Custom web development and web portal services for websites, SaaS, portals, dashboards, ecommerce, and high-performance Next.js applications.',
     h1: 'Web Development Services & Web Portal Development',
     eyebrow: 'Web Development',
     intro:
@@ -192,9 +192,9 @@ export const seoPages: Record<string, SeoPage> = {
   },
   'mobile-app-development': {
     slug: 'mobile-app-development',
-    title: 'Mobile App Development Company - iOS, Android, Cross-Platform Apps',
+    title: 'Mobile App Development Company — iOS & Android',
     description:
-      'Mobile app development company in Hyderabad building iOS, Android, Flutter, React Native apps, custom app development, MVPs, and scalable product platforms for startups and enterprises.',
+      'Mobile app development company in Hyderabad building iOS, Android, Flutter, and React Native apps — MVPs to scalable platforms for startups and enterprises.',
     h1: 'Mobile App Development Company in Hyderabad',
     eyebrow: 'Mobile Apps',
     intro:

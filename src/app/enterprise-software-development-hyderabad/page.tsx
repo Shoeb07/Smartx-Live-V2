@@ -8,9 +8,9 @@ import { absoluteUrl, siteName } from '@/lib/seo'
 import DirectAnswer from '@/components/ui/DirectAnswer'
 
 const page = {
-  title: 'Enterprise Software Development Company in Hyderabad — SmartX Solutions',
+  title: 'Enterprise Software Development Company in Hyderabad',
   description:
-    'SmartX Solutions builds enterprise software solutions in Hyderabad — custom ERP, CRM, workflow automation, and business intelligence platforms for growing companies.',
+    'SmartX Solutions builds enterprise software in Hyderabad — custom ERP, CRM, workflow automation, and BI platforms for growing companies.',
   canonicalUrl: absoluteUrl('/enterprise-software-development-hyderabad'),
 }
 

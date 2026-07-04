@@ -5,9 +5,9 @@ const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/portfolio/ag-traders`
 
 export const metadata: Metadata = {
-  title: 'AG Traders — Manufacturer Website That Ranks on Google | SmartX Solutions',
+  title: 'AG Traders — Manufacturer Website That Ranks on Google',
   description:
-    'How SmartX Solutions built a fast, SEO-optimised website for AG Traders, a fencing wire manufacturer in Palghar, Maharashtra — resulting in first-page Google rankings within 6 weeks of launch.',
+    'How SmartX Solutions built a fast, SEO-optimised website for AG Traders, a fencing wire manufacturer — first-page Google rankings in 6 weeks.',
   alternates: { canonical },
   openGraph: {
     type: 'article',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'SmartX Solutions',
     title: 'AG Traders — Manufacturer Website That Ranks on Google',
     description:
-      'How SmartX Solutions built a fast, SEO-optimised website for AG Traders, a fencing wire manufacturer in Palghar, Maharashtra — resulting in first-page Google rankings within 6 weeks of launch.',
+      'How SmartX Solutions built a fast, SEO-optimised website for AG Traders, a fencing wire manufacturer — first-page Google rankings in 6 weeks.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'AG Traders Case Study — SmartX Solutions' }],
   },
   twitter: {
@@ -32,7 +32,7 @@ const schema = {
   '@type': 'Article',
   headline: 'How We Got a Palghar Manufacturer Ranking on Google in 6 Weeks',
   description:
-    'How SmartX Solutions built a fast, SEO-optimised website for AG Traders, a fencing wire manufacturer in Palghar, Maharashtra — resulting in first-page Google rankings within 6 weeks of launch.',
+    'How SmartX Solutions built a fast, SEO-optimised website for AG Traders, a fencing wire manufacturer — first-page Google rankings in 6 weeks.',
   author: {
     '@type': 'Organization',
     name: 'SmartX Solutions',

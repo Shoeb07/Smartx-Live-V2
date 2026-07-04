@@ -8,7 +8,7 @@ const url = absoluteUrl('/authors/saleha-begum')
 export const metadata: Metadata = {
   title: 'Saleha Begum — Co-Founder & CTO, SmartX Solutions',
   description:
-    'Saleha Begum is the Co-Founder and CTO of SmartX Solutions, leading engineering and architecture. Read her guides on web development costs, WordPress vs custom, and hiring.',
+    'Saleha Begum is the Co-Founder and CTO of SmartX Solutions, leading engineering and architecture. Read her development guides.',
   alternates: { canonical: url },
   openGraph: {
     type: 'profile',

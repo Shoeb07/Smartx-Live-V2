@@ -14,7 +14,7 @@ const aboutSchema = {
   url: 'https://www.smartxsolutions.in/about-us',
   name: 'About SmartX Solutions — Software Development Company Hyderabad',
   description:
-    'SmartX Solutions is a custom software development company based in Hyderabad, India. We build web applications, mobile apps, and SaaS platforms for startups and enterprises.',
+    'SmartX Solutions is a custom software development company in Hyderabad, India, building web, mobile, and SaaS platforms.',
   inLanguage: 'en-IN',
   isPartOf: { '@id': 'https://www.smartxsolutions.in/#website' },
   about: { '@id': 'https://www.smartxsolutions.in/#organization' },

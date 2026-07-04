@@ -8,7 +8,7 @@ export const competitorGapPosts: BlogPost[] = [
   {
     slug: 'blog/what-is-digital-transformation',
     keyword: 'digital transformation',
-    title: 'What Is Digital Transformation? Complete Guide for Indian Businesses (2026)',
+    title: 'What Is Digital Transformation? Indian Business Guide (2026)',
     description:
       'Digital transformation explained for Indian businesses — what it means, how to start, cost in India, and real examples from Hyderabad companies.',
     date: '2026-07-04',
@@ -97,7 +97,7 @@ export const competitorGapPosts: BlogPost[] = [
   {
     slug: 'blog/types-of-web-applications',
     keyword: 'types of web applications',
-    title: 'Types of Web Applications: Complete Guide with Examples (2026)',
+    title: 'Types of Web Applications: Complete Guide (2026)',
     description:
       'All types of web applications explained — static, dynamic, SaaS, e-commerce, portal, and more. With real examples and development costs in India.',
     date: '2026-07-04',
@@ -254,7 +254,7 @@ export const competitorGapPosts: BlogPost[] = [
   {
     slug: 'blog/what-is-seo-for-software-companies',
     keyword: 'seo for software company india',
-    title: 'SEO for Software Companies: What Hyderabad Tech Businesses Need to Know (2026)',
+    title: 'SEO for Software Companies in Hyderabad (2026)',
     description:
       'How software development companies in Hyderabad and across India can use SEO to generate leads — including a real 30-day case study from SmartX Solutions.',
     date: '2026-07-04',
