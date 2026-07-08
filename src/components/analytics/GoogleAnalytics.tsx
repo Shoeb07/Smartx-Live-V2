@@ -1,10 +1,10 @@
 import { GoogleAnalytics as NextGoogleAnalytics } from '@next/third-parties/google'
 
-// GA4 property: smartxsolutions — stream https://smartxsolutions.in
+// GA4 property: smartxsolutions — stream https://smartxsolutions.in (stream ID 15217932174)
 // Hardcoded on purpose: this is the production source of truth, so a stale
 // NEXT_PUBLIC_GA_ID env var on the host can never point tracking at an old
 // property. Measurement IDs are public (visible in page source) — not a secret.
-export const GA_MEASUREMENT_ID = 'G-PWPMXDMSL5'
+export const GA_MEASUREMENT_ID = 'G-Z3PP3MBNSN'
 
 export function GoogleAnalytics() {
   // @next/third-parties handles SPA route-change page views and defines
