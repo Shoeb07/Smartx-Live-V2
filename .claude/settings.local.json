@@ -4,7 +4,18 @@
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebSearch",
+      "Bash(ls -la)",
+      "Bash(find . -maxdepth 2 -iname \"*package.json*\")",
+      "Bash(awk '/const schema/{f=1} f{print} /^}$/{if\\(f\\)exit}')",
+      "Bash(ls -la .claude)",
+      "Bash(cat .claude/launch.json)",
+      "Bash(taskkill //F //PID 35140)",
+      "Bash(rm -rf .next)",
+      "Bash(npx next *)",
+      "PowerShell(foreach \\($u in @\\('https://smartxsolutions.in','https://www.smartxsolutions.in'\\)\\) { try { $r = [System.Net.HttpWebRequest]::Create\\($u\\); $r.Method = 'HEAD'; $r.AllowAutoRedirect = $false; $resp = $r.GetResponse\\(\\); Write-Output \\(\"$u -> \" + [int]$resp.StatusCode + ' Location: ' + $resp.Headers['Location']\\); $resp.Close\\(\\) } catch [System.Net.WebException] { if \\($_.Exception.Response\\) { $resp = $_.Exception.Response; Write-Output \\(\"$u -> \" + [int]$resp.StatusCode + ' Location: ' + $resp.Headers['Location']\\) } else { Write-Output \\(\"$u -> FAILED: \" + $_.Exception.Message\\) } } })",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path 'public\\\\logo.png'\\)\\); Write-Output \\(\"logo.png: \" + $img.Width + \"x\" + $img.Height\\); $img.Dispose\\(\\))"
     ]
   }
 }
