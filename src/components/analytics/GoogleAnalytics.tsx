@@ -1,46 +1,15 @@
-import Script from 'next/script'
+import { GoogleAnalytics as NextGoogleAnalytics } from '@next/third-parties/google'
+
+// GA4 property: smartxsolutions — stream https://smartxsolutions.in
+// Hardcoded on purpose: this is the production source of truth, so a stale
+// NEXT_PUBLIC_GA_ID env var on the host can never point tracking at an old
+// property. Measurement IDs are public (visible in page source) — not a secret.
+export const GA_MEASUREMENT_ID = 'G-PWPMXDMSL5'
 
 export function GoogleAnalytics() {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
-
-  if (!gaId) {
-    return null
-  }
-
-  return (
-    <>
-      {/* Google Tag Manager (noscript) */}
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${gaId}`}
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
-
-      {/* Google Analytics - Load after interaction for performance */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-        strategy="lazyOnload"
-        onLoad={() => {
-          if (typeof window !== 'undefined') {
-            const w = window as any
-            w.dataLayer = w.dataLayer || []
-            const gtag = (...args: any[]) => {
-              w.dataLayer.push(args)
-            }
-            gtag('js', new Date())
-            gtag('config', gaId, {
-              send_page_view: true,
-              anonymize_ip: true,
-            })
-            w.gtag = gtag
-          }
-        }}
-      />
-    </>
-  )
+  // @next/third-parties handles SPA route-change page views and defines
+  // window.gtag/dataLayer, which trackEvent and TrackedLeadLink rely on.
+  return <NextGoogleAnalytics gaId={GA_MEASUREMENT_ID} />
 }
 
 /**
@@ -59,7 +28,7 @@ export function trackEvent(eventName: string, eventParams?: Record<string, any>)
  */
 export function trackPageView(pageTitle: string, pagePath: string) {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    ;(window as any).gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+    ;(window as any).gtag('config', GA_MEASUREMENT_ID, {
       page_title: pageTitle,
       page_path: pagePath,
     })
