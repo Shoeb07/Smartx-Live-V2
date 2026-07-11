@@ -40,6 +40,8 @@ export type BlogPost = {
   image?: string
   keyword: string
   title: string
+  // Overrides the derived '<title> | SmartX Solutions' meta title when set
+  metaTitle?: string
   description: string
   date: string
   readTime: string
@@ -453,15 +455,16 @@ export const blogPostMap = new Map(blogPosts.map((post) => [post.slug, post]))
 export function buildBlogMetadata(post: BlogPost): Metadata {
   const url = absoluteUrl(`/${post.slug}`)
   const image = post.image ?? '/og-image.png'
+  const title = post.metaTitle ?? `${post.title} | ${siteName}`
 
   return {
-    title: `${post.title} | ${siteName}`,
+    title,
     description: post.description,
     alternates: { canonical: url },
     openGraph: {
       type: 'article',
       url,
-      title: post.title,
+      title: post.metaTitle ?? post.title,
       description: post.description,
       siteName,
       publishedTime: post.date,
@@ -469,7 +472,7 @@ export function buildBlogMetadata(post: BlogPost): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: post.metaTitle ?? post.title,
       description: post.description,
       images: [image],
     },

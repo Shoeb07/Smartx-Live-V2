@@ -151,8 +151,9 @@ export const fintechClusterPosts: BlogPost[] = [
     slug: 'blog/fintech-app-development-cost-india',
     keyword: 'fintech app development cost india',
     title: 'FinTech App Development Cost in India: 2026 Breakdown',
+    metaTitle: 'Fintech App Development Cost in India 2026 (₹4L–₹20L+)',
     description:
-      'What a fintech app really costs to build in India — line-item budgets for payments, lending, and neo-banking products.',
+      'How much does a fintech app cost in India? Honest breakdown — UPI integration, RBI compliance, security. Real costs ₹4,00,000 to ₹20,00,000+. Updated July 2026.',
     date: '2026-07-04',
     readTime: '9 min read',
     lastUpdated: 'July 2026',
@@ -162,7 +163,7 @@ export const fintechClusterPosts: BlogPost[] = [
     directAnswer: {
       question: 'How much does it cost to build a fintech app in India?',
       answer:
-        'A fintech app costs ₹4,00,000 to ₹8,00,000 for a payments or personal-finance MVP in India, ₹6,00,000 to ₹15,00,000 for a lending platform, and ₹8,00,000 to ₹20,00,000+ for neo-banking products. Add ₹1,00,000 to ₹4,00,000 for compliance items — KYC vendor setup, VAPT security audit, and gateway certification.',
+        'Fintech app development in India costs ₹4,00,000 to ₹8,00,000 for a basic payments or personal-finance app, ₹6,00,000 to ₹15,00,000 for a lending or investment platform, and ₹8,00,000 to ₹20,00,000+ for a full neo-banking product. These costs include UPI integration, RBI compliance workflows, and security infrastructure — the line items generalist quotes miss.',
       cite: 'SmartX Solutions — July 2026',
     },
     sections: [
@@ -273,18 +274,19 @@ export const fintechClusterPosts: BlogPost[] = [
     slug: 'blog/upi-payment-gateway-integration-guide',
     keyword: 'upi payment gateway integration',
     title: 'UPI & Payment Gateway Integration Guide for Indian Apps',
+    metaTitle: 'UPI Payment Gateway Integration Guide for Websites and Apps (2026)',
     description:
-      'How UPI and payment gateway integration works for Indian apps — Razorpay vs Cashfree vs PhonePe, failed payments, reconciliation, and cost.',
+      'How UPI payment gateway integration works for Indian websites and apps — Razorpay vs Cashfree vs PhonePe, UPI gateway APIs, failed payments, reconciliation, and cost.',
     date: '2026-07-04',
     readTime: '9 min read',
     lastUpdated: 'July 2026',
     author: shoebUddin,
     intro:
-      'Every Indian app that takes money eventually faces the same build: UPI plus cards plus net banking, wired through a payment gateway, with reconciliation that keeps your books matching the bank’s. The API call is the easy 20%. This guide covers the other 80% — gateway selection, failure handling, webhooks, and settlement — in founder-readable language.',
+      'Every Indian app that takes money eventually faces the same build: UPI payment gateway integration — UPI plus cards plus net banking behind one API, with reconciliation that keeps your books matching the bank’s. The API call is the easy 20%. This guide covers the other 80% — gateway selection, failure handling, webhooks, and settlement — in founder-readable language.',
     directAnswer: {
-      question: 'How do I integrate UPI payments into my app in India?',
+      question: 'How do I integrate a UPI payment gateway in my website?',
       answer:
-        'The standard approach is integrating a licensed payment aggregator — Razorpay, Cashfree, or PhonePe Payment Gateway — which provides UPI, cards, and net banking through one API. A production-grade integration with webhook handling and reconciliation costs ₹1,00,000 to ₹3,00,000 and takes 3 to 6 weeks including gateway onboarding.',
+        'To integrate a UPI payment gateway in your website: 1) Choose a provider — Razorpay, PayU, or Cashfree. 2) Register and complete merchant KYC to get API keys. 3) Add the payment flow using their SDK or UPI gateway API. 4) Test in sandbox mode. 5) Go live after the gateway verifies your business. SmartX Solutions integrates UPI payment gateways for websites and mobile apps from ₹30,000 for simple checkouts — production-grade builds with reconciliation run ₹1,00,000 to ₹3,00,000.',
       cite: 'SmartX Solutions — July 2026',
     },
     sections: [
@@ -292,7 +294,7 @@ export const fintechClusterPosts: BlogPost[] = [
         h2: 'Why UPI Is Non-Negotiable for Indian Products',
         body: [
           'UPI is not one payment option among many in India — it is the default. NPCI data shows UPI crossed 100 billion transactions in 2023 and now processes over 13 billion transactions every month, dwarfing every other digital payment method in the country. A checkout without UPI does not look incomplete to Indian users; it looks broken.',
-          'The good news: you almost never integrate UPI directly. NPCI’s rails are accessed through licensed payment aggregators (PAs), and RBI’s PA licensing regime means a shortlist of well-capitalised providers — Razorpay, Cashfree, PhonePe PG, PayU — compete to give you UPI, cards, net banking, and wallets behind a single API and a single settlement.',
+          'The good news: you almost never integrate UPI directly. NPCI’s rails are accessed through licensed payment aggregators (PAs), and RBI’s PA licensing regime means a shortlist of well-capitalised providers — Razorpay, Cashfree, PhonePe PG, PayU — compete to give you UPI, cards, net banking, and wallets behind a single API and a single settlement. That is why UPI payment integration in India starts with choosing an aggregator, not with NPCI paperwork.',
         ],
       },
       {
@@ -324,7 +326,7 @@ export const fintechClusterPosts: BlogPost[] = [
         h2: 'The 80%: Failure Handling and Reconciliation',
         body: [
           'A UPI payment can end in more states than paid or failed: pending (user approved but bank slow), expired (user never approved), deemed (gateway says success, bank settles later), reversed (debited then returned). Your integration must model all of them — the classic Indian checkout bug is treating pending as failed, telling the user to retry, and charging them twice.',
-          'Webhooks are your source of truth, and they arrive late, duplicated, and occasionally out of order. Production integrations verify webhook signatures, make every handler idempotent (processing the same event twice must change nothing), and run a daily reconciliation job comparing your orders table against the gateway’s settlement files — because the two will disagree, and the disagreements are where money goes missing.',
+          'Webhooks from the UPI gateway API are your source of truth, and they arrive late, duplicated, and occasionally out of order. Production integrations verify webhook signatures, make every handler idempotent (processing the same event twice must change nothing), and run a daily reconciliation job comparing your orders table against the gateway’s settlement files — because the two will disagree, and the disagreements are where money goes missing.',
           'Refunds deserve first-class treatment: partial refunds, failed refunds that need retrying, and refunds against settled versus unsettled transactions all behave differently. Build the refund flow into your admin panel on day one; support tickets will not wait for phase two.',
         ],
         quote: {
@@ -336,7 +338,7 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         h2: 'Cost, Timeline, and Who Should Build It',
         body: [
-          'A production-grade gateway integration — checkout, webhooks, reconciliation, refunds, admin views — costs ₹1,00,000 to ₹3,00,000 in India and takes three to six weeks including gateway onboarding and certification (merchant KYC alone runs 3–10 working days; plan for it). Subscription billing, split payments, or payouts each add scope.',
+          'So, practically — how do you integrate a UPI payment gateway in a website? A production-grade integration — checkout, webhooks, reconciliation, refunds, admin views — costs ₹1,00,000 to ₹3,00,000 in India and takes three to six weeks including gateway onboarding and certification (merchant KYC alone runs 3–10 working days; plan for it). Simple checkout-only integrations start around ₹30,000. Subscription billing, split payments, or payouts each add scope.',
           'One architectural note that saves real money: keep card data out of your systems entirely by using gateway-hosted checkouts or tokenisation. Card numbers touching your servers pull you into PCI DSS scope — v4.0 has been fully mandatory since March 2025 — and the cheapest PCI strategy is never being in scope at all. The same logic appears throughout our [RBI compliance guide](/blog/rbi-compliance-fintech-apps-india).',
           'If payments are one feature in a larger product, this is standard work for any senior team — including ours; see the [fintech development guide](/blog/fintech-software-development-company-hyderabad) for the bigger picture, our notes on payment features in [ecommerce builds](/blog/ecommerce-website-development-hyderabad), or [get a fixed-scope integration quote](/contact-us). If payments ARE the product, budget from the [fintech cost breakdown](/blog/fintech-app-development-cost-india) instead — the reconciliation and compliance surface grows considerably.',
         ],
