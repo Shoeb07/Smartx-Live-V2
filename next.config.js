@@ -2,6 +2,13 @@
 const nextConfig = {
   async redirects() {
     return [
+      // Bare domain -> www (also enforced at the host level; this is defense-in-depth)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'smartxsolutions.in' }],
+        destination: 'https://www.smartxsolutions.in/:path*',
+        permanent: true,
+      },
       {
         source: '/about',
         destination: '/about-us',
