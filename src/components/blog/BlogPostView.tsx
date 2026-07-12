@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import TrackedLeadLink from '@/components/analytics/TrackedLeadLink'
 import DirectAnswer from '@/components/ui/DirectAnswer'
 import PeopleAlsoAsk from '@/components/ui/PeopleAlsoAsk'
 import LastUpdated from '@/components/ui/LastUpdated'
@@ -152,6 +153,44 @@ function SectionBlock({ section }: { section: BlogSection }) {
               <span>{link.label}</span>
             </Link>
           ))}
+        </div>
+      )}
+
+      {section.inlineCta && (
+        <div className="mt-8 p-8 rounded-2xl border border-[#00e5b0]/20 bg-[#00e5b0]/[0.05]">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-[#00e5b0]/15 flex items-center justify-center flex-shrink-0">
+              <span className="text-[#00e5b0] text-lg" aria-hidden="true">
+                💡
+              </span>
+            </div>
+            <div>
+              <h3 className="font-syne font-bold text-white text-lg mb-2">
+                {section.inlineCta.heading}
+              </h3>
+              <p className="text-white/55 text-sm mb-4 leading-relaxed">
+                {section.inlineCta.body}
+              </p>
+              {section.inlineCta.whatsapp ? (
+                <TrackedLeadLink
+                  href={section.inlineCta.href}
+                  eventLabel="whatsapp_click"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-medium hover:opacity-90 transition-all"
+                >
+                  💬 {section.inlineCta.buttonLabel}
+                </TrackedLeadLink>
+              ) : (
+                <Link
+                  href={section.inlineCta.href}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#6c63ff] text-white text-sm font-medium hover:bg-[#5a52e0] transition-all"
+                >
+                  {section.inlineCta.buttonLabel} →
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
       )}
     </section>

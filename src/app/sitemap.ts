@@ -38,8 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog listing page
     { url: `${siteUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
 
-    // Nested service landing page (not in seoPages)
+    // Nested service landing pages (not in seoPages)
     { url: `${siteUrl}/services/saas-development-company-hyderabad`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${siteUrl}/services/fintech-app-development-hyderabad`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
 
     // Offshore / US-market landing page
     { url: `${siteUrl}/offshore-software-development-india`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },

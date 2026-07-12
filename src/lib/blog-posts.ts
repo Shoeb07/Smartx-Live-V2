@@ -32,6 +32,15 @@ export type BlogSection = {
     name: string
     role: string
   }
+  // Compact service CTA box rendered at the end of the section.
+  // whatsapp: true renders the WhatsApp-green button with lead tracking.
+  inlineCta?: {
+    heading: string
+    body: string
+    buttonLabel: string
+    href: string
+    whatsapp?: boolean
+  }
 }
 
 export type BlogPost = {
