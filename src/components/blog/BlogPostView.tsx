@@ -348,6 +348,24 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                 <SectionBlock key={section.h2} section={section} />
               ))}
 
+              {post.cta && (
+                <div className="my-10 p-8 rounded-2xl border border-[#6c63ff]/25 bg-[#6c63ff]/[0.08] text-center">
+                  <h3 className="font-syne font-bold text-xl text-white mb-3">
+                    {post.cta.heading}
+                  </h3>
+                  <p className="text-white/55 mb-6 max-w-xl mx-auto">{post.cta.body}</p>
+                  <Link
+                    href={post.cta.href}
+                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#6c63ff] text-white font-medium hover:bg-[#5a52e0] transition-all"
+                  >
+                    {post.cta.buttonLabel} →
+                  </Link>
+                  {post.cta.note && (
+                    <p className="text-white/30 text-xs mt-4">{post.cta.note}</p>
+                  )}
+                </div>
+              )}
+
               <section className="pt-4">
                 <h2 className="font-syne font-bold text-[clamp(26px,4vw,38px)] leading-tight mb-5">
                   Frequently Asked Questions

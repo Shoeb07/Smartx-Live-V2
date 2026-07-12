@@ -71,6 +71,14 @@ export type BlogPost = {
     url: string
   }[]
   extraSchemas?: Record<string, unknown>[]
+  // Conversion CTA rendered after the article body, before the FAQ section
+  cta?: {
+    heading: string
+    body: string
+    buttonLabel: string
+    href: string
+    note?: string
+  }
 }
 
 const corePosts: BlogPost[] = [
