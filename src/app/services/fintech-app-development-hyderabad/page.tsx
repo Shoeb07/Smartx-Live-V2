@@ -10,7 +10,7 @@ const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/services/fintech-app-development-hyderabad`
 
 export const metadata: Metadata = {
-  title: 'Fintech App Development Company in Hyderabad — SmartX Solutions',
+  title: 'Fintech App Development Company in Hyderabad | SmartX',
   description:
     'SmartX Solutions builds RBI-compliant fintech applications in Hyderabad — UPI integration, payment gateways, lending platforms, and digital wallets. Free consultation available.',
   keywords: [
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     type: 'website',
     url: canonical,
     siteName: 'SmartX Solutions',
-    title: 'Fintech App Development Company in Hyderabad — SmartX Solutions',
+    title: 'Fintech App Development Company in Hyderabad | SmartX',
     description:
       'RBI-compliant fintech development in Hyderabad — UPI integration, payment gateways, lending platforms, digital wallets. Free consultation.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Fintech App Development Company in Hyderabad — SmartX Solutions' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Fintech App Development Company in Hyderabad | SmartX' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fintech App Development Company in Hyderabad — SmartX Solutions',
+    title: 'Fintech App Development Company in Hyderabad | SmartX',
     description:
       'RBI-compliant fintech development in Hyderabad — UPI integration, payment gateways, lending platforms, digital wallets.',
     images: ['/og-image.png'],

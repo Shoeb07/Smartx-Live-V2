@@ -9,7 +9,7 @@ const siteUrl = 'https://www.smartxsolutions.in'
 const canonical = `${siteUrl}/best-software-development-companies-hyderabad`
 
 export const metadata: Metadata = {
-  title: 'Best Software Development Companies in Hyderabad 2026 [Honest Reviews + Pricing]',
+  title: 'Best Software Development Companies in Hyderabad [Reviewed]',
   description:
     'Comparing the top software development companies in Hyderabad for startups and SMEs. Honest reviews, real pricing (₹50K-₹15L+), and the criteria that actually matter. Updated July 2026.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical },
   openGraph: {
-    title: 'Best Software Development Companies in Hyderabad 2026 [Honest Reviews + Pricing]',
+    title: 'Best Software Development Companies in Hyderabad [Reviewed]',
     description: 'Comparing the top software development companies in Hyderabad for startups and SMEs. Honest reviews, real pricing (₹50K-₹15L+), and the criteria that actually matter. Updated July 2026.',
     url: canonical,
     siteName: 'SmartX Solutions',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Software Development Companies in Hyderabad 2026 [Honest Reviews + Pricing]',
+    title: 'Best Software Development Companies in Hyderabad [Reviewed]',
     description: 'Comparing the top software development companies in Hyderabad for startups and SMEs. Honest reviews, real pricing (₹50K-₹15L+), and the criteria that actually matter. Updated July 2026.',
     images: ['/og-image.png'],
   },

@@ -152,7 +152,7 @@ export const fintechClusterPosts: BlogPost[] = [
     slug: 'blog/fintech-app-development-cost-india',
     keyword: 'fintech app development cost india',
     title: 'Fintech App Development Cost in India 2026: What You’ll Actually Pay',
-    metaTitle: 'Fintech App Development Cost in India 2026: ₹5L to ₹50L+ Breakdown',
+    metaTitle: 'Fintech App Development Cost in India: ₹5L–₹50L+ (2026)',
     description:
       'Exact cost breakdown for building a fintech app in India — UPI, RBI compliance, security. Real numbers: ₹5,00,000 to ₹50,00,000+. By SmartX Solutions, Hyderabad.',
     date: '2026-07-04',
@@ -283,7 +283,7 @@ export const fintechClusterPosts: BlogPost[] = [
     slug: 'blog/upi-payment-gateway-integration-guide',
     keyword: 'upi payment gateway integration',
     title: 'UPI & Payment Gateway Integration Guide for Indian Apps',
-    metaTitle: 'UPI Payment Gateway Integration Guide for Websites and Apps (2026)',
+    metaTitle: 'UPI Payment Gateway Integration for Websites & Apps (2026)',
     description:
       'How UPI payment gateway integration works — Razorpay, PayU, Cashfree, webhooks, reconciliation. Need it done? SmartX integrates UPI from ₹30,000.',
     date: '2026-07-04',

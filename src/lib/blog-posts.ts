@@ -472,7 +472,10 @@ export const blogPostMap = new Map(blogPosts.map((post) => [post.slug, post]))
 export function buildBlogMetadata(post: BlogPost): Metadata {
   const url = absoluteUrl(`/${post.slug}`)
   const image = post.image ?? '/og-image.png'
-  const title = post.metaTitle ?? `${post.title} | ${siteName}`
+  // Append the brand suffix only when the result stays within Google's
+  // ~60-char display limit; otherwise fall back to the bare post title.
+  const branded = `${post.title} | ${siteName}`
+  const title = post.metaTitle ?? (branded.length <= 60 ? branded : post.title)
 
   return {
     title,
