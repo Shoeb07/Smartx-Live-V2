@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CalendarDays } from 'lucide-react'
 import Link from 'next/link'
+import { trackBookCall, trackCTAClick } from '@/lib/analytics'
 
 export default function CTABanner() {
   return (
@@ -35,6 +36,7 @@ export default function CTABanner() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact-us"
+                onClick={() => trackCTAClick('Start a Project', 'cta_banner')}
                 className="px-8 py-4 rounded-full bg-[#6c63ff] text-white font-medium text-[15px] hover:bg-[#5a52e0] transition-all flex items-center gap-2 group"
               >
                 Start a Project
@@ -42,6 +44,7 @@ export default function CTABanner() {
               </Link>
               <Link
                 href="/contact-us"
+                onClick={() => trackBookCall('cta_banner')}
                 className="px-8 py-4 rounded-full border border-white/15 text-white/75 font-medium text-[15px] hover:border-white/30 hover:text-white transition-all flex items-center gap-2"
               >
                 <CalendarDays size={16} />

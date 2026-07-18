@@ -94,3 +94,23 @@ export function trackLead(source: string, medium: string = 'organic') {
     timestamp: new Date().toISOString(),
   })
 }
+
+/**
+ * Track when a user first interacts with a form (GA4 form_start)
+ */
+export function trackFormStart(formName: string = 'contact') {
+  trackEvent('form_start', {
+    form_name: formName,
+    timestamp: new Date().toISOString(),
+  })
+}
+
+/**
+ * Track consultation booking intent
+ */
+export function trackBookCall(source: string = 'unknown') {
+  trackEvent('book_call', {
+    source,
+    timestamp: new Date().toISOString(),
+  })
+}

@@ -11,7 +11,7 @@ const canonical = `${siteUrl}/best-software-development-companies-hyderabad`
 export const metadata: Metadata = {
   title: 'Best Software Development Companies in Hyderabad [Reviewed]',
   description:
-    'Comparing the top software development companies in Hyderabad for startups and SMEs. Honest reviews, real pricing (₹50K-₹15L+), and the criteria that actually matter. Updated July 2026.',
+    'Comparing 10 software development companies in Hyderabad for startups and SMEs. Real pricing (₹50K–₹15L+), limitations included, honest ranking. Updated July 2026.',
   keywords: [
     'best software development companies in hyderabad',
     'top software companies hyderabad',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical },
   openGraph: {
     title: 'Best Software Development Companies in Hyderabad [Reviewed]',
-    description: 'Comparing the top software development companies in Hyderabad for startups and SMEs. Honest reviews, real pricing (₹50K-₹15L+), and the criteria that actually matter. Updated July 2026.',
+    description: 'Comparing 10 software development companies in Hyderabad for startups and SMEs. Real pricing (₹50K–₹15L+), limitations included, honest ranking. Updated July 2026.',
     url: canonical,
     siteName: 'SmartX Solutions',
     type: 'article',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Software Development Companies in Hyderabad [Reviewed]',
-    description: 'Comparing the top software development companies in Hyderabad for startups and SMEs. Honest reviews, real pricing (₹50K-₹15L+), and the criteria that actually matter. Updated July 2026.',
+    description: 'Comparing 10 software development companies in Hyderabad for startups and SMEs. Real pricing (₹50K–₹15L+), limitations included, honest ranking. Updated July 2026.',
     images: ['/og-image.png'],
   },
 }
@@ -56,7 +56,7 @@ const articleSchema = {
   },
   keywords: 'best software development companies hyderabad, top it companies hyderabad, software agency hyderabad',
   datePublished: '2026-01-01',
-  dateModified: new Date().toISOString().split('T')[0],
+  dateModified: '2026-07-19',
   url: canonical,
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
 }
@@ -438,10 +438,17 @@ export default function BestSoftwareCompaniesHyderabadPage() {
                       </a>
                       <span className="text-white/20">·</span>
                       <Link
+                        href="/software-development-company"
+                        className="text-[#6c63ff] hover:text-white transition-colors underline underline-offset-2 decoration-[#6c63ff]/30"
+                      >
+                        Our services →
+                      </Link>
+                      <span className="text-white/20">·</span>
+                      <Link
                         href="/portfolio"
                         className="text-[#6c63ff] hover:text-white transition-colors underline underline-offset-2 decoration-[#6c63ff]/30"
                       >
-                        View our portfolio →
+                        View portfolio →
                       </Link>
                     </div>
                   </div>

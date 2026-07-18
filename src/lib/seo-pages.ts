@@ -245,55 +245,122 @@ export const seoPages: Record<string, SeoPage> = {
   },
   'software-development-company': {
     slug: 'software-development-company',
-    title: 'Software Development Company - Custom Business Software',
+    title: 'Custom Software Development Company in Hyderabad | SmartX Solutions',
     description:
-      'SmartX Solutions is a custom software development company building SaaS, portals, dashboards, workflow systems, integrations, and enterprise applications.',
-    h1: 'Custom Software Development Company',
-    eyebrow: 'Software Engineering',
+      'SmartX Solutions is a custom software development company in Hyderabad. We build web applications, SaaS platforms, CRM systems, ERP tools, and business automation for startups and enterprises across India.',
+    h1: 'Custom Software Development Company in Hyderabad',
+    eyebrow: 'Custom Software · Hyderabad',
     intro:
-      'SmartX Solutions helps companies replace manual processes, fragmented tools, and outdated systems with custom software that fits the way the business actually works.',
+      'SmartX Solutions is a custom software development company in Hyderabad, Telangana. We help startups and businesses replace manual workflows, disconnected tools, and outdated systems with software built around the way their business actually works. Our team covers strategy, UX design, engineering, deployment, and long-term support from a single Hyderabad base — available for in-person meetings and remote collaboration.',
     sections: [
       {
-        h2: 'Custom Software for Specific Business Workflows',
+        h2: 'Business Problems Custom Software Solves',
         body: [
-          'Off-the-shelf software is useful until your workflow becomes too specific, your team starts duplicating data, or your customers need a better experience than generic tools can provide. SmartX designs custom software around your processes, permissions, data, reporting needs, and growth plans.',
-          'We build SaaS products, CRM systems, ERP modules, booking platforms, logistics tools, financial dashboards, customer portals, inventory systems, workflow automation, API integrations, and internal operations platforms. Each system is documented, tested, and structured so it can evolve over time.',
+          'Off-the-shelf platforms stop working the moment your workflow becomes specific: your team starts duplicating data across disconnected tools, reporting requires someone to manually pull numbers from three different systems, and customers get a generic experience when they need something tailored. Custom software eliminates these gaps by fitting the way your business actually runs.',
+          'The most common problems we are asked to solve: replacing spreadsheet-heavy operations with a proper database application, building customer or vendor portals that reduce manual coordination, creating dashboards that give management real-time visibility instead of week-old reports, and connecting business tools that currently do not talk to each other. Each of these is a specific, solvable engineering problem — not a reason to buy yet another subscription.',
         ],
       },
       {
-        h2: 'Architecture That Supports Growth',
+        h2: 'Custom Software Services We Provide',
         body: [
-          'Good custom software balances speed with durability. We define the right data model, integration points, user roles, security rules, hosting approach, and release workflow before heavy development starts. That foundation helps avoid expensive rewrites as usage grows.',
-          'Our engineering team works across frontend, backend, database, cloud, API, and DevOps layers. We can build a complete platform or collaborate with your internal team on a specific module, migration, or modernisation initiative.',
+          'We build web applications, customer portals, admin dashboards, SaaS platforms, CRM and CMS systems, ERP modules, booking and scheduling tools, inventory and logistics platforms, financial dashboards, internal operations software, and API integrations. We also build mobile apps for businesses that need a field or customer-facing experience on iOS and Android.',
+          'Every system is documented, security-reviewed, tested, and structured so it can be maintained and extended. We do not hand over a black box. We hand over code you can understand, a system you can operate, and a team you can continue working with.',
         ],
       },
       {
-        h2: 'From Discovery to Long-Term Support',
+        h2: 'Industries We Build Software For',
         body: [
-          'Every custom software project starts with discovery. We map the users, business rules, pain points, data sources, and success metrics. Then we turn that information into a delivery roadmap with practical milestones. After launch, we can support monitoring, improvements, maintenance, and new feature development.',
+          'Our custom software projects cover manufacturing, retail and ecommerce, professional services, education and edtech, healthcare and wellness, real estate, logistics, financial services, hospitality, and government-adjacent NGOs. The specific workflow requirements differ across industries, but the fundamentals are the same: clear user roles, reliable data flows, secure access, maintainable code, and support after launch.',
+          'For manufacturing, we build inventory and production tracking systems. For services businesses, we build CRM and scheduling platforms. For edtech, we build student portals and assessment tools. For fintech, we build payment-integrated, RBI-compliant platforms. If your industry is not listed, describe the business problem — the solution is almost always buildable.',
+        ],
+      },
+      {
+        h2: 'Real Projects from Our Portfolio',
+        body: [
+          'AG Traders, a fencing wire manufacturer in Palghar, needed a digital presence to reach contractors and procurement managers searching online. We built a fast, mobile-first Next.js website with a full product catalogue and pre-populated WhatsApp enquiry integration. The site appeared on page one of Google for location-specific searches within six weeks of launch.',
+          'One Stop Dashboard is an ERP application we built to centralise business operations across multiple workflows into a single platform with real-time insights and automated reporting. FurneXo is a marketplace platform — India\'s first furniture exchange — enabling users to buy, sell, and swap furniture online. These are real, live products built by the same team that would work on your project.',
+        ],
+      },
+      {
+        h2: 'Development Process: Discovery to Launch',
+        body: [
+          'Every project starts with discovery. We map the users, business rules, data flows, pain points, integrations, and success metrics before writing a line of code. That clarity prevents expensive changes mid-development and gives you a delivery roadmap with practical milestones rather than guesswork estimates.',
+          'After discovery comes UX design and architecture planning: user journeys, wireframes, data models, API design, security rules, hosting approach, and release workflow. Then development — in focused sprints with regular demos so you can see progress and redirect before it costs time. Then QA, deployment, and a launch-ready handover. After launch, we can support monitoring, feature improvements, performance tuning, and the next release cycle.',
+        ],
+      },
+      {
+        h2: 'Engagement Models',
+        body: [
+          'Fixed-scope projects work well when the requirements are clear and the deliverables are defined: a specific application, a portal, a set of integrations. We scope it, price it, and deliver against milestones. This is the most common model for first-time clients because the cost and timeline are predictable.',
+          'Time-and-materials suits ongoing product development where priorities evolve with user feedback. You get the team\'s capacity each month and control what gets built. Dedicated team arrangements work for companies that need a persistent engineering presence without the overhead of employment: a team allocated to your product for as long as you need.',
+        ],
+      },
+      {
+        h2: 'Technology Stack',
+        body: [
+          'Frontend: React, Next.js, and TypeScript for web applications — fast, SEO-capable, and maintainable at scale. Tailwind CSS for consistent, performant styling. Framer Motion for interactions that match brand quality. Mobile: Flutter and React Native for iOS and Android, chosen based on product requirements and cross-platform needs.',
+          'Backend: Node.js for API-first architectures and Python with FastAPI for data-heavy or AI-integrated systems. PostgreSQL as the default relational database, MongoDB for document-flexible needs, Redis for caching and sessions. Cloud: Vercel for Next.js deployments, AWS and GCP for systems needing granular infrastructure control. All production systems include CI/CD pipelines, monitoring, structured logging, and documented infrastructure.',
+        ],
+      },
+      {
+        h2: 'Realistic Timelines and Pricing Guidance',
+        body: [
+          'A simple internal tool, automation workflow, or business website typically takes four to eight weeks and costs ₹2,50,000 to ₹8,00,000. A custom business application — a portal, CRM, booking system, or operational dashboard — typically takes ten to twenty weeks and costs ₹8,00,000 to ₹25,00,000 depending on scope and integrations. SaaS platforms and enterprise systems start at ₹25,00,000 and scale with complexity, user management, multi-tenancy, and infrastructure requirements.',
+          'These are realistic ranges, not minimums designed to win a proposal. The final number depends on the feature list, integration complexity, data migration, testing requirements, and your timeline. We provide a specific proposal after a discovery call where we understand your actual scope — not a number pulled from a pricing page.',
+        ],
+      },
+      {
+        h2: 'Why Choose a Hyderabad Software Development Company',
+        body: [
+          'Hyderabad has one of India\'s deepest technology talent pools outside Bangalore — home to major engineering centres, a large graduate output from institutions including IIIT Hyderabad and Osmania University, and an active startup ecosystem anchored by T-Hub. Engineering quality at Hyderabad rates runs 15 to 25 percent below equivalent Bangalore costs without a quality gap, making it a rational first choice for budget-conscious and quality-conscious buyers alike.',
+          'For businesses in Telangana and Andhra Pradesh, a Hyderabad company also means accessible in-person meetings, shared timezone, and a team that understands the local regulatory, procurement, and market context without needing it explained.',
+        ],
+      },
+      {
+        h2: 'Why SmartX Solutions',
+        body: [
+          'We are a small, senior team — not a large agency that routes your work through junior staff after the pitch. The people who scope your project are the people who build it. That keeps communication direct, decisions fast, and quality consistent.',
+          'We bring product thinking to every engagement. A good software project is not just clean code and a polished interface — it is the sum of right user flows, correct data architecture, search visibility if the product is public-facing, conversion-oriented design if it touches customers, and operational reliability after launch. SmartX connects those pieces.',
         ],
       },
     ],
     links: [
-      { href: '/services', label: 'Software services overview' },
-      { href: '/web-development-services', label: 'Web application development' },
+      { href: '/contact-us', label: 'Book a free discovery consultation' },
+      { href: '/portfolio', label: 'See our completed projects' },
+      { href: '/portfolio/ag-traders', label: 'AG Traders case study' },
+      { href: '/portfolio/one-stop-dashboard', label: 'One Stop Dashboard case study' },
       { href: '/technologies', label: 'Technologies we use' },
-      { href: '/contact-us', label: 'Plan custom software' },
+      { href: '/best-software-development-companies-hyderabad', label: 'Compare Hyderabad software companies' },
     ],
-    breadcrumb: serviceBreadcrumb('Custom Software Development Company', '/software-development-company'),
+    breadcrumb: serviceBreadcrumb('Custom Software Development Company in Hyderabad', '/software-development-company'),
     faqs: [
       {
         question: 'What custom software does SmartX build?',
         answer:
-          'SmartX builds SaaS platforms, dashboards, portals, CRM tools, ERP modules, workflow systems, integrations, and internal business applications.',
+          'SmartX builds web applications, SaaS platforms, CRM and ERP systems, customer portals, admin dashboards, booking tools, mobile apps, AI automation workflows, and internal business applications.',
+      },
+      {
+        question: 'How much does custom software development cost in Hyderabad?',
+        answer:
+          'Simple tools and automations: ₹2,50,000 to ₹8,00,000. Custom business applications: ₹8,00,000 to ₹25,00,000. SaaS platforms and enterprise systems: ₹25,00,000+. We provide a specific proposal after a discovery call.',
+      },
+      {
+        question: 'How long does custom software development take?',
+        answer:
+          'Simple tools: 4 to 8 weeks. Business applications: 10 to 20 weeks. SaaS or enterprise platforms: 20 to 40 weeks. Timeline depends on scope, integrations, and testing requirements.',
       },
       {
         question: 'Can SmartX modernise legacy software?',
         answer:
-          'Yes. SmartX can audit legacy systems, plan migrations, rebuild modules, improve integrations, and create modern interfaces around existing data.',
+          'Yes. SmartX can audit legacy systems, plan migrations, rebuild modules in stages, improve integrations, and create modern interfaces without requiring a full system replacement.',
+      },
+      {
+        question: 'Why choose a software development company in Hyderabad?',
+        answer:
+          'Hyderabad offers strong engineering talent at 15 to 25 percent lower cost than Bangalore, accessible in-person meetings for local businesses, and a well-established startup and enterprise tech ecosystem including T-Hub and major global engineering centres.',
       },
     ],
-    priority: 0.85,
+    priority: 0.9,
     changeFrequency: 'monthly',
   },
   'digital-marketing-services': {
@@ -546,7 +613,7 @@ export const seoPages: Record<string, SeoPage> = {
           'Yes. SmartX works with clients in Hyderabad, across India, and in international markets using remote collaboration workflows.',
       },
     ],
-    priority: 0.9,
+    priority: 0.5,
     changeFrequency: 'yearly',
   },
   portfolio: {

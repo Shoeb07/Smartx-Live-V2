@@ -136,7 +136,7 @@ const projects = [
     year: "2025",
     description:
       "We&apos;re currently taking on new projects across web apps, mobile applications, e-commerce, and SaaS platforms. Every project we take on gets the same cinematic quality treatment.",
-    tags: ["Your Stack Here", "Your Vision Here"],
+    tags: ["Web Apps", "Mobile Apps", "SaaS", "AI Features"],
     highlights: [
       "Custom web & mobile applications",
       "SaaS product design & development",
@@ -395,16 +395,19 @@ export default function Work() {
           })}
         </div>
 
-        {/* Bottom note */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
-          className="text-center text-white/55 text-[13px] mt-12"
+          className="text-center mt-12"
         >
-          More case studies coming soon as projects go live. Every story we
-          build is worth telling.
-        </motion.p>
+          <a
+            href="/portfolio"
+            className="inline-flex items-center gap-2 text-[#6c63ff] text-sm font-medium hover:text-white transition-colors"
+          >
+            View full portfolio →
+          </a>
+        </motion.div>
       </div>
     </section>
   );
