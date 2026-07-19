@@ -106,7 +106,22 @@ export function trackFormStart(formName: string = 'contact') {
 }
 
 /**
- * Track consultation booking intent
+ * Track a click on any CTA that opens or scrolls to the contact form.
+ * Use this for "Schedule a Consultation", "Book a Call", etc. that link to /contact-us.
+ * Do NOT use book_call here — that event is reserved for confirmed appointment creation
+ * (e.g. a callback from an external scheduler like Calendly).
+ */
+export function trackConsultationClick(source: string = 'unknown') {
+  trackEvent('consultation_click', {
+    source,
+    timestamp: new Date().toISOString(),
+  })
+}
+
+/**
+ * Track a confirmed appointment booking from an external scheduling service.
+ * Fire ONLY when the scheduler confirms the appointment — not on CTA click.
+ * If the site has no external scheduler, this event should never fire.
  */
 export function trackBookCall(source: string = 'unknown') {
   trackEvent('book_call', {

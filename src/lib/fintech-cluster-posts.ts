@@ -1,4 +1,4 @@
-// FinTech development content cluster — 4 posts (SEO audit section 5, batch 1).
+﻿// FinTech development content cluster — 4 posts (SEO audit section 5, batch 1).
 // Slugs are prefixed with 'blog/' so these posts are served at /blog/<slug>.
 // Expert quotes are from SmartX's own named founders — no fabricated third parties.
 // Every statistic is attributed in-text and in the sources list.
@@ -205,11 +205,18 @@ export const fintechClusterPosts: BlogPost[] = [
           'Reconciliation engineering is the invisible half of payments work. A payment is not one API call — it is a state machine of initiated, pending, failed, reversed, settled, and refunded, and your books must match the gateway’s books daily. This is routinely 30–40% of payments engineering effort and the most common gap in quotes from teams that have not shipped fintech.',
           'Audit trails and admin controls: regulated products need immutable logs of who did what — loan approvals, limit changes, manual adjustments — plus maker-checker flows for sensitive operations. That is real schema and UI work that consumer apps never need.',
           'Testing against money: fintech QA means testing failure paths — dropped connections mid-payment, duplicate webhooks, partial refunds — because in fintech a bug is not a broken button, it is someone’s money in the wrong place. Expect QA to run 20–25% of the build, roughly double a typical content product.',
-          'The market justifies the premium: India’s fintech sector attracts more usage per capita than almost anywhere — 87% adoption per EY’s index — and NPCI’s UPI now processes over 13 billion transactions a month, so products that handle money correctly compound fast. Context on general (non-fintech) budgets is in our [web development cost guide](/blog/web-development-cost-hyderabad).',
+          `The market justifies the premium: India’s fintech sector attracts more usage per capita than almost anywhere — 87% adoption per EY’s index — and NPCI’s UPI now processes over 13 billion transactions a month, so products that handle money correctly compound fast. Context on general (non-fintech) budgets is in our [web development cost guide](/blog/web-development-cost-hyderabad).`,
         ],
+        inlineCta: {
+          heading: `Want a Line-Item Fintech Scope?`,
+          body: `SmartX Solutions delivers fintech-grade products with compliance built in from day one — KYC/AML, UPI/PA integration, audit trails, and India-region hosting. We return a line-item estimate with compliance costs included, not a round number that surprises you at launch.`,
+          buttonLabel: `WhatsApp for a Quick Scoping Call`,
+          href: `https://wa.me/919100590377?text=Hi%2C%20I%20want%20to%20scope%20a%20fintech%20project.`,
+          whatsapp: true,
+        },
       },
       {
-        h2: 'How to Phase a FinTech Budget',
+        h2: `How to Phase a FinTech Budget`,
         body: [
           'Phase one — prove the flow (₹5,00,000–₹8,00,000): one core money movement done properly (collect, disburse, or track), KYC on a vendor, payments on a licensed aggregator, security audit before real users. Resist dashboards and analytics — they prove nothing.',
           'Phase two — earn complexity (₹3,00,000–₹7,00,000): the features your first users actually blocked on, deeper reconciliation automation, and operational tooling for your own team. This is also when unit economics justify negotiating vendor rates.',

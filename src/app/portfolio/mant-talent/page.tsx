@@ -73,7 +73,7 @@ const schema = {
   keywords:
     'staffing agency website, Next.js website development, US staffing website, recruitment website design, SmartX Solutions portfolio',
   datePublished: '2025-06-01',
-  dateModified: new Date().toISOString().split('T')[0],
+  dateModified: '2026-07-19',
   url: canonical,
   mainEntityOfPage: {
     '@type': 'WebPage',
@@ -193,6 +193,10 @@ export default function MantTalentPage() {
           role: "Founder, MANT Talent Solutions"
         */
         testimonial={null}
+        relatedServices={[
+          { href: '/web-development-services', label: 'Web Development Services' },
+          { href: '/software-development-company', label: 'Custom Software Development' },
+        ]}
       />
     </>
   )

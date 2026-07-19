@@ -55,7 +55,7 @@ const schema = {
   keywords:
     'ERP development India, custom dashboard development, business operations software, React Node.js ERP, operational reporting automation, SaaS dashboard development',
   datePublished: '2025-01-01',
-  dateModified: new Date().toISOString().split('T')[0],
+  dateModified: '2026-07-19',
   url: canonical,
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
 }
@@ -155,6 +155,11 @@ export default function OneStopDashboardPage() {
         ]}
         testimonial={null}
         /* Testimonial from client — to be added */
+        relatedServices={[
+          { href: '/enterprise-software-development-hyderabad', label: 'Enterprise Software Development' },
+          { href: '/software-development-company', label: 'Custom Software Development' },
+          { href: '/services/saas-development-company-hyderabad', label: 'SaaS Development' },
+        ]}
       />
     </>
   )

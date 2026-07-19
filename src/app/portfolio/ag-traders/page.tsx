@@ -55,7 +55,7 @@ const schema = {
   keywords:
     'fencing wire manufacturer website, manufacturer SEO India, Next.js manufacturer website, local SEO Maharashtra, B2B manufacturer digital presence',
   datePublished: '2025-01-01',
-  dateModified: new Date().toISOString().split('T')[0],
+  dateModified: '2026-07-19',
   url: canonical,
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
 }
@@ -145,6 +145,10 @@ export default function AgTradersPage() {
         ]}
         testimonial={null}
         /* Testimonial from AG Traders client — to be added */
+        relatedServices={[
+          { href: '/web-development-services', label: 'Web Development Services' },
+          { href: '/software-development-company', label: 'Custom Software Development' },
+        ]}
       />
     </>
   )

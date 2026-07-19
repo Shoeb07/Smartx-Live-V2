@@ -49,6 +49,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+  const [honeypot, setHoneypot] = useState('')
   const formStarted = useRef(false)
 
   const handleFormStart = () => {
@@ -67,6 +68,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (isSubmitting) return
+    if (honeypot) return // silently discard bot submissions
     setIsSubmitting(true)
     setError('')
 
@@ -76,6 +78,7 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: '217ec2ff-d20d-48f5-b309-06deccdb02a1',
+          _honeypot: honeypot,
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
@@ -326,6 +329,18 @@ export default function Contact() {
               ))}
             </div>
           </fieldset>
+
+          {/* Honeypot — off-screen input that DOM-scraping bots fill; humans never see it */}
+          <input
+            type="text"
+            name="_honeypot"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            tabIndex={-1}
+            aria-hidden="true"
+            autoComplete="off"
+            style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}
+          />
 
           {/* Error message */}
           {error && (

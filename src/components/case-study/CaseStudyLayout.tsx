@@ -28,6 +28,11 @@ export type CaseStudyTestimonial = {
   role: string
 }
 
+export type CaseStudyServiceLink = {
+  href: string
+  label: string
+}
+
 export type CaseStudyLayoutProps = {
   title: string
   subtitle: string
@@ -43,6 +48,7 @@ export type CaseStudyLayoutProps = {
   testimonial?: CaseStudyTestimonial | null
   liveUrl?: string | null
   accentColor: string
+  relatedServices?: CaseStudyServiceLink[]
 }
 
 const fadeUp = {
@@ -65,6 +71,7 @@ export default function CaseStudyLayout({
   testimonial,
   liveUrl,
   accentColor,
+  relatedServices,
 }: CaseStudyLayoutProps) {
   return (
     <>
@@ -467,6 +474,31 @@ export default function CaseStudyLayout({
               ))}
             </motion.div>
           </motion.section>
+
+          {/* ── 7.5. RELATED SERVICES ── */}
+          {relatedServices && relatedServices.length > 0 && (
+            <motion.section
+              className="py-10 border-b border-white/[0.07]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-white/35 text-xs uppercase tracking-widest mb-4">Related services</p>
+              <div className="flex flex-wrap gap-3">
+                {relatedServices.map((svc) => (
+                  <Link
+                    key={svc.href}
+                    href={svc.href}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.1] bg-white/[0.04] text-sm text-white/70 hover:border-[#6c63ff]/40 hover:text-white hover:bg-[#6c63ff]/[0.05] transition-all"
+                  >
+                    {svc.label}
+                    <ArrowUpRight size={13} />
+                  </Link>
+                ))}
+              </div>
+            </motion.section>
+          )}
 
           {/* ── 8. TESTIMONIAL ── */}
           {testimonial ? (

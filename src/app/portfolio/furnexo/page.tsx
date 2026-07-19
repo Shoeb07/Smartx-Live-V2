@@ -55,7 +55,7 @@ const schema = {
   keywords:
     'furniture marketplace India, two-sided marketplace development, React Next.js marketplace, furniture exchange platform, e-commerce marketplace development India',
   datePublished: '2025-01-01',
-  dateModified: new Date().toISOString().split('T')[0],
+  dateModified: '2026-07-19',
   url: canonical,
   mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
 }
@@ -155,6 +155,10 @@ export default function FurneXoPage() {
         ]}
         testimonial={null}
         /* Testimonial from FurneXo founder — to be added */
+        relatedServices={[
+          { href: '/software-development-company', label: 'Custom Software Development' },
+          { href: '/web-development-services', label: 'Web Development Services' },
+        ]}
       />
     </>
   )
