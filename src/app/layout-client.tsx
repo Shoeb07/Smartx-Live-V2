@@ -3,6 +3,7 @@
 import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics'
+import SiteMotionEnhancer from '@/components/ui/SiteMotionEnhancer'
 
 // Defer heavy client components
 const CustomCursor = dynamic(() => import('@/components/ui/CustomCursor'), {
@@ -23,6 +24,7 @@ export default function RootLayoutClient({
   return (
     <>
       <GoogleAnalytics />
+      <SiteMotionEnhancer />
       <Suspense fallback={null}>
         <CustomCursor />
       </Suspense>

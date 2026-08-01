@@ -2,7 +2,10 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import TrustedBy from '@/components/sections/TrustedBy'
+import RoboticNavigator from '@/components/sections/RoboticNavigator'
 import Services from '@/components/sections/Services'
+import GrowthShowcase from '@/components/sections/GrowthShowcase'
+import InteractiveEcosystem from '@/components/sections/InteractiveEcosystem'
 import WhyChooseSmartX from '@/components/sections/WhyChooseSmartX'
 import Work from '@/components/sections/Work'
 import Industries from '@/components/sections/Industries'
@@ -59,7 +62,10 @@ export default function HomePage() {
       <main>
         <Hero />
         <TrustedBy />
+        <RoboticNavigator />
         <Services />
+        <GrowthShowcase />
+        <InteractiveEcosystem />
 
         <section className="py-12 bg-[#0a0a10] border-t border-white/[0.05]">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">

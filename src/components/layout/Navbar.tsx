@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
@@ -30,6 +30,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const { scrollYProgress } = useScroll()
+  const headerProgress = useSpring(scrollYProgress, { stiffness: 130, damping: 24, mass: 0.25 })
   const isActive = (href: string) => {
     if (href === '/services') return serviceRoutes.includes(pathname)
     if (href === '/blog') return pathname === '/blog' || pathname.startsWith('/blog/')
@@ -55,21 +57,42 @@ export default function Navbar() {
             : 'bg-transparent py-6'
         )}
       >
+        <motion.div
+          className="absolute inset-x-0 bottom-0 h-px origin-left bg-gradient-to-r from-[#6c63ff] via-[#00e5b0] to-[#6c63ff]"
+          style={{ scaleX: headerProgress }}
+        />
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group" aria-label="SmartX Solutions homepage">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-white font-syne font-bold text-sm">
-              SX
-            </div>
-            <span className="font-syne font-bold text-[18px] tracking-tight text-white">
-              SmartX<span className="text-accent2">.</span>
-            </span>
-          </Link>
+          <motion.div whileHover={{ scale: 1.035 }} whileTap={{ scale: 0.98 }}>
+            <Link href="/" className="flex items-center gap-2.5 group" aria-label="SmartX Solutions homepage">
+              <motion.div
+                className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-white font-syne font-bold text-sm overflow-hidden"
+                animate={{ boxShadow: ['0 0 0 rgba(108,99,255,0)', '0 0 22px rgba(108,99,255,.38)', '0 0 0 rgba(108,99,255,0)'] }}
+                transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                <motion.span
+                  className="absolute inset-y-0 w-5 -skew-x-12 bg-white/30 blur-sm"
+                  animate={{ x: [-35, 55] }}
+                  transition={{ duration: 2.8, repeat: Infinity, repeatDelay: 2.5 }}
+                />
+                <span className="relative">SX</span>
+              </motion.div>
+              <span className="font-syne font-bold text-[18px] tracking-tight text-white">
+                SmartX<span className="text-accent2">.</span>
+              </span>
+            </Link>
+          </motion.div>
 
           {/* Desktop Links */}
           <ul className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <li key={link.label}>
+            {navLinks.map((link, index) => (
+              <motion.li
+                key={link.label}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.18 + index * 0.055, duration: 0.45 }}
+                className="relative"
+              >
                 <Link
                   href={link.href}
                   aria-current={isActive(link.href) ? 'page' : undefined}
@@ -80,7 +103,13 @@ export default function Navbar() {
                 >
                   {link.label}
                 </Link>
-              </li>
+                {isActive(link.href) && (
+                  <motion.span
+                    layoutId="active-nav-indicator"
+                    className="absolute -bottom-3 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-[#00e5b0] shadow-[0_0_10px_#00e5b0]"
+                  />
+                )}
+              </motion.li>
             ))}
           </ul>
 
@@ -93,21 +122,40 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <Link
-              href="/contact-us"
-              className="px-5 py-2.5 rounded-full bg-accent text-white text-sm font-medium hover:bg-accent/90 transition-all duration-200 flex items-center gap-1.5"
-            >
-              Get Started <ArrowUpRight size={14} />
-            </Link>
+            <motion.div whileHover={{ scale: 1.045 }} whileTap={{ scale: 0.97 }} className="relative overflow-hidden rounded-full">
+              <Link
+                href="/contact-us"
+                className="relative px-5 py-2.5 rounded-full bg-accent text-white text-sm font-medium hover:bg-accent/90 transition-all duration-200 flex items-center gap-1.5 overflow-hidden"
+              >
+                <motion.span
+                  className="absolute inset-y-0 w-8 -skew-x-12 bg-white/25 blur-sm"
+                  animate={{ x: [-55, 150] }}
+                  transition={{ duration: 2.2, repeat: Infinity, repeatDelay: 2.8 }}
+                />
+                <span className="relative">Get Started</span>
+                <ArrowUpRight size={14} className="relative" />
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile Burger */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-white"
+            className="relative lg:hidden w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-white overflow-hidden"
             aria-label="Toggle menu"
+            aria-expanded={open}
           >
-            {open ? <X size={18} /> : <Menu size={18} />}
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={open ? 'close' : 'menu'}
+                initial={{ opacity: 0, rotate: -90, scale: 0.7 }}
+                animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, rotate: 90, scale: 0.7 }}
+                transition={{ duration: 0.2 }}
+              >
+                {open ? <X size={18} /> : <Menu size={18} />}
+              </motion.span>
+            </AnimatePresence>
           </button>
         </div>
       </motion.nav>
