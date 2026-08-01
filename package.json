@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "predev": "node scripts/ensure-local-next-cache.mjs",
+    "dev": "node scripts/run-next.mjs dev",
+    "prebuild": "node scripts/ensure-local-next-cache.mjs",
+    "build": "node scripts/run-next.mjs build",
+    "start": "node scripts/run-next.mjs start",
     "lint": "next lint"
   },
   "dependencies": {

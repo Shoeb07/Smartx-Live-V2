@@ -16,6 +16,7 @@
     background-color: #050508;
     color: #f0eff8;
     font-family: var(--font-dm-sans);
+    overflow-x: clip;
   }
 
   ::selection {
@@ -33,6 +34,60 @@
     background: rgba(108, 99, 255, 0.4);
     border-radius: 3px;
   }
+}
+
+/* Lightweight site-wide motion layer. Transform-only animations preserve layout
+   stability and remain disabled for visitors who prefer reduced motion. */
+.sx-scroll-progress {
+  --sx-scroll-progress: 0;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10001;
+  height: 2px;
+  pointer-events: none;
+  transform: scaleX(var(--sx-scroll-progress));
+  transform-origin: left center;
+  background: linear-gradient(90deg, #6c63ff, #00e5b0);
+  box-shadow: 0 0 16px rgba(0, 229, 176, 0.45);
+  will-change: transform;
+}
+
+.sx-pointer-aura {
+  --sx-pointer-x: 50vw;
+  --sx-pointer-y: 35vh;
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.3;
+  background: radial-gradient(420px circle at var(--sx-pointer-x) var(--sx-pointer-y), rgba(108, 99, 255, 0.075), transparent 68%);
+  mix-blend-mode: screen;
+}
+
+.sx-health-pulse {
+  animation: sxHealthPulse 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes sxHealthPulse {
+  from { opacity: 0.32; }
+  to { opacity: 1; }
+}
+
+main,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .sx-pointer-aura { display: none; }
 }
 
 @layer utilities {
