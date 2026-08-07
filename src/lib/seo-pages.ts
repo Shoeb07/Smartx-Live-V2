@@ -249,7 +249,7 @@ export const seoPages: Record<string, SeoPage> = {
     slug: 'software-development-company',
     title: 'Custom Software Development Company in Hyderabad | SmartX Solutions',
     description:
-      'SmartX Solutions is a custom software development company in Hyderabad. We build web applications, SaaS platforms, CRM systems, ERP tools, and business automation for startups and enterprises across India.',
+      'SmartX Solutions builds custom web, mobile & AI software for startups and enterprises in Hyderabad. Fast delivery, transparent pricing. Get a free quote today.',
     h1: 'Custom Software Development Company in Hyderabad',
     eyebrow: 'Custom Software · Hyderabad',
     intro:
@@ -562,9 +562,9 @@ export const seoPages: Record<string, SeoPage> = {
   },
   'contact-us': {
     slug: 'contact-us',
-    title: 'Contact SmartX Solutions - Start a Software Project',
+    title: 'Get a Free Quote — SmartX Solutions | Custom Software Hyderabad',
     description:
-      'Contact SmartX Solutions to discuss web development, mobile app development, custom software, AI automation, or digital marketing projects.',
+      'Tell us about your project and get a free consultation. We respond within 24 hours. Based in Hyderabad, serving clients across India.',
     h1: 'Contact SmartX Solutions',
     eyebrow: 'Contact Us',
     intro:

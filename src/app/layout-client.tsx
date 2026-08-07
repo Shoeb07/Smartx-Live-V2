@@ -16,6 +16,11 @@ const GlobalAIChatWidget = dynamic(() => import('@/components/ui/GlobalAIChatWid
   ssr: false,
 })
 
+const WhatsAppWidget = dynamic(() => import('@/components/ui/WhatsAppWidget'), {
+  loading: () => null,
+  ssr: false,
+})
+
 export default function RootLayoutClient({
   children,
 }: {
@@ -31,6 +36,9 @@ export default function RootLayoutClient({
       {children}
       <Suspense fallback={null}>
         <GlobalAIChatWidget />
+      </Suspense>
+      <Suspense fallback={null}>
+        <WhatsAppWidget />
       </Suspense>
     </>
   )

@@ -23,8 +23,8 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'SmartX Solutions — Custom Software Development Company India',
-  description: 'SmartX Solutions is a custom software development company in Hyderabad delivering web apps, mobile apps, SaaS platforms, UI/UX design, and digital transformation services across India.',
+  title: 'SmartX Solutions — Custom Software Development Company, Hyderabad',
+  description: 'We build custom software — web apps, mobile apps, fintech & AI solutions. Trusted by founders and businesses across India. Start your project in 2 weeks.',
   keywords: [
     'custom software development company hyderabad',
     'software development company hyderabad',
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     siteName: 'SmartX Solutions',
-    title: 'SmartX Solutions — Custom Software Development Company India',
-    description: 'SmartX Solutions is a custom software development company in Hyderabad delivering web apps, mobile apps, SaaS platforms, UI/UX design, and digital transformation services across India.',
+    title: 'SmartX Solutions — Custom Software Development Company, Hyderabad',
+    description: 'We build custom software — web apps, mobile apps, fintech & AI solutions. Trusted by founders and businesses across India. Start your project in 2 weeks.',
     images: [
       {
         url: '/og-image.png',
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SmartX Solutions — Custom Software Development Company India',
-    description: 'SmartX Solutions is a custom software development company in Hyderabad delivering web apps, mobile apps, SaaS platforms, UI/UX design, and digital transformation services across India.',
+    title: 'SmartX Solutions — Custom Software Development Company, Hyderabad',
+    description: 'We build custom software — web apps, mobile apps, fintech & AI solutions. Trusted by founders and businesses across India. Start your project in 2 weeks.',
     images: ['/og-image.png'],
   },
 }

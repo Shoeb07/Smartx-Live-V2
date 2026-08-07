@@ -20,7 +20,7 @@ export const fintechClusterPosts: BlogPost[] = [
     lastUpdated: 'July 2026',
     author: shoebUddin,
     intro:
-      'India is one of the world’s most active fintech markets, and Hyderabad — with its bank technology centres, payments talent, and startup ecosystem — is one of the best places in the country to build a fintech product. This guide covers what fintech development actually involves, what it costs, the compliance rules you cannot skip, and how to choose a development partner who has built for regulated environments.',
+      "India is one of the world's most active fintech markets, and Hyderabad — with its bank technology centres, payments talent, and startup ecosystem — is one of the best places in the country to build a fintech product. This guide covers what fintech development actually involves, what it costs, the compliance rules you cannot skip, and how to choose a development partner who has built for regulated environments.",
     directAnswer: {
       question: 'What does a fintech software development company in Hyderabad do?',
       answer:
@@ -31,8 +31,8 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         h2: 'Why FinTech, and Why Hyderabad',
         body: [
-          'India’s fintech adoption rate was measured at 87% against a 64% global average in EY’s Global FinTech Adoption Index — the joint-highest in the world — and the infrastructure behind that adoption keeps compounding: UPI crossed 100 billion transactions in a single year in 2023 according to NPCI data, making real-time payments a default expectation for any Indian financial product.',
-          'Hyderabad’s role in this market is underrated. The city hosts major technology centres for global banks and payment companies, a deep pool of engineers who have worked on regulated financial systems, and T-Hub — one of the world’s largest startup incubators — with an active fintech cohort. For founders, that means senior fintech-experienced talent at Hyderabad rates, which run 15–20% below Bangalore for equivalent quality.',
+          "India's fintech adoption rate was measured at 87% against a 64% global average in EY's Global FinTech Adoption Index — the joint-highest in the world — and the infrastructure behind that adoption keeps compounding: UPI crossed 100 billion transactions in a single year in 2023 according to NPCI data, making real-time payments a default expectation for any Indian financial product.",
+          "Hyderabad's role in this market is underrated. The city hosts major technology centres for global banks and payment companies, a deep pool of engineers who have worked on regulated financial systems, and T-Hub — one of the world's largest startup incubators — with an active fintech cohort. For founders, that means senior fintech-experienced talent at Hyderabad rates, which run 15–20% below Bangalore for equivalent quality.",
           'The practical upshot: if your product touches payments, lending, savings, insurance, or investing, you can hire a Hyderabad team that has already solved UPI integration, KYC onboarding, and RBI data-localisation requirements — rather than paying a generalist team to learn them on your budget.',
         ],
         quote: {
@@ -77,7 +77,7 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         h2: 'The Compliance Floor You Cannot Build Below',
         body: [
-          'Three regulatory anchors shape almost every Indian fintech build. First, RBI data localisation: since the RBI’s April 2018 directive, payment system data must be stored only in India — which constrains your cloud architecture from day one. Second, the Digital Personal Data Protection (DPDP) Act 2023 sets consent and data-handling obligations for all personal data, with financial data attracting the most scrutiny. Third, product-specific rules: the RBI Digital Lending Guidelines for lending, PA/PG licensing rules for anyone aggregating payments, SEBI for investments, IRDAI for insurance.',
+          "Three regulatory anchors shape almost every Indian fintech build. First, RBI data localisation: since the RBI's April 2018 directive, payment system data must be stored only in India — which constrains your cloud architecture from day one. Second, the Digital Personal Data Protection (DPDP) Act 2023 sets consent and data-handling obligations for all personal data, with financial data attracting the most scrutiny. Third, product-specific rules: the RBI Digital Lending Guidelines for lending, PA/PG licensing rules for anyone aggregating payments, SEBI for investments, IRDAI for insurance.",
           'None of this should scare you off — thousands of Indian startups operate happily within these rules. But it is why "we will use a compliant partner and gateway" is the correct architecture for most early products, and why we wrote a dedicated guide to [RBI compliance for fintech apps](/blog/rbi-compliance-fintech-apps-india) covering what founders must build in from day one.',
         ],
       },
@@ -88,7 +88,7 @@ export const fintechClusterPosts: BlogPost[] = [
           '1. Ask what they would refuse to build. A partner who knows the regulatory landscape can name things that require licences you do not have. A partner who says yes to everything does not know where the lines are.',
           '2. Ask how they handle payment reconciliation. Anyone can call a payment API; experienced teams talk unprompted about failed-transaction states, settlement mismatches, and refund flows — because that is where fintech engineering actually lives. Our [UPI and payment gateway integration guide](/blog/upi-payment-gateway-integration-guide) shows what good looks like.',
           '3. Ask where the data lives. The correct answer names India-region cloud infrastructure immediately and mentions RBI localisation without being prompted.',
-          '4. Ask for their security process: dependency scanning, secrets management, access controls, and whether they have been through a client’s VAPT audit before.',
+          "4. Ask for their security process: dependency scanning, secrets management, access controls, and whether they have been through a client's VAPT audit before.",
           'SmartX Solutions builds fintech-grade products on Next.js, Node.js, and PostgreSQL with India-region AWS infrastructure — including payment-integrated platforms with Razorpay — under NDA-first, fixed-scope engagements with 100% IP transfer. If you are planning a fintech product, [book a discovery call](/contact-us); if the product needs licences or partners you do not yet have, we will tell you before you spend anything. For SaaS-shaped fintech products, our [SaaS development service](/services/saas-development-company-hyderabad) is the right starting point.',
         ],
       },
@@ -151,7 +151,7 @@ export const fintechClusterPosts: BlogPost[] = [
   {
     slug: 'blog/fintech-app-development-cost-india',
     keyword: 'fintech app development cost india',
-    title: 'Fintech App Development Cost in India 2026: What You’ll Actually Pay',
+    title: "Fintech App Development Cost in India 2026: What You'll Actually Pay",
     metaTitle: 'Fintech App Development Cost in India: ₹5L–₹50L+ (2026)',
     description:
       'Exact cost breakdown for building a fintech app in India — UPI, RBI compliance, security. Real numbers: ₹5,00,000 to ₹50,00,000+. By SmartX Solutions, Hyderabad.',
@@ -191,10 +191,10 @@ export const fintechClusterPosts: BlogPost[] = [
           'KYC and onboarding: digital KYC vendors (Digio, HyperVerge, Signzy) charge setup plus per-verification fees — typically ₹5 to ₹50 per check depending on method (PAN, Aadhaar-based, video KYC). Budget the integration at ₹50,000–₹1,50,000 plus running costs that scale with signups.',
           'Security audit: a pre-launch VAPT (vulnerability assessment and penetration test) from a CERT-In empanelled firm runs ₹75,000–₹2,50,000 depending on scope. Banking and PA partners increasingly require the report before they will certify your integration.',
           'Card data scope: if card numbers touch your systems, PCI DSS applies — and v4.0 requirements became fully mandatory in March 2025. Most startups avoid the entire burden by tokenising through their gateway; deliberately architecting card data out of scope is the single biggest compliance saving available.',
-          'Data residency: RBI’s April 2018 directive requires payment system data to be stored only in India. India-region cloud hosting costs no more than any other region — but discovering the requirement after building on US-region infrastructure means a migration project nobody budgeted.',
+          "Data residency: RBI's April 2018 directive requires payment system data to be stored only in India. India-region cloud hosting costs no more than any other region — but discovering the requirement after building on US-region infrastructure means a migration project nobody budgeted.",
         ],
         quote: {
-          text: 'When a founder shows me a fintech quote that is 40% below everyone else’s, I can usually predict the missing lines: no VAPT, no reconciliation engineering, no KYC vendor costs. The quote is not cheaper — it is incomplete, and the gap surfaces two months before launch when it is most expensive.',
+          text: "When a founder shows me a fintech quote that is 40% below everyone else's, I can usually predict the missing lines: no VAPT, no reconciliation engineering, no KYC vendor costs. The quote is not cheaper — it is incomplete, and the gap surfaces two months before launch when it is most expensive.",
           name: 'Saleha Begum',
           role: 'Co-Founder & CTO, SmartX Solutions',
         },
@@ -202,10 +202,10 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         h2: 'What Drives FinTech Costs Above Ordinary Apps',
         body: [
-          'Reconciliation engineering is the invisible half of payments work. A payment is not one API call — it is a state machine of initiated, pending, failed, reversed, settled, and refunded, and your books must match the gateway’s books daily. This is routinely 30–40% of payments engineering effort and the most common gap in quotes from teams that have not shipped fintech.',
+          "Reconciliation engineering is the invisible half of payments work. A payment is not one API call — it is a state machine of initiated, pending, failed, reversed, settled, and refunded, and your books must match the gateway's books daily. This is routinely 30–40% of payments engineering effort and the most common gap in quotes from teams that have not shipped fintech.",
           'Audit trails and admin controls: regulated products need immutable logs of who did what — loan approvals, limit changes, manual adjustments — plus maker-checker flows for sensitive operations. That is real schema and UI work that consumer apps never need.',
-          'Testing against money: fintech QA means testing failure paths — dropped connections mid-payment, duplicate webhooks, partial refunds — because in fintech a bug is not a broken button, it is someone’s money in the wrong place. Expect QA to run 20–25% of the build, roughly double a typical content product.',
-          `The market justifies the premium: India’s fintech sector attracts more usage per capita than almost anywhere — 87% adoption per EY’s index — and NPCI’s UPI now processes over 13 billion transactions a month, so products that handle money correctly compound fast. Context on general (non-fintech) budgets is in our [web development cost guide](/blog/web-development-cost-hyderabad).`,
+          "Testing against money: fintech QA means testing failure paths — dropped connections mid-payment, duplicate webhooks, partial refunds — because in fintech a bug is not a broken button, it is someone's money in the wrong place. Expect QA to run 20–25% of the build, roughly double a typical content product.",
+          `The market justifies the premium: India's fintech sector attracts more usage per capita than almost anywhere — 87% adoption per EY's index — and NPCI's UPI now processes over 13 billion transactions a month, so products that handle money correctly compound fast. Context on general (non-fintech) budgets is in our [web development cost guide](/blog/web-development-cost-hyderabad).`,
         ],
         inlineCta: {
           heading: `Want a Line-Item Fintech Scope?`,
@@ -248,11 +248,11 @@ export const fintechClusterPosts: BlogPost[] = [
       },
     ],
     cta: {
-      heading: 'Building a Fintech App in India?',
-      body: 'SmartX Solutions has delivered fintech projects including UPI integration, RBI compliance architecture, and payment gateway implementations. Get a free estimate for your project.',
-      buttonLabel: 'Get Free Fintech Project Estimate',
+      heading: 'Want an accurate estimate for your project?',
+      body: 'Every fintech product is different. Share your requirements and we\'ll give you a realistic cost breakdown — no generic quotes.',
+      buttonLabel: 'Get a Custom Estimate',
       href: '/contact-us',
-      note: 'Response within 2 hours · No commitment',
+      note: 'Response within 24 hours · No commitment',
     },
     paa: [
       {
@@ -298,7 +298,7 @@ export const fintechClusterPosts: BlogPost[] = [
     lastUpdated: 'July 2026',
     author: shoebUddin,
     intro:
-      'Every Indian app that takes money eventually faces the same build: UPI payment gateway integration — UPI plus cards plus net banking behind one API, with reconciliation that keeps your books matching the bank’s. The API call is the easy 20%. This guide covers the other 80% — gateway selection, failure handling, webhooks, and settlement — in founder-readable language.',
+      "Every Indian app that takes money eventually faces the same build: UPI payment gateway integration — UPI plus cards plus net banking behind one API, with reconciliation that keeps your books matching the bank's. The API call is the easy 20%. This guide covers the other 80% — gateway selection, failure handling, webhooks, and settlement — in founder-readable language.",
     directAnswer: {
       question: 'How do I integrate a UPI payment gateway in my website?',
       answer:
@@ -310,7 +310,7 @@ export const fintechClusterPosts: BlogPost[] = [
         h2: 'Why UPI Is Non-Negotiable for Indian Products',
         body: [
           'UPI is not one payment option among many in India — it is the default. NPCI data shows UPI crossed 100 billion transactions in 2023 and now processes over 13 billion transactions every month, dwarfing every other digital payment method in the country. A checkout without UPI does not look incomplete to Indian users; it looks broken.',
-          'The good news: you almost never integrate UPI directly. NPCI’s rails are accessed through licensed payment aggregators (PAs), and RBI’s PA licensing regime means a shortlist of well-capitalised providers — Razorpay, Cashfree, PhonePe PG, PayU — compete to give you UPI, cards, net banking, and wallets behind a single API and a single settlement. That is why UPI payment integration in India starts with choosing an aggregator, not with NPCI paperwork.',
+          "The good news: you almost never integrate UPI directly. NPCI's rails are accessed through licensed payment aggregators (PAs), and RBI's PA licensing regime means a shortlist of well-capitalised providers — Razorpay, Cashfree, PhonePe PG, PayU — compete to give you UPI, cards, net banking, and wallets behind a single API and a single settlement. That is why UPI payment integration in India starts with choosing an aggregator, not with NPCI paperwork.",
         ],
       },
       {
@@ -346,16 +346,22 @@ export const fintechClusterPosts: BlogPost[] = [
         },
       },
       {
-        h2: 'The 80%: Failure Handling and Reconciliation',
+        h2: "The 80%: Failure Handling and Reconciliation",
         body: [
-          'A UPI payment can end in more states than paid or failed: pending (user approved but bank slow), expired (user never approved), deemed (gateway says success, bank settles later), reversed (debited then returned). Your integration must model all of them — the classic Indian checkout bug is treating pending as failed, telling the user to retry, and charging them twice.',
-          'Webhooks from the UPI gateway API are your source of truth, and they arrive late, duplicated, and occasionally out of order. Production integrations verify webhook signatures, make every handler idempotent (processing the same event twice must change nothing), and run a daily reconciliation job comparing your orders table against the gateway’s settlement files — because the two will disagree, and the disagreements are where money goes missing.',
-          'Refunds deserve first-class treatment: partial refunds, failed refunds that need retrying, and refunds against settled versus unsettled transactions all behave differently. Build the refund flow into your admin panel on day one; support tickets will not wait for phase two.',
+          "A UPI payment can end in more states than paid or failed: pending (user approved but bank slow), expired (user never approved), deemed (gateway says success, bank settles later), reversed (debited then returned). Your integration must model all of them — the classic Indian checkout bug is treating pending as failed, telling the user to retry, and charging them twice.",
+          "Webhooks from the UPI gateway API are your source of truth, and they arrive late, duplicated, and occasionally out of order. Production integrations verify webhook signatures, make every handler idempotent (processing the same event twice must change nothing), and run a daily reconciliation job comparing your orders table against the gateway's settlement files — because the two will disagree, and the disagreements are where money goes missing.",
+          "Refunds deserve first-class treatment: partial refunds, failed refunds that need retrying, and refunds against settled versus unsettled transactions all behave differently. Build the refund flow into your admin panel on day one; support tickets will not wait for phase two.",
         ],
         quote: {
-          text: 'The payment API integration takes a week. What takes a month is everything around it — idempotent webhooks, the reconciliation job, refund states, and the admin screens your operations team needs when a customer says they paid and your database says they did not. That month is the actual product.',
-          name: 'Shoeb Uddin',
-          role: 'Founder & CEO, SmartX Solutions',
+          text: "The payment API integration takes a week. What takes a month is everything around it — idempotent webhooks, the reconciliation job, refund states, and the admin screens your operations team needs when a customer says they paid and your database says they did not. That month is the actual product.",
+          name: "Shoeb Uddin",
+          role: "Founder & CEO, SmartX Solutions",
+        },
+        inlineCta: {
+          heading: "Building a fintech product?",
+          body: "We handle the entire stack — including UPI, payment gateway integration, and RBI compliance. Used by startups across Hyderabad.",
+          buttonLabel: "Talk to Our Team",
+          href: "/contact-us",
         },
       },
       {
@@ -393,7 +399,7 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         question: 'What is payment reconciliation and do I really need it?',
         answer:
-          'Reconciliation is the daily process of matching your transaction records against the gateway’s settlement reports. Yes, you need it — webhooks get missed and settlements get adjusted, and without reconciliation those discrepancies silently become accounting losses.',
+          "Reconciliation is the daily process of matching your transaction records against the gateway's settlement reports. Yes, you need it — webhooks get missed and settlements get adjusted, and without reconciliation those discrepancies silently become accounting losses.",
       },
     ],
     paa: [
@@ -410,6 +416,12 @@ export const fintechClusterPosts: BlogPost[] = [
         a: 'The user approved but the bank has not confirmed. Correct handling: keep the order in a pending state, poll or await the webhook, and never prompt an immediate retry — that is how double charges happen. Most pendings resolve within minutes; your flow should handle hours.',
       },
     ],
+    sidebarCta: {
+      heading: 'Building a fintech product?',
+      body: 'We handle the entire stack — including UPI, payment gateway integration, and RBI compliance. Used by startups across Hyderabad.',
+      buttonLabel: 'Talk to Our Team →',
+      href: '/contact-us',
+    },
     related: [
       { href: '/blog/fintech-software-development-company-hyderabad', label: 'FinTech development guide' },
       { href: '/blog/rbi-compliance-fintech-apps-india', label: 'RBI compliance for fintech apps' },
@@ -439,7 +451,7 @@ export const fintechClusterPosts: BlogPost[] = [
     lastUpdated: 'July 2026',
     author: salehaBegum,
     intro:
-      'This is not legal advice — it is the engineering translation of India’s fintech rulebook: the five regulatory anchors that shape how fintech products must be architected, and the build decisions each one forces. Founders who understand this list collect better quotes, ship without rework, and pass partner due-diligence the first time. For licensing decisions, engage a fintech lawyer; for building within the rules, read on.',
+      "This is not legal advice — it is the engineering translation of India's fintech rulebook: the five regulatory anchors that shape how fintech products must be architected, and the build decisions each one forces. Founders who understand this list collect better quotes, ship without rework, and pass partner due-diligence the first time. For licensing decisions, engage a fintech lawyer; for building within the rules, read on.",
     directAnswer: {
       question: 'What RBI compliance do fintech apps need in India?',
       answer:
@@ -450,21 +462,21 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         h2: 'Anchor 1: Data Localisation — Decide Before Your First Deploy',
         body: [
-          'RBI’s April 2018 directive on Storage of Payment System Data requires that payment data be stored only in India. Processing abroad is permitted in specific cases, but the data must be brought back and stored domestically within prescribed timelines. Foreign leg transactions have carve-outs; the safe default for an Indian fintech is simpler: India-region infrastructure for anything payment-adjacent.',
+          "RBI's April 2018 directive on Storage of Payment System Data requires that payment data be stored only in India. Processing abroad is permitted in specific cases, but the data must be brought back and stored domestically within prescribed timelines. Foreign leg transactions have carve-outs; the safe default for an Indian fintech is simpler: India-region infrastructure for anything payment-adjacent.",
           'The build decision: choose India-region cloud (AWS Mumbai/Hyderabad, GCP Mumbai/Delhi) on day one, and audit your vendor list for where THEY store data — your analytics tool, error tracker, and customer-support platform all receive user data, and a payment-adjacent product inherits their storage geography. This costs nothing extra at the start and a migration project if discovered late.',
         ],
       },
       {
         h2: 'Anchor 2: KYC and AML — Onboarding Is a Regulated Flow',
         body: [
-          'RBI’s Master Direction on KYC governs how regulated entities verify customers, and if you operate through a bank, NBFC, or PA partner, their obligations flow down into your onboarding UX. In practice that means verified identity (PAN, Aadhaar-based options, or video KYC) before meaningful account activity, plus screening and monitoring obligations on your partner’s side that your data model must support.',
-          'The build decisions: integrate a KYC vendor (Digio, HyperVerge, Signzy) rather than hand-rolling verification; design onboarding as a resumable state machine (users abandon mid-KYC constantly and must continue, not restart); and store verification artefacts with timestamps and audit trails, because your partner’s compliance team will ask for them during due diligence.',
+          "RBI's Master Direction on KYC governs how regulated entities verify customers, and if you operate through a bank, NBFC, or PA partner, their obligations flow down into your onboarding UX. In practice that means verified identity (PAN, Aadhaar-based options, or video KYC) before meaningful account activity, plus screening and monitoring obligations on your partner's side that your data model must support.",
+          "The build decisions: integrate a KYC vendor (Digio, HyperVerge, Signzy) rather than hand-rolling verification; design onboarding as a resumable state machine (users abandon mid-KYC constantly and must continue, not restart); and store verification artefacts with timestamps and audit trails, because your partner's compliance team will ask for them during due diligence.",
         ],
       },
       {
         h2: 'Anchor 3: Digital Lending Guidelines — Who May Touch the Money',
         body: [
-          'The RBI Digital Lending Guidelines (September 2022) reshaped Indian lending tech around one principle: loan disbursals and repayments must flow directly between the borrower and the regulated entity (bank or NBFC) — not through your platform’s accounts. Add mandatory borrower disclosures (the Key Fact Statement with all-in cost of credit), a cooling-off period, and explicit consent for data use.',
+          "The RBI Digital Lending Guidelines (September 2022) reshaped Indian lending tech around one principle: loan disbursals and repayments must flow directly between the borrower and the regulated entity (bank or NBFC) — not through your platform's accounts. Add mandatory borrower disclosures (the Key Fact Statement with all-in cost of credit), a cooling-off period, and explicit consent for data use.",
           'The build decisions: architecture where your platform orchestrates but never holds loan funds; a disclosure layer that renders the KFS before acceptance; consent capture that is granular and logged; and grievance-redressal workflows with a named nodal officer surfaced in-app. Lending UX in India is compliance UX — teams that fight this ship late.',
         ],
         quote: {
@@ -476,13 +488,13 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         h2: 'Anchors 4 & 5: Payment Aggregation and the DPDP Act',
         body: [
-          'Payment aggregation: RBI’s PA/PG framework requires anyone pooling merchant payments to hold a PA licence with net-worth requirements most startups cannot meet — which is precisely why the standard architecture builds on licensed aggregators like Razorpay or Cashfree. The build decision is mostly a business decision: stay on licensed rails until volumes justify your own licence, and keep settlement flows designed so funds never rest in your accounts. Our [UPI and gateway integration guide](/blog/upi-payment-gateway-integration-guide) covers the implementation half.',
+          "Payment aggregation: RBI's PA/PG framework requires anyone pooling merchant payments to hold a PA licence with net-worth requirements most startups cannot meet — which is precisely why the standard architecture builds on licensed aggregators like Razorpay or Cashfree. The build decision is mostly a business decision: stay on licensed rails until volumes justify your own licence, and keep settlement flows designed so funds never rest in your accounts. Our [UPI and gateway integration guide](/blog/upi-payment-gateway-integration-guide) covers the implementation half.",
           'The DPDP Act 2023 applies to all personal data, with financial products squarely in scope: consent must be specific and withdrawable, data collection purpose-limited, and breach notification obligations sit with you. The build decisions: a consent registry (who agreed to what, when, and which version), data-deletion workflows that actually cascade through backups and vendors, and role-based access with logging on personal data reads — the same audit-trail muscle the other anchors already demand.',
           'Cross-cutting both: before any bank or PA partner certifies you, expect their due-diligence checklist — VAPT report from a CERT-In empanelled auditor, access-control documentation, and incident-response process. Budget for this in the plan, not the panic; the numbers are in our [fintech cost breakdown](/blog/fintech-app-development-cost-india).',
         ],
       },
       {
-        h2: 'The Founder’s Compliance Checklist',
+        h2: "The Founder's Compliance Checklist",
         body: [
           'Print this before you brief a development team. Every item is cheap at design time and expensive at retrofit time.',
         ],
@@ -527,7 +539,7 @@ export const fintechClusterPosts: BlogPost[] = [
       {
         question: 'Do the Digital Lending Guidelines apply if I am just a lead-generation platform?',
         answer:
-          'The guidelines bind regulated entities and their lending service providers — and if you participate in the credit journey (sourcing, underwriting support, collections), your partner’s obligations reach you contractually. Pure lead-gen with no role in disbursal sits lighter, but partners will still audit your disclosures.',
+          "The guidelines bind regulated entities and their lending service providers — and if you participate in the credit journey (sourcing, underwriting support, collections), your partner's obligations reach you contractually. Pure lead-gen with no role in disbursal sits lighter, but partners will still audit your disclosures.",
       },
       {
         question: 'What does DPDP Act compliance require from a small fintech startup?',
@@ -543,7 +555,7 @@ export const fintechClusterPosts: BlogPost[] = [
     paa: [
       {
         q: 'What is a CERT-In empanelled auditor and do I need one?',
-        a: 'CERT-In (India’s national cyber security agency) maintains a list of approved security auditing firms. Bank and payment-aggregator partners commonly require a VAPT report from an empanelled firm before certifying integrations — expect ₹75,000 to ₹2,50,000 depending on scope.',
+        a: "CERT-In (India's national cyber security agency) maintains a list of approved security auditing firms. Bank and payment-aggregator partners commonly require a VAPT report from an empanelled firm before certifying integrations — expect ₹75,000 to ₹2,50,000 depending on scope.",
       },
       {
         q: 'Can I use Aadhaar for KYC in my app?',
