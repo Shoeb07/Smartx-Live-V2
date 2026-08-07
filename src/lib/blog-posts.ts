@@ -88,6 +88,13 @@ export type BlogPost = {
     href: string
     note?: string
   }
+  // CTA card displayed at the top of the sticky sidebar (desktop)
+  sidebarCta?: {
+    heading: string
+    body: string
+    buttonLabel: string
+    href: string
+  }
 }
 
 const corePosts: BlogPost[] = [

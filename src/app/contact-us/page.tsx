@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Contact from '@/components/sections/Contact'
+import QuickContactForm from '@/components/ui/QuickContactForm'
 import TrackedLeadLink from '@/components/analytics/TrackedLeadLink'
 import { buildMetadata, breadcrumbSchema, faqSchema } from '@/lib/seo'
 import { seoPages } from '@/lib/seo-pages'
@@ -156,7 +157,15 @@ export default function ContactUsPage() {
             ))}
           </section>
 
-          <section className="pb-8">
+          <section className="py-12 border-b border-white/[0.07]">
+            <div className="max-w-xl">
+              <h2 className="font-syne font-bold text-2xl mb-2">Send Us Your Requirements</h2>
+              <p className="text-white/50 text-sm mb-6">3 fields · 60 seconds · We respond within 24 hours.</p>
+              <QuickContactForm source="contact_us_page" />
+            </div>
+          </section>
+
+          <section className="pb-8 pt-12">
             <h2 className="font-syne font-bold text-2xl mb-5">Helpful Links Before You Contact Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {page.links.map((link) => (

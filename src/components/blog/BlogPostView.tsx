@@ -453,6 +453,24 @@ export default function BlogPostView({ post }: BlogPostViewProps) {
                 <ChevronLeft size={13} />
                 All Articles
               </Link>
+
+              {post.sidebarCta && (
+                <div className="mb-6 rounded-2xl border border-[#6c63ff]/25 bg-[#6c63ff]/[0.08] p-5">
+                  <h3 className="font-syne font-bold text-[15px] text-white mb-2">
+                    {post.sidebarCta.heading}
+                  </h3>
+                  <p className="text-white/55 text-[13px] leading-relaxed mb-4">
+                    {post.sidebarCta.body}
+                  </p>
+                  <Link
+                    href={post.sidebarCta.href}
+                    className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-[#6c63ff] px-4 py-2.5 text-[13px] font-medium text-white hover:bg-[#5a52e0] transition-all"
+                  >
+                    {post.sidebarCta.buttonLabel}
+                  </Link>
+                </div>
+              )}
+
               <h2 className="font-syne font-bold text-lg mb-4">Related Pages</h2>
               <ul className="space-y-2">
                 {post.related.map((item) => (

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView, useMotionValue, useReducedMotion, useSpring } from 'framer-motion'
-import { ArrowUpRight, Braces, Database, Play, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowUpRight, Braces, Database, ShieldCheck, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useMagneticButton } from '@/lib/useMagneticButton'
@@ -359,9 +359,10 @@ function HeroMobileVisual() {
   )
 }
 
+const WA_URL = 'https://wa.me/919100590377?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project.'
+
 export default function Hero() {
   const btn1 = useMagneticButton(0.3)
-  const btn2 = useMagneticButton(0.3)
 
   return (
     <section id="top" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-24 pb-16 lg:pt-24 lg:pb-14 xl:pt-28 xl:pb-20">
@@ -382,10 +383,9 @@ export default function Hero() {
 
         {/* Headline */}
         <h1 className="font-syne font-bold text-[clamp(48px,7.5vw,100px)] lg:text-[54px] xl:text-[68px] 2xl:text-[80px] leading-[1.01] tracking-[-0.03em] mb-5 max-w-5xl">
-          <div className="block"><WordReveal text="Custom Software" delay={0.18} /></div>
-          <div className="block"><WordReveal text="Development" delay={0.30} gradient /></div>
-          <div className="block"><WordReveal text="Company in" delay={0.46} /></div>
-          <div className="block"><WordReveal text="Hyderabad, India." delay={0.58} /></div>
+          <div className="block"><WordReveal text="We Build Custom" delay={0.18} /></div>
+          <div className="block"><WordReveal text="Software That" delay={0.30} gradient /></div>
+          <div className="block"><WordReveal text="Grows Your Business" delay={0.46} /></div>
         </h1>
 
         {/* Subline */}
@@ -395,7 +395,7 @@ export default function Hero() {
           transition={{ delay: 0.85, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-white/50 text-[16px] lg:text-[13px] xl:text-[14px] max-w-[620px] mb-7 leading-[1.7] lg:leading-[1.55] speakable"
         >
-          SmartX Solutions is a custom software development company based in Hyderabad, Telangana, India. Founded in 2025, we design and build web applications, mobile apps, SaaS platforms, and digital products for startups and enterprises across India. Our senior engineering team has delivered live projects including AG Traders, FurneXo, and MANT Talent Solutions.
+          Web apps, mobile apps, fintech &amp; AI solutions — built by a Hyderabad team that delivers on time.
         </motion.p>
 
         <HeroMobileVisual />
@@ -414,24 +414,17 @@ export default function Hero() {
             onMouseLeave={btn1.onMouseLeave}
             className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#6c63ff] text-white font-medium text-[15px] hover:bg-[#5a52e0] transition-colors"
           >
-            Start a Project
+            Get a Free Consultation
             <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
-          <Link
-            href="/portfolio"
-            ref={btn2.ref as React.RefObject<HTMLAnchorElement>}
-            onMouseMove={btn2.onMouseMove}
-            onMouseLeave={btn2.onMouseLeave}
-            className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-full border border-white/10 text-white/70 font-medium text-[15px] hover:border-white/25 hover:text-white transition-all"
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="basis-full text-[13px] text-white/40 hover:text-[#25D366] transition-colors mt-1"
           >
-            <Play size={13} className="fill-current" /> View Our Work
-          </Link>
-          <Link
-            href="/offshore-software-development-india"
-            className="basis-full text-[13px] text-white/40 hover:text-[#00e5b0] transition-colors mt-1"
-          >
-            Hiring from the US or UK? Offshore development teams from $2,000/month →
-          </Link>
+            Or message us on WhatsApp →
+          </a>
         </motion.div>
 
         {/* Stats */}
