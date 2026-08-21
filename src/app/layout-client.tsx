@@ -11,11 +11,6 @@ const CustomCursor = dynamic(() => import('@/components/ui/CustomCursor'), {
   ssr: false,
 })
 
-const GlobalAIChatWidget = dynamic(() => import('@/components/ui/GlobalAIChatWidget'), {
-  loading: () => null,
-  ssr: false,
-})
-
 const WhatsAppWidget = dynamic(() => import('@/components/ui/WhatsAppWidget'), {
   loading: () => null,
   ssr: false,
@@ -34,9 +29,6 @@ export default function RootLayoutClient({
         <CustomCursor />
       </Suspense>
       {children}
-      <Suspense fallback={null}>
-        <GlobalAIChatWidget />
-      </Suspense>
       <Suspense fallback={null}>
         <WhatsAppWidget />
       </Suspense>

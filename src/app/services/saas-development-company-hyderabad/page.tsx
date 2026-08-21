@@ -9,9 +9,9 @@ import WhatsAppButton from './whatsapp-button'
 import DirectAnswer from '@/components/ui/DirectAnswer'
 
 const page = {
-  title: 'SaaS Development Company in Hyderabad — SmartX Solutions',
+  title: 'SaaS Development Company in Hyderabad | SmartX Solutions | ₹3L–₹15L',
   description:
-    'SaaS product development services in Hyderabad. SmartX builds custom SaaS platforms, web portals, and subscription management systems.',
+    'Build your SaaS platform with SmartX Solutions in Hyderabad. Multi-tenancy, subscription billing, cloud deployment included. Starting ₹3,00,000. Free consultation available.',
   canonicalUrl: absoluteUrl('/services/saas-development-company-hyderabad'),
 }
 
@@ -187,7 +187,7 @@ export default function SaasDevelopmentPage() {
         addressRegion: 'Telangana',
         addressCountry: 'IN',
       },
-      telephone: '+919100590377',
+      telephone: '+919346754163',
       url: 'https://www.smartxsolutions.in',
     },
     areaServed: ['IN'],
@@ -230,7 +230,7 @@ export default function SaasDevelopmentPage() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <WhatsAppButton source="saas-hero" />
               <TrackedLeadLink
-                href="tel:+919100590377"
+                href="tel:+919346754163"
                 eventLabel="phone_click"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/20 text-white font-dm font-bold rounded-lg hover:border-white/40 transition-all"
               >

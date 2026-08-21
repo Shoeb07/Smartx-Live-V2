@@ -92,7 +92,7 @@ const faqSchema = {
 }
 
 const tableRows = [
-  ['Monthly cost per developer', '$6,000–$12,000 / month', '₹1,50,000–₹3,00,000 equivalent'],
+  ['Monthly cost per developer', '$10,000–$26,000+ / month', '₹1,50,000–₹3,00,000 equivalent'],
   ['What is included', 'One developer', 'PM + Design + Dev + QA team'],
   ['Vetting standard', 'Top 3% claim, multi-stage process', 'Senior engineers, India-based, code reviewed'],
   ['Minimum engagement', '2-week trial required', 'Discovery call, no minimum commitment'],
@@ -115,14 +115,14 @@ export default function SmartXVsToptalPage() {
       <ComparisonLayout
         title="SmartX Solutions vs Toptal: Agency vs Elite Freelancer Network (2026)"
         subtitle="Toptal vs SmartX Solutions — which gives you better value for a complex software project? Honest comparison of cost, vetting, accountability, and outcomes for India-based companies."
-        lastUpdated="June 2026"
+        lastUpdated="August 2026"
         authorName="Saleha Begum"
         authorRole="Co-Founder & CTO, SmartX Solutions"
         authorUrl={`${siteUrl}/about-us`}
         disclosureText="This comparison was written by SmartX Solutions. We compete with Toptal for some clients. We have credited Toptal's genuine strengths honestly — their vetting is real and rigorous."
       >
 
-        <LastUpdated date="July 2026" />
+        <LastUpdated date="August 2026" />
 
         {/* Intro */}
         <section>
@@ -184,7 +184,7 @@ export default function SmartXVsToptalPage() {
               <p className="text-white/55 text-sm mb-5">1 senior developer, 6 months</p>
               <div className="space-y-3 text-sm">
                 {[
-                  ['1 developer × $8,000/month × 6', '₹40,00,000+'],
+                  ['1 developer × $10,000/month × 6', '₹50,00,000+'],
                   ['Your PM time (separate)', 'Your cost'],
                   ['Designer (hire separately)', 'Your cost'],
                   ['QA engineer (hire separately)', 'Your cost'],
@@ -197,7 +197,7 @@ export default function SmartXVsToptalPage() {
                 ))}
                 <div className="pt-3 border-t border-white/[0.08] flex justify-between font-syne font-bold">
                   <span className="text-white">Total</span>
-                  <span className="text-white">₹40L+ (developer only)</span>
+                  <span className="text-white">₹50L+ (developer only)</span>
                 </div>
               </div>
             </div>

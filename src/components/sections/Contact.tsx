@@ -383,7 +383,7 @@ export default function Contact() {
           <p className="text-center text-white/50 text-sm mb-6">Prefer a faster response?</p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://wa.me/919100590377"
+              href="https://wa.me/919346754163"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackWhatsAppClick('contact_form')}
@@ -394,13 +394,13 @@ export default function Contact() {
               Chat on WhatsApp
             </a>
             <a
-              href="tel:+919100590377"
+              href="tel:+919346754163"
               onClick={() => trackPhoneClick('contact_form')}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/15 text-white/65 text-sm font-medium hover:border-white/30 hover:text-white transition-all"
               aria-label="Call SmartX Solutions"
             >
               <Phone size={15} />
-              +91 91005 90377
+              +91 93467 54163
             </a>
           </div>
         </div>

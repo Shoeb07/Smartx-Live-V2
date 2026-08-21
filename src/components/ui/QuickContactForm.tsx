@@ -50,7 +50,7 @@ export default function QuickContactForm({ source = 'quick_form' }: { source?: s
           We&apos;ll review your requirement and reach out within 24 hours. If you need a faster
           response,{' '}
           <a
-            href="https://wa.me/919100590377?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project."
+            href="https://wa.me/919346754163?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project."
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#00e5b0] underline underline-offset-2"

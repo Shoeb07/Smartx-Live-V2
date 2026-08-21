@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 
 const WA_URL =
-  'https://wa.me/919100590377?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project.'
+  'https://wa.me/919346754163?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project.'
 
 export default function WhatsAppWidget() {
   const pathname = usePathname()
