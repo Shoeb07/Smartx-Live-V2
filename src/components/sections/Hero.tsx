@@ -177,7 +177,7 @@ function HeroSystemVisual() {
               <Image
                 src={headView === 'front'
                   ? '/images/smartx-robot-head-front-v5.png'
-                  : '/images/smartx-robot-head-short-v4.png'}
+                  : '/images/smartx-robot-head-short-v5.png'}
                 alt=""
                 fill
                 priority
@@ -330,7 +330,7 @@ function HeroMobileVisual() {
             <Image
               src={headView === 'front'
                 ? '/images/smartx-robot-head-front-v5.png'
-                : '/images/smartx-robot-head-short-v4.png'}
+                : '/images/smartx-robot-head-short-v5.png'}
               alt=""
               fill
               priority

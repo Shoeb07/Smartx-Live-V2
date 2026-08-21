@@ -40,6 +40,13 @@ export type BlogSection = {
     buttonLabel: string
     href: string
     whatsapp?: boolean
+    // Optional secondary outline button rendered next to the primary one
+    secondaryLabel?: string
+    secondaryHref?: string
+    // Optional trust-signal bullets rendered below the buttons
+    trustItems?: string[]
+    // Overrides the default 💡 icon shown in the badge
+    icon?: string
   }
 }
 

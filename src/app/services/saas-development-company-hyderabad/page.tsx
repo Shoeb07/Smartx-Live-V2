@@ -9,9 +9,9 @@ import WhatsAppButton from './whatsapp-button'
 import DirectAnswer from '@/components/ui/DirectAnswer'
 
 const page = {
-  title: 'SaaS Development Company in Hyderabad — SmartX Solutions',
+  title: 'SaaS Development Company in Hyderabad | SmartX Solutions | ₹3L–₹15L',
   description:
-    'SaaS product development services in Hyderabad. SmartX builds custom SaaS platforms, web portals, and subscription management systems.',
+    'Build your SaaS platform with SmartX Solutions in Hyderabad. Multi-tenancy, subscription billing, cloud deployment included. Starting ₹3,00,000. Free consultation available.',
   canonicalUrl: absoluteUrl('/services/saas-development-company-hyderabad'),
 }
 
