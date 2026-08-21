@@ -187,7 +187,7 @@ export default function SaasDevelopmentPage() {
         addressRegion: 'Telangana',
         addressCountry: 'IN',
       },
-      telephone: '+919100590377',
+      telephone: '+919346754163',
       url: 'https://www.smartxsolutions.in',
     },
     areaServed: ['IN'],
@@ -230,7 +230,7 @@ export default function SaasDevelopmentPage() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <WhatsAppButton source="saas-hero" />
               <TrackedLeadLink
-                href="tel:+919100590377"
+                href="tel:+919346754163"
                 eventLabel="phone_click"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/20 text-white font-dm font-bold rounded-lg hover:border-white/40 transition-all"
               >

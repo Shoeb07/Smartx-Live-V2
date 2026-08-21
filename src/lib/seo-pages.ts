@@ -587,7 +587,7 @@ export const seoPages: Record<string, SeoPage> = {
       {
         h2: 'Contact Details',
         body: [
-          'SmartX Solutions is based in Hyderabad, India. You can reach the team by email at business@smartxsolutions.in or by phone at +91 91005 90377. We work with local and remote clients and can support projects across time zones when the engagement requires it.',
+          'SmartX Solutions is based in Hyderabad, India. You can reach the team by email at business@smartxsolutions.in or by phone at +91 93467 54163. We work with local and remote clients and can support projects across time zones when the engagement requires it.',
         ],
       },
       {

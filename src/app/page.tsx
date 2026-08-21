@@ -23,7 +23,7 @@ import { homeFaqs } from '@/lib/home-faq'
 const legitimacyFaq = {
   question: 'Is SmartX Solutions a legitimate company?',
   answer:
-    'Yes. SmartX Solutions is a legitimate software development company based in Hyderabad, Telangana, India. We have delivered live projects including AG Traders (agtraders.info), MANT Talent Solutions (manttalent.com), FurneXo, and Attractions Mens Studio. Our contact details are publicly available - email: business@smartxsolutions.in, phone: +91 91005 90377. We are not affiliated with other companies using similar names such as SmartX Connected Products or SmartX Services Limited.',
+    'Yes. SmartX Solutions is a legitimate software development company based in Hyderabad, Telangana, India. We have delivered live projects including AG Traders (agtraders.info), MANT Talent Solutions (manttalent.com), FurneXo, and Attractions Mens Studio. Our contact details are publicly available - email: business@smartxsolutions.in, phone: +91 93467 54163. We are not affiliated with other companies using similar names such as SmartX Connected Products or SmartX Services Limited.',
 }
 
 export default function HomePage() {

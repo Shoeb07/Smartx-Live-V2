@@ -359,7 +359,7 @@ function HeroMobileVisual() {
   )
 }
 
-const WA_URL = 'https://wa.me/919100590377?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project.'
+const WA_URL = 'https://wa.me/919346754163?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project.'
 
 export default function Hero() {
   const btn1 = useMagneticButton(0.3)
