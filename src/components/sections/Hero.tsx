@@ -8,10 +8,10 @@ import Image from 'next/image'
 import { useMagneticButton } from '@/lib/useMagneticButton'
 
 const stats = [
-  { value: 5, suffix: '+', label: 'Projects Delivered' },
-  { value: 100, suffix: '%', label: 'Client Satisfaction' },
-  { value: 2, suffix: '+', label: 'Years Building' },
-  { value: 5, suffix: '+', label: 'Happy Clients' },
+  { value: 5, suffix: '+', label: 'Public Work Examples' },
+  { value: 4, suffix: '', label: 'Delivery Stages' },
+  { value: 3, suffix: '', label: 'Engagement Models' },
+  { value: 1, suffix: '', label: 'Hyderabad Team' },
 ]
 
 const techStack = [

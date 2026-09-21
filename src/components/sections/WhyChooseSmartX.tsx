@@ -7,13 +7,13 @@ import Link from 'next/link'
 const advantages = [
   {
     icon: Users,
-    title: 'Expert Software Engineering Team',
-    description: 'Our senior-only team brings deep expertise in custom software development, ensuring enterprise-grade solutions that scale.',
+    title: 'Direct Access to the Delivery Team',
+    description: 'Speak directly with the people scoping and building your product, with clear ownership from discovery through launch.',
   },
   {
     icon: Trophy,
-    title: 'Proven Track Record',
-    description: '94% on-time delivery rate with 100% client satisfaction. We\'ve successfully delivered scalable software platforms for startups and enterprises.',
+    title: 'Work You Can Review',
+    description: 'Review live project examples and detailed case studies before deciding whether our experience fits your brief.',
   },
   {
     icon: Target,
@@ -65,7 +65,7 @@ export default function WhyChooseSmartX() {
             transition={{ delay: 0.1 }}
             className="text-white/55 leading-relaxed max-w-3xl mx-auto"
           >
-            As Hyderabad's premier software development company, we combine technical excellence with business acumen to deliver scalable software platforms that drive real growth. Our comprehensive approach covers web development services, mobile app development, SaaS development, and digital transformation solutions.
+            SmartX is a Hyderabad-based software development team combining product strategy, design, engineering, and launch support. Our work covers web applications, mobile apps, SaaS products, AI automation, and business software.
           </motion.p>
         </div>
 

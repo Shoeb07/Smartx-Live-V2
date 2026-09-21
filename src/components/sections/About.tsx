@@ -6,13 +6,13 @@ import { CheckCircle2, Users, Trophy, Clock, Zap } from 'lucide-react'
 const reasons = [
   {
     icon: Users,
-    title: 'Senior-Only Teams',
-    description: 'Every project is staffed with senior engineers and designers. No juniors on your critical work — ever.',
+    title: 'Direct Collaboration',
+    description: 'You work directly with the people responsible for scoping, design, engineering, and delivery.',
   },
   {
     icon: Clock,
-    title: 'On-Time Delivery',
-    description: 'We\'ve delivered 94% of projects on-schedule. We use realistic estimates, not optimistic ones.',
+    title: 'Visible Delivery',
+    description: 'Written scope, practical milestones, and regular demos make progress and trade-offs easy to review.',
   },
   {
     icon: Trophy,
@@ -101,12 +101,12 @@ export default function About() {
               itemType="https://schema.org/Organization"
             >
               {[
-                'SmartX Solutions delivers custom software in Hyderabad with a 100% IP ownership guarantee — all code belongs to the client.',
-                'We staff every project exclusively with senior engineers — no juniors, no outsourcing to third parties.',
-                'Our average project delivery time is 4 months from kickoff to production launch.',
-                'We have maintained a 94% on-time delivery rate across all completed engagements.',
+                'SmartX Solutions builds custom software from its Hyderabad base for local and remote clients.',
+                'Clients communicate directly with the team responsible for planning and delivery.',
+                'Project timelines are estimated after scope, integrations, and testing requirements are understood.',
+                'Progress is reviewed through milestones and working demonstrations during delivery.',
                 'Our engagement models include fixed-price projects, monthly retainers, and team augmentation.',
-                'SmartX provides 24/7 post-launch monitoring and a dedicated project manager from day one.',
+                'Post-launch support is scoped around the operational needs of each product.',
               ].map((claim, i) => (
                 <div
                   key={i}

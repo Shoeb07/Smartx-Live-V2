@@ -4,7 +4,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: 'What types of custom software development services do you offer?',
     answer:
-      'We offer custom web application development, mobile app development using Flutter and React Native, SaaS platform development, UI/UX design, cloud infrastructure, AI and LLM integration, and digital transformation consulting. All services are delivered by our senior-only team based in Hyderabad, India.',
+      'We offer custom web application development, mobile app development using Flutter and React Native, SaaS platform development, UI/UX design, cloud infrastructure, AI and LLM integration, and digital transformation consulting from our Hyderabad base.',
   },
   {
     question: 'How long does it take to develop a custom software solution?',

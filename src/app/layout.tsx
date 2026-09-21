@@ -24,7 +24,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: 'SmartX Solutions — Custom Software Development Company, Hyderabad',
-  description: 'We build custom software — web apps, mobile apps, fintech & AI solutions. Trusted by founders and businesses across India. Start your project in 2 weeks.',
+  description: 'Hyderabad-based custom software development for web apps, mobile apps, SaaS, AI automation, and business systems. Discuss your project with SmartX.',
   keywords: [
     'custom software development company hyderabad',
     'software development company hyderabad',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'SmartX Solutions',
     title: 'SmartX Solutions — Custom Software Development Company, Hyderabad',
-    description: 'We build custom software — web apps, mobile apps, fintech & AI solutions. Trusted by founders and businesses across India. Start your project in 2 weeks.',
+    description: 'Hyderabad-based custom software development for web apps, mobile apps, SaaS, AI automation, and business systems. Discuss your project with SmartX.',
     images: [
       {
         url: '/og-image.png',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SmartX Solutions — Custom Software Development Company, Hyderabad',
-    description: 'We build custom software — web apps, mobile apps, fintech & AI solutions. Trusted by founders and businesses across India. Start your project in 2 weeks.',
+    description: 'Hyderabad-based custom software development for web apps, mobile apps, SaaS, AI automation, and business systems. Discuss your project with SmartX.',
     images: ['/og-image.png'],
   },
 }

@@ -24,6 +24,11 @@ const nextConfig = {
         destination: '/portfolio/:path*',
         permanent: true,
       },
+      {
+        source: '/terms',
+        destination: '/terms-and-conditions',
+        permanent: true,
+      },
     ]
   },
   eslint: {

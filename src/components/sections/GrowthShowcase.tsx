@@ -5,9 +5,9 @@ import { ArrowUpRight, Bot, Gauge, Layers3, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
 
 const outcomes = [
-  { icon: Gauge, value: '2.4×', label: 'Faster workflows', color: '#00e5b0' },
-  { icon: TrendingUp, value: '99.9%', label: 'Reliable platforms', color: '#8d82ff' },
-  { icon: Layers3, value: 'Built to scale', label: 'From MVP to enterprise', color: '#65b7ff' },
+  { icon: Gauge, value: 'Less manual work', label: 'Workflow automation', color: '#00e5b0' },
+  { icon: TrendingUp, value: 'Clearer decisions', label: 'Connected reporting', color: '#8d82ff' },
+  { icon: Layers3, value: 'Built to evolve', label: 'Maintainable foundations', color: '#65b7ff' },
 ]
 
 const pipeline = ['Discover', 'Design', 'Build', 'Launch']
@@ -90,9 +90,9 @@ export default function GrowthShowcase() {
               <div className="flex items-end justify-between">
                 <div>
                   <p className="text-xs text-white/35">Delivery velocity</p>
-                  <p className="mt-1 font-syne text-3xl font-bold">+38%</p>
+                  <p className="mt-1 font-syne text-3xl font-bold">Visible progress</p>
                 </div>
-                <span className="rounded-full bg-[#00e5b0]/10 px-2.5 py-1 text-[10px] text-[#00e5b0]">This quarter</span>
+                <span className="rounded-full bg-[#00e5b0]/10 px-2.5 py-1 text-[10px] text-[#00e5b0]">Illustrative view</span>
               </div>
               <div className="mt-8 flex h-36 items-end gap-2">
                 {[34, 48, 42, 66, 58, 78, 92, 84, 100].map((height, index) => (
@@ -117,7 +117,7 @@ export default function GrowthShowcase() {
             <div className="grid gap-4">
               <div className="rounded-2xl border border-white/[0.06] bg-black/20 p-5">
                 <p className="text-xs text-white/35">Automation saved</p>
-                <p className="mt-2 font-syne text-2xl font-bold">184 hrs</p>
+                <p className="mt-2 font-syne text-2xl font-bold">Time returned</p>
                 <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
                   <motion.div
                     className="h-full rounded-full bg-gradient-to-r from-[#6c63ff] to-[#00e5b0]"

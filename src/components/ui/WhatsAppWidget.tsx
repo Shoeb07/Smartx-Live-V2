@@ -1,6 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import { trackWhatsAppClick } from '@/lib/analytics'
 
 const WA_URL =
   'https://wa.me/919100590377?text=Hi%20SmartX%2C%20I%27d%20like%20to%20discuss%20a%20software%20project.'
@@ -14,6 +15,7 @@ export default function WhatsAppWidget() {
       href={WA_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsAppClick('floating_widget')}
       aria-label="Chat with SmartX on WhatsApp"
       className="fixed bottom-6 right-6 z-[9999] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-[0_4px_24px_rgba(37,211,102,0.45)] hover:scale-110 transition-transform duration-200"
     >
