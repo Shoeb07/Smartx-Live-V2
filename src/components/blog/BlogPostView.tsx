@@ -161,7 +161,7 @@ function SectionBlock({ section }: { section: BlogSection }) {
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-[#00e5b0]/15 flex items-center justify-center flex-shrink-0">
               <span className="text-[#00e5b0] text-lg" aria-hidden="true">
-                💡
+                {section.inlineCta.icon ?? '💡'}
               </span>
             </div>
             <div>
@@ -171,23 +171,42 @@ function SectionBlock({ section }: { section: BlogSection }) {
               <p className="text-white/55 text-sm mb-4 leading-relaxed">
                 {section.inlineCta.body}
               </p>
-              {section.inlineCta.whatsapp ? (
-                <TrackedLeadLink
-                  href={section.inlineCta.href}
-                  eventLabel="whatsapp_click"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-medium hover:opacity-90 transition-all"
-                >
-                  💬 {section.inlineCta.buttonLabel}
-                </TrackedLeadLink>
-              ) : (
-                <Link
-                  href={section.inlineCta.href}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#6c63ff] text-white text-sm font-medium hover:bg-[#5a52e0] transition-all"
-                >
-                  {section.inlineCta.buttonLabel} →
-                </Link>
+              <div className="flex flex-wrap gap-3">
+                {section.inlineCta.whatsapp ? (
+                  <TrackedLeadLink
+                    href={section.inlineCta.href}
+                    eventLabel="whatsapp_click"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-medium hover:opacity-90 transition-all"
+                  >
+                    💬 {section.inlineCta.buttonLabel}
+                  </TrackedLeadLink>
+                ) : (
+                  <Link
+                    href={section.inlineCta.href}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#6c63ff] text-white text-sm font-medium hover:bg-[#5a52e0] transition-all"
+                  >
+                    {section.inlineCta.buttonLabel} →
+                  </Link>
+                )}
+                {section.inlineCta.secondaryLabel && section.inlineCta.secondaryHref && (
+                  <Link
+                    href={section.inlineCta.secondaryHref}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/15 text-white/60 text-sm font-medium hover:border-white/30 hover:text-white/80 transition-all"
+                  >
+                    {section.inlineCta.secondaryLabel} →
+                  </Link>
+                )}
+              </div>
+              {section.inlineCta.trustItems && section.inlineCta.trustItems.length > 0 && (
+                <p className="text-white/25 text-xs mt-3">
+                  {section.inlineCta.trustItems.map((item, i) => (
+                    <span key={item}>
+                      {i > 0 && '  '}✓ {item}
+                    </span>
+                  ))}
+                </p>
               )}
             </div>
           </div>

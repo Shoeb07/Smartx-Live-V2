@@ -247,9 +247,9 @@ export const seoPages: Record<string, SeoPage> = {
   },
   'software-development-company': {
     slug: 'software-development-company',
-    title: 'Custom Software Development Company in Hyderabad | SmartX Solutions',
+    title: 'Custom Software Development Company in Hyderabad | SmartX',
     description:
-      'SmartX Solutions builds custom web, mobile & AI software for startups and enterprises in Hyderabad. Fast delivery, transparent pricing. Get a free quote today.',
+      'Hyderabad custom software agency — web apps, SaaS & mobile apps from ₹2.5L. Senior engineers, 2-week sprints. Book a free discovery call.',
     h1: 'Custom Software Development Company in Hyderabad',
     eyebrow: 'Custom Software · Hyderabad',
     intro:
@@ -587,7 +587,7 @@ export const seoPages: Record<string, SeoPage> = {
       {
         h2: 'Contact Details',
         body: [
-          'SmartX Solutions is based in Hyderabad, India. You can reach the team by email at business@smartxsolutions.in or by phone at +91 91005 90377. We work with local and remote clients and can support projects across time zones when the engagement requires it.',
+          'SmartX Solutions is based in Hyderabad, India. You can reach the team by email at business@smartxsolutions.in or by phone at +91 93467 54163. We work with local and remote clients and can support projects across time zones when the engagement requires it.',
         ],
       },
       {

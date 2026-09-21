@@ -12,7 +12,7 @@ interface WhatsAppButtonProps {
 }
 
 export default function WhatsAppButton({
-  phoneNumber = '919100590377',
+  phoneNumber = '919346754163',
   message = 'Hi, I would like to discuss a SaaS project',
   source = 'saas-page',
   className = '',
@@ -49,7 +49,7 @@ export default function WhatsAppButton({
       className={className || buttonClass}
     >
       <MessageCircle size={20} />
-      {variant === 'primary' ? '+91 9100 590 377' : 'WhatsApp'}
+      {variant === 'primary' ? '+91 93467 54163' : 'WhatsApp'}
     </a>
   )
 }

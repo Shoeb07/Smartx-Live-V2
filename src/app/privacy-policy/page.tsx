@@ -130,7 +130,7 @@ business@smartxsolutions.in.
               </p>
               <ul className="list-disc list-inside ml-4">
                 <li>Email: business@smartxsolutions.in</li>
-                <li>Phone: +91 91005 90377</li>
+                <li>Phone: +91 93467 54163</li>
               </ul>
               <p>
                 You can also return to the <Link href="/" className="text-[#00e5b0] hover:text-white">SmartX Solutions homepage</Link>, review our <Link href="/services" className="text-[#00e5b0] hover:text-white">software development services</Link>, or reach us through the <Link href="/contact-us" className="text-[#00e5b0] hover:text-white">contact page</Link>.

@@ -13,7 +13,7 @@ export default function ContactBand({ source = 'unknown' }: ContactBandProps) {
       <p className="text-white/45 text-xs uppercase tracking-widest mb-4">Quick contact</p>
       <div className="flex flex-wrap gap-3">
         <a
-          href="https://wa.me/919100590377"
+          href="https://wa.me/919346754163"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackWhatsAppClick(source)}
@@ -24,13 +24,13 @@ export default function ContactBand({ source = 'unknown' }: ContactBandProps) {
           WhatsApp
         </a>
         <a
-          href="tel:+919100590377"
+          href="tel:+919346754163"
           onClick={() => trackPhoneClick(source)}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-white/65 text-sm hover:border-white/30 hover:text-white transition-all"
-          aria-label="Call +91 91005 90377"
+          aria-label="Call +91 93467 54163"
         >
           <Phone size={14} />
-          +91 91005 90377
+          +91 93467 54163
         </a>
         <a
           href="mailto:business@smartxsolutions.in"

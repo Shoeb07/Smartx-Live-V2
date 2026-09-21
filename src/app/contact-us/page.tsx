@@ -29,14 +29,14 @@ const contactSchema = {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+919100590377',
+        telephone: '+919346754163',
         contactType: 'customer service',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi', 'Telugu'],
       },
       {
         '@type': 'ContactPoint',
-        telephone: '+919100590377',
+        telephone: '+919346754163',
         contactType: 'sales',
         areaServed: ['IN', 'US', 'GB', 'AU'],
         availableLanguage: 'English',
@@ -101,7 +101,7 @@ export default function ContactUsPage() {
                   Email Us <ArrowUpRight size={14} />
                 </a>
                 <TrackedLeadLink
-                  href="tel:+919100590377"
+                  href="tel:+919346754163"
                   eventLabel="phone_click"
                   className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.03] px-6 py-3 text-sm font-medium text-white/75 hover:border-white/25 hover:text-white transition-all"
                 >
@@ -126,8 +126,8 @@ export default function ContactUsPage() {
                   <Phone size={17} className="text-[#00e5b0] mt-0.5 shrink-0" />
                   <div>
                     <p className="text-sm text-white/45 mb-1">Phone</p>
-                    <TrackedLeadLink href="tel:+919100590377" eventLabel="phone_click" className="text-sm text-white/75 hover:text-white">
-                      +91 91005 90377
+                    <TrackedLeadLink href="tel:+919346754163" eventLabel="phone_click" className="text-sm text-white/75 hover:text-white">
+                      +91 93467 54163
                     </TrackedLeadLink>
                   </div>
                 </li>

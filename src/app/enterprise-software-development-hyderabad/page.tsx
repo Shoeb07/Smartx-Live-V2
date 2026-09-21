@@ -198,7 +198,7 @@ export default function EnterpriseSoftwarePage() {
             </h1>
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <a
-                href="https://wa.me/919100590377?text=Hi%2C%20I%20want%20to%20discuss%20an%20enterprise%20software%20project"
+                href="https://wa.me/919346754163?text=Hi%2C%20I%20want%20to%20discuss%20an%20enterprise%20software%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#00e5b0] text-black font-dm font-bold rounded-lg hover:bg-[#00d99f] transition-all"
@@ -207,7 +207,7 @@ export default function EnterpriseSoftwarePage() {
                 WhatsApp Us
               </a>
               <TrackedLeadLink
-                href="tel:+919100590377"
+                href="tel:+919346754163"
                 eventLabel="phone_click"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-white/20 text-white font-dm font-bold rounded-lg hover:border-white/40 transition-all"
               >
@@ -380,7 +380,7 @@ export default function EnterpriseSoftwarePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/919100590377?text=Hi%2C%20I%20want%20to%20discuss%20an%20enterprise%20software%20project"
+                href="https://wa.me/919346754163?text=Hi%2C%20I%20want%20to%20discuss%20an%20enterprise%20software%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-black text-[#00e5b0] font-dm font-bold rounded-lg hover:bg-black/80 transition-all"

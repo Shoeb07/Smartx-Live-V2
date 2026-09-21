@@ -136,7 +136,7 @@ export function organizationSchema() {
           '@type': 'ContactPoint',
           contactType: 'sales',
           email: 'business@smartxsolutions.in',
-          telephone: '+919100590377',
+          telephone: '+919346754163',
         },
         // FIX 9: Expanded sameAs (add profiles when created)
         sameAs: [
@@ -192,7 +192,7 @@ export function organizationSchema() {
         name: siteName,
         description: 'Custom software development company in Hyderabad',
         url: siteUrl,
-        telephone: '+919100590377',
+        telephone: '+919346754163',
         email: 'business@smartxsolutions.in',
         image: `${siteUrl}/og-image.png`,
         address: {

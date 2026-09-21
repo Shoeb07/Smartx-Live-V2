@@ -27,7 +27,7 @@ QUICK_PROMPTS[3] = "I want a quick call"
 
 const TEMPORARY_REPLY: Message = {
   role: 'assistant',
-  content: "Thanks for sharing. The AI chat is temporarily paused, so please WhatsApp us at +91 91005 90377 or email business@smartxsolutions.in. Our team will review your message and respond as soon as possible.",
+  content: "Thanks for sharing. The AI chat is temporarily paused, so please WhatsApp us at +91 93467 54163 or email business@smartxsolutions.in. Our team will review your message and respond as soon as possible.",
   isNew: true,
 }
 
@@ -132,7 +132,7 @@ export default function AIChatWidget() {
     } catch {
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: "Sorry, something went wrong. Please email us at business@smartxsolutions.in or call +91 91005 90377.",
+        content: "Sorry, something went wrong. Please email us at business@smartxsolutions.in or call +91 93467 54163.",
         isNew: true,
       }])
     } finally {
@@ -201,7 +201,7 @@ export default function AIChatWidget() {
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <a
-                  href="https://wa.me/919100590377"
+                  href="https://wa.me/919346754163"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full bg-[#00e5b0] px-3 py-1.5 text-[11px] font-bold text-black"
@@ -209,7 +209,7 @@ export default function AIChatWidget() {
                   WhatsApp
                 </a>
                 <a
-                  href="tel:+919100590377"
+                  href="tel:+919346754163"
                   className="rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-medium text-white/80"
                 >
                   Call
