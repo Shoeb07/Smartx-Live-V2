@@ -22,7 +22,7 @@ export default function QuickContactForm({ source = 'quick_form' }: { source?: s
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: ACCESS_KEY,
-          subject: `New quick enquiry from ${form.name} — ${source}`,
+          subject: `New Project Enquiry from ${form.name}`,
           name: form.name,
           message: form.requirement,
           phone: form.whatsapp,
