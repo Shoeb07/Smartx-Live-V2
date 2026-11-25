@@ -3,7 +3,7 @@
 // Expert quotes are from SmartX's own named founders — no fabricated third parties.
 // Every statistic is attributed in-text and in the sources list.
 import type { BlogPost } from './blog-posts'
-import { shoebUddin, salehaBegum } from './blog-authors'
+import { shoebUddin } from './blog-authors'
 
 export const fintechClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
@@ -158,7 +158,7 @@ export const fintechClusterPosts: BlogPost[] = [
     date: '2026-07-04',
     readTime: '9 min read',
     lastUpdated: 'July 2026',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'Fintech app budgets in India get quoted anywhere from ₹3,00,000 to ₹50,00,000 for what sounds like the same product — because half the real cost sits in items that never appear on a generalist quote: KYC vendors, security audits, gateway certification, and compliance workflows. This is the line-item breakdown we wish every founder saw before collecting quotes.',
     directAnswer: {
@@ -195,7 +195,7 @@ export const fintechClusterPosts: BlogPost[] = [
         ],
         quote: {
           text: "When a founder shows me a fintech quote that is 40% below everyone else's, I can usually predict the missing lines: no VAPT, no reconciliation engineering, no KYC vendor costs. The quote is not cheaper — it is incomplete, and the gap surfaces two months before launch when it is most expensive.",
-          name: 'Saleha Begum',
+          name: ' ',
           role: 'Co-Founder & CTO, SmartX Solutions',
         },
       },
@@ -457,7 +457,7 @@ export const fintechClusterPosts: BlogPost[] = [
     date: '2026-07-04',
     readTime: '10 min read',
     lastUpdated: 'July 2026',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       "This is not legal advice — it is the engineering translation of India's fintech rulebook: the five regulatory anchors that shape how fintech products must be architected, and the build decisions each one forces. Founders who understand this list collect better quotes, ship without rework, and pass partner due-diligence the first time. For licensing decisions, engage a fintech lawyer; for building within the rules, read on.",
     directAnswer: {
@@ -489,7 +489,7 @@ export const fintechClusterPosts: BlogPost[] = [
         ],
         quote: {
           text: 'Founders sometimes read the Digital Lending Guidelines as bureaucracy. Read them again as an architecture document: RBI is telling you exactly where the money may flow and what the user must see. Build to that spec from the first commit and compliance stops being a blocker — it becomes the reason a bank partner signs you.',
-          name: 'Saleha Begum',
+          name: ' ',
           role: 'Co-Founder & CTO, SmartX Solutions',
         },
       },

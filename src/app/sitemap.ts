@@ -7,7 +7,7 @@ const staticRoutes = [
   '',
   '/about-us',
   '/ai-automation-services',
-  '/authors/saleha-begum',
+  // '/authors/saleha-begum',
   '/authors/shoeb-uddin',
   '/best-software-development-companies-hyderabad',
   '/blog',

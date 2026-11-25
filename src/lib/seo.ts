@@ -265,17 +265,17 @@ export function organizationSchema() {
         // TODO: Replace with real personal LinkedIn URL
         // TODO: Add image once a real headshot exists in /public (do not point at a missing file)
       },
-      {
-        '@type': 'Person',
-        '@id': `${siteUrl}/#saleha-begum`,
-        name: 'Saleha Begum',
-        jobTitle: 'Co-Founder & CTO',
-        worksFor: { '@id': `${siteUrl}/#organization` },
-        url: `${siteUrl}/authors/saleha-begum`,
-        sameAs: ['https://www.linkedin.com/in/saleha-begum-smartx'],
-        // TODO: Replace with real personal LinkedIn URL
-        // TODO: Add image once a real headshot exists in /public (do not point at a missing file)
-      },
+      // {
+      //   '@type': 'Person',
+      //   '@id': `${siteUrl}/#saleha-begum`,
+      //   name: 'Saleha Begum',
+      //   jobTitle: 'Co-Founder & CTO',
+      //   worksFor: { '@id': `${siteUrl}/#organization` },
+      //   url: `${siteUrl}/authors/saleha-begum`,
+      //   sameAs: ['https://www.linkedin.com/in/saleha-begum-smartx'],
+      //   // TODO: Replace with real personal LinkedIn URL
+      //   // TODO: Add image once a real headshot exists in /public (do not point at a missing file)
+      // },
     ],
   }
 }

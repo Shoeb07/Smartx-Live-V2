@@ -20,13 +20,13 @@ export const shoebUddin: Author = {
   url: 'https://www.smartxsolutions.in/authors/shoeb-uddin',
 }
 
-export const salehaBegum: Author = {
-  name: 'Saleha Begum',
-  role: 'Co-Founder & CTO',
-  company: 'SmartX Solutions',
-  bio: 'Saleha Begum is the Co-Founder and CTO of SmartX Solutions. She leads engineering and technical architecture — overseeing the delivery of web applications, mobile apps, SaaS platforms, and AI integrations for clients across India.',
-  initials: 'SB',
-  color: '#00e5b0',
-  linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
-  url: 'https://www.smartxsolutions.in/authors/saleha-begum',
-}
+// export const salehaBegum: Author = {
+//   name: 'Saleha Begum',
+//   role: 'Co-Founder & CTO',
+//   company: 'SmartX Solutions',
+//   bio: 'Saleha Begum is the Co-Founder and CTO of SmartX Solutions. She leads engineering and technical architecture — overseeing the delivery of web applications, mobile apps, SaaS platforms, and AI integrations for clients across India.',
+//   initials: 'SB',
+//   color: '#00e5b0',
+//   linkedin: 'https://www.linkedin.com/company/smartx-solutions-in',
+//   url: 'https://www.smartxsolutions.in/authors/saleha-begum',
+// }

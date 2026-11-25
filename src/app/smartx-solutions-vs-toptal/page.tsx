@@ -42,7 +42,7 @@ const articleSchema = {
     'SmartX Solutions vs Toptal — which gives you better value for a complex software project? Honest comparison of cost, vetting, accountability, and outcomes.',
   author: {
     '@type': 'Person',
-    name: 'Saleha Begum',
+    // name: 'Saleha Begum',
     jobTitle: 'Co-Founder & CTO',
     worksFor: { '@type': 'Organization', name: 'SmartX Solutions', url: siteUrl },
     url: `${siteUrl}/about-us`,
@@ -116,7 +116,7 @@ export default function SmartXVsToptalPage() {
         title="SmartX Solutions vs Toptal: Agency vs Elite Freelancer Network (2026)"
         subtitle="Toptal vs SmartX Solutions — which gives you better value for a complex software project? Honest comparison of cost, vetting, accountability, and outcomes for India-based companies."
         lastUpdated="August 2026"
-        authorName="Saleha Begum"
+        authorName="Shoen Uddin"
         authorRole="Co-Founder & CTO, SmartX Solutions"
         authorUrl={`${siteUrl}/about-us`}
         disclosureText="This comparison was written by SmartX Solutions. We compete with Toptal for some clients. We have credited Toptal's genuine strengths honestly — their vetting is real and rigorous."

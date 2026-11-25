@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { absoluteUrl, siteName } from './seo'
-import { shoebUddin, salehaBegum, type Author } from './blog-authors'
+import { shoebUddin, type Author } from './blog-authors'
 import { webDevClusterPosts } from './webdev-cluster-posts'
 import { fintechClusterPosts } from './fintech-cluster-posts'
 import { competitorGapPosts } from './competitor-gap-posts'
 
-export { shoebUddin, salehaBegum }
+export { shoebUddin }
 export type { Author }
 
 export type BlogSection = {
@@ -230,7 +230,7 @@ const corePosts: BlogPost[] = [
       'A practical guide to choosing a software development company for custom applications, SaaS products, mobile apps, integrations, and digital transformation.',
     date: '2026-05-31',
     readTime: '9 min read',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'Choosing a software development company is a major business decision. The right partner can help you launch a product, modernise operations, improve customer experience, or create software that becomes part of your company competitive advantage.',
     sections: [

@@ -1,5 +1,5 @@
 import type { BlogPost } from './blog-posts'
-import { shoebUddin, salehaBegum } from './blog-authors'
+import { shoebUddin } from './blog-authors'
 
 export const competitorGapPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
@@ -102,7 +102,7 @@ export const competitorGapPosts: BlogPost[] = [
       'All types of web applications explained — static, dynamic, SaaS, e-commerce, portal, and more. With real examples and development costs in India.',
     date: '2026-07-04',
     readTime: '11 min read',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'Not every "web application" is the same kind of project — a static brochure site, a SaaS platform, and a real-time chat dashboard have almost nothing in common under the hood, and they cost wildly different amounts to build. This guide walks through every major type of web application, when each one actually makes sense, and roughly what it costs to build in India, so you know what to ask for before you talk to a developer. Getting this categorisation right before you request quotes matters more than it seems — vendors sometimes price a project as a more complex category than it needs to be, and knowing the actual category yourself is the fastest way to have an informed conversation.',
     directAnswer: {

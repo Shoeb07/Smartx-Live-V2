@@ -2,7 +2,7 @@
 // Slugs are prefixed with 'blog/' so these posts are served at /blog/<slug>
 // by src/app/blog/[slug]/page.tsx (legacy posts stay at root level).
 import type { BlogPost } from './blog-posts'
-import { shoebUddin, salehaBegum } from './blog-authors'
+import { shoebUddin} from './blog-authors'
 
 export const webDevClusterPosts: BlogPost[] = [
   // ═══════════════════════════════════════════
@@ -326,7 +326,7 @@ export const webDevClusterPosts: BlogPost[] = [
     date: '2026-07-02',
     readTime: '8 min read',
     lastUpdated: 'July 2026',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'The most common question we get from Hyderabad businesses is not "can you build this?" — it is "what will it cost?" This guide gives you real 2026 numbers: what each type of project costs in Hyderabad, why quotes vary so widely, how Hyderabad rates compare to other Indian cities, and how to get a quote you can actually trust.',
     directAnswer: {
@@ -621,7 +621,7 @@ export const webDevClusterPosts: BlogPost[] = [
     date: '2026-07-02',
     readTime: '8 min read',
     lastUpdated: 'July 2026',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'Full disclosure up front: SmartX Solutions does not build WordPress websites — we specialise in custom Next.js development. That makes us unusually well placed to write an honest guide, because we have nothing to sell you on the WordPress side. WordPress is genuinely the right choice for some Hyderabad businesses, the wrong choice for others, and this guide tells you which one you are.',
     directAnswer: {
@@ -886,7 +886,7 @@ export const webDevClusterPosts: BlogPost[] = [
     date: '2026-07-02',
     readTime: '7 min read',
     lastUpdated: 'July 2026',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'Freelancers in Hyderabad will quote you half of what a company quotes for "the same" website — and sometimes the freelancer is genuinely the right choice. The honest answer to company-vs-freelancer depends on your project size, your technical knowledge, and how expensive failure would be for you. Here is the comparison without the sales pitch.',
     directAnswer: {
@@ -1151,7 +1151,7 @@ export const webDevClusterPosts: BlogPost[] = [
     date: '2026-07-02',
     readTime: '7 min read',
     lastUpdated: 'July 2026',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'Most advice about web development is written for companies with lakhs to spend. Small businesses in Hyderabad — shops, manufacturers, clinics, service providers — need something different: a website that gets found locally, converts visitors into phone calls and WhatsApp messages, and does not demand a monthly IT budget. This guide covers exactly that.',
     directAnswer: {
@@ -1393,7 +1393,7 @@ export const webDevClusterPosts: BlogPost[] = [
     date: '2026-07-02',
     readTime: '8 min read',
     lastUpdated: 'July 2026',
-    author: salehaBegum,
+    author: shoebUddin,
     intro:
       'Every WordPress-vs-custom comparison you have read compares build quotes. That is the wrong number. Websites are owned for years, and the cheaper-to-build option is frequently the more expensive one to own. This guide runs the honest three-year arithmetic for Hyderabad businesses — including the scenarios where WordPress still wins.',
     directAnswer: {
